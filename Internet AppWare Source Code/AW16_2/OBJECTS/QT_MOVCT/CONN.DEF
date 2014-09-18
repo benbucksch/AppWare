@@ -1,0 +1,55 @@
+LIBRARY         ALM_CNCT
+DESCRIPTION     'Novell AppWare Loadable Module: Connection Object'
+EXETYPE         WINDOWS
+
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+
+HEAPSIZE        32768
+
+EXPORTS         WEP                            @1   
+                CONNECTADMN                    @2
+                CONN_CHARTOVALUEFUNC           @3  
+                CONN_VALUETOCHARFUNC           @4  
+                CONN_SENDTEXTFUNC              @5  
+                CONN_CLOSECOMMFUNC             @6  
+                CONN_OPENCOMMFUNC              @7 
+                CONN_CONFIGUREFUNC             @8
+                CONN_UNSCHEDULETEXTFUNC        @9
+                CONN_SCHEDULETEXTFUNC          @10  
+                CONN_CANCELLISTENFUNC          @11  
+                CONN_LISTENFUNC                @12  
+                CONN_BREAKFUNC                 @13  
+                CONN_SETCONFIGFUNC             @14  
+                CONN_GETCONFIGFUNC             @15  
+                CONN_SETSEARCHFUNC             @16  
+                CONN_DEACTIVATEFUNC            @17  
+                CONN_ACTIVATEFUNC              @18  
+				CONN_ASYNCHLISTENEVENT         @19
+                CONN_SENDSCHEDULETEXTEVENT     @20  
+                CONN_IDLEEVENT                 @21  
+                CONN_SHUTDOWNEVENT             @22  
+                CONN_STARTUPEVENT              @23  
+                COMMGETMEMLEN                  @24 
+                COMMGETMEM                     @25  
+                COMMPUTSTRING                  @26  
+                COMMPUTCHAR                    @27  
+                COMMPUTBUFFER                  @28  
+                COMMWAITCHAR                   @29 
+                COMMGETCHAR                    @30  
+                COMMGETSTRING                  @31  
+                COMMGETBUFFER                  @32  
+                COMMGETPAUSESTATUS             @33  
+                COMMSETXONXOFF                 @34  
+                COMMSETHANDSHAKE               @35  
+                COMMSETPARITY                  @36  
+                COMMSETSTOPBITS                @37  
+                COMMSETBAUDRATE                @38  
+                COMMGETHANDSHAKE               @39  
+                COMMGETPARITY                  @40  
+                COMMGETSTOPBITS                @41  
+                COMMFLUSHQUEUE                 @42  
+                COMMTXCOUNT                    @43  
+                COMMRXCOUNT                    @44  
+                COMMISPORTOPEN                 @45  

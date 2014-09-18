@@ -1,0 +1,295 @@
+LIBRARY         ALM_WND
+DESCRIPTION     'Novell AppWare Loadable Module: Window Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+HEAPSIZE        32768
+STACKSIZE       32768
+EXPORTS
+                WEP                                    @1  RESIDENTNAME
+
+                WNDADMINPROC                           @10
+
+                ;Window funtions get ords 100-149
+                WNDFUNCTION_ACTIVATEITEM               @100
+                WNDFUNCTION_ACTIVEITEM                 @101
+                WNDFUNCTION_CANCELCLOSE                @102
+                WNDFUNCTION_CENTERWINDOW               @103
+                WNDFUNCTION_CLOSEWINDOW                @104
+                WNDFUNCTION_FRONTWINDOW                @105
+                WNDFUNCTION_GETSELECTION               @106
+                WNDFUNCTION_GETTITLE                   @107
+                WNDFUNCTION_HIDEITEM                   @108
+                WNDFUNCTION_ISWINDOWOPEN               @109
+                WNDFUNCTION_ITEMLOCATION               @110
+                WNDFUNCTION_MOUSELOCATION              @111
+                WNDFUNCTION_MOVEITEM                   @112
+                WNDFUNCTION_MOVEWINDOW                 @113
+                WNDFUNCTION_OPENWINDOW                 @114
+                WNDFUNCTION_SETSELECTION               @115
+                WNDFUNCTION_SETTITLE                   @116
+                WNDFUNCTION_SHOWITEM                   @117
+                WNDFUNCTION_SIZEWINDOW                 @118
+                WNDFUNCTION_WINDOWPOSITION             @119
+
+
+                ;Window events get ords 150-199
+                WNDEVENT_CLOSEWINDOWOBJECT             @150
+                WNDEVENT_OBJECTCHANGED                 @151
+                WNDEVENT_OPENWINDOWOBJECT              @152
+                WNDEVENT_PRINT                         @153
+                WNDEVENT_SHUTDOWN                      @154
+                WNDEVENT_STARTUP                       @155
+                WNDEVENT_WINDOWSTARTUP                 @156
+                WNDEVENT_CUTCOPYPASTEUNDO              @157
+
+
+                ;Hwnd window item functions get ords 200-299
+                OPHWIACCELKEYHIT                       @200
+                OPHWIACTIVATE                          @201
+                OPHWIADJUSTNEWRECT                     @202
+                OPHWICOPY                              @203
+                OPHWICUT                               @204
+                OPHWIDATACHANGED                       @205
+                OPHWIDEACTIVATED                       @206
+                OPHWIDESTROY                           @207
+                OPHWIDRAWGRABHANDLES                   @208
+                OPHWIDRAWTRACKINGRECT                  @209
+                OPHWIEDIT                              @210
+                OPHWIGETEXTRADATA                      @211
+                OPHWIGETSELECTION                      @212
+                OPHWIHIDE                              @213
+                OPHWIINIT                              @214
+                OPHWIINVALIDATEGRABHANDLES             @215
+                OPHWIITEMINRECT                        @216
+                OPHWIITEMINREGION                      @217
+                OPHWIMOUSEENTRY                        @218
+                OPHWIMOVE                              @219
+                OPHWIOBJECT                            @220
+                OPHWIPARENTCLOSING                     @221
+                OPHWIPARENTNOTIFICATION                @222
+                OPHWIPARENTOPENED                      @223
+                OPHWIPASTE                             @224
+                OPHWIPOINTINGRABHANDLE                 @225
+                OPHWIPOINTINITEM                       @226
+                OPHWIPRINT                             @227
+                OPHWIQUERYPROTOCOL                     @228
+                OPHWIREMOVEITEMFROMREGION              @229
+                OPHWISETDEFAULTITEM                    @230
+                OPHWISETSELECTION                      @231
+                OPHWISHOW                              @232
+                OPHWITYPE                              @233
+                OPHWIUNDO                              @234
+                OPHWIENABLE                            @235
+                OPHWISCREENLOCATIONCHANGED             @236
+                OPHWIINVALIDATEITEM                    @237
+                OPHWIEXPORTEXTRADATA                   @238
+                OPHWIIMPORTEXTRADATA                   @239
+               
+
+                ;Lite window item functions get ords 300-399
+                OPLWIACCELKEYHIT                       @300
+                OPLWIACTIVATE                          @301
+                OPLWIADJUSTNEWRECT                     @302
+                OPLWICANCELMODE                        @303
+                OPLWICOPY                              @304
+                OPLWICUT                               @305
+                OPLWIDATACHANGED                       @306
+                OPLWIDEACTIVATED                       @307
+                OPLWIDESTROY                           @308
+                OPLWIDOUBLECLICKED                     @309
+                OPLWIDRAW                              @310
+                OPLWIDRAWGRABHANDLES                   @311
+                OPLWIDRAWTRACKINGRECT                  @312
+                OPLWIEDIT                              @313
+                OPLWIGETEXTRADATA                      @314
+                OPLWIGETSELECTION                      @315
+                OPLWIHIDE                              @316
+                OPLWIINIT                              @317
+                OPLWIINVALIDATEGRABHANDLES             @318
+                OPLWIITEMINRECT                        @319
+                OPLWIITEMINREGION                      @320
+                OPLWIKEYDOWN                           @321
+                OPLWIKEYUP                             @322
+                OPLWIMOUSEDOWN                         @323
+                OPLWIMOUSEENTRY                        @324
+                OPLWIMOUSEMOVE                         @325
+                OPLWIMOUSEUP                           @326
+                OPLWIMOVE                              @327
+                OPLWIOBJECT                            @328
+                OPLWIPARENTCLOSING                     @329
+                OPLWIPARENTOPENED                      @330
+                OPLWIPASTE                             @331
+                OPLWIPOINTINGRABHANDLE                 @332
+                OPLWIPOINTINITEM                       @333
+                OPLWIPRINT                             @334
+                OPLWIQUERYPROTOCOL                     @335
+                OPLWIREMOVEITEMFROMREGION              @336
+                OPLWISETDEFAULTITEM                    @337
+                OPLWISETSELECTION                      @338
+                OPLWISHOW                              @339
+                OPLWITYPE                              @340
+                OPLWIUNDO                              @341
+                OPLWIENABLE                            @342
+                OPLWISCREENLOCATIONCHANGED             @343
+                OPLWIINVALIDATEITEM                    @344
+                OPLWIEXPORTEXTRADATA                   @345
+                OPLWIIMPORTEXTRADATA                   @346
+
+
+                ;Window API functions get ords 400-599
+                OWNDACTIVATEWINDOW                     @400
+                OWNDCALLEACHVISUALINSTANCE             @401
+                OWNDDOESITEMUSECANCELKEY               @402
+                OWNDDOESITEMUSECURSORKEYS              @403
+                OWNDDOESITEMUSEDEFAULTKEY              @404
+                OWNDDOESITEMUSETAB                     @405
+                OWNDGETACTIVEITEM                      @406
+                OWNDGETACTIVEWINDOWOBJECT              @407
+                OWNDGETCAPTUREITEM                     @408
+                OWNDGETITEMCONTROLID                   @409
+                OWNDGETNEXTITEM                        @410
+                OWNDGETPREVIOUSITEM                    @411
+                OWNDISITEMACTIVATABLE                  @412
+                OWNDISITEMCANCEL                       @413
+                OWNDISITEMDEFAULT                      @414
+                OWNDISITEMENABLED                      @415
+                ; 416 is in the Window Layout API Section
+                OWNDISITEMTRANSPARENT                  @417
+                OWNDISITEMVISIBLE                      @418
+                OWNDISLAYOUTTIME                       @419
+                OWNDISWINDOWCOLOR                      @420
+                OWNDRELEASECAPTURE                     @421
+                OWNDRELEASECURSOR                      @422
+                OWNDSETACTIVEITEM                      @423
+                OWNDSETCANCELITEM                      @424
+                OWNDSETCAPTUREITEM                     @425
+                OWNDSETCURSOR                          @426
+                OWNDSETDEFAULTITEM                     @427
+                OWNDSETITEMACCELKEY                    @428
+                OWNDSETITEMACTIVATABLE                 @429
+                OWNDSETITEMENABLED                     @430
+                ; 431 is in the Window Layout API Section
+                OWNDSETITEMTRANSPARENT                 @432
+                OWNDSETITEMUSESCANCELKEY               @433
+                OWNDSETITEMUSESCURSORKEYS              @434
+                OWNDSETITEMUSESDEFAULTKEY              @435
+                OWNDSETITEMUSESTAB                     @436
+                OWNDSETITEMVISIBLE                     @437
+                OWNDSIMULATEACCELKEY                   @438
+                OWNDISLITEITEM                         @439
+                OWNDISHWNDITEM                         @440
+                OWNDDPTOLP                             @441
+                OWNDLPTODP                             @442
+                OWNDINVALIDATELOGICALRECT              @443
+                OWNDVALIDATELOGICALRECT                @444
+                OWNDCREATEWINDOWEX                     @445
+                OWNDMOVEWINDOW                         @446
+                OWNDGETACTIVEMENUBAR                   @447
+                OWNDSHOWMENUBAR                        @448
+                OWNDHIDEMENUBAR                        @449
+                OWNDSETMENUBAR                         @450
+                OWNDREDRAWMENUBAR                      @451
+                OWNDCREATEFONTTMM                      @452
+                OWNDDELETEFONT                         @453
+                OWNDWINDOWOBJECTFROMHWND               @454
+                OWNDHIDEITEM                           @455
+                OWNDSHOWITEM                           @456
+                ; 457 is in the Window Layout API Section
+                ; 458 is in the Window Layout API Section
+                OWNDITEMFROMUID                        @459
+                OWNDUIDFROMITEM                        @460
+                OWNDDSTOLS                             @461
+                OWNDLSTODS                             @462
+                OWNDGETHANDLE                          @463
+                OWNDGETCLIENTRECT                      @464
+                OWNDMOVEITEM                           @465
+                OWNDISITEMOBJECT                       @466
+                OWNDSETMENUACCELKEY                    @467
+                OWNDGETPALETTE                         @468
+
+                ;Window Layout API get ords 600-799
+                OWNDLAYISITEMSHAPE                     @416  ; Name needed to change, but ordinal needed to be identical
+                OWNDLAYSETITEMISSHAPE                  @431  ; Name needed to change, but ordinal needed to be identical
+                OWNDLAYISITEMGROUP                     @458  ; Name needed to change, but ordinal needed to be identical
+                OWNDLAYSETITEMISGROUP                  @457  ; Name needed to change, but ordinal needed to be identical
+                OWNDLAYCREATEALLEXISTINGITEMS          @600
+                OWNDLAYCREATENEWITEM                   @601
+                OWNDLAYDESTROYALLEXISTINGITEMS         @602
+                OWNDLAYDESTROYITEM                     @603
+                OWNDLAYDRAWSSMOOTH                     @604
+                OWNDLAYGETINITIALCLIENTRECT            @605
+                OWNDLAYGETINITIALWINDOWSTATE           @606
+                OWNDLAYGETMAXSIZE                      @607
+                OWNDLAYGETMENUBARID                    @608
+                OWNDLAYGETMINSIZE                      @609
+                OWNDLAYGETSCROLLSIZE                   @610
+                OWNDLAYGETTITLE                        @611
+                OWNDLAYHASDIALOGFRAME                  @612
+                OWNDLAYHASHSCROLL                      @613
+                OWNDLAYHASMAXBUTTON                    @614
+                OWNDLAYHASMAXSIZE                      @615
+                OWNDLAYHASRESIZEFRAME                  @616
+                OWNDLAYHASSYSMENU                      @617
+                OWNDLAYHASTITLEBAR                     @618
+                OWNDLAYHASVSCROLL                      @619
+                OWNDLAYISINITVISIBLE                   @620
+                OWNDLAYISMODAL                         @621
+                OWNDLAYISPOPUP                         @622
+                OWNDLAYSAVEITEMS                       @623
+                OWNDLAYSETDRAWSSMOOTH                  @624
+                OWNDLAYSETHASDIALOGFRAME               @625
+                OWNDLAYSETHASHSCROLL                   @626
+                OWNDLAYSETHASMAXBUTTON                 @627
+                OWNDLAYSETHASMAXSIZE                   @628
+                OWNDLAYSETHASRESIZEFRAME               @629
+                OWNDLAYSETHASSYSMENU                   @630
+                OWNDLAYSETHASTITLEBAR                  @631
+                OWNDLAYSETHASVSCROLL                   @632
+                OWNDLAYSETINITIALCLIENTRECT            @633
+                OWNDLAYSETINITIALWINDOWSTATE           @634
+                OWNDLAYSETISINITVISIBLE                @635
+                OWNDLAYSETISMODAL                      @636
+                OWNDLAYSETISPOPUP                      @637
+                OWNDLAYSETMAXSIZE                      @638
+                OWNDLAYSETMENUBARID                    @639
+                OWNDLAYSETMINSIZE                      @640
+                OWNDLAYSETSCROLLSIZE                   @641
+                OWNDLAYSETTITLE                        @642
+                OWNDLAYHASMINBUTTON                    @643
+                OWNDLAYSETHASMINBUTTON                 @644
+                OWNDLAYSETITEMTABSTOP                  @645
+                OWNDLAYISITEMTABSTOP                   @646
+                OWNDLAYSETITEMGROUPSTOP                @647
+                OWNDLAYISITEMGROUPSTOP                 @648
+                OWNDLAYSETMAPPINGMODE                  @649
+                OWNDLAYSETWINDOWHANDLE                 @650
+                OWNDLAYGETCOLORSANDPATTERN             @651
+                OWNDLAYSETCOLORSANDPATTERN             @652
+                OWNDLAYSETITEMGROWFLAG                 @653
+                OWNDLAYGETITEMGROWFLAG                 @654
+                OWNDLAYRECREATEEXISTINGITEM            @655
+                OWNDLAYQUITSONCLOSE                    @656
+                OWNDLAYSETQUITSONCLOSE                 @657
+                OWNDLAYADJWINDOWRECTEX                 @658
+                OWNDLAYSETVIEWPORTORGEX                @659
+                OWNDLAYGETVIEWPORTORGEX                @660
+                OWNDLAYSETWINDOWORGEX                  @661
+                OWNDLAYGETWINDOWORGEX                  @662
+                OWNDLAYSETITEMLOCKED                   @663
+                OWNDLAYISITEMLOCKED                    @664
+                OWNDLAYCREATENEWGROUP                  @665
+                OWNDLAYSETITEMVISIBLEFLAG              @666
+
+                ;Group window item functions get ords 800-899
+                OPGWINUMITEMS                          @800
+                OPGWIALLOBJECTS                        @801
+                OPGWICREATED                           @802
+                OPGWISETVISIBLE                        @803
+                OPGWIGETNEXTITEM                       @804
+                OPGWIGETPREVITEM                       @805
+                OPGWIITEMRECREATED                     @806
+                OPGWIUNGROUPED                         @807
+                OPGWILOCK                              @808
+                OPGWIITEMDELETED                       @809
+                OPGWIITEMADDED                         @810

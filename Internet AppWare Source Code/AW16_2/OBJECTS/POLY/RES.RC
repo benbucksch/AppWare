@@ -1,0 +1,153 @@
+#include <windows.h>
+#include "ver.h"
+#include "dialog.h"
+
+POLYBUTTON_MAIN_SETUP_DIALOG DIALOG 29, 26, 310, 276
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MAXIMIZEBOX
+CLASS "BorDlg"
+CAPTION "POLYBUTTON"
+FONT 8, "Helv"
+BEGIN
+	DEFPUSHBUTTON "OK", PB_OK, 242, 56, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "Cancel", PB_CANCEL, 242, 77, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	ICON "ICON_FACE", -1, 7, 4, 18, 20, WS_CHILD | WS_VISIBLE
+	PUSHBUTTON "Configure...", PB_CONFIGURE, 4, 74, 48, 15, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "Load...", PB_LOAD, 116, 74, 48, 15, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "Paste", PB_PASTE, 172, 74, 48, 15, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	CONTROL "Normal", RB_NORMAL, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 131, 49, 38, 12
+	CONTROL "Hilite", RB_HIGHLIGHT, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 178, 49, 33, 12
+	CONTROL "", ST_OBJECTNAME, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 36, 5, 232, 21
+	CONTROL "Tools", -1, "BorShade", 32769 | WS_CHILD | WS_VISIBLE, 4, 34, 116, 35
+	CONTROL "Picture", -1, "BorShade", 32769 | WS_CHILD | WS_VISIBLE, 126, 34, 96, 35
+	CONTROL "", ST_HORZLINE, "BorShade", 2 | WS_CHILD | WS_VISIBLE, 0, 29, 273, 4
+	CONTROL "", RB_TOOL_ARROW, "BUTTON", BS_OWNERDRAW | WS_CHILD | WS_VISIBLE, 10, 46, 20, 20
+	CONTROL "", RB_TOOL_RECT, "BUTTON", BS_OWNERDRAW | WS_CHILD, 31, 46, 20, 20
+	CONTROL "", RB_TOOL_ELLIPSE, "BUTTON", BS_OWNERDRAW | WS_CHILD, 52, 46, 20, 20
+	CONTROL "", RB_TOOL_POLYGON, "BUTTON", BS_OWNERDRAW | WS_CHILD, 73, 46, 20, 20
+	CONTROL "", RB_TOOL_FREEHAND, "BUTTON", BS_OWNERDRAW | WS_CHILD, 95, 46, 20, 20
+	CONTROL "", ST_VERTLINE, "BorShade", 3 | WS_CHILD | WS_VISIBLE, 229, 34, 2, 236
+	CONTROL "", OD_FRAME, "static", SS_WHITEFRAME | WS_CHILD | WS_VISIBLE, 6, 94, 220, 174
+	PUSHBUTTON "Delete", PB_DELETE, 60, 74, 48, 15, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	CONTROL "Text", 103, "AWResizer", 0 | WS_CHILD | WS_VISIBLE, 257, 237, 20, 20
+END
+
+
+BUTTON_CONFIG_DIALOG DIALOG 50, 49, 168, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "BorDlg"
+FONT 8, "Helv"
+BEGIN
+	CONTROL "Region Name", -1, "BorShade", 32769 | WS_CHILD | WS_VISIBLE, 3, 8, 110, 33
+	CONTROL "", ED_TITLE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 8, 21, 100, 17
+	CONTROL "Region Type", -1, "BorShade", 32769 | WS_CHILD | WS_VISIBLE, 3, 46, 110, 60
+	CONTROL "Push Type", RB_PUSH, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 6, 59, 56, 10
+	CONTROL "Radio Type", RB_RADIO, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 6, 70, 56, 10
+	CONTROL "Check Type", RB_CHECK, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 6, 81, 56, 10
+	CONTROL "Transparent", RB_TRANSPARENT, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 6, 92, 56, 10
+	CONTROL "OK", PB_OK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 124, 8, 38, 14
+	PUSHBUTTON "Cancel", PB_CANCEL, 125, 28, 38, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	CONTROL "", 112, "BorShade", 3 | WS_CHILD | WS_VISIBLE, 118, 4, 1, 104
+END
+
+POLYBACCEL ACCELERATORS 
+BEGIN
+	"^K", AC_DELETE
+	VK_DELETE, AC_DELETE, VIRTKEY
+END
+
+
+ICON_FACE ICON "poly.ico"
+
+ICON_ARROW		ICON "arrow.ico"
+ICON_SQUARE		ICON "rect.ico"
+ICON_CIRCLE		ICON "circle.ico"
+ICON_POLYGON	ICON "polygon.ico"
+ICON_FREEHAND	ICON "freehand.ico"
+
+
+STRINGTABLE 
+BEGIN
+2 "NULL pointer in %s line #%d"
+3 "Assertion Failed in %s line #%d"
+5 "Unable to get function parameter in %s line #%d"
+6 "Unable to create psuedo object in %s line #%d"
+END
+
+
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION     1, 1, 0, 0
+PRODUCTVERSION  1, 1, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Polybutton Object\0"
+      VALUE "FileVersion",      "1.1\0"
+      VALUE "InternalName",     "ALM_POLY\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1994.\0"
+      VALUE "OriginalFilename", "ALM_POLY.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.1\0"
+      VALUE "ProductVersion",   "1.10\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+	1001, "VeRsIoN=1.10\0"
+  1002, "\0"
+  1003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1994.  All rights reserved.\0"
+END
+
+
+AWResizeRight RCDATA 
+BEGIN
+PB_OK
+PB_CANCEL
+ST_VERTLINE
+ST_OBJECTNAME
+ST_HORZLINE
+OD_DRAWWINDOW
+0
+
+END
+
+AWResizeLeft RCDATA 
+BEGIN
+PB_OK
+PB_CANCEL
+ST_VERTLINE
+0
+END
+
+AWResizeBottom RCDATA 
+BEGIN
+OD_DRAWWINDOW
+ST_VERTLINE
+0
+
+END
+
+////////////////////////////////////////////////////////////////////////////
+

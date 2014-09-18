@@ -1,0 +1,11 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = ALM_FLAG.DLL
+OBJECTDEFNAME = ALM_FLAG.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  =
+LOCALLIBS     = ALM_TEXT.LIB
+OBJECTAPI     = ALM_FLAG.LIB

@@ -1,0 +1,19 @@
+# Format of each line is:  <TARGETDIR> <SOURCEFILE> [<NEWFILENAME>]
+
+# Executables and DLLs
+BIN		cfgupdat\obj\almcfgup.dll
+BIN		dev\obj\almconfg.exe
+BIN		oip\obj\almkrnl.dll
+BIN		pro\obj\appbldr.exe
+BIN		shell\obj\almshell.exe				almkrnl.dat
+
+# API header files
+INCLUDE		oip\hdr\ap_macro.h
+INCLUDE		oip\hdr\a_alm.h
+INCLUDE		oip\hdr\a_almutl.h
+INCLUDE		oip\hdr\intdebug.h
+INCLUDE		oip\hdr\seriusid.h
+INCLUDE		pro\hdr\helpids.h
+
+# Exported .LIBs
+LIB		oip\obj\almkrnl.lib

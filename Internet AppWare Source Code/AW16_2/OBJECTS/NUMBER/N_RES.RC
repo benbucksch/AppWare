@@ -1,0 +1,107 @@
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "n_dialog.h"
+#include "n_string.h"
+
+
+number ICON "number.ico"
+NUMBER_SETUP_DIALOG DIALOG 50, 22, 222, 219
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CLASS "bordlg"
+CAPTION "Number Object Setup"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", PB_OK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 164, 36, 50, 14
+  PUSHBUTTON "Cancel", PB_CANCEL, 164, 56, 50, 14
+  PUSHBUTTON "&Attributes...", PB_FONTS, 164, 76, 50, 14
+  PUSHBUTTON "&Help", PB_HELP, 164, 105, 50, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+  LTEXT " &Value:", -1, 6, 36, 143, 10
+  CONTROL "", ED_TITLE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 9, 50, 137, 12
+  LTEXT " &Format:", ST_FORMAT, 6, 71, 143, 9
+  CONTROL "", ED_FORMAT, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 9, 84, 137, 12
+  LTEXT " Number &Type", 118, 6, 105, 69, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "&Whole Number", RB_INUMBER, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 10, 120, 63, 10
+  CONTROL "Real Nu&mber", RB_RNUMBER, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 10, 132, 55, 10
+  LTEXT " &Justification", 113, 81, 105, 68, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "&Left", RB_LEFT, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 85, 120, 63, 10
+  CONTROL "&Right", RB_RIGHT, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 85, 132, 55, 10
+  LTEXT " O&ptions", 116, 6, 152, 143, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "&Editable", CB_EDITABLE, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 11, 166, 108, 10
+  CONTROL "Sh&ow Frame", CB_FRAME, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 11, 177, 108, 10
+  CONTROL "&Can Activate", CB_ACTIVATABLE, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 11, 188, 108, 10
+  CONTROL "&Select All When Activated", CB_SELECTALL, "BorCheck", 3 | WS_CHILD | WS_VISIBLE, 11, 188, 108, 10
+  CONTROL "Initially &Display Empty", CB_DISPLAYEMPTY, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 11, 199, 108, 10
+  CONTROL "number", -1, "STATIC", SS_ICON | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 4, 18, 20
+  LTEXT "", ST_OBJECTNAME, 28, 5, 188, 19, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 222, 2
+  CONTROL "", 115, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 6, 46, 144, 19
+  CONTROL "", 115, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 6, 80, 144, 19
+  CONTROL "", 117, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 6, 115, 69, 31
+  CONTROL "", 117, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 81, 115, 69, 31
+  CONTROL "", 119, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 6, 162, 144, 51
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 156, 36, 2, 177
+END
+
+//////////////////////////////////////////////////
+
+STRINGTABLE 
+BEGIN
+  0, "Number Object"
+  ERR_NULL_NUM, "NULL num pointer in %s"
+  ERR_NULL_HNI, "NULL hni pointer in %s"
+  ERR_WRONG_TYPEID, "Incorrect Object Type in %s"
+  ERR_INVALIDWINDOW, "Invalid window handle in %s"
+  WARN_CANNOT_CHANGE_TYPE, "Can only change the type of temporary number objects"
+  ERR_GET_PARAMETER_FAILED, "Unable to get parameter #%d in %s"
+  ERR_CREATING_PSUEDO_OBJECT, "Unable to create pseudo object %s"
+  I_NUMBER_PARTS, "%()-+"
+END
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Number Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_NMBR\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_NMBR.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

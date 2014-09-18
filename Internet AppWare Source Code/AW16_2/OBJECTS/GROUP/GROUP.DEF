@@ -1,0 +1,18 @@
+LIBRARY         ALM_GRUP
+
+DESCRIPTION     'Novell AppWare Loadable Module: Group Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD SINGLE MOVEABLE
+PROTMODE
+
+SEGMENTS
+
+EXPORTS         WEP                            @1   RESIDENTNAME
+                GROUPADMINISTRATION            @2   
+                REMOVEFUNC                     @3   
+                INSERTFUNC                     @4   
+                GETFUNC                        @5   
+                FINDFUNC                       @6   
+                COUNTFUNC                      @7   
+                GROUPOBJECTPROC                @8   

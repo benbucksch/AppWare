@@ -1,0 +1,17 @@
+LIBRARY         AW32GRUP
+
+DESCRIPTION     'Novell AppWare Loadable Module: Group Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD SINGLE MOVEABLE
+PROTMODE
+
+SEGMENTS
+
+EXPORTS         GroupAdministration            @1   
+                RemoveFunc                     @2   
+                InsertFunc                     @3   
+                GetFunc                        @4   
+                FindFunc                       @5   
+                CountFunc                      @6   
+                GroupObjectProc                @7   

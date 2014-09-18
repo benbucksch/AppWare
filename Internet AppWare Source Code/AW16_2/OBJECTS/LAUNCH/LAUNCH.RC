@@ -1,0 +1,97 @@
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "launch.h"
+
+LaunchDlg1 DIALOG 18, 20, 205, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Launcher"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 157, 37, 40, 14
+  PUSHBUTTON "Cancel", IDCANCEL, 157, 57, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Browse...", IDBROWSE, 157, 77, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Help", IDHELP, 157, 104, 40, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+  LTEXT "&Command Line:", -1, 12, 41, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_CMDLINE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 51, 122, 12
+  LTEXT "Working &Directory:", -1, 12, 67, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_STARTDIR, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 77, 122, 12
+  CONTROL "&Run Minimized", 103, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 12, 105, 95, 10
+  LTEXT "", 201, 28, 5, 171, 19, WS_CHILD | WS_VISIBLE | WS_GROUP
+  ICON "LaunchIcon", -1, 5, 4, 18, 20, SS_ICON | WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 101, 135, 18
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 148, 37, 2, 82
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 37, 135, 58
+  CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 205, 2
+END
+
+
+LaunchDlg2 DIALOG 34, 32, 205, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Launcher"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 157, 6, 40, 14
+  PUSHBUTTON "Cancel", IDCANCEL, 157, 25, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Browse...", IDBROWSE, 157, 50, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  LTEXT "&Command Line:", -1, 12, 10, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_CMDLINE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 20, 122, 12
+  LTEXT "Working &Directory:", -1, 12, 36, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_STARTDIR, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 46, 122, 12
+  CONTROL "&Run Minimized", 103, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 12, 74, 95, 10
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 70, 135, 18
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 148, 6, 2, 82
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 6, 135, 58
+END
+
+LaunchIcon ICON "launcher.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION     1, 0, 0, 1
+PRODUCTVERSION  1, 0, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Launcher Object\0"
+      VALUE "FileVersion",      "1.00\0"
+      VALUE "InternalName",     "ALM_APPL\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1994.\0"
+      VALUE "OriginalFilename", "ALM_APPL.DLL\0"
+      VALUE "ProductName",      "Visual AppBuilder Version 1.0\0"
+      VALUE "ProductVersion",   "1.00\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.00\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1994.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

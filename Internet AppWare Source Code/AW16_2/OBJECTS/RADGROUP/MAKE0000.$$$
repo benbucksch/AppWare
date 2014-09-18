@@ -1,0 +1,4 @@
+-nsobj
+-IG:\INTERNAL\INCLUDE;..\INCLUDE;D:\BORLANDC\INCLUDE
+-I
+-3 -c -ml! -Vf -V -w -WDE -DWINVER=0x030a -k- -O -Obegilpvs -v- -vi -X -Z 

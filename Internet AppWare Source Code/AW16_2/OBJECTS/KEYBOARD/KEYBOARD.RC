@@ -1,0 +1,69 @@
+#include "windows.h"
+#include "bwcc.h"
+#include "ver.h"
+#include "keyboard.h"
+
+KEYBOARD DIALOG 58, 44, 151, 80
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Keyboard"
+FONT 8, "Helv"
+BEGIN
+	CONTROL "OK", IDOK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 31, 60, 40, 14
+	PUSHBUTTON "Cancel", IDCANCEL, 79, 60, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	CONTROL "&Help", IDHELP, "BUTTON", BS_PUSHBUTTON | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 105, 60, 40, 14
+	CONTROL "&Active at Startup", ACTIVEID, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 11, 40, 69, 10
+	CONTROL "KEYBOARD", -1, "STATIC", SS_ICON | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 4, 18, 20
+	LTEXT " ", ID_OBJECT, 28, 5, 116, 18, WS_CHILD | WS_VISIBLE | WS_GROUP
+	CONTROL "", 203, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 6, 36, 139, 18
+	CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 151, 2
+END
+
+KEYBOARD ICON "keyboard.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Keyboard Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_KEYB\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_KEYB.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////
