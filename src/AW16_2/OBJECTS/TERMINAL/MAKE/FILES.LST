@@ -1,8 +1,0 @@
-admtmnl.cpp
-terminal.cpp
-ansiterm.cpp
-ttyterm.cpp
-vt52term.cpp
-tmnl_vi.cpp
-fun_tmnl.cpp
-evt_term.cpp
