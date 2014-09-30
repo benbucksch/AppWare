@@ -1,8 +1,0 @@
-
-Overview Of Text Factory
-
-Allow the concantonation of objects in text form with the
-ability to add control charaters and literal strings.
-
-The output of text factory is specified by the result variable
-which is always a text object type.

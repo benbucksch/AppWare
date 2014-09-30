@@ -1,7 +1,0 @@
-File n:\objects\menus\itemlib.cpp:
-341            pItemInfo->itemID = MenuGenerateItemID();
-File n:\objects\menus\menulib.cpp:
-46         // FUNCTION....: MenuGenerateItemID
-51         short MenuGenerateItemID(
-774        	pItemEntry->menuItemID = MenuGenerateItemID();
-832        	pItemEntry->menuItemID = pItemSpec->itemID = MenuGenerateItemID();
