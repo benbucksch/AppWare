@@ -1,0 +1,17 @@
+LIBRARY     AW32FILE
+
+DESCRIPTION 'Novell AppWare Loadable Module: File Object'
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD SINGLE MOVEABLE
+SEGMENTS    _TEXT PRELOAD
+
+EXPORTS
+      EditObjectDialogProc           @2
+      OpenFileFunc                   @6
+      LoadFileFunc                   @7
+      SaveAsFileFunc                 @8
+      SaveFileFunc                   @9
+      NewFileFunc                    @10
+      FileNameFunc                   @11
+      AdministrationRoutine          @12

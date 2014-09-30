@@ -1,0 +1,1299 @@
+
+ Start         Length Name               Class
+
+  0001:0000    1F65H  _TEXT              CODE
+  0002:0000    09D0H  ARRAY_TEXT         CODE
+  0003:0000    0569H  BLKBLK_TEXT        CODE
+  0004:0000    033AH  DBSARRAY_TEXT      CODE
+  0005:0000    054FH  DBSTRING_TEXT      CODE
+  0006:0000    08A9H  FILEOBJ_TEXT       CODE
+  0007:0000    0080H  MEMCLASS_TEXT      CODE
+  0008:0000    055DH  MEMLIB_TEXT        CODE
+  0009:0000    30C0H  RECBLK_TEXT        CODE
+  000A:0000    1756H  SERBLK_TEXT        CODE
+  000B:0000    016DH  SERREC_TEXT        CODE
+  000C:0000    0D57H  STRSPACE_TEXT      CODE
+  000D:0000    0318H  TSTRING_TEXT       CODE
+  000E:0000    0A91H  UIDTABLE_TEXT      CODE
+  000F:0000    0A6DH  CFGDESC_TEXT       CODE
+  0010:0000    016FH  COMPDESC_TEXT      CODE
+  0011:0000    0085H  EVNTDESC_TEXT      CODE
+  0012:0000    0613H  FLOWS_TEXT         CODE
+  0013:0000    02F0H  FUNCDESC_TEXT      CODE
+  0014:0000    01BDH  METHDESC_TEXT      CODE
+  0015:0000    02B4H  OBJDESC_TEXT       CODE
+  0016:0000    0667H  PARAMS_TEXT        CODE
+  0017:0000    071CH  RESPONSE_TEXT      CODE
+  0018:0000    0234H  ROUTINES_TEXT      CODE
+  0019:0000    0F18H  SERICON_TEXT       CODE
+  001A:0000    0194H  SYSTEM_TEXT        CODE
+  001B:0000    01E2H  SYNTAX_TEXT        CODE
+  001C:0000    003DH  MAIN_TEXT          CODE
+  001D:0000    0484H  CFGUPDAT_TEXT      CODE
+  001E:0000    0000H  _FARDATA           FAR_DATA
+  001E:0000    0034H  SYSTEM5_DATA       FAR_DATA
+  001F:0000    0000H  _FARBSS            FAR_BSS
+  001F:0000    0010H  NULL               BEGDATA
+  001F:0010    0A94H  _DATA              DATA
+  001F:0AA4    0004H  _FPSEG             DATA
+  001F:0AA8    0002H  _CVTSEG            DATA
+  001F:0AAA    0006H  _SCNSEG            DATA
+  001F:0AB0    0000H  _CONST             CONST
+  001F:0AB0    0012H  _INIT_             INITDATA
+  001F:0AC2    0000H  _INITEND_          INITDATA
+  001F:0AC2    0006H  _EXIT_             EXITDATA
+  001F:0AC8    0000H  _EXITEND_          EXITDATA
+  001F:0AC8    008CH  _BSS               BSS
+  001F:0B54    0000H  _BSSEND            BSSEND
+
+
+Detailed map of segments
+
+ 0001:0000 017B C=CODE   S=_TEXT          G=(none)  M=c0d.ASM    ACBP=48
+ 0001:017C 0000 C=CODE   S=_TEXT          G=(none)  M=HUGEVAL    ACBP=48
+ 0001:017C 009A C=CODE   S=_TEXT          G=(none)  M=LDTRUNC    ACBP=48
+ 0001:0216 01BD C=CODE   S=_TEXT          G=(none)  M=REALCVT    ACBP=48
+ 0001:03D4 002B C=CODE   S=_TEXT          G=(none)  M=ROUND      ACBP=48
+ 0001:0400 0397 C=CODE   S=_TEXT          G=(none)  M=SCANTOD    ACBP=48
+ 0001:0798 0216 C=CODE   S=_TEXT          G=(none)  M=XCVT       ACBP=48
+ 0001:09AE 00F7 C=CODE   S=_TEXT          G=(none)  M=FBSTP      ACBP=28
+ 0001:0AA6 00C9 C=CODE   S=_TEXT          G=(none)  M=_POW10     ACBP=48
+ 0001:0B70 000D C=CODE   S=_TEXT          G=(none)  M=POW10D     ACBP=48
+ 0001:0B7E 001C C=CODE   S=_TEXT          G=(none)  M=CEIL       ACBP=48
+ 0001:0B9A 002C C=CODE   S=_TEXT          G=(none)  M=FFTOL      ACBP=28
+ 0001:0BC6 002F C=CODE   S=_TEXT          G=(none)  M=ATEXIT     ACBP=48
+ 0001:0BF6 0000 C=CODE   S=_TEXT          G=(none)  M=CTYPE      ACBP=48
+ 0001:0BF6 0014 C=CODE   S=_TEXT          G=(none)  M=DEL        ACBP=48
+ 0001:0C0A 0097 C=CODE   S=_TEXT          G=(none)  M=EXIT       ACBP=48
+ 0001:0CA2 0000 C=CODE   S=_TEXT          G=(none)  M=FILES      ACBP=48
+ 0001:0CA2 0000 C=CODE   S=_TEXT          G=(none)  M=FILES2     ACBP=48
+ 0001:0CA2 0017 C=CODE   S=_TEXT          G=(none)  M=F_LXMUL    ACBP=28
+ 0001:0CB9 001C C=CODE   S=_TEXT          G=(none)  M=F_SCOPY    ACBP=28
+ 0001:0CD5 00AE C=CODE   S=_TEXT          G=(none)  M=H_LDIV     ACBP=28
+ 0001:0D83 0027 C=CODE   S=_TEXT          G=(none)  M=H_SPUSH    ACBP=28
+ 0001:0DAA 004B C=CODE   S=_TEXT          G=(none)  M=IOERROR    ACBP=48
+ 0001:0DF6 0013 C=CODE   S=_TEXT          G=(none)  M=ISATTY     ACBP=48
+ 0001:0E0A 002B C=CODE   S=_TEXT          G=(none)  M=LSEEK      ACBP=48
+ 0001:0E36 0070 C=CODE   S=_TEXT          G=(none)  M=NEW        ACBP=48
+ 0001:0EA6 0017 C=CODE   S=_TEXT          G=(none)  M=N_LXMUL    ACBP=28
+ 0001:0EBE 00BA C=CODE   S=_TEXT          G=(none)  M=SETUPIO    ACBP=48
+ 0001:0F78 00CF C=CODE   S=_TEXT          G=(none)  M=FFLUSH     ACBP=48
+ 0001:1048 0044 C=CODE   S=_TEXT          G=(none)  M=FLUSHALL   ACBP=48
+ 0001:108C 01E6 C=CODE   S=_TEXT          G=(none)  M=FSEEK      ACBP=48
+ 0001:1272 011F C=CODE   S=_TEXT          G=(none)  M=SETVBUF    ACBP=48
+ 0001:1392 002B C=CODE   S=_TEXT          G=(none)  M=STRCPY     ACBP=48
+ 0001:13BE 0021 C=CODE   S=_TEXT          G=(none)  M=STRLEN     ACBP=48
+ 0001:13E0 004B C=CODE   S=_TEXT          G=(none)  M=STRRCHR    ACBP=48
+ 0001:142C 0153 C=CODE   S=_TEXT          G=(none)  M=WRITE      ACBP=48
+ 0001:1580 0069 C=CODE   S=_TEXT          G=(none)  M=WRITEA     ACBP=48
+ 0001:15EA 003A C=CODE   S=_TEXT          G=(none)  M=XFFLUSH    ACBP=48
+ 0001:1624 0026 C=CODE   S=_TEXT          G=(none)  M=FMEMCPY    ACBP=48
+ 0001:164A 0047 C=CODE   S=_TEXT          G=(none)  M=FMEMSET    ACBP=48
+ 0001:1692 0074 C=CODE   S=_TEXT          G=(none)  M=ERREXIT    ACBP=48
+ 0001:1706 000F C=CODE   S=_TEXT          G=(none)  M=FPERR      ACBP=28
+ 0001:1715 003C C=CODE   S=_TEXT          G=(none)  M=FPINIT     ACBP=28
+ 0001:1752 006E C=CODE   S=_TEXT          G=(none)  M=HEAP       ACBP=48
+ 0001:17C0 003E C=CODE   S=_TEXT          G=(none)  M=SETARGV0   ACBP=48
+ 0001:17FE 0006 C=CODE   S=_TEXT          G=(none)  M=SUBALLOC   ACBP=48
+ 0001:1804 0000 C=CODE   S=_TEXT          G=(none)  M=WCFNCPTR   ACBP=48
+ 0001:1804 0268 C=CODE   S=_TEXT          G=(none)  M=SIGNAL     ACBP=48
+ 0001:1A6C 02A5 C=CODE   S=_TEXT          G=(none)  M=ASMMEM     ACBP=28
+ 0001:1D11 005B C=CODE   S=_TEXT          G=(none)  M=WINMEM     ACBP=28
+ 0001:1D6C 01F9 C=CODE   S=_TEXT          G=(none)  M=FHEAP      ACBP=48
+ 0002:0000 09D0 C=CODE   S=ARRAY_TEXT     G=(none)  M=SRC\ARRAY.CPP ACBP=48
+ 0003:0000 0569 C=CODE   S=BLKBLK_TEXT    G=(none)  M=SRC\BLKBLK.CPP ACBP=48
+ 0004:0000 033A C=CODE   S=DBSARRAY_TEXT  G=(none)  M=SRC\DBSARRAY.CPP ACBP=48
+ 0005:0000 054F C=CODE   S=DBSTRING_TEXT  G=(none)  M=SRC\DBSTRING.CPP ACBP=48
+ 0006:0000 08A9 C=CODE   S=FILEOBJ_TEXT   G=(none)  M=SRC\FILEOBJ.CPP ACBP=48
+ 0007:0000 0080 C=CODE   S=MEMCLASS_TEXT  G=(none)  M=SRC\MEMCLASS.CPP ACBP=48
+ 0008:0000 055D C=CODE   S=MEMLIB_TEXT    G=(none)  M=SRC\MEMLIB.CPP ACBP=48
+ 0009:0000 30C0 C=CODE   S=RECBLK_TEXT    G=(none)  M=SRC\RECBLK.CPP ACBP=48
+ 000A:0000 1756 C=CODE   S=SERBLK_TEXT    G=(none)  M=SRC\SERBLK.CPP ACBP=48
+ 000B:0000 016D C=CODE   S=SERREC_TEXT    G=(none)  M=SRC\SERREC.CPP ACBP=48
+ 000C:0000 0D57 C=CODE   S=STRSPACE_TEXT  G=(none)  M=SRC\STRSPACE.CPP ACBP=48
+ 000D:0000 0318 C=CODE   S=TSTRING_TEXT   G=(none)  M=SRC\TSTRING.CPP ACBP=48
+ 000E:0000 0A91 C=CODE   S=UIDTABLE_TEXT  G=(none)  M=SRC\UIDTABLE.CPP ACBP=48
+ 000F:0000 0A6D C=CODE   S=CFGDESC_TEXT   G=(none)  M=SRC\CFGDESC.CPP ACBP=48
+ 0010:0000 016F C=CODE   S=COMPDESC_TEXT  G=(none)  M=SRC\COMPDESC.CPP ACBP=48
+ 0011:0000 0085 C=CODE   S=EVNTDESC_TEXT  G=(none)  M=SRC\EVNTDESC.CPP ACBP=48
+ 0012:0000 0613 C=CODE   S=FLOWS_TEXT     G=(none)  M=SRC\FLOWS.CPP ACBP=48
+ 0013:0000 02F0 C=CODE   S=FUNCDESC_TEXT  G=(none)  M=SRC\FUNCDESC.CPP ACBP=48
+ 0014:0000 01BD C=CODE   S=METHDESC_TEXT  G=(none)  M=SRC\METHDESC.CPP ACBP=48
+ 0015:0000 02B4 C=CODE   S=OBJDESC_TEXT   G=(none)  M=SRC\OBJDESC.CPP ACBP=48
+ 0016:0000 0667 C=CODE   S=PARAMS_TEXT    G=(none)  M=SRC\PARAMS.CPP ACBP=48
+ 0017:0000 071C C=CODE   S=RESPONSE_TEXT  G=(none)  M=SRC\RESPONSE.CPP ACBP=48
+ 0018:0000 0234 C=CODE   S=ROUTINES_TEXT  G=(none)  M=SRC\ROUTINES.CPP ACBP=48
+ 0019:0000 0F18 C=CODE   S=SERICON_TEXT   G=(none)  M=SRC\SERICON.CPP ACBP=48
+ 001A:0000 0194 C=CODE   S=SYSTEM_TEXT    G=(none)  M=SRC\SYSTEM.CPP ACBP=48
+ 001B:0000 01E2 C=CODE   S=SYNTAX_TEXT    G=(none)  M=SRC\SYNTAX.CPP ACBP=48
+ 001C:0000 003D C=CODE   S=MAIN_TEXT      G=(none)  M=SRC\MAIN.CPP ACBP=48
+ 001D:0000 0484 C=CODE   S=CFGUPDAT_TEXT  G=(none)  M=SRC\CFGUPDAT.CPP ACBP=48
+ 001E:0000 0000 C=FAR_DATA S=_FARDATA       G=(none)  M=c0d.ASM    ACBP=68
+ 001E:0000 0034 C=FAR_DATA S=SYSTEM5_DATA   G=(none)  M=SRC\SYSTEM.CPP ACBP=68
+ 001F:0000 0000 C=FAR_BSS S=_FARBSS        G=DGROUP  M=c0d.ASM    ACBP=68
+ 001F:0000 0010 C=BEGDATA S=NULL           G=DGROUP  M=c0d.ASM    ACBP=68
+ 001F:0010 0040 C=DATA   S=_DATA          G=DGROUP  M=c0d.ASM    ACBP=68
+ 001F:0050 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\ARRAY.CPP ACBP=48
+ 001F:0050 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\BLKBLK.CPP ACBP=48
+ 001F:0050 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\DBSARRAY.CPP ACBP=48
+ 001F:0050 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\DBSTRING.CPP ACBP=48
+ 001F:0050 0002 C=DATA   S=_DATA          G=DGROUP  M=SRC\FILEOBJ.CPP ACBP=48
+ 001F:0052 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\MEMCLASS.CPP ACBP=48
+ 001F:0052 0008 C=DATA   S=_DATA          G=DGROUP  M=SRC\MEMLIB.CPP ACBP=48
+ 001F:005A 0079 C=DATA   S=_DATA          G=DGROUP  M=SRC\RECBLK.CPP ACBP=48
+ 001F:00D4 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\SERBLK.CPP ACBP=48
+ 001F:00D4 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\SERREC.CPP ACBP=48
+ 001F:00D4 0254 C=DATA   S=_DATA          G=DGROUP  M=SRC\STRSPACE.CPP ACBP=48
+ 001F:0328 005B C=DATA   S=_DATA          G=DGROUP  M=SRC\TSTRING.CPP ACBP=48
+ 001F:0384 0161 C=DATA   S=_DATA          G=DGROUP  M=SRC\UIDTABLE.CPP ACBP=48
+ 001F:04E6 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\CFGDESC.CPP ACBP=48
+ 001F:04E6 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\COMPDESC.CPP ACBP=48
+ 001F:04E6 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\EVNTDESC.CPP ACBP=48
+ 001F:04E6 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\FLOWS.CPP ACBP=48
+ 001F:04E6 0002 C=DATA   S=_DATA          G=DGROUP  M=SRC\FUNCDESC.CPP ACBP=48
+ 001F:04E8 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\METHDESC.CPP ACBP=48
+ 001F:04E8 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\OBJDESC.CPP ACBP=48
+ 001F:04E8 0004 C=DATA   S=_DATA          G=DGROUP  M=SRC\PARAMS.CPP ACBP=48
+ 001F:04EC 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\RESPONSE.CPP ACBP=48
+ 001F:04EC 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\ROUTINES.CPP ACBP=48
+ 001F:04EC 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\SERICON.CPP ACBP=48
+ 001F:04EC 005E C=DATA   S=_DATA          G=DGROUP  M=SRC\SYSTEM.CPP ACBP=48
+ 001F:054A 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\SYNTAX.CPP ACBP=48
+ 001F:054A 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\MAIN.CPP ACBP=48
+ 001F:054A 0000 C=DATA   S=_DATA          G=DGROUP  M=SRC\CFGUPDAT.CPP ACBP=48
+ 001F:054A 0024 C=DATA   S=_DATA          G=DGROUP  M=HUGEVAL    ACBP=48
+ 001F:056E 0000 C=DATA   S=_DATA          G=DGROUP  M=LDTRUNC    ACBP=48
+ 001F:056E 0000 C=DATA   S=_DATA          G=DGROUP  M=REALCVT    ACBP=48
+ 001F:056E 0000 C=DATA   S=_DATA          G=DGROUP  M=ROUND      ACBP=48
+ 001F:056E 0018 C=DATA   S=_DATA          G=DGROUP  M=SCANTOD    ACBP=48
+ 001F:0586 0000 C=DATA   S=_DATA          G=DGROUP  M=XCVT       ACBP=48
+ 001F:0586 0000 C=DATA   S=_DATA          G=DGROUP  M=FBSTP      ACBP=48
+ 001F:0586 0080 C=DATA   S=_DATA          G=DGROUP  M=_POW10     ACBP=48
+ 001F:0606 0000 C=DATA   S=_DATA          G=DGROUP  M=POW10D     ACBP=48
+ 001F:0606 0000 C=DATA   S=_DATA          G=DGROUP  M=CEIL       ACBP=48
+ 001F:0606 0000 C=DATA   S=_DATA          G=DGROUP  M=FFTOL      ACBP=48
+ 001F:0606 0002 C=DATA   S=_DATA          G=DGROUP  M=ATEXIT     ACBP=48
+ 001F:0608 0101 C=DATA   S=_DATA          G=DGROUP  M=CTYPE      ACBP=48
+ 001F:070A 0000 C=DATA   S=_DATA          G=DGROUP  M=DEL        ACBP=48
+ 001F:070A 000C C=DATA   S=_DATA          G=DGROUP  M=EXIT       ACBP=48
+ 001F:0716 0190 C=DATA   S=_DATA          G=DGROUP  M=FILES      ACBP=48
+ 001F:08A6 002A C=DATA   S=_DATA          G=DGROUP  M=FILES2     ACBP=48
+ 001F:08D0 0000 C=DATA   S=_DATA          G=DGROUP  M=F_LXMUL    ACBP=48
+ 001F:08D0 0000 C=DATA   S=_DATA          G=DGROUP  M=F_SCOPY    ACBP=48
+ 001F:08D0 0000 C=DATA   S=_DATA          G=DGROUP  M=H_LDIV     ACBP=48
+ 001F:08D0 0000 C=DATA   S=_DATA          G=DGROUP  M=H_SPUSH    ACBP=48
+ 001F:08D0 005B C=DATA   S=_DATA          G=DGROUP  M=IOERROR    ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=ISATTY     ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=LSEEK      ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=NEW        ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=N_LXMUL    ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=SETUPIO    ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=FFLUSH     ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=FLUSHALL   ACBP=48
+ 001F:092C 0000 C=DATA   S=_DATA          G=DGROUP  M=FSEEK      ACBP=48
+ 001F:092C 0004 C=DATA   S=_DATA          G=DGROUP  M=SETVBUF    ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=STRCPY     ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=STRLEN     ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=STRRCHR    ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=WRITE      ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=WRITEA     ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=XFFLUSH    ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=FMEMCPY    ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=FMEMSET    ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=ERREXIT    ACBP=48
+ 001F:0930 0000 C=DATA   S=_DATA          G=DGROUP  M=FPERR      ACBP=48
+ 001F:0930 0008 C=DATA   S=_DATA          G=DGROUP  M=FPINIT     ACBP=48
+ 001F:0938 0000 C=DATA   S=_DATA          G=DGROUP  M=HEAP       ACBP=48
+ 001F:0938 001F C=DATA   S=_DATA          G=DGROUP  M=SETARGV0   ACBP=48
+ 001F:0958 0000 C=DATA   S=_DATA          G=DGROUP  M=SUBALLOC   ACBP=48
+ 001F:0958 0008 C=DATA   S=_DATA          G=DGROUP  M=WCFNCPTR   ACBP=48
+ 001F:0960 0143 C=DATA   S=_DATA          G=DGROUP  M=SIGNAL     ACBP=48
+ 001F:0AA4 0000 C=DATA   S=_DATA          G=DGROUP  M=ASMMEM     ACBP=48
+ 001F:0AA4 0000 C=DATA   S=_DATA          G=DGROUP  M=WINMEM     ACBP=48
+ 001F:0AA4 0000 C=DATA   S=_DATA          G=DGROUP  M=FHEAP      ACBP=48
+ 001F:0AA4 0004 C=DATA   S=_FPSEG         G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AA8 0000 C=DATA   S=_CVTSEG        G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AA8 0002 C=DATA   S=_CVTSEG        G=DGROUP  M=REALCVT    ACBP=48
+ 001F:0AAA 0000 C=DATA   S=_SCNSEG        G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AAA 0006 C=DATA   S=_SCNSEG        G=DGROUP  M=SCANTOD    ACBP=48
+ 001F:0AB0 0000 C=CONST  S=_CONST         G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AB0 0000 C=INITDATA S=_INIT_         G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AB0 0006 C=INITDATA S=_INIT_         G=DGROUP  M=SETUPIO    ACBP=48
+ 001F:0AB6 0006 C=INITDATA S=_INIT_         G=DGROUP  M=FPINIT     ACBP=48
+ 001F:0ABC 0006 C=INITDATA S=_INIT_         G=DGROUP  M=SETARGV0   ACBP=48
+ 001F:0AC2 0000 C=INITDATA S=_INITEND_      G=DGROUP  M=c0d.ASM    ACBP=28
+ 001F:0AC2 0000 C=EXITDATA S=_EXIT_         G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AC2 0006 C=EXITDATA S=_EXIT_         G=DGROUP  M=FPINIT     ACBP=48
+ 001F:0AC8 0000 C=EXITDATA S=_EXITEND_      G=DGROUP  M=c0d.ASM    ACBP=28
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=c0d.ASM    ACBP=48
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\ARRAY.CPP ACBP=48
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\BLKBLK.CPP ACBP=48
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\DBSARRAY.CPP ACBP=48
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\DBSTRING.CPP ACBP=48
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\FILEOBJ.CPP ACBP=48
+ 001F:0AC8 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\MEMCLASS.CPP ACBP=48
+ 001F:0AC8 0002 C=BSS    S=_BSS           G=DGROUP  M=SRC\MEMLIB.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\RECBLK.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\SERBLK.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\SERREC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\STRSPACE.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\TSTRING.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\UIDTABLE.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\CFGDESC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\COMPDESC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\EVNTDESC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\FLOWS.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\FUNCDESC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\METHDESC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\OBJDESC.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\PARAMS.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\RESPONSE.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\ROUTINES.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\SERICON.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\SYSTEM.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\SYNTAX.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\MAIN.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SRC\CFGUPDAT.CPP ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=LDTRUNC    ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=REALCVT    ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=ROUND      ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=SCANTOD    ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=XCVT       ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=_POW10     ACBP=48
+ 001F:0ACA 0000 C=BSS    S=_BSS           G=DGROUP  M=CEIL       ACBP=48
+ 001F:0ACA 0080 C=BSS    S=_BSS           G=DGROUP  M=ATEXIT     ACBP=48
+ 001F:0B4A 0000 C=BSS    S=_BSS           G=DGROUP  M=IOERROR    ACBP=48
+ 001F:0B4A 0000 C=BSS    S=_BSS           G=DGROUP  M=ISATTY     ACBP=48
+ 001F:0B4A 0000 C=BSS    S=_BSS           G=DGROUP  M=LSEEK      ACBP=48
+ 001F:0B4A 0004 C=BSS    S=_BSS           G=DGROUP  M=NEW        ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=SETUPIO    ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=STRCPY     ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=STRLEN     ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=WRITEA     ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=FMEMCPY    ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=FMEMSET    ACBP=48
+ 001F:0B4E 0000 C=BSS    S=_BSS           G=DGROUP  M=SETARGV0   ACBP=48
+ 001F:0B4E 0006 C=BSS    S=_BSS           G=DGROUP  M=SUBALLOC   ACBP=48
+ 001F:0B54 0000 C=BSSEND S=_BSSEND        G=DGROUP  M=c0d.ASM    ACBP=28
+
+  Address         Publics by Name
+
+ 0001:0BF6       operator delete(void far*)
+ 0001:0E62       operator new(unsigned int)
+ 0008:01C1       Allocate(unsigned int)
+ 0009:30BC       cfgdesc::
+ 0009:2AE7       CFGDESC::CFGDESC(void far*)
+ 000F:0000 idle  CFGDESC::CFGDESC()
+ 000F:0794 idle  CFGDESC::ConvertToPointers()
+ 000F:030C idle  CFGDESC::CreateEventDesc(TSTRING,unsigned long)
+ 000F:0259 idle  CFGDESC::CreateFunctionDesc(TSTRING,unsigned long)
+ 000F:01A6 idle  CFGDESC::CreateObjectDesc(TSTRING,unsigned long)
+ 000F:0582 idle  CFGDESC::DeleteEventDesc(SERUID)
+ 000F:048C idle  CFGDESC::DeleteFunctionDesc(SERUID)
+ 000F:03BE idle  CFGDESC::DeleteObjectDesc(SERUID)
+ 000F:070C idle  CFGDESC::NextEventDesc(EVENTDESC far*)
+ 000F:0684 idle  CFGDESC::NextFunctionDesc(FUNCDESC far*)
+ 000F:05FC idle  CFGDESC::NextObjectDesc(OBJDESC far*)
+ 000F:076B idle  CFGDESC::pNextEventDesc(EVENTDESC far*)
+ 000F:06E3 idle  CFGDESC::pNextFunctionDesc(FUNCDESC far*)
+ 000F:065B idle  CFGDESC::pNextObjectDesc(OBJDESC far*)
+ 0008:04B7 idle  CleanUpBlocks()
+ 0009:30A8       compdesc::
+ 0009:2E21       COMPDESC::COMPDESC(void far*)
+ 0010:0000       COMPDESC::COMPDESC(unsigned long,TSTRING)
+ 0010:014F       COMPDESC::ConvertToPointers()
+ 0010:00BC idle  COMPDESC::GetName()
+ 0010:0115 idle  COMPDESC::GetUID()
+ 0010:00FA idle  COMPDESC::pGetName()
+ 0010:0083 idle  COMPDESC::SetName(TSTRING)
+ 0010:0130 idle  COMPDESC::SetUID(unsigned long)
+ 0008:007C idle  CreateArrayOfHandles()
+ 0005:00A1       DBSTRING::operator =(TSTRING far&)
+ 0005:0000       DBSTRING::operator =(DBSTRING far&)
+ 0005:0158       DBSTRING::operator =(char far*)
+ 0005:029C       DBSTRING::DBSTRING(TSTRING far&)
+ 0005:0339       DBSTRING::DBSTRING(const DBSTRING far&)
+ 0009:2DF1       DBSTRING::DBSTRING(void far*)
+ 0005:0207       DBSTRING::DBSTRING(char far*)
+ 0004:02D7       DBSTRING::DBSTRING()
+ 0005:0541       DBSTRING::operator delete(void far*)
+ 0005:03BA       DBSTRING::~DBSTRING()
+ 0004:0326       DBSTRING::operator new(unsigned int)
+ 0004:02C1       DBSTRING::operator new(unsigned int,void far*)
+ 0005:0465       DBSTRING::operator char far*()
+ 0005:04AC       DBSTRING::ConvertToPointers()
+ 0005:0419 idle  DBSTRING::strlen()
+ 0004:01FE idle  DBSTRINGARRAY::operator =(DBSTRINGARRAY far&)
+ 0009:3022       DBSTRINGARRAY::DBSTRINGARRAY(void far*)
+ 0004:0042       DBSTRINGARRAY::DBSTRINGARRAY(unsigned short)
+ 0004:0000       DBSTRINGARRAY::DBSTRINGARRAY()
+ 0004:019D       DBSTRINGARRAY::operator [](unsigned short) const
+ 0004:026B       DBSTRINGARRAY::ConvertToPointers()
+ 0004:00CD       DBSTRINGARRAY::Resize(unsigned short)
+ 0008:0387       Deallocate(void far*)
+ 001D:0000 idle  DoUpdate(FILEOBJECT far*,char far*,char far*,void(far*)(short,void far*))
+ 0009:30B0       eventdesc::
+ 0009:2D35       EVENTDESC::EVENTDESC(void far*)
+ 0011:0000       EVENTDESC::EVENTDESC(unsigned long,TSTRING)
+ 0006:0248 idle  FILEHEADER::FILEHEADER(int)
+ 0006:0000 idle  FILEHEADER::FILEHEADER(UIDTABLE far*)
+ 0006:0430       FILEOBJECT::FILEOBJECT(int)
+ 0006:0377 idle  FILEOBJECT::FILEOBJECT()
+ 0006:06C4 idle  FILEOBJECT::~FILEOBJECT()
+ 0003:0550       FILEOBJECT::GetBlockBlocks()
+ 001D:031D       FILEOBJECT::GetFileType()
+ 001D:0387       FILEOBJECT::GetHeadBlock()
+ 001D:0334       FILEOBJECT::GetHeadRec()
+ 001D:02D6       FILEOBJECT::GetIdString()
+ 001D:02EF       FILEOBJECT::GetMajorVersion()
+ 001D:0306       FILEOBJECT::GetMinorVersion()
+ 000F:09DC       FILEOBJECT::GetName()
+ 0009:2A1D       FILEOBJECT::GetRecordBlocks()
+ 000A:171F       FILEOBJECT::GetSeriusBlocks()
+ 0005:0503       FILEOBJECT::GetStringSpace()
+ 0002:08F9       FILEOBJECT::GetUIDTable()
+ 0012:010E idle  FLOWDESC::operator =(FLOWDESC far&)
+ 0012:0050 idle  FLOWDESC::FLOWDESC(char far*,char far*)
+ 0012:0000 idle  FLOWDESC::FLOWDESC()
+ 0012:05EF       FLOWDESC::operator delete(void far*)
+ 0012:00BB idle  FLOWDESC::~FLOWDESC()
+ 0012:05DB       FLOWDESC::operator new(unsigned int)
+ 0012:05FD       FLOWDESC::operator new(unsigned int,void far*)
+ 0012:016A idle  FLOWDESC::ConvertToPointers()
+ 0012:051A idle  FLOWDESCARRAY::operator =(FLOWDESCARRAY far&)
+ 0012:0260 idle  FLOWDESCARRAY::FLOWDESCARRAY(const FLOWDESCARRAY far&)
+ 0009:2F9A       FLOWDESCARRAY::FLOWDESCARRAY(void far*)
+ 0012:01D6       FLOWDESCARRAY::FLOWDESCARRAY(unsigned short)
+ 0012:0198 idle  FLOWDESCARRAY::FLOWDESCARRAY()
+ 0012:0332 idle  FLOWDESCARRAY::operator [](unsigned short) const
+ 0012:0586       FLOWDESCARRAY::ConvertToPointers()
+ 0012:040B idle  FLOWDESCARRAY::Delete(unsigned short)
+ 0012:0353 idle  FLOWDESCARRAY::Insert(unsigned short,char far*,char far*)
+ 0012:044C idle  FLOWDESCARRAY::Resize(unsigned short)
+ 0009:30B4       funcdesc::
+ 0009:2C37       FUNCDESC::FUNCDESC(void far*)
+ 0013:0000       FUNCDESC::FUNCDESC(unsigned long,TSTRING)
+ 0013:0268       FUNCDESC::ConvertToPointers()
+ 0013:0224 idle  FUNCDESC::GetFlow(int)
+ 0013:01B8 idle  FUNCDESC::GetFlowsCount()
+ 0013:015B idle  FUNCDESC::GetIcons()
+ 0013:01DA idle  FUNCDESC::GetInput(int)
+ 0013:0174 idle  FUNCDESC::GetInputsCount()
+ 0013:01FF idle  FUNCDESC::GetOutput(int)
+ 0013:0196 idle  FUNCDESC::GetOutputsCount()
+ 0013:011D idle  FUNCDESC::SetLibName(char far*)
+ 0008:0000 idle  GetGlobalBlockArrayAddr()
+ 0008:0032 idle  GetGlobalBlockArraySize()
+ 0002:0838       GetObject(SERUID)
+ 000F:0A24       GetObject(SERUID,int far&)
+ 0002:07E6       GetUID(void far*)
+ 0008:0059       InitializeBlocks()
+ 0007:0019       MEMORY::operator delete(void far*)
+ 0007:0000       MEMORY::operator new(unsigned int)
+ 0007:0035 idle  MEMORY::operator new(unsigned int,int)
+ 0009:30AC       methoddesc::
+ 0009:2D87       METHODDESC::METHODDESC(void far*)
+ 0014:0000 idle  METHODDESC::METHODDESC(unsigned long,TSTRING)
+ 0014:018F idle  METHODDESC::ConvertToPointers()
+ 0014:00CE idle  METHODDESC::GetDLLName()
+ 0014:0090 idle  METHODDESC::GetFunctionName()
+ 0014:00E7 idle  METHODDESC::GetTypeID()
+ 0014:012D idle  METHODDESC::SetDLLName(char far*)
+ 0014:0102 idle  METHODDESC::SetFunctionName(char far*)
+ 0014:016B idle  METHODDESC::SetTypeID(unsigned long)
+ 0008:00D8 idle  NewBlock(unsigned int)
+ 0009:30B8       objdesc::
+ 0009:2B81       OBJDESC::OBJDESC(void far*)
+ 0015:0000       OBJDESC::OBJDESC(unsigned long,TSTRING)
+ 0015:023A       OBJDESC::ConvertToPointers()
+ 0015:014B idle  OBJDESC::GetDLL(short)
+ 0015:00EC idle  OBJDESC::GetFunction(short)
+ 0015:00D3 idle  OBJDESC::GetIcons()
+ 0015:017A idle  OBJDESC::pGetDLL(short)
+ 0015:011B idle  OBJDESC::pGetFunction(short)
+ 0015:028C idle  OBJDESC::pGetResponse(unsigned long)
+ 0015:01F2 idle  OBJDESC::SetDLL(short,char far*)
+ 0015:01AA idle  OBJDESC::SetFunction(short,char far*)
+ 0016:0121 idle  PARAMDESC::operator =(PARAMDESC far&)
+ 0016:0050 idle  PARAMDESC::PARAMDESC(char far*,char far*,unsigned long,unsigned long)
+ 0016:0000 idle  PARAMDESC::PARAMDESC()
+ 0016:0643       PARAMDESC::operator delete(void far*)
+ 0016:00CE idle  PARAMDESC::~PARAMDESC()
+ 0016:062F       PARAMDESC::operator new(unsigned int)
+ 0016:0651       PARAMDESC::operator new(unsigned int,void far*)
+ 0016:0193 idle  PARAMDESC::ConvertToPointers()
+ 0016:056E idle  PARAMDESCARRAY::operator =(PARAMDESCARRAY far&)
+ 0016:0289 idle  PARAMDESCARRAY::PARAMDESCARRAY(const PARAMDESCARRAY far&)
+ 0009:2FDE       PARAMDESCARRAY::PARAMDESCARRAY(void far*)
+ 0016:01FF       PARAMDESCARRAY::PARAMDESCARRAY(unsigned short)
+ 0016:01C1 idle  PARAMDESCARRAY::PARAMDESCARRAY()
+ 0016:036B idle  PARAMDESCARRAY::operator [](unsigned short) const
+ 0016:05DA       PARAMDESCARRAY::ConvertToPointers()
+ 0016:052D idle  PARAMDESCARRAY::Delete(unsigned short)
+ 0016:046A idle  PARAMDESCARRAY::Insert(unsigned short,char far*,char far*,unsigned long,unsigned long)
+ 0016:038C idle  PARAMDESCARRAY::Resize(unsigned short)
+ 0009:0117       RECORDBLOCK::RECORDBLOCK(long,long)
+ 0009:01BF idle  RECORDBLOCK::RECORDBLOCK(long,long,long)
+ 0009:0072       RECORDBLOCK::RECORDBLOCK()
+ 0009:0042 idle  RECORDBLOCK::operator delete(void far*,unsigned int)
+ 0009:04EC       RECORDBLOCK::~RECORDBLOCK()
+ 0009:0000 idle  RECORDBLOCK::operator new(unsigned int)
+ 0009:002C idle  RECORDBLOCK::operator new(unsigned int,void far*)
+ 0009:1D87       RECORDBLOCK::operator [](long)
+ 0009:0C1B idle  RECORDBLOCK::AddPreallocatedRecord(unsigned int)
+ 0009:0765       RECORDBLOCK::AddRecord(unsigned int)
+ 0009:1923 idle  RECORDBLOCK::CallConstructor(SERIUSBLOCK far*)
+ 0009:1B33 idle  RECORDBLOCK::CallDestructor(void far*,short)
+ 0009:2902       RECORDBLOCK::ConvertToPointers()
+ 0009:14D8       RECORDBLOCK::DeleteRecord(void far*,unsigned int)
+ 0009:27B8 idle  RECORDBLOCK::Free()
+ 0009:052A idle  RECORDBLOCK::FreeMemory()
+ 001D:040C       RECORDBLOCK::GetBlockCount()
+ 001D:0423       RECORDBLOCK::GetBlockID()
+ 0009:1FD4       RECORDBLOCK::GetCount()
+ 0009:1FB9       RECORDBLOCK::GetRecordSize()
+ 001D:03F5       RECORDBLOCK::GetType()
+ 0009:0F00       RECORDBLOCK::InitUIDTable()
+ 0009:1FEF       RECORDBLOCK::NextRec(void far*)
+ 0009:24C2       RECORDBLOCK::pNextRec(void far*)
+ 0009:023D idle  RECORDBLOCK::PreAllocate(long)
+ 0009:11EE idle  RECORDBLOCK::PurgeBlock()
+ 0009:13FA idle  RECORDBLOCK::UpdateUIDTable(SERIUSBLOCK far*,unsigned int)
+ 0006:0757       RECORDPREFIX::RECORDPREFIX(SERUID,SERUID)
+ 0006:07C8       RECORDPREFIX::RECORDPREFIX()
+ 0017:0158 idle  RESPONSE::operator =(RESPONSE far&)
+ 0017:00DF idle  RESPONSE::RESPONSE(RESPONSE far&)
+ 0017:0058 idle  RESPONSE::RESPONSE(unsigned long,char far*,char far*)
+ 0017:0000 idle  RESPONSE::RESPONSE()
+ 0017:06F4       RESPONSE::operator delete(void far*)
+ 0017:06CA       RESPONSE::operator new(unsigned int)
+ 0017:06DE       RESPONSE::operator new(unsigned int,void far*)
+ 0017:01F5 idle  RESPONSE::ConvertToPointers()
+ 0017:0702       RESPONSE::GetEventID()
+ 0017:01B7 idle  RESPONSE::SetDll(char far*)
+ 0017:0594 idle  RESPONSEARRAY::operator =(RESPONSEARRAY far&)
+ 0017:02E1 idle  RESPONSEARRAY::RESPONSEARRAY(const RESPONSEARRAY far&)
+ 0009:2EE1       RESPONSEARRAY::RESPONSEARRAY(void far*)
+ 0017:0257 idle  RESPONSEARRAY::RESPONSEARRAY(unsigned short)
+ 0017:0215       RESPONSEARRAY::RESPONSEARRAY()
+ 0017:039B idle  RESPONSEARRAY::operator [](unsigned short) const
+ 0017:0675       RESPONSEARRAY::ConvertToPointers()
+ 0017:0432 idle  RESPONSEARRAY::Delete(unsigned short)
+ 0017:03BC idle  RESPONSEARRAY::Insert(unsigned short,unsigned long,char far*,char far*)
+ 0017:0600       RESPONSEARRAY::pGetResponse(unsigned long)
+ 0017:049F idle  RESPONSEARRAY::Resize(unsigned short)
+ 0018:0050       ROUTINES::ROUTINES(int)
+ 0009:2E85       ROUTINES::ROUTINES(void far*)
+ 0018:0000 idle  ROUTINES::ROUTINES()
+ 0018:011F idle  ROUTINES::Add(char far*,char far*)
+ 0018:0206       ROUTINES::ConvertToPointers()
+ 0018:01AE idle  ROUTINES::Delete(int)
+ 0018:00A7 idle  ROUTINES::Update(char far*,char far*,int)
+ 0009:3066       SERIUSARRAY::SERIUSARRAY(void far*)
+ 0002:0062       SERIUSARRAY::SERIUSARRAY(short,unsigned short)
+ 0002:0116 idle  SERIUSARRAY::SERIUSARRAY(short,unsigned short,SERIUSBLOCK far*)
+ 0002:0000       SERIUSARRAY::SERIUSARRAY()
+ 0002:01C4       SERIUSARRAY::~SERIUSARRAY()
+ 0002:06FC       SERIUSARRAY::ConvertToPointers()
+ 0002:04CC       SERIUSARRAY::Delete(unsigned short)
+ 0004:030F       SERIUSARRAY::GetCount() const
+ 0002:061B       SERIUSARRAY::GetElement(unsigned short) const
+ 0002:032E       SERIUSARRAY::Insert(unsigned short)
+ 0002:06B3       SERIUSARRAY::pGetElement(unsigned short)
+ 0002:024F       SERIUSARRAY::Resize(unsigned short)
+ 0002:0586 idle  SERIUSARRAY::Write(int,unsigned short far&)
+ 000A:014C       SERIUSBLOCK::SERIUSBLOCK(long)
+ 000A:00E2       SERIUSBLOCK::SERIUSBLOCK()
+ 000A:0082 idle  SERIUSBLOCK::operator delete(void far*,unsigned int)
+ 000A:0ADD       SERIUSBLOCK::~SERIUSBLOCK()
+ 000A:0000 idle  SERIUSBLOCK::operator new(unsigned int)
+ 000A:0042 idle  SERIUSBLOCK::operator new(unsigned int,SERUID)
+ 000A:002C idle  SERIUSBLOCK::operator new(unsigned int,void far*)
+ 000A:01BB       SERIUSBLOCK::AllocateBlock(long)
+ 000A:0659 idle  SERIUSBLOCK::AllocateChunk(long)
+ 000A:0D24 idle  SERIUSBLOCK::CheckBlock()
+ 000A:0F78 idle  SERIUSBLOCK::CheckFreeBlocks(MEMCHUNK far*)
+ 000A:0D34 idle  SERIUSBLOCK::CompactFree(MEMCHUNK far*,FREEBLOCK)
+ 000A:13C2       SERIUSBLOCK::DeleteSubBlock(long,long)
+ 001D:03DA       SERIUSBLOCK::GetBlockMemID()
+ 000A:14E2       SERIUSBLOCK::GetByteCount()
+ 000A:14FD       SERIUSBLOCK::GetData()
+ 000A:07C3 idle  SERIUSBLOCK::InitChunkFreeSpace(MEMCHUNK far*,long)
+ 000A:1518       SERIUSBLOCK::Read(int)
+ 000A:087D idle  SERIUSBLOCK::Read(int,RECORDBLOCK far*)
+ 000A:0A08 idle  SERIUSBLOCK::ReadChunk(int,MEMCHUNK far*,long)
+ 000A:0B57       SERIUSBLOCK::ReleaseMemory(long,long,void far*)
+ 000A:0F88       SERIUSBLOCK::ResizeBlock(long)
+ 000A:12BA idle  SERIUSBLOCK::ResizeChunk(long,long)
+ 000A:161E       SERIUSBLOCK::Write(int,unsigned short far&)
+ 0009:2A36       SERIUSBLOCKBLOCK::SERIUSBLOCKBLOCK(long)
+ 0009:2AA9       SERIUSBLOCKBLOCK::SERIUSBLOCKBLOCK()
+ 0003:0144       SERIUSBLOCKBLOCK::operator delete(void far*)
+ 0003:0000       SERIUSBLOCKBLOCK::operator new(unsigned int)
+ 0003:00AC idle  SERIUSBLOCKBLOCK::operator new(unsigned int,SERIUSBLOCK far*,UIDTABLE far*)
+ 0003:012E idle  SERIUSBLOCKBLOCK::operator new(unsigned int,void far*)
+ 0003:03B5       SERIUSBLOCKBLOCK::InitUIDTable(SERIUSBLOCK far*,UIDTABLE far*)
+ 0003:0494       SERIUSBLOCKBLOCK::NextRec(SERIUSBLOCK far*,SERIUSBLOCKBLOCK far*)
+ 0003:02DA idle  SERIUSBLOCKBLOCK::UpdateUIDTable(SERIUSBLOCK far*,UIDTABLE far*)
+ 0019:0653 idle  SERIUSICON::SERIUSICON(int,short)
+ 0009:2F25       SERIUSICON::SERIUSICON(void far*)
+ 0019:0000       SERIUSICON::SERIUSICON()
+ 0019:0B95 idle  SERIUSICON::DrawBW(unsigned int,int,int)
+ 0019:0D05 idle  SERIUSICON::DrawBWImage(unsigned int,int,int)
+ 0019:0C76 idle  SERIUSICON::DrawBWMask(unsigned int,int,int)
+ 0019:099A idle  SERIUSICON::DrawColor(unsigned int,int,int)
+ 0019:0B08 idle  SERIUSICON::DrawColorImage(unsigned int,int,int)
+ 0019:0A79 idle  SERIUSICON::DrawColorMask(unsigned int,int,int)
+ 0019:08D8 idle  SERIUSICON::InitPixels(short,short)
+ 0019:0D94 idle  SERIUSICON::Write(int)
+ 000B:0169       seriusrecord::
+ 000B:0108       SERIUSRECORD::SERIUSRECORD()
+ 000B:006A       SERIUSRECORD::operator delete(void far*,unsigned int)
+ 000B:00CA       SERIUSRECORD::~SERIUSRECORD()
+ 000B:0000       SERIUSRECORD::operator new(unsigned int)
+ 000B:0014       SERIUSRECORD::operator new(unsigned int,SERUID)
+ 000B:0054       SERIUSRECORD::operator new(unsigned int,void far*)
+ 000B:0157       SERIUSRECORD::PostReadInit()
+ 0002:07A6       SERUID::SERUID(long)
+ 0002:0776       SERUID::SERUID()
+ 0002:087C       SERUID::operator ==(const SERUID far&)
+ 0009:2A7A       SERUID::operator !=(const SERUID far&)
+ 0008:0017 idle  SetGlobalBlockArrayAddr(void far*)
+ 0008:0045 idle  SetGlobalBlockArraySize(unsigned int)
+ 0001:0E36 idle  set_new_handler(void(far*)())
+ 000C:0062       STRINGSPACE::STRINGSPACE(unsigned short)
+ 000C:0000       STRINGSPACE::STRINGSPACE()
+ 000C:0B19 idle  STRINGSPACE::CheckFreeBlocks(BLOCKHEADER far*)
+ 000C:0A6F idle  STRINGSPACE::FreeStringMemory()
+ 0005:051C       STRINGSPACE::GetPointer(unsigned short,unsigned short)
+ 000C:0929 idle  STRINGSPACE::InitBlock(STRINGBLOCK far&)
+ 000C:0A06 idle  STRINGSPACE::InitStringMemory(unsigned short)
+ 000C:00A3       STRINGSPACE::Read(int)
+ 000C:0202       STRINGSPACE::StringAlloc(int,short far&)
+ 000C:05DA       STRINGSPACE::StringFree(char far*)
+ 000C:05A7       STRINGSPACE::StringFree(unsigned short,unsigned short)
+ 000C:0CC8 idle  STRINGSPACE::Write(int)
+ 001B:003E idle  SYNTAX::SYNTAX(const SYNTAX far&)
+ 0009:2F56       SYNTAX::SYNTAX(void far*)
+ 001B:0000       SYNTAX::SYNTAX()
+ 001B:012B idle  SYNTAX::Add(char far*)
+ 001B:01C6       SYNTAX::ConvertToPointers()
+ 001B:0181 idle  SYNTAX::Delete(int)
+ 001B:00D6 idle  SYNTAX::Update(char far*,int)
+ 001A:006C idle  SYSTEM::CleanUp()
+ 001E:0002       SYSTEM::contextStack
+ 0002:08AB       SYSTEM::GetFileObject()
+ 000D:02FA       SYSTEM::GetTempStringSpace()
+ 000A:1738       SYSTEM::GetTheMemory()
+ 001A:0000 idle  SYSTEM::Initialize()
+ 001A:005E idle  SYSTEM::InitMemory()
+ 001E:002E idle  SYSTEM::numberOfColors
+ 001A:013D idle  SYSTEM::PopContext()
+ 001A:00DA idle  SYSTEM::PushContext(FILEOBJECT far*)
+ 001A:007A       SYSTEM::SetFileObject(FILEOBJECT far*)
+ 001D:0461       SYSTEM::SetTempStringSpace(STRINGSPACE far*)
+ 001D:043E       SYSTEM::SetTheMemory(SERIUSMEMORY far*)
+ 001E:0000       SYSTEM::stackTop
+ 001E:0030       SYSTEM::tempStringSpace
+ 001E:002A       SYSTEM::theMemory
+ 000D:0000 idle  TSTRING::operator =(const TSTRING far&)
+ 000D:0059       TSTRING::TSTRING(DBSTRING)
+ 000D:01EF idle  TSTRING::TSTRING(int)
+ 000D:0195       TSTRING::TSTRING(const TSTRING far&)
+ 000D:0109       TSTRING::TSTRING(char far*)
+ 0006:086B       TSTRING::TSTRING()
+ 000D:0298       TSTRING::~TSTRING()
+ 000F:0A0A       TSTRING::operator char far*()
+ 000E:0000       UIDTABLE::UIDTABLE()
+ 000E:04C1 idle  UIDTABLE::AllocateTable()
+ 000E:0980       UIDTABLE::BuildFreeList()
+ 000E:006E       UIDTABLE::GenerateUID(void far*,long)
+ 0002:0912       UIDTABLE::GetPointer(SERUID)
+ 000E:0777       UIDTABLE::InitPointer(SERUID,void far*,long)
+ 000E:058E       UIDTABLE::ReleaseUID(SERUID)
+ 000E:0698       UIDTABLE::SetPointer(SERUID,void far*)
+ 000E:0A64 idle  UIDTABLE::SetTableSize(unsigned short)
+ 0000:0000 idle  BITBLT
+ 001D:0254       CONVERTFILE
+ 0000:0000 idle  CREATECOMPATIBLEBITMAP
+ 0000:0000 idle  CREATECOMPATIBLEDC
+ 0000:0000 idle  CREATEDC
+ 0000:0000 idle  DEBUGBREAK
+ 0000:0000 idle  DELETEDC
+ 0000:0000 idle  DELETEOBJECT
+ 0000:FE32 idle  FIARQQ
+ 0000:0E32 idle  FICRQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:1632  Abs  FIERQQ
+ 0000:0632 idle  FISRQQ
+ 0000:A23D  Abs  FIWRQQ
+ 0000:4000 idle  FJARQQ
+ 0000:C000 idle  FJCRQQ
+ 0000:8000 idle  FJSRQQ
+ 0001:0B9A idle  FTOL@
+ 0001:0B9A       F_FTOL@
+ 0001:0CD8       F_LDIV@
+ 0001:0CE7       F_LMOD@
+ 0001:0CDF idle  F_LUDIV@
+ 0001:0CEF idle  F_LUMOD@
+ 0001:0CA2       F_LXMUL@
+ 0001:0CB9       F_SCOPY@
+ 0001:0D89       F_SPUSH@
+ 0000:0000 idle  GETDESKTOPWINDOW
+ 0000:0000 idle  GETDEVICECAPS
+ 0000:0000 idle  GETMODULEFILENAME
+ 0000:0000 idle  GETWINFLAGS
+ 0000:0000 idle  GLOBALALLOC
+ 0000:0000 idle  GLOBALFREE
+ 0000:0000 idle  GLOBALHANDLE
+ 0000:0000 idle  GLOBALLOCK
+ 0000:0000 idle  GLOBALREALLOC
+ 0000:0000 idle  GLOBALSIZE
+ 0000:0000 idle  GLOBALUNLOCK
+ 0001:0CD8 idle  LDIV@
+ 0001:0000 idle  LibEntry
+ 001C:0000       LIBMAIN
+ 0001:0CE7 idle  LMOD@
+ 0000:0000 idle  LOADLIBRARY
+ 0000:0000 idle  LOCALINIT
+ 0000:0000 idle  LOCKSEGMENT
+ 0000:0000 idle  LSTRCPY
+ 0000:0000 idle  LSTRLEN
+ 0001:0CDF idle  LUDIV@
+ 0001:0CEF idle  LUMOD@
+ 0001:0CA2 idle  LXMUL@
+ 0000:0000 idle  MESSAGEBOX
+ 0001:0CD5 idle  N_LDIV@
+ 0001:0CE4 idle  N_LMOD@
+ 0001:0CDC idle  N_LUDIV@
+ 0001:0CEC idle  N_LUMOD@
+ 0001:0EA6       N_LXMUL@
+ 0001:0D83 idle  N_SPUSH@
+ 0001:0CB9 idle  SCOPY@
+ 0000:0000 idle  SELECTOBJECT
+ 0000:0000 idle  SETDIBITS
+ 0001:0D89 idle  SPUSH@
+ 0000:0000 idle  UNLOCKSEGMENT
+ 0001:00BC       WEP
+ 001F:0052 idle  _arrayOfBlocks
+ 001F:0AC8 idle  _arraySize
+ 0001:0BC6 idle  _atexit
+ 0001:178A idle  _calloc
+ 0001:0B7E       _ceil
+ 001F:0010       _errno
+ 0001:0C62 idle  _exit
+ 0001:0F78       _fflush
+ 0001:1048       _flushall
+ 0001:17A7       _free
+ 0001:110E       _fseek
+ 0001:1190 idle  _ftell
+ 0001:0DF6       _isatty
+ 0000:0000 idle  _LLSEEK
+ 0000:0000 idle  _LREAD
+ 0001:0E0A       _lseek
+ 0000:0000 idle  _LWRITE
+ 0001:1752       _malloc
+ 0001:0B70       _pow10
+ 0001:1993 idle  _raise
+ 0001:176B idle  _realloc
+ 0001:1272       _setvbuf
+ 0001:1827 idle  _signal
+ 0001:1392       _strcpy
+ 0001:13BE       _strlen
+ 0001:13E0       _strrchr
+ 001F:0B4E idle  _SubAllocClientData
+ 001F:0014 idle  __8087
+ 0000:0000 idle  __acrtused
+ 0000:0000 idle  __AHSHIFT
+ 001F:0938       __argv0
+ 001F:0606       __atexitcnt
+ 001F:0ACA       __atexittbl
+ 0001:0C87       __cexit
+ 0001:00B0       __checknull
+ 0001:009E       __cleanup
+ 001F:0608       __ctype
+ 0000:0000 idle  __cvtfak
+ 0001:0C95 idle  __c_exit
+ 001F:08D0 idle  __doserrno
+ 0001:0DE3 idle  __DOSERROR
+ 001F:08D2 idle  __dosErrorToSV
+ 0001:1692 idle  __errorBox
+ 0001:16EA       __errorExitBox
+ 0001:0C73       __exit
+ 001F:070A       __exitbuf
+ 001F:070E idle  __exitfopen
+ 001F:0712 idle  __exitopen
+ 0001:1DB5       __farcallocf
+ 0001:1E32       __farfreef
+ 0001:1D6C       __farmallocf
+ 0001:1E66       __farreallocf
+ 0001:09CC       __fbstp
+ 0000:8087 idle  __floatconvert
+ 0001:1624       __fmemcpy
+ 0001:1670       __fmemset
+ 0001:187E idle  __FpeDefault
+ 0001:1A15       __FpeHandler
+ 0001:1706       __fperr
+ 0000:0000 idle  __FPMATH
+ 001F:0AA4       __FPVector
+ 0001:164A idle  __fsetmem
+ 0001:00F2       __GetDGROUP
+ 0001:1AD1       __GETMEM
+ 0001:1D11       __GET_TEMP_BLOCK
+ 001F:001D       __hInstance
+ 001F:054E       __huge_dble
+ 001F:054A idle  __huge_flt
+ 001F:0556 idle  __huge_ldble
+ 001F:0560 idle  __indefinite
+ 0001:1A7A idle  __INITMEM
+ 0001:0DAA       __IOERROR
+ 0001:017C       __LDTRUNC
+ 001F:0021       __LockWIN87EM
+ 001F:0B4A idle  __new_handler
+ 001F:08A6       __nfile
+ 001F:08A8       __openfd
+ 001F:001A idle  __osmajor
+ 001F:001B idle  __osminor
+ 001F:001C idle  __osmode
+ 001F:001A idle  __osversion
+ 0001:0AA6       __POW10
+ 001F:0012 idle  __protected
+ 001F:0AA8 idle  __RealCvtVector
+ 0001:00B1       __restorezero
+ 0001:1C50       __RLSMEM
+ 0001:1D41       __RLS_TEMP_BLOCK
+ 0001:03D4       __ROUND
+ 001F:0AAA idle  __ScanTodVector
+ 0001:0EBE       __setupio
+ 0001:1C3A       __SIZMEM
+ 0001:1D58       __SIZ_TEMP_BLOCK
+ 001F:0016 idle  __StartTime
+ 0001:1A8F idle  __STOPMEM
+ 001F:0716       __streams
+ 0001:00B2       __terminate
+ 001F:0564 idle  __tiny_ldble
+ 0000:0000  Abs  __turboCvt
+ 0000:8087  Abs  __turboFloat
+ 001F:001A idle  __version
+ 001C:0028       __WEP
+ 001F:001F       __WinAllocFlag
+ 0000:0000 idle  __windowsFloat
+ 0001:1580       __write
+ 0001:0798       __XCVT
+ 0001:15EA       __xfflush
+ 0001:17FE       ___GetSubAllocClientData
+ 001F:0958 idle  ___ReadBufFPtr
+ 0001:142C       ___write
+ 001F:095C       ___WriteBufFPtr
+
+  Address         Publics by Value
+
+ 0000:0000 idle  LOCALINIT
+ 0000:0000 idle  LOCKSEGMENT
+ 0000:0000 idle  UNLOCKSEGMENT
+ 0000:0000 idle  GETWINFLAGS
+ 0001:0000 idle  LibEntry
+ 0000:0000 idle  __acrtused
+ 0000:0000 idle  LSTRLEN
+ 0000:0000 idle  LSTRCPY
+ 0000:0000 idle  _LREAD
+ 0000:0000 idle  _LLSEEK
+ 0000:0000 idle  GLOBALHANDLE
+ 0000:0000 idle  GLOBALUNLOCK
+ 0000:0000 idle  GLOBALLOCK
+ 0000:0000 idle  GLOBALFREE
+ 0000:0000 idle  GLOBALREALLOC
+ 0000:0000 idle  GLOBALALLOC
+ 0000:0000 idle  MESSAGEBOX
+ 0000:0000 idle  DEBUGBREAK
+ 0000:0000 idle  __AHSHIFT
+ 0000:0000 idle  _LWRITE
+ 0000:0000 idle  GLOBALSIZE
+ 0000:0000 idle  SETDIBITS
+ 0000:0000 idle  BITBLT
+ 0000:0000 idle  CREATECOMPATIBLEBITMAP
+ 0000:0000 idle  SELECTOBJECT
+ 0000:0000 idle  DELETEOBJECT
+ 0000:0000 idle  DELETEDC
+ 0000:0000 idle  CREATECOMPATIBLEDC
+ 0000:0000 idle  GETDEVICECAPS
+ 0000:0000 idle  CREATEDC
+ 0000:0000  Abs  __turboCvt
+ 0000:0000 idle  GETMODULEFILENAME
+ 0000:0000 idle  LOADLIBRARY
+ 0000:0000 idle  GETDESKTOPWINDOW
+ 0000:0000 idle  __FPMATH
+ 0000:0000 idle  __windowsFloat
+ 0000:0000 idle  __cvtfak
+ 0001:009E       __cleanup
+ 0001:00B0       __checknull
+ 0001:00B1       __restorezero
+ 0001:00B2       __terminate
+ 0001:00BC       WEP
+ 0001:00F2       __GetDGROUP
+ 0001:017C       __LDTRUNC
+ 0001:03D4       __ROUND
+ 0000:0632 idle  FISRQQ
+ 0001:0798       __XCVT
+ 0001:09CC       __fbstp
+ 0001:0AA6       __POW10
+ 0001:0B70       _pow10
+ 0001:0B7E       _ceil
+ 0001:0B9A       F_FTOL@
+ 0001:0B9A idle  FTOL@
+ 0001:0BC6 idle  _atexit
+ 0001:0BF6       operator delete(void far*)
+ 0001:0C62 idle  _exit
+ 0001:0C73       __exit
+ 0001:0C87       __cexit
+ 0001:0C95 idle  __c_exit
+ 0001:0CA2       F_LXMUL@
+ 0001:0CA2 idle  LXMUL@
+ 0001:0CB9       F_SCOPY@
+ 0001:0CB9 idle  SCOPY@
+ 0001:0CD5 idle  N_LDIV@
+ 0001:0CD8       F_LDIV@
+ 0001:0CD8 idle  LDIV@
+ 0001:0CDC idle  N_LUDIV@
+ 0001:0CDF idle  F_LUDIV@
+ 0001:0CDF idle  LUDIV@
+ 0001:0CE4 idle  N_LMOD@
+ 0001:0CE7       F_LMOD@
+ 0001:0CE7 idle  LMOD@
+ 0001:0CEC idle  N_LUMOD@
+ 0001:0CEF idle  LUMOD@
+ 0001:0CEF idle  F_LUMOD@
+ 0001:0D83 idle  N_SPUSH@
+ 0001:0D89       F_SPUSH@
+ 0001:0D89 idle  SPUSH@
+ 0001:0DAA       __IOERROR
+ 0001:0DE3 idle  __DOSERROR
+ 0001:0DF6       _isatty
+ 0001:0E0A       _lseek
+ 0000:0E32 idle  FICRQQ
+ 0001:0E36 idle  set_new_handler(void(far*)())
+ 0001:0E62       operator new(unsigned int)
+ 0001:0EA6       N_LXMUL@
+ 0001:0EBE       __setupio
+ 0001:0F78       _fflush
+ 0001:1048       _flushall
+ 0001:110E       _fseek
+ 0001:1190 idle  _ftell
+ 0001:1272       _setvbuf
+ 0001:1392       _strcpy
+ 0001:13BE       _strlen
+ 0001:13E0       _strrchr
+ 0001:142C       ___write
+ 0001:1580       __write
+ 0001:15EA       __xfflush
+ 0001:1624       __fmemcpy
+ 0000:1632  Abs  FIERQQ
+ 0001:164A idle  __fsetmem
+ 0001:1670       __fmemset
+ 0001:1692 idle  __errorBox
+ 0001:16EA       __errorExitBox
+ 0001:1706       __fperr
+ 0001:1752       _malloc
+ 0001:176B idle  _realloc
+ 0001:178A idle  _calloc
+ 0001:17A7       _free
+ 0001:17FE       ___GetSubAllocClientData
+ 0001:1827 idle  _signal
+ 0001:187E idle  __FpeDefault
+ 0001:1993 idle  _raise
+ 0001:1A15       __FpeHandler
+ 0001:1A7A idle  __INITMEM
+ 0001:1A8F idle  __STOPMEM
+ 0001:1AD1       __GETMEM
+ 0001:1C3A       __SIZMEM
+ 0001:1C50       __RLSMEM
+ 0001:1D11       __GET_TEMP_BLOCK
+ 0001:1D41       __RLS_TEMP_BLOCK
+ 0001:1D58       __SIZ_TEMP_BLOCK
+ 0001:1D6C       __farmallocf
+ 0001:1DB5       __farcallocf
+ 0001:1E32       __farfreef
+ 0001:1E66       __farreallocf
+ 0000:4000 idle  FJARQQ
+ 0000:5C32  Abs  FIDRQQ
+ 0000:8000 idle  FJSRQQ
+ 0000:8087  Abs  __turboFloat
+ 0000:8087 idle  __floatconvert
+ 0000:A23D  Abs  FIWRQQ
+ 0000:C000 idle  FJCRQQ
+ 0000:FE32 idle  FIARQQ
+ 0002:0000       SERIUSARRAY::SERIUSARRAY()
+ 0002:0062       SERIUSARRAY::SERIUSARRAY(short,unsigned short)
+ 0002:0116 idle  SERIUSARRAY::SERIUSARRAY(short,unsigned short,SERIUSBLOCK far*)
+ 0002:01C4       SERIUSARRAY::~SERIUSARRAY()
+ 0002:024F       SERIUSARRAY::Resize(unsigned short)
+ 0002:032E       SERIUSARRAY::Insert(unsigned short)
+ 0002:04CC       SERIUSARRAY::Delete(unsigned short)
+ 0002:0586 idle  SERIUSARRAY::Write(int,unsigned short far&)
+ 0002:061B       SERIUSARRAY::GetElement(unsigned short) const
+ 0002:06B3       SERIUSARRAY::pGetElement(unsigned short)
+ 0002:06FC       SERIUSARRAY::ConvertToPointers()
+ 0002:0776       SERUID::SERUID()
+ 0002:07A6       SERUID::SERUID(long)
+ 0002:07E6       GetUID(void far*)
+ 0002:0838       GetObject(SERUID)
+ 0002:087C       SERUID::operator ==(const SERUID far&)
+ 0002:08AB       SYSTEM::GetFileObject()
+ 0002:08F9       FILEOBJECT::GetUIDTable()
+ 0002:0912       UIDTABLE::GetPointer(SERUID)
+ 0003:0000       SERIUSBLOCKBLOCK::operator new(unsigned int)
+ 0003:00AC idle  SERIUSBLOCKBLOCK::operator new(unsigned int,SERIUSBLOCK far*,UIDTABLE far*)
+ 0003:012E idle  SERIUSBLOCKBLOCK::operator new(unsigned int,void far*)
+ 0003:0144       SERIUSBLOCKBLOCK::operator delete(void far*)
+ 0003:02DA idle  SERIUSBLOCKBLOCK::UpdateUIDTable(SERIUSBLOCK far*,UIDTABLE far*)
+ 0003:03B5       SERIUSBLOCKBLOCK::InitUIDTable(SERIUSBLOCK far*,UIDTABLE far*)
+ 0003:0494       SERIUSBLOCKBLOCK::NextRec(SERIUSBLOCK far*,SERIUSBLOCKBLOCK far*)
+ 0003:0550       FILEOBJECT::GetBlockBlocks()
+ 0004:0000       DBSTRINGARRAY::DBSTRINGARRAY()
+ 0004:0042       DBSTRINGARRAY::DBSTRINGARRAY(unsigned short)
+ 0004:00CD       DBSTRINGARRAY::Resize(unsigned short)
+ 0004:019D       DBSTRINGARRAY::operator [](unsigned short) const
+ 0004:01FE idle  DBSTRINGARRAY::operator =(DBSTRINGARRAY far&)
+ 0004:026B       DBSTRINGARRAY::ConvertToPointers()
+ 0004:02C1       DBSTRING::operator new(unsigned int,void far*)
+ 0004:02D7       DBSTRING::DBSTRING()
+ 0004:030F       SERIUSARRAY::GetCount() const
+ 0004:0326       DBSTRING::operator new(unsigned int)
+ 0005:0000       DBSTRING::operator =(DBSTRING far&)
+ 0005:00A1       DBSTRING::operator =(TSTRING far&)
+ 0005:0158       DBSTRING::operator =(char far*)
+ 0005:0207       DBSTRING::DBSTRING(char far*)
+ 0005:029C       DBSTRING::DBSTRING(TSTRING far&)
+ 0005:0339       DBSTRING::DBSTRING(const DBSTRING far&)
+ 0005:03BA       DBSTRING::~DBSTRING()
+ 0005:0419 idle  DBSTRING::strlen()
+ 0005:0465       DBSTRING::operator char far*()
+ 0005:04AC       DBSTRING::ConvertToPointers()
+ 0005:0503       FILEOBJECT::GetStringSpace()
+ 0005:051C       STRINGSPACE::GetPointer(unsigned short,unsigned short)
+ 0005:0541       DBSTRING::operator delete(void far*)
+ 0006:0000 idle  FILEHEADER::FILEHEADER(UIDTABLE far*)
+ 0006:0248 idle  FILEHEADER::FILEHEADER(int)
+ 0006:0377 idle  FILEOBJECT::FILEOBJECT()
+ 0006:0430       FILEOBJECT::FILEOBJECT(int)
+ 0006:06C4 idle  FILEOBJECT::~FILEOBJECT()
+ 0006:0757       RECORDPREFIX::RECORDPREFIX(SERUID,SERUID)
+ 0006:07C8       RECORDPREFIX::RECORDPREFIX()
+ 0006:086B       TSTRING::TSTRING()
+ 0007:0000       MEMORY::operator new(unsigned int)
+ 0007:0019       MEMORY::operator delete(void far*)
+ 0007:0035 idle  MEMORY::operator new(unsigned int,int)
+ 0008:0000 idle  GetGlobalBlockArrayAddr()
+ 0008:0017 idle  SetGlobalBlockArrayAddr(void far*)
+ 0008:0032 idle  GetGlobalBlockArraySize()
+ 0008:0045 idle  SetGlobalBlockArraySize(unsigned int)
+ 0008:0059       InitializeBlocks()
+ 0008:007C idle  CreateArrayOfHandles()
+ 0008:00D8 idle  NewBlock(unsigned int)
+ 0008:01C1       Allocate(unsigned int)
+ 0008:0387       Deallocate(void far*)
+ 0008:04B7 idle  CleanUpBlocks()
+ 0009:0000 idle  RECORDBLOCK::operator new(unsigned int)
+ 0009:002C idle  RECORDBLOCK::operator new(unsigned int,void far*)
+ 0009:0042 idle  RECORDBLOCK::operator delete(void far*,unsigned int)
+ 0009:0072       RECORDBLOCK::RECORDBLOCK()
+ 0009:0117       RECORDBLOCK::RECORDBLOCK(long,long)
+ 0009:01BF idle  RECORDBLOCK::RECORDBLOCK(long,long,long)
+ 0009:023D idle  RECORDBLOCK::PreAllocate(long)
+ 0009:04EC       RECORDBLOCK::~RECORDBLOCK()
+ 0009:052A idle  RECORDBLOCK::FreeMemory()
+ 0009:0765       RECORDBLOCK::AddRecord(unsigned int)
+ 0009:0C1B idle  RECORDBLOCK::AddPreallocatedRecord(unsigned int)
+ 0009:0F00       RECORDBLOCK::InitUIDTable()
+ 0009:11EE idle  RECORDBLOCK::PurgeBlock()
+ 0009:13FA idle  RECORDBLOCK::UpdateUIDTable(SERIUSBLOCK far*,unsigned int)
+ 0009:14D8       RECORDBLOCK::DeleteRecord(void far*,unsigned int)
+ 0009:1923 idle  RECORDBLOCK::CallConstructor(SERIUSBLOCK far*)
+ 0009:1B33 idle  RECORDBLOCK::CallDestructor(void far*,short)
+ 0009:1D87       RECORDBLOCK::operator [](long)
+ 0009:1FB9       RECORDBLOCK::GetRecordSize()
+ 0009:1FD4       RECORDBLOCK::GetCount()
+ 0009:1FEF       RECORDBLOCK::NextRec(void far*)
+ 0009:24C2       RECORDBLOCK::pNextRec(void far*)
+ 0009:27B8 idle  RECORDBLOCK::Free()
+ 0009:2902       RECORDBLOCK::ConvertToPointers()
+ 0009:2A1D       FILEOBJECT::GetRecordBlocks()
+ 0009:2A36       SERIUSBLOCKBLOCK::SERIUSBLOCKBLOCK(long)
+ 0009:2A7A       SERUID::operator !=(const SERUID far&)
+ 0009:2AA9       SERIUSBLOCKBLOCK::SERIUSBLOCKBLOCK()
+ 0009:2AE7       CFGDESC::CFGDESC(void far*)
+ 0009:2B81       OBJDESC::OBJDESC(void far*)
+ 0009:2C37       FUNCDESC::FUNCDESC(void far*)
+ 0009:2D35       EVENTDESC::EVENTDESC(void far*)
+ 0009:2D87       METHODDESC::METHODDESC(void far*)
+ 0009:2DF1       DBSTRING::DBSTRING(void far*)
+ 0009:2E21       COMPDESC::COMPDESC(void far*)
+ 0009:2E85       ROUTINES::ROUTINES(void far*)
+ 0009:2EE1       RESPONSEARRAY::RESPONSEARRAY(void far*)
+ 0009:2F25       SERIUSICON::SERIUSICON(void far*)
+ 0009:2F56       SYNTAX::SYNTAX(void far*)
+ 0009:2F9A       FLOWDESCARRAY::FLOWDESCARRAY(void far*)
+ 0009:2FDE       PARAMDESCARRAY::PARAMDESCARRAY(void far*)
+ 0009:3022       DBSTRINGARRAY::DBSTRINGARRAY(void far*)
+ 0009:3066       SERIUSARRAY::SERIUSARRAY(void far*)
+ 0009:30A8       compdesc::
+ 0009:30AC       methoddesc::
+ 0009:30B0       eventdesc::
+ 0009:30B4       funcdesc::
+ 0009:30B8       objdesc::
+ 0009:30BC       cfgdesc::
+ 000A:0000 idle  SERIUSBLOCK::operator new(unsigned int)
+ 000A:002C idle  SERIUSBLOCK::operator new(unsigned int,void far*)
+ 000A:0042 idle  SERIUSBLOCK::operator new(unsigned int,SERUID)
+ 000A:0082 idle  SERIUSBLOCK::operator delete(void far*,unsigned int)
+ 000A:00E2       SERIUSBLOCK::SERIUSBLOCK()
+ 000A:014C       SERIUSBLOCK::SERIUSBLOCK(long)
+ 000A:01BB       SERIUSBLOCK::AllocateBlock(long)
+ 000A:0659 idle  SERIUSBLOCK::AllocateChunk(long)
+ 000A:07C3 idle  SERIUSBLOCK::InitChunkFreeSpace(MEMCHUNK far*,long)
+ 000A:087D idle  SERIUSBLOCK::Read(int,RECORDBLOCK far*)
+ 000A:0A08 idle  SERIUSBLOCK::ReadChunk(int,MEMCHUNK far*,long)
+ 000A:0ADD       SERIUSBLOCK::~SERIUSBLOCK()
+ 000A:0B57       SERIUSBLOCK::ReleaseMemory(long,long,void far*)
+ 000A:0D24 idle  SERIUSBLOCK::CheckBlock()
+ 000A:0D34 idle  SERIUSBLOCK::CompactFree(MEMCHUNK far*,FREEBLOCK)
+ 000A:0F78 idle  SERIUSBLOCK::CheckFreeBlocks(MEMCHUNK far*)
+ 000A:0F88       SERIUSBLOCK::ResizeBlock(long)
+ 000A:12BA idle  SERIUSBLOCK::ResizeChunk(long,long)
+ 000A:13C2       SERIUSBLOCK::DeleteSubBlock(long,long)
+ 000A:14E2       SERIUSBLOCK::GetByteCount()
+ 000A:14FD       SERIUSBLOCK::GetData()
+ 000A:1518       SERIUSBLOCK::Read(int)
+ 000A:161E       SERIUSBLOCK::Write(int,unsigned short far&)
+ 000A:171F       FILEOBJECT::GetSeriusBlocks()
+ 000A:1738       SYSTEM::GetTheMemory()
+ 000B:0000       SERIUSRECORD::operator new(unsigned int)
+ 000B:0014       SERIUSRECORD::operator new(unsigned int,SERUID)
+ 000B:0054       SERIUSRECORD::operator new(unsigned int,void far*)
+ 000B:006A       SERIUSRECORD::operator delete(void far*,unsigned int)
+ 000B:00CA       SERIUSRECORD::~SERIUSRECORD()
+ 000B:0108       SERIUSRECORD::SERIUSRECORD()
+ 000B:0157       SERIUSRECORD::PostReadInit()
+ 000B:0169       seriusrecord::
+ 000C:0000       STRINGSPACE::STRINGSPACE()
+ 000C:0062       STRINGSPACE::STRINGSPACE(unsigned short)
+ 000C:00A3       STRINGSPACE::Read(int)
+ 000C:0202       STRINGSPACE::StringAlloc(int,short far&)
+ 000C:05A7       STRINGSPACE::StringFree(unsigned short,unsigned short)
+ 000C:05DA       STRINGSPACE::StringFree(char far*)
+ 000C:0929 idle  STRINGSPACE::InitBlock(STRINGBLOCK far&)
+ 000C:0A06 idle  STRINGSPACE::InitStringMemory(unsigned short)
+ 000C:0A6F idle  STRINGSPACE::FreeStringMemory()
+ 000C:0B19 idle  STRINGSPACE::CheckFreeBlocks(BLOCKHEADER far*)
+ 000C:0CC8 idle  STRINGSPACE::Write(int)
+ 000D:0000 idle  TSTRING::operator =(const TSTRING far&)
+ 000D:0059       TSTRING::TSTRING(DBSTRING)
+ 000D:0109       TSTRING::TSTRING(char far*)
+ 000D:0195       TSTRING::TSTRING(const TSTRING far&)
+ 000D:01EF idle  TSTRING::TSTRING(int)
+ 000D:0298       TSTRING::~TSTRING()
+ 000D:02FA       SYSTEM::GetTempStringSpace()
+ 000E:0000       UIDTABLE::UIDTABLE()
+ 000E:006E       UIDTABLE::GenerateUID(void far*,long)
+ 000E:04C1 idle  UIDTABLE::AllocateTable()
+ 000E:058E       UIDTABLE::ReleaseUID(SERUID)
+ 000E:0698       UIDTABLE::SetPointer(SERUID,void far*)
+ 000E:0777       UIDTABLE::InitPointer(SERUID,void far*,long)
+ 000E:0980       UIDTABLE::BuildFreeList()
+ 000E:0A64 idle  UIDTABLE::SetTableSize(unsigned short)
+ 000F:0000 idle  CFGDESC::CFGDESC()
+ 000F:01A6 idle  CFGDESC::CreateObjectDesc(TSTRING,unsigned long)
+ 000F:0259 idle  CFGDESC::CreateFunctionDesc(TSTRING,unsigned long)
+ 000F:030C idle  CFGDESC::CreateEventDesc(TSTRING,unsigned long)
+ 000F:03BE idle  CFGDESC::DeleteObjectDesc(SERUID)
+ 000F:048C idle  CFGDESC::DeleteFunctionDesc(SERUID)
+ 000F:0582 idle  CFGDESC::DeleteEventDesc(SERUID)
+ 000F:05FC idle  CFGDESC::NextObjectDesc(OBJDESC far*)
+ 000F:065B idle  CFGDESC::pNextObjectDesc(OBJDESC far*)
+ 000F:0684 idle  CFGDESC::NextFunctionDesc(FUNCDESC far*)
+ 000F:06E3 idle  CFGDESC::pNextFunctionDesc(FUNCDESC far*)
+ 000F:070C idle  CFGDESC::NextEventDesc(EVENTDESC far*)
+ 000F:076B idle  CFGDESC::pNextEventDesc(EVENTDESC far*)
+ 000F:0794 idle  CFGDESC::ConvertToPointers()
+ 000F:09DC       FILEOBJECT::GetName()
+ 000F:0A0A       TSTRING::operator char far*()
+ 000F:0A24       GetObject(SERUID,int far&)
+ 0010:0000       COMPDESC::COMPDESC(unsigned long,TSTRING)
+ 0010:0083 idle  COMPDESC::SetName(TSTRING)
+ 0010:00BC idle  COMPDESC::GetName()
+ 0010:00FA idle  COMPDESC::pGetName()
+ 0010:0115 idle  COMPDESC::GetUID()
+ 0010:0130 idle  COMPDESC::SetUID(unsigned long)
+ 0010:014F       COMPDESC::ConvertToPointers()
+ 0011:0000       EVENTDESC::EVENTDESC(unsigned long,TSTRING)
+ 0012:0000 idle  FLOWDESC::FLOWDESC()
+ 0012:0050 idle  FLOWDESC::FLOWDESC(char far*,char far*)
+ 0012:00BB idle  FLOWDESC::~FLOWDESC()
+ 0012:010E idle  FLOWDESC::operator =(FLOWDESC far&)
+ 0012:016A idle  FLOWDESC::ConvertToPointers()
+ 0012:0198 idle  FLOWDESCARRAY::FLOWDESCARRAY()
+ 0012:01D6       FLOWDESCARRAY::FLOWDESCARRAY(unsigned short)
+ 0012:0260 idle  FLOWDESCARRAY::FLOWDESCARRAY(const FLOWDESCARRAY far&)
+ 0012:0332 idle  FLOWDESCARRAY::operator [](unsigned short) const
+ 0012:0353 idle  FLOWDESCARRAY::Insert(unsigned short,char far*,char far*)
+ 0012:040B idle  FLOWDESCARRAY::Delete(unsigned short)
+ 0012:044C idle  FLOWDESCARRAY::Resize(unsigned short)
+ 0012:051A idle  FLOWDESCARRAY::operator =(FLOWDESCARRAY far&)
+ 0012:0586       FLOWDESCARRAY::ConvertToPointers()
+ 0012:05DB       FLOWDESC::operator new(unsigned int)
+ 0012:05EF       FLOWDESC::operator delete(void far*)
+ 0012:05FD       FLOWDESC::operator new(unsigned int,void far*)
+ 0013:0000       FUNCDESC::FUNCDESC(unsigned long,TSTRING)
+ 0013:011D idle  FUNCDESC::SetLibName(char far*)
+ 0013:015B idle  FUNCDESC::GetIcons()
+ 0013:0174 idle  FUNCDESC::GetInputsCount()
+ 0013:0196 idle  FUNCDESC::GetOutputsCount()
+ 0013:01B8 idle  FUNCDESC::GetFlowsCount()
+ 0013:01DA idle  FUNCDESC::GetInput(int)
+ 0013:01FF idle  FUNCDESC::GetOutput(int)
+ 0013:0224 idle  FUNCDESC::GetFlow(int)
+ 0013:0268       FUNCDESC::ConvertToPointers()
+ 0014:0000 idle  METHODDESC::METHODDESC(unsigned long,TSTRING)
+ 0014:0090 idle  METHODDESC::GetFunctionName()
+ 0014:00CE idle  METHODDESC::GetDLLName()
+ 0014:00E7 idle  METHODDESC::GetTypeID()
+ 0014:0102 idle  METHODDESC::SetFunctionName(char far*)
+ 0014:012D idle  METHODDESC::SetDLLName(char far*)
+ 0014:016B idle  METHODDESC::SetTypeID(unsigned long)
+ 0014:018F idle  METHODDESC::ConvertToPointers()
+ 0015:0000       OBJDESC::OBJDESC(unsigned long,TSTRING)
+ 0015:00D3 idle  OBJDESC::GetIcons()
+ 0015:00EC idle  OBJDESC::GetFunction(short)
+ 0015:011B idle  OBJDESC::pGetFunction(short)
+ 0015:014B idle  OBJDESC::GetDLL(short)
+ 0015:017A idle  OBJDESC::pGetDLL(short)
+ 0015:01AA idle  OBJDESC::SetFunction(short,char far*)
+ 0015:01F2 idle  OBJDESC::SetDLL(short,char far*)
+ 0015:023A       OBJDESC::ConvertToPointers()
+ 0015:028C idle  OBJDESC::pGetResponse(unsigned long)
+ 0016:0000 idle  PARAMDESC::PARAMDESC()
+ 0016:0050 idle  PARAMDESC::PARAMDESC(char far*,char far*,unsigned long,unsigned long)
+ 0016:00CE idle  PARAMDESC::~PARAMDESC()
+ 0016:0121 idle  PARAMDESC::operator =(PARAMDESC far&)
+ 0016:0193 idle  PARAMDESC::ConvertToPointers()
+ 0016:01C1 idle  PARAMDESCARRAY::PARAMDESCARRAY()
+ 0016:01FF       PARAMDESCARRAY::PARAMDESCARRAY(unsigned short)
+ 0016:0289 idle  PARAMDESCARRAY::PARAMDESCARRAY(const PARAMDESCARRAY far&)
+ 0016:036B idle  PARAMDESCARRAY::operator [](unsigned short) const
+ 0016:038C idle  PARAMDESCARRAY::Resize(unsigned short)
+ 0016:046A idle  PARAMDESCARRAY::Insert(unsigned short,char far*,char far*,unsigned long,unsigned long)
+ 0016:052D idle  PARAMDESCARRAY::Delete(unsigned short)
+ 0016:056E idle  PARAMDESCARRAY::operator =(PARAMDESCARRAY far&)
+ 0016:05DA       PARAMDESCARRAY::ConvertToPointers()
+ 0016:062F       PARAMDESC::operator new(unsigned int)
+ 0016:0643       PARAMDESC::operator delete(void far*)
+ 0016:0651       PARAMDESC::operator new(unsigned int,void far*)
+ 0017:0000 idle  RESPONSE::RESPONSE()
+ 0017:0058 idle  RESPONSE::RESPONSE(unsigned long,char far*,char far*)
+ 0017:00DF idle  RESPONSE::RESPONSE(RESPONSE far&)
+ 0017:0158 idle  RESPONSE::operator =(RESPONSE far&)
+ 0017:01B7 idle  RESPONSE::SetDll(char far*)
+ 0017:01F5 idle  RESPONSE::ConvertToPointers()
+ 0017:0215       RESPONSEARRAY::RESPONSEARRAY()
+ 0017:0257 idle  RESPONSEARRAY::RESPONSEARRAY(unsigned short)
+ 0017:02E1 idle  RESPONSEARRAY::RESPONSEARRAY(const RESPONSEARRAY far&)
+ 0017:039B idle  RESPONSEARRAY::operator [](unsigned short) const
+ 0017:03BC idle  RESPONSEARRAY::Insert(unsigned short,unsigned long,char far*,char far*)
+ 0017:0432 idle  RESPONSEARRAY::Delete(unsigned short)
+ 0017:049F idle  RESPONSEARRAY::Resize(unsigned short)
+ 0017:0594 idle  RESPONSEARRAY::operator =(RESPONSEARRAY far&)
+ 0017:0600       RESPONSEARRAY::pGetResponse(unsigned long)
+ 0017:0675       RESPONSEARRAY::ConvertToPointers()
+ 0017:06CA       RESPONSE::operator new(unsigned int)
+ 0017:06DE       RESPONSE::operator new(unsigned int,void far*)
+ 0017:06F4       RESPONSE::operator delete(void far*)
+ 0017:0702       RESPONSE::GetEventID()
+ 0018:0000 idle  ROUTINES::ROUTINES()
+ 0018:0050       ROUTINES::ROUTINES(int)
+ 0018:00A7 idle  ROUTINES::Update(char far*,char far*,int)
+ 0018:011F idle  ROUTINES::Add(char far*,char far*)
+ 0018:01AE idle  ROUTINES::Delete(int)
+ 0018:0206       ROUTINES::ConvertToPointers()
+ 0019:0000       SERIUSICON::SERIUSICON()
+ 0019:0653 idle  SERIUSICON::SERIUSICON(int,short)
+ 0019:08D8 idle  SERIUSICON::InitPixels(short,short)
+ 0019:099A idle  SERIUSICON::DrawColor(unsigned int,int,int)
+ 0019:0A79 idle  SERIUSICON::DrawColorMask(unsigned int,int,int)
+ 0019:0B08 idle  SERIUSICON::DrawColorImage(unsigned int,int,int)
+ 0019:0B95 idle  SERIUSICON::DrawBW(unsigned int,int,int)
+ 0019:0C76 idle  SERIUSICON::DrawBWMask(unsigned int,int,int)
+ 0019:0D05 idle  SERIUSICON::DrawBWImage(unsigned int,int,int)
+ 0019:0D94 idle  SERIUSICON::Write(int)
+ 001A:0000 idle  SYSTEM::Initialize()
+ 001A:005E idle  SYSTEM::InitMemory()
+ 001A:006C idle  SYSTEM::CleanUp()
+ 001A:007A       SYSTEM::SetFileObject(FILEOBJECT far*)
+ 001A:00DA idle  SYSTEM::PushContext(FILEOBJECT far*)
+ 001A:013D idle  SYSTEM::PopContext()
+ 001B:0000       SYNTAX::SYNTAX()
+ 001B:003E idle  SYNTAX::SYNTAX(const SYNTAX far&)
+ 001B:00D6 idle  SYNTAX::Update(char far*,int)
+ 001B:012B idle  SYNTAX::Add(char far*)
+ 001B:0181 idle  SYNTAX::Delete(int)
+ 001B:01C6       SYNTAX::ConvertToPointers()
+ 001C:0000       LIBMAIN
+ 001C:0028       __WEP
+ 001D:0000 idle  DoUpdate(FILEOBJECT far*,char far*,char far*,void(far*)(short,void far*))
+ 001D:0254       CONVERTFILE
+ 001D:02D6       FILEOBJECT::GetIdString()
+ 001D:02EF       FILEOBJECT::GetMajorVersion()
+ 001D:0306       FILEOBJECT::GetMinorVersion()
+ 001D:031D       FILEOBJECT::GetFileType()
+ 001D:0334       FILEOBJECT::GetHeadRec()
+ 001D:0387       FILEOBJECT::GetHeadBlock()
+ 001D:03DA       SERIUSBLOCK::GetBlockMemID()
+ 001D:03F5       RECORDBLOCK::GetType()
+ 001D:040C       RECORDBLOCK::GetBlockCount()
+ 001D:0423       RECORDBLOCK::GetBlockID()
+ 001D:043E       SYSTEM::SetTheMemory(SERIUSMEMORY far*)
+ 001D:0461       SYSTEM::SetTempStringSpace(STRINGSPACE far*)
+ 001E:0000       SYSTEM::stackTop
+ 001E:0002       SYSTEM::contextStack
+ 001E:002A       SYSTEM::theMemory
+ 001E:002E idle  SYSTEM::numberOfColors
+ 001E:0030       SYSTEM::tempStringSpace
+ 001F:0010       _errno
+ 001F:0012 idle  __protected
+ 001F:0014 idle  __8087
+ 001F:0016 idle  __StartTime
+ 001F:001A idle  __osversion
+ 001F:001A idle  __osmajor
+ 001F:001A idle  __version
+ 001F:001B idle  __osminor
+ 001F:001C idle  __osmode
+ 001F:001D       __hInstance
+ 001F:001F       __WinAllocFlag
+ 001F:0021       __LockWIN87EM
+ 001F:0052 idle  _arrayOfBlocks
+ 001F:054A idle  __huge_flt
+ 001F:054E       __huge_dble
+ 001F:0556 idle  __huge_ldble
+ 001F:0560 idle  __indefinite
+ 001F:0564 idle  __tiny_ldble
+ 001F:0606       __atexitcnt
+ 001F:0608       __ctype
+ 001F:070A       __exitbuf
+ 001F:070E idle  __exitfopen
+ 001F:0712 idle  __exitopen
+ 001F:0716       __streams
+ 001F:08A6       __nfile
+ 001F:08A8       __openfd
+ 001F:08D0 idle  __doserrno
+ 001F:08D2 idle  __dosErrorToSV
+ 001F:0938       __argv0
+ 001F:0958 idle  ___ReadBufFPtr
+ 001F:095C       ___WriteBufFPtr
+ 001F:0AA4       __FPVector
+ 001F:0AA8 idle  __RealCvtVector
+ 001F:0AAA idle  __ScanTodVector
+ 001F:0AC8 idle  _arraySize
+ 001F:0ACA       __atexittbl
+ 001F:0B4A idle  __new_handler
+ 001F:0B4E idle  _SubAllocClientData
+
+

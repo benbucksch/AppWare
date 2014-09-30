@@ -1,0 +1,39 @@
+LIBRARY       AW32TIME
+DESCRIPTION   'Novell AppWare Loadable Module: Time Objecct'
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+HEAPSIZE      32768
+STACKSIZE     20480
+
+EXPORTS	    	TimeAdminProc  			@10              
+			OTimeStringToTime			@11
+			OTimeGetValue				@12
+			OTimeConvertToString		@13
+			OTimeConvertFromString		@14
+			OTimeFormatTime			@15
+			OTimeSetValue				@16
+			OTimeToHMS				@17
+			OTimeFromHMS				@18
+			OTimeGetStyle				@19
+			OTimeParseString			@20
+
+; Functions
+			TimeFunction_Change			@100
+			TimeFunction_CompareHM		@101
+			TimeFunction_CompareHMS		@102
+			TimeFunction_Current		@103
+			TimeFunction_Diff			@104
+			TimeFunction_SetFontSize		@105
+
+; Events
+			TimeEvent_Startup			@200
+			TimeEvent_TextToObject		@201
+			TimeEvent_ObjectToText		@202
+			TimeEvent_timeUpdate		@203
+
+
+
+
+
+

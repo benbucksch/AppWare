@@ -1,0 +1,12 @@
+LIBRARY         AW32RADG
+DESCRIPTION     'Novell AppWare Loadable Module: Radio Group Object'
+EXETYPE         WINDOWS
+CODE            MOVEABLE DISCARDABLE LOADONCALL
+DATA            SINGLE MOVEABLE PRELOAD
+SEGMENTS        _TEXT PRELOAD
+HEAPSIZE        32768
+
+EXPORTS         DllEntryPoint        	@1 RESIDENTNAME
+
+                RadioObjectAdm        @3
+								Rad_objectChanged			@4

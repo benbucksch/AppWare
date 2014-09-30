@@ -1,0 +1,16 @@
+LIBRARY         AW32NTFY
+
+DESCRIPTION     'Novell AppWare Loadable Module: Notification Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+
+EXPORTS         
+
+                NotifyAdmn                     @10
+                ShutDownEvent                  @11
+                FlashNotify                    @12
+                StopNotify                     @13
+                StartNotify                    @14
+                AlertNotify                    @15

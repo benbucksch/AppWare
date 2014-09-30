@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=e:\appware\bin\alm_bind\help
+ERRORLOG=e:\appware\bin\alm_bind\help\nwbind.log
+TITLE=NetWare Bindery ALM Help
+WARNING=3
+COMPRESS=OFF
+BMROOT=e:\appware\bin\alm_bind\help,e:\appware\bin\alm_bind\help\bitmaps,w:\word_6.00\hb_bmaps
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+nwbind.rtf
+;
+[BITMAPS]
+d:\windows\arcade.bmp
+d:\windows\castle.bmp
+;
+[CONFIG]
+BrowseButtons()
+;
+CB("btn_up", "&Up", "JI(`', `idx_contents')")
+;
+[WINDOWS]
+main="NetWare Bindery ALM Help",,,(255, 255, 255),(192, 192, 192),0
+[MAP]
+#include <nwbind.hh>

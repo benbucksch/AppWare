@@ -1,0 +1,18 @@
+# Format of each line is:  <TARGETDIR> <SOURCEFILE> [<NEWFILENAME>]
+
+# Executables and DLLs
+BIN             environ\almbldr\obj\aw32cfg.exe
+BIN             environ\kernel\obj\aw32run.dll
+BIN             environ\apebldr\obj\aw32.exe
+BIN             environ\shell\obj\aw32shel.exe                          aw32.dat
+
+# API header files
+INCLUDE         environ\kernel\hdr\ap_macro.h
+INCLUDE         environ\kernel\hdr\a_alm.h
+INCLUDE         environ\kernel\hdr\a_almutl.h
+INCLUDE         environ\kernel\hdr\intdebug.h
+INCLUDE         environ\kernel\hdr\intutl.h
+INCLUDE         environ\apebldr\hdr\helpids.h
+
+# Exported .LIBs
+LIB             environ\kernel\obj\aw32run.lib

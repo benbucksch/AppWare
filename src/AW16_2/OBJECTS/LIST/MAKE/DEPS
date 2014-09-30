@@ -1,0 +1,171 @@
+OBJECTFILES= \
+	$(OBJDIR)\attribut.obj \
+	$(OBJDIR)\l_adm.obj \
+	$(OBJDIR)\l_api.obj \
+	$(OBJDIR)\l_edit.obj \
+	$(OBJDIR)\l_events.obj \
+	$(OBJDIR)\l_func.obj \
+	$(OBJDIR)\l_list.obj \
+	$(OBJDIR)\l_main.obj \
+	$(OBJDIR)\l_util.obj \
+	$(OBJDIR)\l_ver.obj \
+	$(OBJDIR)\l_vi.obj 
+
+
+$(OBJDIR)\attribut.obj: 
+
+$(OBJDIR)\l_adm.obj:  .\l_adm.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                      .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                      g:\internal\include\o_list.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_api.obj:  .\l_api.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                      .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                      g:\internal\include\o_list.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_edit.obj:  .\l_edit.cpp .\l_dialog.h .\l_includ.h .\l_util.h \
+                       .\l_macros.h .\l_vi.h .\l_string.h .\l_global.h \
+                       .\l_data.h g:\internal\include\o_list.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_events.obj:  .\l_events.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                         .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                         g:\internal\include\o_list.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h ..\include\attribut.h \
+                         g:\internal\include\intdebug.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_func.obj:  .\l_func.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                       .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                       g:\internal\include\o_list.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_list.obj:  .\l_list.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                       .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                       g:\internal\include\o_list.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_main.obj:  .\l_main.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                       .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                       g:\internal\include\o_list.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_util.obj:  .\l_util.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                       .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                       g:\internal\include\o_list.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_ver.obj:  .\l_ver.cpp .\l_includ.h .\l_util.h .\l_macros.h \
+                      .\l_vi.h .\l_string.h .\l_global.h .\l_data.h \
+                      g:\internal\include\o_list.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\l_vi.obj:  .\l_vi.cpp d:\borlandc\include\stdlib.h .\l_include.h \
+                     .\l_util.h .\l_macros.h .\l_vi.h .\l_string.h \
+                     .\l_global.h .\l_data.h g:\internal\include\o_list.h \
+                     g:\internal\include\o_number.h \
+                     g:\internal\include\o_text.h g:\internal\include\o_wnd.h \
+                     g:\internal\include\op_wnd.h \
+                     g:\internal\include\ap_macro.h ..\include\attribut.h \
+                     g:\internal\include\intdebug.h \
+                     g:\internal\include\a_almutl.h \
+                     g:\internal\include\a_alm.h d:\borlandc\include\string.h \
+                     d:\borlandc\include\mem.h d:\borlandc\include\stddef.h \
+                     d:\borlandc\include\windows.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\l_res.res 
+
+
+$(OBJDIR)\l_res.res:  .\l_res.rc .\l_dialog.h
+

@@ -1,0 +1,232 @@
+OBJECTFILES= \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\menudata.obj \
+	$(OBJDIR)\w_adm.obj \
+	$(OBJDIR)\w_api.obj \
+	$(OBJDIR)\w_cback.obj \
+	$(OBJDIR)\w_events.obj \
+	$(OBJDIR)\w_funct.obj \
+	$(OBJDIR)\w_group.obj \
+	$(OBJDIR)\w_hooks.obj \
+	$(OBJDIR)\w_idata.obj \
+	$(OBJDIR)\w_layapi.obj \
+	$(OBJDIR)\w_main.obj \
+	$(OBJDIR)\w_prot.obj \
+	$(OBJDIR)\w_rtime.obj \
+	$(OBJDIR)\w_upsf.obj \
+	$(OBJDIR)\w_window.obj 
+
+
+$(OBJDIR)\heap.obj:  .\heap.cpp .\heapint.h .\heap.h \
+                     g:\internal\include\intdebug.h
+
+$(OBJDIR)\menudata.obj:  .\menudata.cpp .\menudata.h \
+                         g:\internal\include\intdebug.h
+
+$(OBJDIR)\w_adm.obj:  .\w_adm.cpp .\w_includ.h g:\internal\include\o_genrl.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                      .\w_string.h .\w_global.h g:\internal\include\o_print.h \
+                      g:\internal\include\o_wndshp.h \
+                      g:\internal\include\o_wndlay.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h \
+                      g:\internal\include\intdebug.h \
+                      d:\borlandc\include\mem.h d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_api.obj:  .\w_api.cpp g:\internal\include\a_almutl.h .\w_includ.h \
+                      g:\internal\include\o_genrl.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                      .\w_string.h .\w_global.h g:\internal\include\o_print.h \
+                      g:\internal\include\o_wndshp.h \
+                      g:\internal\include\o_wndlay.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h \
+                      g:\internal\include\intdebug.h \
+                      d:\borlandc\include\mem.h d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_cback.obj:  .\w_cback.cpp .\w_includ.h \
+                        g:\internal\include\o_genrl.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                        .\w_string.h .\w_global.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wndshp.h \
+                        g:\internal\include\o_wndlay.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h \
+                        g:\internal\include\intdebug.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_events.obj:  .\w_events.cpp .\w_includ.h \
+                         g:\internal\include\o_genrl.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                         .\w_string.h .\w_global.h \
+                         g:\internal\include\o_print.h \
+                         g:\internal\include\o_wndshp.h \
+                         g:\internal\include\o_wndlay.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h \
+                         g:\internal\include\intdebug.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_funct.obj:  .\w_funct.cpp .\w_includ.h \
+                        g:\internal\include\o_genrl.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                        .\w_string.h .\w_global.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wndshp.h \
+                        g:\internal\include\o_wndlay.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h \
+                        g:\internal\include\intdebug.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_group.obj:  .\w_group.cpp .\heap.h .\w_includ.h \
+                        g:\internal\include\o_genrl.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                        .\w_string.h .\w_global.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wndshp.h \
+                        g:\internal\include\o_wndlay.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h \
+                        g:\internal\include\intdebug.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_hooks.obj:  .\w_hooks.cpp .\w_includ.h \
+                        g:\internal\include\o_genrl.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                        .\w_string.h .\w_global.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wndshp.h \
+                        g:\internal\include\o_wndlay.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h \
+                        g:\internal\include\intdebug.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_idata.obj:  .\w_idata.cpp g:\internal\include\o_wndshp.h \
+                        .\w_includ.h g:\internal\include\o_genrl.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                        .\w_string.h .\w_global.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wndlay.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h \
+                        g:\internal\include\intdebug.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_layapi.obj:  .\w_layapi.cpp .\menudata.h .\w_includ.h \
+                         g:\internal\include\o_genrl.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                         .\w_string.h .\w_global.h \
+                         g:\internal\include\o_print.h \
+                         g:\internal\include\o_wndshp.h \
+                         g:\internal\include\o_wndlay.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h \
+                         g:\internal\include\intdebug.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_main.obj:  .\w_main.cpp .\w_includ.h \
+                       g:\internal\include\o_genrl.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                       .\w_string.h .\w_global.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_wndshp.h \
+                       g:\internal\include\o_wndlay.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h \
+                       g:\internal\include\intdebug.h \
+                       d:\borlandc\include\mem.h d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_prot.obj:  .\w_prot.cpp .\w_includ.h \
+                       g:\internal\include\o_genrl.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                       .\w_string.h .\w_global.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_wndshp.h \
+                       g:\internal\include\o_wndlay.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h \
+                       g:\internal\include\intdebug.h \
+                       d:\borlandc\include\mem.h d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_rtime.obj:  .\w_rtime.cpp .\w_includ.h \
+                        g:\internal\include\o_genrl.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                        .\w_string.h .\w_global.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wndshp.h \
+                        g:\internal\include\o_wndlay.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h \
+                        g:\internal\include\intdebug.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_upsf.obj:  .\w_upsf.cpp .\w_includ.h \
+                       g:\internal\include\o_genrl.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                       .\w_string.h .\w_global.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_wndshp.h \
+                       g:\internal\include\o_wndlay.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h \
+                       g:\internal\include\intdebug.h \
+                       d:\borlandc\include\mem.h d:\borlandc\include\stddef.h
+
+$(OBJDIR)\w_window.obj:  .\w_window.cpp .\w_includ.h \
+                         g:\internal\include\o_genrl.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h .\w_macros.h .\w_data.h \
+                         .\w_string.h .\w_global.h \
+                         g:\internal\include\o_print.h \
+                         g:\internal\include\o_wndshp.h \
+                         g:\internal\include\o_wndlay.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h \
+                         g:\internal\include\intdebug.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\w_res.res 
+
+
+$(OBJDIR)\w_res.res:  .\w_res.rc .\w_string.h
+

@@ -1,0 +1,17 @@
+LIBRARY     AW32SUBR
+
+DESCRIPTION 'Novell AppWare Loadable Module: Subroutine Object'
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE SINGLE
+SEGMENTS    _TEXT PRELOAD
+PROTMODE
+
+EXPORTS		SubroutineAdmn   	@10
+			CallSubroutine		@11
+			FetchParameters	@12
+			Return			@13
+
+
+
+

@@ -1,0 +1,18 @@
+LIBRARY         AW32PICT
+
+DESCRIPTION     'Novell AppWare Loadable Module: Picture Object'
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+HEAPSIZE        32768
+STACKSIZE       20480
+
+EXPORTS         DllEntryPoint                   @1    RESIDENTNAME
+								AdmnProc												@2
+                mdrtProc                        @3   
+                loadPict                        @4   
+                SavePict                        @5   
+                IsPictureEmpty                  @6   
+                OPictGetHandle                  @7
+
+

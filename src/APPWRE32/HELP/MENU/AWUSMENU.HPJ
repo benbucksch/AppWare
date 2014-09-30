@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\menu
+ERRORLOG=o:\help\menu\awusmenu.log
+TITLE=Menu ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+menualm.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusmenu.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Menu ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_menu.h>

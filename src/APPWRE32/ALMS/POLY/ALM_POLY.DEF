@@ -1,0 +1,26 @@
+LIBRARY        AW32POLY
+
+DESCRIPTION    'Novell Appware Loadable Module: Polybutton Object'
+
+EXETYPE        WINDOWS
+
+CODE           LOADONCALL MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+
+HEAPSIZE       32768
+
+EXPORTS        DllEntryPoint                            @1   RESIDENTNAME
+							 PolybuttonAdminProc										 	@2		
+							 PolyFunc_ClearRegion											@3
+							 PolyFunc_Compress												@4
+							 PolyFunc_CountRegions										@5
+							 PolyFunc_Edit														@6
+							 PolyFunc_GetClick												@7
+							 PolyFunc_GetIndex												@8
+							 PolyFunc_GetName													@9
+							 PolyFunc_GetPictures											@10
+							 PolyFunc_IsRegionSet											@11
+							 PolyFunc_SetName													@12
+							 PolyFunc_SetPictures											@13
+							 PolyFunc_SetRegion												@14
+

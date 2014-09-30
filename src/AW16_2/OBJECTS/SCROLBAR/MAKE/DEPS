@@ -1,0 +1,29 @@
+OBJECTFILES= \
+	$(OBJDIR)\almobase.obj \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\resstrng.obj \
+	$(OBJDIR)\sbr_main.obj \
+	$(OBJDIR)\scroll.obj \
+	$(OBJDIR)\scrol_vi.obj 
+
+
+$(OBJDIR)\almobase.obj:  .\almobase.cpp .\almobase.h
+
+$(OBJDIR)\heap.obj:  .\heap.cpp .\heapint.h .\heap.h
+
+$(OBJDIR)\resstrng.obj:  .\resstrng.cpp .\resstrng.h
+
+$(OBJDIR)\sbr_main.obj:  .\sbr_main.cpp .\scrol_vi.h .\scroll.h .\heap.h \
+                         .\almobase.h
+
+$(OBJDIR)\scroll.obj:  .\scroll.cpp .\scroll.h .\resstrng.h .\almobase.h \
+                       .\sbar_rsc.h
+
+$(OBJDIR)\scrol_vi.obj:  .\scrol_vi.cpp .\scrol_vi.h .\scroll.h .\almobase.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\sbar_rsc.res 
+
+
+$(OBJDIR)\sbar_rsc.res:  .\sbar_rsc.rc .\resstrng.h .\sbar_rsc.h
+

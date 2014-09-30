@@ -1,0 +1,12 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32TEXT.DLL
+OBJECTDEFNAME = ALM_TEXT.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  = ..\include
+LOCALLIBS     = AW32WND.LIB AW32NMBR.LIB
+OBJECTAPI     = AW32TEXT.LIB
+

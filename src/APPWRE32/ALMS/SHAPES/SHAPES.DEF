@@ -1,0 +1,10 @@
+LIBRARY        AW32SHAP
+DESCRIPTION    'Novell AppWare Loadable Module: Shape Library'
+EXETYPE        WINDOWS
+CODE           LOADONCALL MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+HEAPSIZE       32768
+STACKSIZE      20480
+
+EXPORTS
+               ShapeLibAdmin              @10

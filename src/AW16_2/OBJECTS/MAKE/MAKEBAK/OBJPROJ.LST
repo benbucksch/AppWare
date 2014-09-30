@@ -1,0 +1,53 @@
+# Projects that can be compiled
+APPLICAT
+BROWSER
+BUNDLE
+BUTTON
+CALC
+CONNCNT
+CURSOR
+DATABASE
+DATE
+DDECLIEN
+DDESERVE
+DLL
+FILE
+FILEOPS
+FILETRAN
+FLAG
+GENERAL
+GROUP
+IMP-EXP
+KEYBOARD
+LAUNCH
+LIST
+LOOP
+MENUS
+NOTIFY
+NUMBER
+NWMSG
+NWMHS
+OLE1
+ORACLE
+PAGE
+PICTURE
+PRINT
+QPLUSE
+RADGROUP
+SCALE
+SCROLBAR
+SHAPES
+SIGNAL
+SUB
+TABLE
+TERMINAL
+TEXT
+TEXTFACT
+TIME
+WINDOW
+W_LAYOUT
+
+# Projects that should just be retrieved
+CONFIGS                             nomake              
+INCLUDE                             nomake              alwaysget
+MAKE                                nomake              

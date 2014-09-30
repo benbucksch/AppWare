@@ -1,0 +1,44 @@
+LIBRARY         AW32LIST                      
+DESCRIPTION     'Novell AppWare Loadable Module: List Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD SINGLE MOVEABLE
+HEAPSIZE        1024
+;SEGMENTS        'code 1' PRELOAD
+SEGMENTS		_TEXT PRELOAD DISCARDABLE
+
+EXPORTS         OListSort                @19
+                OListGetSelection        @22
+                OListGetElement          @23
+                OListSetSelection        @24
+                OListSetElement          @25  
+                OListNewElement          @26  
+                OListGetElementLength    @27  
+                OListDeleteSelections    @28  
+                OListDeleteElement       @29  
+                OListCountSelections     @30  
+                OListCountElements       @31  
+                OListClearSelections     @32  
+                OListSetEditText         @33
+				OListDeleteAll			 @34
+
+				ListFunction_DeleteAll							
+				ListFunction_ClearSelections				
+				ListFunction_CountElements					
+				ListFunction_DeleteElement					
+				ListFunction_GetElement							
+				ListFunction_GetSelection						
+				ListFunction_NewElement							
+				ListFunction_SetElement							
+				ListFunction_SetSelection						
+				ListFunction_SortList								
+
+				NewListboxProc
+				NewComboboxProc
+				NewComboboxEditProc 
+				NewComboboxListProc 
+
+				ListEvent_ObjectToText
+				ListEvent_TextToObject
+				ListAdminProc
+								

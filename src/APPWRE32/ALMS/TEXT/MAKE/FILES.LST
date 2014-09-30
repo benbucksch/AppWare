@@ -1,0 +1,12 @@
+..\attrib\attribut.cpp
+t_adm.cpp
+t_api.cpp
+t_edit.cpp
+t_events.cpp
+t_func.cpp
+t_hti.cpp
+t_lti.cpp
+t_main.cpp
+t_rtime.cpp
+t_text.cpp
+t_util.cpp

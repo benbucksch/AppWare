@@ -1,0 +1,20 @@
+;======================================================================
+; CFGUPDAT.DEF
+; BGB 16-Aug-93 created
+;======================================================================
+
+LIBRARY         ALMCFGUP
+DESCRIPTION     'ALM Configuration Update Utility'
+EXETYPE         WINDOWS
+STUB            'WINSTUB.EXE'
+
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+
+HEAPSIZE        4096
+
+EXPORTS
+   WEP                                  @1 RESIDENTNAME
+   CONVERTFILE                          @2
+

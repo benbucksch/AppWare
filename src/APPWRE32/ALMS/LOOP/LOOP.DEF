@@ -1,0 +1,13 @@
+LIBRARY         AW32LOOP
+
+DESCRIPTION     'Novell AppWare Loadable Module: Loop Object'
+EXETYPE         WINDOWS
+
+DATA            PRELOAD MULTIPLE MOVEABLE
+
+EXPORTS
+				DllEntryPoint						@1
+				LoopAdmn								@10
+				LoopMethod							@11
+				StartLoop								@12
+				AbortLoop								@13

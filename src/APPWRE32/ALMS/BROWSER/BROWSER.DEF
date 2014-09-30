@@ -1,0 +1,13 @@
+;//////////////////////////////////////////////////////////////////////
+;//  browser.def
+;//////////////////////////////////////////////////////////////////////
+
+LIBRARY       AW32BRWS
+DESCRIPTION   'Novell AppWare Loadable Module: Browser Object'
+EXETYPE       WINDOWS
+
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+
+EXPORTS
+			  AdministrationRoutine

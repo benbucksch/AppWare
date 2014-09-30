@@ -1,0 +1,46 @@
+;
+[OPTIONS]
+ROOT=.
+ERRORLOG=.\wholealm.log
+TITLE=AppWare ALM Builder Help
+CONTENTS=idx_appware_alm_builder_help_index
+WARNING=3
+COMPRESS=OFF
+BMROOT=.\bitmaps
+;
+COPYRIGHT=Help File Copyright© 1994, Novell, Inc.
+;
+CITATION=AppWare ALM Builder Help File Version 1.1.  Copyright© 1994, Novell, Inc. All Rights Reserved.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+wholedoc.rtf
+;
+[BITMAPS]
+hd.bmp
+sb.bmp
+create.bmp
+crebutn.bmp
+objdef.bmp
+eventrsp.bmp
+fnctdef.bmp
+inptparm.bmp
+flow.bmp
+evntdscr.bmp
+novell2.bmp
+fncchain.bmp
+bundle.bmp
+connect.bmp
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_close', `Close', `Exit()')
+CB(`btn_up', `&Up', `JI(`',`idx_contents')')
+CB(`btn_print', `&Print', `Print()')
+;
+[WINDOWS]
+main="AppWare ALM Builder Help",,,,(255, 255, 232),0
+[MAP]

@@ -1,0 +1,10 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32CALC.DLL
+OBJECTDEFNAME = CALC.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  =
+LOCALLIBS     = AW32NMBR.LIB BWCC.LIB

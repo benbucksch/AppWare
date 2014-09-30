@@ -1,0 +1,114 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+;;
+;;  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+;;  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+;;  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL, INC. EMPLOYEES
+;;  WHO HAVE A NEED TO KNOW HOW TO PERFORM THEIR TASKS WITHIN THE SCOPE
+;;  OF THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL, INC. WHO
+;;  HAVE ENTERED INTO APPROPRIATE LICENSE AGREEMENTS.  NO PART OF THIS
+;;  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+;;  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+;;  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+;;  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL, INC.  ANY USE OR
+;;  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+;;  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+;;
+;;--------------------------------------------------------------------------
+;;
+;; FILE:  "alm_tabl.def"
+;;
+;; AUTHOR:
+;;
+;; DESCRIPTION:
+;;
+;; CHANGES:
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+LIBRARY         ALM_TABL
+
+DESCRIPTION     'Novell AppWare Loadable Module: Table Object'
+
+CODE            MOVEABLE DISCARDABLE LOADONCALL
+
+DATA            SINGLE MOVEABLE PRELOAD
+
+SEGMENTS        _TEXT PRELOAD
+
+HEAPSIZE        32768
+
+EXPORTS         ; dll entry and exit
+                WEP                            @1   
+                LIBMAIN                        @2
+
+                ; table admn and objd
+                TABL_ADMN                      @3
+                GETSERVERSION                  @72
+
+                ; table functions
+                TABL_UPDATEAUTOTABLE           @5
+                TABL_SORTASCENDING             @6   
+                TABL_SORTROWASCENDING          @7
+                TABL_SETSELECTION              @8
+                TABL_SETROW                    @9  
+                TABL_SETINDEXEDFIELD           @10  
+                TABL_SETDATASOURCE             @11  
+                TABL_SETCOLUMNWIDTH            @12  
+                TABL_SETCOLUMNTITLE            @13  
+                TABL_SETCOLUMN                 @14  
+                TABL_SETCELL                   @15  
+                TABL_SCROLLTOSELECTION         @16  
+                TABL_ROWTOTEXT                 @17  
+                TABL_ROWTOOBJECTS              @18  
+                TABL_ROWCALCULATION            @19  
+                TABL_REFRESHAUTOTABLE          @20  
+                TABL_INSERTCOLUMN              @21  
+                TABL_GETSELECTION              @22  
+                TABL_GETRECORDID               @23  
+                TABL_GETINDEXEDFIELD           @24  
+                TABL_GETDATASOURCE             @25  
+                TABL_GETCOLUMNWIDTH            @26  
+                TABL_GETCOLUMNTITLE            @27  
+                TABL_GETCOLUMN                 @28  
+                TABL_GETCELL                   @29  
+                TABL_FINDEXACT                 @30  
+                TABL_FIND                      @31  
+                TABL_DELETEROW                 @32  
+                TABL_DELETECOLUMN              @33  
+                TABL_COUNTROWS                 @34  
+                TABL_COLUMNCALCULATION         @35  
+                TABL_CLEARTABLE                @36  
+                TABL_CLEARSELECTIONS           @37  
+                TABL_CELLEDITED                @38
+                TABL_ADDROW                    @39  
+                TABL_ACTIVECOLUMN              @40  
+                TABL_ACTIVECELL                @41  
+                TABL_ACTIVATECOLUMN            @42  
+                TABL_SORTDESCENDING            @71
+                TABL_SORTROWDESCENDING         @73
+
+                ; table event handlers
+                TABL_DOUBLECLICKWAIT           @44  
+                TABL_TRACKCURSOR               @49
+                TABL_PRINTITEMDRAWROUTINE      @50  
+                TABL_STARTUPEVENT              @64
+                TABL_OBJECTCHANGED             @70
+
+                ; table api entries -- for the SequeLink SQL object and others..
+                OTABLEADDROW                   @79
+                OTABLECOLUMNTITLE              @69
+                OTABLEGETCELL                  @80
+                OTABLEGETCOLUMN                @76
+                OTABLEGETCOLUMNCOUNT           @78
+                OTABLEGETROW                   @75
+                OTABLEGETROWCOUNT              @77
+                OTABLESETCELL                  @81
+                OTABLESETCOLUMNCOUNT           @67
+                OTABLESETCOLUMN                @68  
+                OTABLESETROW                   @74
+                OTABLESETROWCOUNT              @66
+                OTABLESETCOLEDITATTRIB         @100
+                OTABLESETCOLUMNWIDTH           @101
+                OTABLEFINDCELL                 @102

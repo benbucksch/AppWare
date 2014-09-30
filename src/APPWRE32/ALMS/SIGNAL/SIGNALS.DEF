@@ -1,0 +1,13 @@
+LIBRARY         AW32SIGS
+
+DESCRIPTION     'Novell AppWare Loadable Module: Signal Object'
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+HEAPSIZE        32768
+STACKSIZE       20480
+
+
+EXPORTS			signalADMN  					@10 
+						GenerateSignals				@11
+						signalMDRT						@12

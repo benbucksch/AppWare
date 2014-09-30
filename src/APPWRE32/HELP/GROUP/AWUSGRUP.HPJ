@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\group
+ERRORLOG=o:\help\group\awusgrup.log
+TITLE=Group ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+grpalm.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB("btn_up", "&Up", "JI(`', `idx_contents')")
+;
+[WINDOWS]
+main="Group ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_grup.h>

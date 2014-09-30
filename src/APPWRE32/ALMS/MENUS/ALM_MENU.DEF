@@ -1,0 +1,72 @@
+;======================================================================
+;   MENU.def
+;
+;======================================================================
+
+LIBRARY      AW32MENU
+DESCRIPTION  'Novell AppWare Loadable Module: Menu, Menu Item, and Menu Bar Objects'
+;EXETYPE       WINDOWS
+
+;CODE         LOADONCALL MOVEABLE DISCARDABLE
+CODE         LOADONCALL DISCARDABLE
+;DATA         PRELOAD MOVEABLE SINGLE 
+DATA         PRELOAD SINGLE 
+;SEGMENTS     _TEXT PRELOAD MOVEABLE DISCARDABLE
+SEGMENTS     _TEXT PRELOAD DISCARDABLE
+PROTMODE
+
+HEAPSIZE     4096
+
+EXPORTS
+
+    OMenuIsPopup                @2
+    OMenuIsEnabled              @3
+    OMenuGetTitle               @4
+    OMenuAddItems               @35
+    OMenuDeleteItems            @36
+    OMenuAddSubmenu             @37
+    OMenuDeleteSubmenu          @38
+    OMenuDeletePosition         @39
+
+    handleShutDown              @40
+
+    MenuStartup                 @6
+    MenuObjectChanged           @7
+
+    EvtReleaseBarHandle         @8
+    EvtGetBarHandle             @9
+    EvtHandleCommand            @10
+
+    ItemDisable                 @11
+    ItemEnable                  @12
+    ItemToggleOn                @13
+    ItemToggleOff               @14
+
+    Func_MenuCountItems         @15
+    Func_MenuDisable            @16
+    Func_MenuEnable             @17
+    Func_MenuGetItemTitle       @18
+    Func_MenuInsertItem         @19
+    Func_MenuDeleteItem         @20
+    Func_MenuSetItemTitle       @21
+    Func_MenuGetPopItem         @22
+    Func_MenuSetPopItem         @23
+
+    Func_BarEnable              @24
+    Func_BarDisable             @25
+    Func_BarShow                @26
+    Func_BarHide                @27
+    Func_BarInstall             @28
+
+    ItemEvent                   @29
+
+    BarStartup                  @30
+    BarObjectChanged            @31
+
+    MenuAdministration          @32
+
+    ItemAdministration          @33
+
+    BarAdministration           @34
+
+; Last used entry number:  40

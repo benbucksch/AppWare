@@ -1,0 +1,58 @@
+LIBRARY       AW32TEXT
+
+DESCRIPTION   'Novell AppWare Loadable Module: Text Object'
+
+EXETYPE       WINDOWS
+
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE MULTIPLE
+
+HEAPSIZE      32768
+
+EXPORTS
+              OTextCompareWithBuffer              @10
+              OTextCompareWithMemblock            @11
+              OTextGetLength                      @12
+              OTextGetToBuffer                    @13
+              OTextGetToMemblock                  @14
+              OTextSetValueFromBuffer             @15
+              OTextSetValueFromMemblock           @16
+              OTextGetToBufferEx                  @17
+              OTextGetToMemblockEx                @18
+              OTextSetValueFromBufferEx           @19
+              OTextSetValueFromMemblockEx         @20
+              OTextGetLimit					  @21
+   			TxtAdminProc				@22
+
+					 
+					 		;The following functions need to be in the def file to be
+							;exported.  They do not need an ordinal number because they
+							;are used by name. (GetProcAddress)
+							TxtAdminProc
+				  		TxtEvent_Startup
+				  		TxtEvent_Shutdown
+				  		TxtEvent_ObjectToText
+				  		TxtEvent_TextToObject
+				  		TxtEvent_PIDR
+							TextFunction_AppendReturn
+							TextFunction_AppendTab
+							TextFunction_Clear
+							TextFunction_Compare
+							TextFunction_Concat
+							TextFunction_FindReplace
+							TextFunction_GetField
+							TextFunction_GetLine
+							TextFunction_GetNumber
+							TextFunction_GetWord
+							TextFunction_InsertText
+							TextFunction_Left
+							TextFunction_Load
+							TextFunction_Mid
+							TextFunction_Right
+							TextFunction_Save
+							TextFunction_SetFontSize
+							TextFunction_Length
+							TextFunction_UpperCase
+							TextFunction_IntersectText
+							TextFunction_MergeText
+							TextFunction_OmitText

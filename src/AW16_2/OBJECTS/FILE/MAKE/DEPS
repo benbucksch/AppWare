@@ -1,0 +1,18 @@
+OBJECTFILES= \
+	$(OBJDIR)\fileadmn.obj \
+	$(OBJDIR)\filefunc.obj \
+	$(OBJDIR)\fileobjd.obj 
+
+
+$(OBJDIR)\fileadmn.obj:  .\fileadmn.cpp .\fileobj.h
+
+$(OBJDIR)\filefunc.obj:  .\filefunc.cpp .\fileobj.h
+
+$(OBJDIR)\fileobjd.obj:  .\fileobjd.cpp .\fileobj.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\fileobj.res 
+
+
+$(OBJDIR)\fileobj.res:  .\fileobj.rc .\fileobj.h
+

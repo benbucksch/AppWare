@@ -1,0 +1,38 @@
+LIBRARY         AW32DDEC
+
+DESCRIPTION     'Novell AppWare Loadable Module: DDE Client Object'
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+HEAPSIZE        32768
+STACKSIZE       20480
+
+
+EXPORTS
+                ddeClientMDRT               @2
+                GetLastUpdatedTrans         @3
+                GetAbortedTransaction       @4
+                GetLastNewTrans             @5
+                GetTransactionInfo          @6
+                GetConversationInfo         @7
+                ExecuteServerCommand        @8
+                SetTransactionsOptions      @9
+                ResumeAllConversations      @10
+                SuspendAllConversations     @11
+                ResumeConversation          @12
+                SuspendConversation         @13
+                SendData                    @14
+                GetData                     @15
+                IsServiceAvailable          @16
+                StopTransaction             @17
+                StartTransaction            @18
+                StopAllConversations        @19
+                StopConversation            @20
+                StartConversation           @21
+                StopServer                  @22
+                StartServer                 @23
+                DdeCallback                 @24
+                ddeClientADMN               @25
+                OptionsDlgProc              @26
+
+

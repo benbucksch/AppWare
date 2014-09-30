@@ -1,0 +1,27 @@
+;======================================================================
+;   appl.def
+;======================================================================
+
+LIBRARY         AW32SYSM
+DESCRIPTION     'Novell AppWare Loadable Module: Application Object'
+EXETYPE         WINDOWS
+
+DATA            PRELOAD MOVEABLE MULTIPLE
+
+EXPORTS
+							AppDoaActivateApp			@10
+							appFunctionPriority		@11
+							appGetMouseDown				@12
+							appGetName						@13
+							AppKeyboardHook				@14
+							AppMouseHook					@15
+							appMouseUp						@16
+							appSavePersistentData	@17
+							appSetName						@18
+							appStartIdle					@19
+							appStopIdle						@20
+							appUpdateWindows			@21
+							appVisualPriority			@22
+							HandleShutdown				@23
+							HandleStartup					@24
+							appAdmn								@25

@@ -1,0 +1,11 @@
+LIBRARY         AW32TEXT
+
+DESCRIPTION     'Test module'
+EXETYPE         WINDOWS
+
+DATA            PRELOAD MULTIPLE MOVEABLE
+
+EXPORTS
+		TinyTextAdmin			@10
+		TinyTextObjToText		@11
+		TinyTextTextToObj		@12

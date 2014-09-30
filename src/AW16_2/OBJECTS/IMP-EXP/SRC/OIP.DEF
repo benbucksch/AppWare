@@ -1,0 +1,199 @@
+;/*//////////////////////////////////////////////////////////////
+;//
+;//         Copyright 1994, Novell, Inc.  All rights reserved
+;//
+;// THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+;// PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+;// ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+;// A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+;// THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+;// ENTERED INTO APPROPRIATE LICENCE AGREEMENTS.  NO PART OF THIS
+;// WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+;// REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+;// COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+;// WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+;// EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+;// THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+;//
+;//--------------------------------------------------------------
+;//
+;// FILE:         OIP.DEF
+;//
+;// AUTHOR:
+;//
+;// DESCRIPTION:
+;//
+;// CHANGES:
+;//   7/22/93   Scott
+;//     Removed OIPEMULATEOSEVENT
+;// kjs 17-Dec-92 added upsf stuff
+;// jon 15-Aug-92 created
+;// kjs 13-Apr-94 added upsfValidateScope
+;//
+;//////////////////////////////////////////////////////////////*/
+
+
+LIBRARY       AW32RUN
+DESCRIPTION   'Novell AppWare Bus'
+EXETYPE       WINDOWS
+
+DATA          PRELOAD MOVEABLE MULTIPLE
+
+;
+; Keep the exports alphabetical within group.  Update the
+; 'lastUsed' export number at the end of the file.
+;
+
+EXPORTS
+    AAppConvertOSTime                     @10
+    AAppDefWndProc                        @132
+    AAppGetCmdLine                        @130
+    AAppGetExecutionState                 @136
+    AAppGetIcon                           @11
+    AAppGetName                           @12
+    AAppGetPriorityMode                   @13
+    AAppGetTime                           @14
+    AAppIsDesignTime                      @134
+    AAppPostShutdown                      @122
+    AAppSave                              @15
+    AAppSetName                           @16
+    AAppSetPriorityMode                   @17
+    AAppShowAppBuilder                    @133
+
+    ADbgInternalPrint                     @18
+    _ADbgPrint                            @19
+    _ADbgPrintRes                         @112
+
+    AEvtCallMethod                        @20
+    AEvtCheckForMethod                    @21
+    AEvtGetObjectChangedPriority          @22
+    AEvtPost                              @23
+    AEvtPostSignalAtMark                  @24
+    AEvtPostSignalAtTail                  @25
+    AEvtPostStandard                      @26
+
+    AFuncGetOutput                        @123
+    AFuncGetParameter                     @27
+    AFuncGetTypedParameter                @28
+    AFuncReportResult                     @29
+    AFuncSetParameter                     @30
+
+    AMemAllocate                          @31
+    AMemFree                              @32
+    AMemGetSize                           @33
+    AMemLock                              @34
+    AMemSetSize                           @35
+    AMemUnlock                            @115
+
+    ATypeAddData                          @37
+    ATypeDeleteData                       @44
+    ATypeGetCount                         @57
+    ATypeGetCountCfg                      @120
+    ATypeGetDataCount                     @58
+    ATypeGetDataSize                      @59
+    ATypeGetIcon                          @118
+    ATypeGetName                          @60
+    ATypeGetNext                          @53
+    ATypeGetNextCfg                       @121
+    ATypeGetRuntimeInfo                   @108
+    ATypeInsertData                       @63
+    ATypeLockData                         @66
+    ATypeQueryProtocol                    @109
+    ATypeResizeData                       @69
+    ATypeSetData                          @73
+    ATypeSetDataCount                     @74
+    ATypeSetRuntimeInfo                   @107
+    ATypeUnlockData                       @116
+
+    AObjAddData                           @36
+    AObjAddRequiredFile                   @131
+    AObjAssign                            @38
+    AObjCheckType                         @39
+    AObjConvertFromText                   @40
+    AObjConvertToText                     @41
+    AObjCopyDatas                         @126
+    AObjCreate                            @42
+    AObjCreateWithProtocol                @117
+    AObjDeleteData                        @43
+    AObjDestroy                           @45
+    AObjEdit                              @46
+    AObjExport                            @47
+    AObjGetDataCount                      @48
+    AObjGetDataLockCount                  @119
+    AObjGetDataSize                       @49
+    AObjGetName                           @50
+    AObjGetNextObject                     @51
+    AObjGetNextOwner                      @52
+    AObjGetObjectCount                    @54
+    AObjGetRuntimeInfo                    @55
+    AObjGetType                           @56
+    AObjImport                            @61
+    AObjInsertData                        @62
+    AObjLockData                          @64
+    AObjLockDataDbg                       @65
+    AObjQueryProtocol                     @110
+    AObjReadDatas                         @125
+    AObjRegisterOwner                     @67
+    AObjReportError                       @111
+    AObjResizeData                        @68
+    AObjRestoreDatas                      @127
+    AObjSetData                           @70
+    AObjSetDataCount                      @71
+    AObjSetName                           @128
+    AObjSetRuntimeInfo                    @72
+    AObjUnlockData                        @113
+    AObjUnlockDataDbg                     @114
+    AObjUnregisterOwner                   @75
+    AObjValidateID                        @76
+    AObjWriteDatas                        @124
+    AUpsfCloseScope                       @77
+    AUpsfCreateScope                      @78
+    AUpsfExportField                      @79
+    AUpsfFieldCount                       @80
+    AUpsfFieldInfo                        @81
+    AUpsfImportField                      @82
+    AUpsfLogComment                       @83
+    AUpsfOpenScope                        @84
+
+    AUtlCenterDialog                      @135
+    AUtlCreateBrushIndirect               @85
+    AUtlCreateFont                        @86
+    AUtlCreateFontIndirect                @87
+    AUtlCreateSolidBrush                  @88
+    AUtlDeleteBrush                       @89
+    AUtlDeleteFont                        @90
+    AUtlDlgEditFont                       @98
+    AUtlSetTitleFont                      @97
+
+    ; UNDOCUMENTED
+
+    exeContinueApp                        @91         ; undocumented
+    exeRegisterContext                    @92         ; undocumented
+    exeResetApp                           @93         ; undocumented
+    exeRunApp                             @94         ; undocumented
+    exeUnregisterContext                  @95         ; undocumented
+
+    upsfClearObjectIDs                    @100        ; undocumented
+    upsfCloseExport                       @101        ; undocumented
+    upsfCloseImport                       @102        ; undocumented
+    upsfInitExport                        @103        ; undocumented
+    upsfInitImport                        @104        ; undocumented
+    upsfRegisterObjectID                  @105        ; undocumented
+    upsfScopeLength                       @106        ; undocumented
+    upsfValidateScope                     @129        ; undocumented
+
+		AUtlOpenProductSubKey									@137        ; undocumented
+    AUtlCloseProductSubKey                   @138        ; undocumented
+		AUtlWriteKeyString										@139        ; undocumented
+    AUtlWriteKeyLong											@140        ; undocumented
+    AUtlGetKeyString											@141        ; undocumented
+    AUtlGetKeyLong												@142        ; undocumented
+    
+    ADBGGetKernelBuildNum									@143				; undocumented
+    ADBGGetKernelBuildDate								@144				; undocumented
+    ADBGGetKernelName											@145        ; undocumented
+    
+    AUtlGetOSVersion											@146				; undocumented
+    
+;;last used 146
+

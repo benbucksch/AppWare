@@ -1,0 +1,37 @@
+LIBRARY       AW32DATE
+DESCRIPTION   'Novell AppWare Loadable Module: Date Object'
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+HEAPSIZE      32768
+STACKSIZE     20480
+
+EXPORTS       DateAdminProc             	@10
+	           ODateStringToDate            @11
+			 ODateConvertToString		@12
+			 ODateConvertFromString		@13
+			 ODateFormatDate			@14
+			 ODateGetValue				@15
+			 ODateSetValue				@16
+			 ODateToYMD				@17
+			 ODateFromYMD				@18
+			 ODateGetStyle				@19
+			 ODateParseString			@20
+
+; Functions
+			 DateFunction_Change		@100
+			 DateFunction_Compare		@101
+			 DateFunction_Current		@102
+			 DateFunction_Diff			@103
+			 DateFunction_SetFontSize	@104
+			 DateFunction_Parse			@105
+
+; Events
+			 DateEvent_Startup			@200
+	   		 DateEvent_TextToObject		@201
+	   		 DateEvent_ObjectToText		@202
+			 DateEvent_dateUpdate		@203
+
+
+
+

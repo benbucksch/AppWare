@@ -1,0 +1,31 @@
+LIBRARY       ALM_FLAG
+
+DESCRIPTION   'Novell AppWare Loadable Module: Flag Object'
+
+CODE          MOVEABLE DISCARDABLE LOADONCALL
+
+DATA          SINGLE MOVEABLE PRELOAD
+
+SEGMENTS      _TEXT PRELOAD
+
+EXPORTS       ; dll entry and exit
+              WEP                           @1   RESIDENTNAME
+
+              ; flag admn and objd
+              FLAG_ADMN                     @3
+              FLAG_OBJD                     @4
+              GETSERVERSION                 @5
+
+              ; flag functions
+              FLAG_CLEARFLAG                @6
+              FLAG_ISFLAGSET                @7
+              FLAG_SETFLAG                  @8
+              FLAG_TOGGLEFLAG               @9      
+
+              ; flag event handlers
+              FLAG_OBJECTTOTEXT             @10
+              FLAG_TEXTTOOBJECT             @11
+
+              ; flag APIs
+              OFLAGGET                        @12
+              OFLAGSET                        @13

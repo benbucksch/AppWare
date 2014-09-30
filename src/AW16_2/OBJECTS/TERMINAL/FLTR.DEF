@@ -1,0 +1,27 @@
+LIBRARY       ALM_FLTR                      
+DESCRIPTION   'Novell AppWare Loadable Module: File Transfer Object'
+EXETYPE       WINDOWS
+
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+SEGMENTS      _TEXT PRELOAD
+
+EXPORTS
+              WEP                            @1   
+              LIBMAIN                        @2   
+              FT_SETCONFIGFUNC               @3   
+              FT_GETCONFIGFUNC               @4   
+              FT_RECEIVEFILEFUNC             @5   
+              FT_SENDFILEFUNC                @6   
+              FT_CANCELFUNC                  @7  
+              FT_CONFIGUREFUNC               @8 
+              FLTR_RECEIVEBINARYFILEEVENT    @9  
+              FLTR_SENDBINARYFILEEVENT       @10  
+              FLTR_ASCII_RECEIVEFILEEVENT    @11  
+              FLTR_ASCII_CANCELFILEEVENT     @12  
+              FLTR_ASCII_SENDFILEEVENT       @13  
+              FLTR_ACTIVEIDLEEVENT           @14  
+              FLTR_KILLIDLEEVENT             @15  
+			  FLTR_POSTPOLLTIMEREVENT        @16
+			  FLTR_POSTDATATIMEREVENT        @17
+			  FLTR_STARTUPEVENT              @18

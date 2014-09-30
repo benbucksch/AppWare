@@ -1,0 +1,21 @@
+LIBRARY     AW32CALC
+
+DESCRIPTION 'Novell AppWare Loadable Module: Calculation Object'
+EXETYPE     WINDOWS
+CODE        MOVEABLE DISCARDABLE LOADONCALL
+DATA        SINGLE MOVEABLE PRELOAD
+SEGMENTS    'code 1' PRELOAD
+
+EXPORTS			DllEntryPoint									 @1
+				    CalcAdmn                       @2
+            Expression                     @3   
+            SetExpression                  @4   
+            Calculate                      @5
+            Calc_ObjectChanged             @6
+						Calc_Startup                   @8
+						AutoUpdateOff									 @9
+						AutoUpdateOn									 @10
+
+
+
+

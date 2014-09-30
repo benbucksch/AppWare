@@ -1,0 +1,33 @@
+LIBRARY     	AW32SBAR
+
+DESCRIPTION	'Novell AppWare Loadable Module: Scroll Bar Object'
+
+CODE        	MOVEABLE DISCARDABLE LOADONCALL
+
+DATA        	SINGLE MOVEABLE PRELOAD
+
+SEGMENTS    	_TEXT PRELOAD
+
+HEAPSIZE    	4096
+
+EXPORTS		; /* ---- DLL entry and exit ---------------------------- */
+		DllEntryPoint			@1
+
+		; /* ---- Scroll Bar object ----------------------------- */
+		ScrollAdmn			@2
+		ScrollStartup			@3
+
+		ScrollObjectChanged		@6
+		ScrollMaybePostSignals		@7
+
+		; /* ---- The functions --------------------------------- */
+		ScrollDisable			@11
+		ScrollEnable			@12
+		ScrollGetIncrement		@13
+		ScrollGetPosition		@14
+		ScrollGetRange			@15
+		ScrollIsEnabled			@16
+		ScrollSetIncrement		@17
+		ScrollSetPosition		@18
+		ScrollSetRange			@19
+

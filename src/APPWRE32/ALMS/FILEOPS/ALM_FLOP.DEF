@@ -1,0 +1,29 @@
+LIBRARY       AW32FLOP
+DESCRIPTION   'Novell AppWare Loadable Module: File Operation Functions'
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+HEAPSIZE      32768
+STACKSIZE     20480
+
+
+EXPORTS     DllEntryPoint             @1      RESIDENTNAME
+            PathNameFunc              @2
+            CreateDirectoryFunc       @3
+            DiskLabelFunc             @4
+            DirectoryFunc             @5
+            DeleteFileFunc            @6
+            CopyFileFunc              @7
+            ChooseFileFunc            @8
+            PutFileFunc               @9
+            GetFileNamesFunc          @10
+            GetFilesFunc              @11
+            MoveFileFunc              @12
+            RenameFileFunc            @13
+		    GetCreationInfoFunc		  @14
+		    GetModificationInfoFunc	  @15
+		    GetSizeFunc				  @16
+		    GetTypesFunc			  @17
+			Flop_ReadIni			  @18
+		    Flop_WriteIni			  @19
+			  

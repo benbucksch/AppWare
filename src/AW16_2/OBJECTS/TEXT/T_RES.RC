@@ -1,0 +1,161 @@
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+#include "t_dialog.h"
+#include "t_string.h"
+
+text ICON "text.ico"
+TEXT_SETUP_DIALOG DIALOG 86, 2, 290, 254
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MAXIMIZEBOX
+CLASS "bordlg"
+CAPTION "Text Object Setup"
+FONT 8, "Helv"
+BEGIN
+	LTEXT " Te&xt:", ST_LABEL_TEXT, 5, 29, 221, 10, WS_CHILD | WS_VISIBLE
+	CONTROL "", ED_TITLE, "EDIT", ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP, 5, 39, 221, 52
+	CONTROL "Size Options", ST_LABEL_SIZEOPTIONS, "BorShade", 32769 | WS_CHILD | WS_VISIBLE, 5, 94, 221, 25
+	LTEXT "&Limit:", ST_LABEL_LIMIT, 10, 107, 20, 10, WS_CHILD | WS_VISIBLE
+	CONTROL "", ED_LIMIT, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 32, 105, 52, 12
+	LTEXT "Tab &Width:", ST_LABEL_WIDTH, 119, 107, 39, 8, WS_CHILD | WS_VISIBLE
+	EDITTEXT ED_TABSIZE, 158, 105, 45, 12, ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP
+	CONTROL "Case", ST_LABEL_CASE, "BorShade", 32769 | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 122, 221, 23
+	CONTROL "Case &Insensitive", RB_CASEINSENSITIVE, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 12, 133, 69, 10
+	CONTROL "&Uppercase", RB_UPPERCASE, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 92, 133, 49, 10
+	CONTROL "L&owercase", RB_LOWERCASE, "BorRadio", 9 | WS_CHILD | WS_VISIBLE, 156, 133, 49, 10
+	CONTROL "Type", ST_LABEL_TYPE, "BorShade", 32769 | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 148, 221, 103
+	CONTROL "Multili&ne", RB_MULTILINE, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 12, 159, 44, 10
+	CONTROL "Sin&gle-Line", RB_SINGLELINE, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 92, 159, 49, 10
+	CONTROL "&Static", RB_STATIC, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 156, 159, 32, 10
+	CONTROL "Style", ST_LABEL_STYLE, "BorShade", 32769 | WS_CHILD | WS_VISIBLE | WS_GROUP, 11, 172, 208, 51
+	CONTROL "Fra&me and Background", CB_FRAME, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 16, 183, 90, 10
+	CONTROL "&Editable", CB_EDITABLE, "BorCheck", 3 | WS_CHILD | WS_VISIBLE, 16, 192, 43, 10
+	CONTROL "&Horizontal Scrollbar", CB_HORZSCROLL, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 16, 201, 78, 10
+	CONTROL "&Vertical Scrollbar", CB_VERTSCROLL, "BorCheck", 3 | WS_CHILD | WS_VISIBLE, 16, 210, 71, 10
+	CONTROL "&Select All When Activated", CB_SELECTALL, "BorCheck", 3 | WS_CHILD | WS_VISIBLE, 113, 183, 100, 10
+	CONTROL "Always Show Selection", CB_KEEPSELECTION, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 113, 192, 90, 10
+	CONTROL "&Uses Enter at Runtime", CB_USESENTER, "BorCheck", 3 | WS_CHILD | WS_VISIBLE, 113, 201, 87, 10
+	CONTROL "Uses Ta&b at Runtime", CB_USESTAB, "BorCheck", 3 | WS_CHILD | WS_VISIBLE, 113, 210, 84, 10
+	CONTROL "&Password", CB_PASSWORD, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 113, 201, 47, 10
+	CONTROL "Justification", ST_JUSTIFICATION, "BorShade", 32769 | WS_CHILD | WS_VISIBLE | WS_GROUP, 11, 224, 208, 22
+	CONTROL "Le&ft", RB_LEFT, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 26, 235, 26, 10
+	CONTROL "&Center", RB_CENTER, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 81, 235, 35, 10
+	CONTROL "&Right", RB_RIGHT, "BorRadio", 9 | WS_CHILD | WS_VISIBLE, 145, 235, 30, 10
+	CONTROL "OK", PB_OK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 235, 38, 50, 14
+	PUSHBUTTON "Cancel", PB_CANCEL, 235, 58, 50, 14
+	PUSHBUTTON "&Attributes...", PB_FONTS, 235, 78, 50, 14
+	CONTROL "&Help...", PB_HELP, "BUTTON", BS_PUSHBUTTON | WS_CHILD | NOT WS_VISIBLE, 337, 79, 50, 14
+	CONTROL "text", -1, "STATIC", SS_ICON | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 2, 18, 20
+	LTEXT "", ST_OBJECTNAME, 28, 3, 255, 19, WS_CHILD | WS_VISIBLE
+	CONTROL "", ST_HORZLINE1, "BorShade", 2 | WS_CHILD | WS_VISIBLE, 0, 25, 284, 1
+	CONTROL "", ST_HORZLINE2, "BorShade", 2 | WS_CHILD | WS_VISIBLE, 8, 169, 212, 1
+	CONTROL "", ST_VERTLINE, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 230, 28, 1, 225
+	CONTROL "Text", 1003, "AWResizer", 0 | WS_CHILD | WS_VISIBLE, 256, 219, 20, 20
+END
+
+AWResizeTop RCDATA 
+BEGIN
+CB_HORZSCROLL					CB_VERTSCROLL				ED_LIMIT						CB_EDITABLE					CB_FRAME		        
+CB_USESENTER					CB_USESTAB					RB_LEFT             RB_CENTER           RB_RIGHT            
+RB_CASEINSENSITIVE  	RB_UPPERCASE        RB_LOWERCASE        ED_TABSIZE					CB_SELECTALL				
+RB_MULTILINE					RB_SINGLELINE				RB_STATIC						CB_PASSWORD					ST_JUSTIFICATION		
+STR_FRAME							STR_FRAMEANDBACK		CB_KEEPSELECTION		ST_LABEL_LIMIT			ST_LABEL_WIDTH			
+ST_LABEL_SIZEOPTIONS	ST_LABEL_CASE				ST_LABEL_TYPE				ST_LABEL_STYLE			ST_HORZLINE2
+0
+END
+
+AWResizeBottom RCDATA 
+BEGIN
+CB_HORZSCROLL					CB_VERTSCROLL				ED_LIMIT						CB_EDITABLE					CB_FRAME		        
+CB_USESENTER					CB_USESTAB					RB_LEFT             RB_CENTER           RB_RIGHT            
+RB_CASEINSENSITIVE  	RB_UPPERCASE        RB_LOWERCASE        ED_TABSIZE					CB_SELECTALL				
+RB_MULTILINE					RB_SINGLELINE				RB_STATIC						CB_PASSWORD					ST_JUSTIFICATION		
+STR_FRAME							STR_FRAMEANDBACK		CB_KEEPSELECTION		ST_LABEL_LIMIT			ST_LABEL_WIDTH			
+ST_LABEL_SIZEOPTIONS	ST_LABEL_CASE				ST_LABEL_TYPE				ST_LABEL_STYLE			ST_HORZLINE2
+ED_TITLE	 ST_VERTLINE
+0
+END
+
+AWResizeLeft RCDATA
+BEGIN
+PB_OK               PB_CANCEL           PB_HELP							PB_FONTS		 ST_VERTLINE
+0
+END
+
+
+AWResizeRight RCDATA
+BEGIN
+PB_OK               PB_CANCEL           PB_HELP							PB_FONTS		ST_VERTLINE
+ED_TITLE
+ST_OBJECTNAME
+ST_HORZLINE1
+ST_LABEL_TEXT
+0
+END
+
+
+
+STRINGTABLE 
+BEGIN
+  0, "Text Object"
+  ERR_NULL_TXT, "NULL txt pointer in %s"
+  ERR_NULL_TR, "NULL tr pointer in %s"
+  ERR_NULL_HTI, "NULL hti pointer in %s"
+  ERR_NULL_STRING, "NULL text string in %s"
+  ERR_INVALIDWINDOW, "Invalid window handle in %s"
+  ERR_WRONG_TYPEID, "Incorrect Object Type in %s"
+  ERR_GET_PARAMETER_FAILED, "Unable to get parameter #%d in %s"
+  ERR_CREATING_PSUEDO_OBJECT, "Unable to create pseudo object %s"
+  ERR_BAD_API_PARAMETER, "Bad API parameter in %s"
+	STR_FRAME, "&Frame"
+	STR_FRAMEANDBACK, "&Frame and Background"
+
+END
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Text Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_TEXT\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_TEXT.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////
+
+

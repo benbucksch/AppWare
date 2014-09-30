@@ -1,0 +1,78 @@
+OBJECTFILES= \
+	$(OBJDIR)\tabl_api.obj \
+	$(OBJDIR)\tabl_lib.obj \
+	$(OBJDIR)\tabl_row.obj \
+	$(OBJDIR)\table1.obj \
+	$(OBJDIR)\table2.obj \
+	$(OBJDIR)\table3.obj \
+	$(OBJDIR)\table4.obj \
+	$(OBJDIR)\tbl_admn.obj \
+	$(OBJDIR)\tbl_atrb.obj \
+	$(OBJDIR)\tbl_clmn.obj \
+	$(OBJDIR)\tbl_func.obj \
+	$(OBJDIR)\tbl_main.obj \
+	$(OBJDIR)\tbl_mthd.obj \
+	$(OBJDIR)\tbl_objd.obj \
+	$(OBJDIR)\tbl_prnt.obj \
+	$(OBJDIR)\tbl_wlay.obj 
+
+
+$(OBJDIR)\tabl_api.obj:  .\tabl_api.cpp .\table.h .\tabl_row.h .\tabl_hdr.h \
+                         .\tbl_clmn.h .\tbl_atrb.h
+
+$(OBJDIR)\tabl_lib.obj:  .\tabl_lib.cpp g:\internal\include\o_number.h \
+                         .\tabl_hdr.h
+
+$(OBJDIR)\tabl_row.obj:  .\tabl_row.cpp .\tabl_row.h .\tbl_clmn.h \
+                         .\tabl_hdr.h .\table.h \
+                         g:\internal\include\o_number.h .\tbl_atrb.h
+
+$(OBJDIR)\table1.obj:  .\table1.cpp .\tabl_row.h .\tabl_rsc.h .\tabl_hdr.h \
+                       .\table.h .\tbl_atrb.h .\tbl_clmn.h
+
+$(OBJDIR)\table2.obj:  .\table2.cpp .\tabl_row.h .\table.h .\tabl_hdr.h \
+                       g:\internal\include\o_number.h .\tbl_atrb.h \
+                       .\tbl_clmn.h
+
+$(OBJDIR)\table3.obj:  .\table3.cpp .\tabl_row.h .\table.h .\tabl_hdr.h \
+                       g:\internal\include\o_number.h .\tbl_atrb.h \
+                       .\tbl_clmn.h
+
+$(OBJDIR)\table4.obj:  .\table4.cpp .\tabl_row.h .\table.h .\tabl_rsc.h \
+                       .\tabl_hdr.h .\tbl_atrb.h .\tbl_clmn.h
+
+$(OBJDIR)\tbl_admn.obj:  .\tbl_admn.cpp .\tbl_wlay.h .\tabl_row.h .\table.h \
+                         .\tabl_hdr.h .\tbl_atrb.h .\tbl_clmn.h
+
+$(OBJDIR)\tbl_atrb.obj:  .\tbl_atrb.cpp .\table.h .\tabl_row.h .\tbl_clmn.h \
+                         .\tbl_atrb.h .\tabl_rsc.h .\tabl_hdr.h
+
+$(OBJDIR)\tbl_clmn.obj:  .\tbl_clmn.cpp .\tabl_row.h .\tbl_clmn.h \
+                         .\tabl_hdr.h .\table.h .\tbl_atrb.h
+
+$(OBJDIR)\tbl_func.obj:  .\tbl_func.cpp .\tabl_row.h .\table.h .\tabl_hdr.h \
+                         g:\internal\include\o_number.h .\tbl_atrb.h \
+                         .\tbl_clmn.h
+
+$(OBJDIR)\tbl_main.obj:  .\tbl_main.cpp .\table.h .\tabl_rsc.h .\tabl_hdr.h \
+                         .\tbl_clmn.h .\tbl_atrb.h
+
+$(OBJDIR)\tbl_mthd.obj:  .\tbl_mthd.cpp .\table.h .\tabl_hdr.h .\tabl_row.h \
+                         .\tbl_clmn.h .\tbl_atrb.h
+
+$(OBJDIR)\tbl_objd.obj:  .\tbl_objd.cpp .\tabl_rsc.h .\tbl_objd.h \
+                         .\tbl_clmn.h .\tbl_atrb.h .\tabl_hdr.h \
+                         g:\internal\include\o_number.h
+
+$(OBJDIR)\tbl_prnt.obj:  .\tbl_prnt.cpp .\tabl_row.h .\table.h .\tabl_hdr.h \
+                         .\tbl_atrb.h .\tbl_clmn.h
+
+$(OBJDIR)\tbl_wlay.obj:  .\tbl_wlay.cpp .\tbl_wlay.h .\table.h .\tabl_hdr.h \
+                         .\tbl_clmn.h .\tbl_atrb.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\tabl_rsc.res 
+
+
+$(OBJDIR)\tabl_rsc.res:  .\tabl_rsc.rc .\tabl_rsc.h
+

@@ -1,0 +1,107 @@
+OBJECTFILES= \
+	$(OBJDIR)\admin.obj \
+	$(OBJDIR)\dialog.obj \
+	$(OBJDIR)\event.obj \
+	$(OBJDIR)\function.obj \
+	$(OBJDIR)\listdata.obj \
+	$(OBJDIR)\objd.obj \
+	$(OBJDIR)\strclass.obj \
+	$(OBJDIR)\heap.obj 
+
+
+$(OBJDIR)\admin.obj:  .\admin.cpp .\heap.h .\tf_incld.h .\textfact.h \
+                      .\strclass.h g:\internal\include\helpids.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\dialog.obj:  .\dialog.cpp .\tf_incld.h .\textfact.h .\strclass.h \
+                       g:\internal\include\helpids.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\event.obj:  .\event.cpp .\tf_incld.h .\textfact.h .\strclass.h \
+                      g:\internal\include\helpids.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\function.obj:  .\function.cpp .\tf_incld.h .\textfact.h \
+                         .\strclass.h g:\internal\include\helpids.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\listdata.obj:  .\listdata.cpp .\tf_incld.h .\textfact.h \
+                         .\strclass.h g:\internal\include\helpids.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\objd.obj:  .\objd.cpp .\tf_incld.h .\textfact.h .\strclass.h \
+                     g:\internal\include\helpids.h \
+                     g:\internal\include\o_number.h \
+                     g:\internal\include\o_text.h g:\internal\include\o_wnd.h \
+                     g:\internal\include\op_wnd.h \
+                     g:\internal\include\a_almutl.h \
+                     g:\internal\include\a_alm.h d:\borlandc\include\string.h \
+                     d:\borlandc\include\mem.h d:\borlandc\include\stddef.h \
+                     d:\borlandc\include\windows.h
+
+$(OBJDIR)\strclass.obj:  .\strclass.cpp .\tf_incld.h .\textfact.h \
+                         .\strclass.h g:\internal\include\helpids.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\heap.obj:  .\heap.cpp .\heapint.h .\heap.h \
+                     g:\internal\include\intdebug.h \
+                     g:\internal\include\a_alm.h \
+                     d:\borlandc\include\windows.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\resource.res 
+
+
+$(OBJDIR)\resource.res:  .\resource.rc
+

@@ -1,0 +1,10 @@
+LIBRARY       ALM_SCAL                         
+
+DESCRIPTION   'Novell AppWare Loadable Module: Scale Object'
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+SEGMENTS      _TEXT PRELOAD
+
+HEAPSIZE      4096
+

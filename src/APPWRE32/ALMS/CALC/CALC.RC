@@ -1,0 +1,81 @@
+#include <windows.h>
+///#include <bwcc.h>
+#include <ver.h>
+
+#include "calc_dlg.h"
+
+CALCDLG DIALOG 68, 0, 290, 269
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Calculation Object"
+FONT 8, "MS Sans Serif"
+{
+ PUSHBUTTON "OK", IDOK, 232, 8, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 232, 26, 50, 14
+ PUSHBUTTON "&Test...", IDD_EVALUATE, 232, 44, 50, 14
+ PUSHBUTTON "&Help", IDHELP, 232, 62, 50, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "<< A&dd <<", IDD_ADD, 91, 37, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "&Remove", IDD_REMOVE, 91, 56, 50, 14
+ PUSHBUTTON "&Edit...", IDD_EDIT, 91, 75, 50, 14
+ LTEXT "&Variables:", -1, 19, 18, 68, 11
+ LISTBOX IDD_VARIABLES, 18, 29, 65, 70, LBS_NOTIFY | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Available &objects:", -1, 152, 18, 63, 11
+ LISTBOX IDD_OBJECTS, 149, 29, 65, 70, LBS_NOTIFY | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Variable &name:", IDD_ALIAS_TITLE, 7, 115, 57, 11
+ EDITTEXT IDD_ALIAS, 7, 126, 85, 12, ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
+ LTEXT "Re&sult object:", -1, 17, 229, 57, 11
+ COMBOBOX IDD_RESULT, 17, 239, 92, 60, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+ LTEXT "Ex&pression:", -1, 17, 158, 41, 11, WS_CHILD | WS_VISIBLE | WS_GROUP
+ EDITTEXT IDD_EXPRESSION, 17, 169, 196, 50, ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ CHECKBOX "Auto &update", IDD_AUTO_UPDATE, 155, 239, 56, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
+ GROUPBOX "Equation", IDC_GROUPBOX1, 7, 145, 216, 114, BS_GROUPBOX
+ GROUPBOX "Group", IDC_GROUPBOX2, 8, 5, 216, 103, BS_GROUPBOX
+}
+
+CalcIcon ICON "calculat.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Calculation Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32CALC\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32CALC.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  1, "VeRsIoN=1.20\0"
+  2, "\0"
+  3, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

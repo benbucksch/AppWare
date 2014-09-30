@@ -1,0 +1,17 @@
+n:
+cd \
+
+REM internal
+\build\bin\makeenv -i -n -g -ln:\build\log\intern
+\build\bin\copyenv -c -an:\build\log\intern
+\build\bin\makeobj -i -n -g -u -m -an:\build\log\intern  window w_layout table button nwmhs
+
+REM debug
+\build\bin\makeenv -d -i -n -ln:\build\log\debug
+\build\bin\copyenv -d -c -an:\build\log\debug
+\build\bin\makeobj -d -i -n -m -an:\build\log\debug window w_layout table button nwmhs
+
+REM ship
+\build\bin\makeenv -s -i -n -ln:\build\log\ship
+\build\bin\copyenv -s -c -an:\build\log\ship
+\build\bin\makeobj -s -i -n -m -an:\build\log\ship window w_layout table button nwmhs

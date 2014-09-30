@@ -1,0 +1,10 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32RADG.DLL
+OBJECTDEFNAME = ALM_RADG.DEF
+LOCALCCFLAGS  =
+LOCALINCLUDE  =
+LOCALLIBS     = AW32BUTN.LIB

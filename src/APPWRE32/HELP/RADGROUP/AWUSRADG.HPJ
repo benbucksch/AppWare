@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\radgroup
+ERRORLOG=o:\help\radgroup\awusradg.log
+TITLE=Radio Button ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+radalm.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusradg.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Radio Button ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_rdgp.h>

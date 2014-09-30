@@ -1,0 +1,10 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32GRUP.DLL
+OBJECTDEFNAME = GROUP.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  =
+LOCALLIBS     = AW32NMBR.LIB

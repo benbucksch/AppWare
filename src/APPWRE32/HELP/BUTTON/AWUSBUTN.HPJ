@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\button
+ERRORLOG=o:\help\button\awusbutn.log
+TITLE=Button ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+btnalm.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusbutn.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Button ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_butn.h>

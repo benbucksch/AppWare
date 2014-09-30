@@ -1,0 +1,20 @@
+LIBRARY       AW32TMNL                      
+DESCRIPTION   'Novell AppWare Loadable Module: Terminal Object'
+EXETYPE       WINDOWS
+
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+SEGMENTS      _TEXT PRELOAD
+
+EXPORTS
+              TerminalAdmn                   @2
+              Tmnl_SetConfigFunc             @3  
+              Tmnl_GetConfigFunc             @4  
+              Tmnl_EndCaptureTextFunc        @5  
+              TMNL_CaptureTextFunc           @6  
+              TMNL_ResetFunc                 @7  
+              TMNL_ReceiveTextFunc           @8  
+              TMNL_ClearFunc                 @9  
+              TMNL_ConfigureFunc             @10  
+              TMNL_IdleTerminal              @11  
+              TMNL_StartupTerminal           @12

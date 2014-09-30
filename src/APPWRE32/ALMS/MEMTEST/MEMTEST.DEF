@@ -1,0 +1,12 @@
+LIBRARY         AW32MTST
+
+DESCRIPTION     'Novell AppWare Loadable Module:  Memory Tester'
+EXETYPE         WINDOWS
+
+DATA            PRELOAD MULTIPLE MOVEABLE
+
+EXPORTS
+			MemTestAdmin			@10
+			MemTestAllocate		@11
+			MemTestVerify			@12
+			MemTestFree				@13

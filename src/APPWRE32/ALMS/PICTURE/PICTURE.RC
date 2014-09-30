@@ -1,0 +1,86 @@
+#define lsb     10000
+#include "windows.h"
+#include <ver.h>
+#include "picture.h"
+
+
+BORDERID BITMAP border.bmp
+
+PICTDLG DIALOG 45, 45, 195, 230
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "PICTURE"
+FONT 8, "Helv"
+{
+ PUSHBUTTON "OK", IDOK, 148, 35, 40, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 148, 54, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "&Help", IDHELP, 148, 82, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ CONTROL "", -1, "STATIC", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 33, 132, 104
+ PUSHBUTTON "&Paste In", PASTEID, 5, 140, 61, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "&Load File...", LOADFILEID, 72, 140, 61, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ LTEXT " &Display", 210, 5, 160, 61, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+ CONTROL "&Crop", CROPID, "BUTTON", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 9, 174, 54, 10
+ CONTROL "P&roportional", ORIGPROPID, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 9, 186, 54, 10
+ CONTROL "Size to &Fit", SIZETOFITID, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 9, 198, 54, 10
+ LTEXT " &Options", -1, 73, 160, 60, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+ CONTROL "&Selectable", SELECTABLEID, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 77, 174, 56, 10
+ CONTROL "&Frame", BORDERID, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE, 77, 186, 56, 10
+ CONTROL "&Bitmap", BITMAPID, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 77, 198, 54, 10
+ CONTROL "&MetaFile", METAFILEID, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 77, 210, 54, 10
+ ICON "PICTURE", -1, 5, 4, 18, 20, SS_ICON | WS_GROUP
+ LTEXT " ", ID_OBJECT, 28, 5, 161, 19
+ CONTROL "Text", PICTUREID, "BUTTON", BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 7, 35, 128, 99
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, 7, 171, 59, 54
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, 73, 171, 59, 54
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, 5, 28, 183, 1
+ CONTROL "", -1, "static", SS_BLACKRECT | WS_CHILD | WS_VISIBLE, 142, 33, 1, 194
+}
+
+
+PICTURE ICON "picture.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Picture Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32PICT\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32PICT.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

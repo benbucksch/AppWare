@@ -1,0 +1,209 @@
+OBJECTFILES= \
+	$(OBJDIR)\attribut.obj \
+	$(OBJDIR)\n_adm.obj \
+	$(OBJDIR)\n_lti.obj \
+	$(OBJDIR)\n_hti.obj \
+	$(OBJDIR)\n_edit.obj \
+	$(OBJDIR)\n_events.obj \
+	$(OBJDIR)\n_funct.obj \
+	$(OBJDIR)\n_api.obj \
+	$(OBJDIR)\n_util.obj \
+	$(OBJDIR)\n_main.obj \
+	$(OBJDIR)\n_number.obj 
+
+
+$(OBJDIR)\ATTRIBUT.obj: 
+
+$(OBJDIR)\N_ADM.obj:  .\n_adm.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                      .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_print.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\limits.h \
+                      d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                      d:\borlandc\include\ctype.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_LTI.obj:  .\n_lti.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                      .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_print.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\limits.h \
+                      d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                      d:\borlandc\include\ctype.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_HTI.obj:  .\n_hti.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                      .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_print.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\limits.h \
+                      d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                      d:\borlandc\include\ctype.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_EDIT.obj:  .\n_edit.cpp .\n_dialog.h .\n_includ.h .\n_macros.h \
+                       .\n_util.h .\n_string.h .\n_global.h .\n_vi.h \
+                       .\n_data.h g:\internal\include\o_text.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\limits.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_EVENTS.obj:  .\n_events.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                         .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_print.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h ..\include\attribut.h \
+                         g:\internal\include\intdebug.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\limits.h \
+                         d:\borlandc\include\stdio.h \
+                         d:\borlandc\include\math.h \
+                         d:\borlandc\include\ctype.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_FUNCT.obj:  .\n_funct.cpp .\n_includ.h \
+                        d:\borlandc\include\stdlib.h .\n_macros.h .\n_util.h \
+                        .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                        g:\internal\include\o_text.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h ..\include\attribut.h \
+                        g:\internal\include\intdebug.h \
+                        g:\internal\include\a_almutl.h \
+                        g:\internal\include\a_alm.h \
+                        d:\borlandc\include\limits.h \
+                        d:\borlandc\include\stdio.h \
+                        d:\borlandc\include\math.h \
+                        d:\borlandc\include\ctype.h \
+                        d:\borlandc\include\string.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h \
+                        d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_API.obj:  .\n_api.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                      .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                      g:\internal\include\o_text.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_print.h \
+                      g:\internal\include\o_wnd.h \
+                      g:\internal\include\op_wnd.h \
+                      g:\internal\include\ap_macro.h ..\include\attribut.h \
+                      g:\internal\include\intdebug.h \
+                      g:\internal\include\a_almutl.h \
+                      g:\internal\include\a_alm.h \
+                      d:\borlandc\include\limits.h \
+                      d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                      d:\borlandc\include\ctype.h \
+                      d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                      d:\borlandc\include\stddef.h \
+                      d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_UTIL.obj:  .\n_util.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                       .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\limits.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_MAIN.obj:  .\n_main.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                       .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\limits.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\N_NUMBER.obj:  .\n_number.cpp .\n_includ.h .\n_macros.h .\n_util.h \
+                         .\n_string.h .\n_global.h .\n_vi.h .\n_data.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_print.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h ..\include\attribut.h \
+                         g:\internal\include\intdebug.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\limits.h \
+                         d:\borlandc\include\stdio.h \
+                         d:\borlandc\include\math.h \
+                         d:\borlandc\include\ctype.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h \
+                         d:\borlandc\include\windows.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\n_res.res 
+
+
+$(OBJDIR)\n_res.res:  .\n_res.rc .\n_string.h .\n_dialog.h
+

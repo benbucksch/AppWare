@@ -1,0 +1,1603 @@
+OBJECTFILES= \
+	$(OBJDIR)\response.obj \
+	$(OBJDIR)\array.obj \
+	$(OBJDIR)\baseblk.obj \
+	$(OBJDIR)\baserecb.obj \
+	$(OBJDIR)\chunklib.obj \
+	$(OBJDIR)\dbstring.obj \
+	$(OBJDIR)\exrecblk.obj \
+	$(OBJDIR)\exserblk.obj \
+	$(OBJDIR)\exserrec.obj \
+	$(OBJDIR)\exstring.obj \
+	$(OBJDIR)\fastrecm.obj \
+	$(OBJDIR)\fileobj.obj \
+	$(OBJDIR)\list.obj \
+	$(OBJDIR)\memblk.obj \
+	$(OBJDIR)\memclass.obj \
+	$(OBJDIR)\memlib.obj \
+	$(OBJDIR)\recblk.obj \
+	$(OBJDIR)\rtrec.obj \
+	$(OBJDIR)\rtreclst.obj \
+	$(OBJDIR)\serblk.obj \
+	$(OBJDIR)\serrec.obj \
+	$(OBJDIR)\strspace.obj \
+	$(OBJDIR)\tstring.obj \
+	$(OBJDIR)\uidstack.obj \
+	$(OBJDIR)\uidtable.obj \
+	$(OBJDIR)\bitree.obj \
+	$(OBJDIR)\datasmgr.obj \
+	$(OBJDIR)\dibitmap.obj \
+	$(OBJDIR)\exeevntl.obj \
+	$(OBJDIR)\exeflwmg.obj \
+	$(OBJDIR)\exefunc.obj \
+	$(OBJDIR)\exehead.obj \
+	$(OBJDIR)\exelibl.obj \
+	$(OBJDIR)\exelistb.obj \
+	$(OBJDIR)\exeobjs.obj \
+	$(OBJDIR)\exeproc.obj \
+	$(OBJDIR)\exeprocl.obj \
+	$(OBJDIR)\exerespl.obj \
+	$(OBJDIR)\exetypes.obj \
+	$(OBJDIR)\ownerlst.obj \
+	$(OBJDIR)\mtypelst.obj \
+	$(OBJDIR)\splshdis.obj \
+	$(OBJDIR)\stckarry.obj \
+	$(OBJDIR)\winlist.obj \
+	$(OBJDIR)\classes.obj \
+	$(OBJDIR)\nat2univ.obj \
+	$(OBJDIR)\req_size.obj \
+	$(OBJDIR)\univ2nat.obj \
+	$(OBJDIR)\upsf.obj \
+	$(OBJDIR)\context.obj \
+	$(OBJDIR)\eventque.obj \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\main.obj \
+	$(OBJDIR)\markstac.obj \
+	$(OBJDIR)\oipcreat.obj \
+	$(OBJDIR)\oipdatas.obj \
+	$(OBJDIR)\oipdebug.obj \
+	$(OBJDIR)\oiptime.obj \
+	$(OBJDIR)\oipevnts.obj \
+	$(OBJDIR)\oipexe.obj \
+	$(OBJDIR)\oipmem.obj \
+	$(OBJDIR)\oipmisc.obj \
+	$(OBJDIR)\oipobjs.obj \
+	$(OBJDIR)\oipowner.obj \
+	$(OBJDIR)\oipparms.obj \
+	$(OBJDIR)\oiputils.obj \
+	$(OBJDIR)\oipwindo.obj \
+	$(OBJDIR)\rsrcmgr.obj \
+	$(OBJDIR)\sassoc2.obj \
+	$(OBJDIR)\serdlg.obj \
+	$(OBJDIR)\ser_font.obj \
+	$(OBJDIR)\system.obj \
+	$(OBJDIR)\systemfu.obj 
+
+
+$(OBJDIR)\response.obj:  ..\dev\src\response.cpp  ..\dev\hdr\response.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\array.h \
+                         ..\memio\hdr\dbstring.h ..\dev\hdr\compuid.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\rtuiddf.h \
+                         ..\memio\hdr\tstring.h
+
+$(OBJDIR)\array.obj:  ..\memio\src\array.cpp  ..\memio\hdr\rtreclib.h \
+                      ..\memio\hdr\serblk.h ..\memio\hdr\array.h \
+                      d:\borlandc\include\mem.h hdr\almsys.h \
+                      ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                      ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                      ..\memio\hdr\baseblk.h ..\pro\hdr\classdef.h \
+                      ..\memio\hdr\rtuiddf.h d:\borlandc\include\windows.h \
+                      ..\memio\hdr\rtreclst.h ..\memio\hdr\seruid.h \
+                      ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                      ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                      ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                      ..\memio\hdr\strspace.h ..\memio\hdr\list.h \
+                      ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                      ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                      ..\memio\hdr\ememstr.h ..\pro\hdr\winlist.h \
+                      ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuid.h \
+                      ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                      ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                      ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                      hdr\intdebug.h hdr\intalm.h ..\pro\hdr\bitree.h \
+                      ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                      hdr\eventqnd.h ..\pro\hdr\exeflwmg.h \
+                      ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                      hdr\persdata.h
+
+$(OBJDIR)\baseblk.obj:  ..\memio\src\baseblk.cpp  hdr\intdebug.h \
+                        ..\memio\hdr\chunklib.h ..\memio\hdr\baseblk.h \
+                        ..\memio\hdr\ememstr.h ..\memio\hdr\serdef.h \
+                        hdr\almsys.h d:\borlandc\include\mem.h \
+                        ..\memio\hdr\rtrec.h ..\memio\hdr\listmbr.h \
+                        ..\pro\hdr\classdef.h d:\borlandc\include\windows.h \
+                        hdr\system.h ..\memio\hdr\rtreclst.h \
+                        ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                        ..\memio\hdr\fileobj.h ..\memio\hdr\list.h \
+                        ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                        ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                        ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        hdr\intalm.h ..\pro\hdr\bitree.h \
+                        ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                        hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                        ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                        ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                        ..\memio\hdr\exserrec.h hdr\persdata.h \
+                        ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                        ..\memio\hdr\rtuiddf.h
+
+$(OBJDIR)\baserecb.obj:  ..\memio\src\baserecb.cpp  ..\pro\hdr\clipgrup.h \
+                         ..\pro\hdr\clipflow.h ..\pro\hdr\clipobj.h \
+                         ..\pro\hdr\clipfunc.h ..\pro\hdr\clipcom.h \
+                         ..\pro\hdr\clipparm.h ..\pro\hdr\clipsjt.h \
+                         ..\memio\hdr\memblk.h ..\pro\hdr\exerespl.h \
+                         ..\pro\hdr\exebeadl.h ..\pro\hdr\exeprocl.h \
+                         ..\pro\hdr\exelibl.h ..\pro\hdr\exeevntl.h \
+                         ..\pro\hdr\exelistb.h ..\pro\hdr\exeparam.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exetypes.h ..\pro\hdr\exeobjs.h \
+                         ..\pro\hdr\objtype.h ..\pro\hdr\objinst.h \
+                         ..\pro\hdr\param.h ..\pro\hdr\flow.h \
+                         ..\pro\hdr\comment.h ..\pro\hdr\funcinst.h \
+                         ..\pro\hdr\subject.h ..\pro\hdr\project.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\rtrec.h \
+                         ..\pro\hdr\objgroup.h ..\pro\hdr\exeflow.h \
+                         ..\memio\hdr\rectypes.h ..\dev\hdr\cfgdesc.h \
+                         ..\dev\hdr\evntdesc.h ..\dev\hdr\methdesc.h \
+                         ..\dev\hdr\funcdesc.h ..\dev\hdr\objdesc.h \
+                         ..\memio\hdr\sereclib.h hdr\system.h \
+                         ..\memio\hdr\exserblk.h ..\memio\hdr\serblk.h \
+                         ..\memio\hdr\ememstr.h hdr\switches.h \
+                         ..\dev\hdr\debug.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\baserecb.h hdr\intalm.h hdr\almsys.h \
+                         d:\borlandc\include\mem.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\serrec.h ..\memio\hdr\seruid.h \
+                         ..\memio\hdr\dbstring.h ..\pro\hdr\parmmask.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\exeresp.h \
+                         ..\pro\hdr\exebead.h ..\pro\hdr\exeproc.h \
+                         ..\pro\hdr\exelib.h ..\pro\hdr\exeevnt.h \
+                         hdr\kernel.h ..\memio\hdr\recblk.h \
+                         ..\memio\hdr\exrecblk.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h ..\memio\hdr\rtuid.h \
+                         hdr\persdata.h ..\pro\hdr\exeflwmg.h \
+                         ..\pro\hdr\basetype.h ..\memio\hdr\tstring.h \
+                         ..\pro\hdr\ownerlst.h ..\pro\hdr\object.h \
+                         ..\pro\hdr\flowmgr.h ..\pro\hdr\cfglibp.h \
+                         ..\dev\hdr\compuid.h ..\pro\hdr\progsys.h \
+                         ..\pro\hdr\flowflgs.h ..\pro\hdr\fwinobj.h \
+                         ..\pro\hdr\navitem.h ..\pro\hdr\funcmask.h \
+                         ..\pro\hdr\bitree.h ..\pro\hdr\sjtwin.h \
+                         ..\pro\hdr\uidlist.h ..\pro\hdr\wrksheet.h \
+                         ..\pro\hdr\scopstak.h ..\pro\hdr\unitree.h \
+                         ..\memio\hdr\memclass.h ..\memio\hdr\listmbr.h \
+                         ..\dev\hdr\sericon.h ..\memio\hdr\fileobj.h \
+                         ..\memio\hdr\rtreclst.h ..\dev\hdr\compdesc.h \
+                         ..\dev\hdr\params.h ..\dev\hdr\flows.h \
+                         ..\dev\hdr\typeary.h ..\dev\hdr\response.h \
+                         ..\dev\hdr\routines.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtuiddf.h d:\borlandc\include\stdlib.h \
+                         d:\borlandc\include\time.h hdr\intdebug.h \
+                         ..\pro\hdr\mtypelst.h ..\pro\hdr\datasmgr.h \
+                         ..\memio\hdr\array.h ..\pro\hdr\dibitmap.h \
+                         ..\pro\hdr\basewin.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\dbsarray.h hdr\eventque.h \
+                         ..\memio\hdr\strngstr.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h
+
+$(OBJDIR)\chunklib.obj:  ..\memio\src\chunklib.cpp  ..\memio\hdr\chunklib.h \
+                         hdr\system.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\serdef.h d:\borlandc\include\mem.h \
+                         hdr\almsys.h ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                         ..\pro\hdr\classdef.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\memio\hdr\strspace.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuiddf.h \
+                         hdr\intdebug.h
+
+$(OBJDIR)\dbstring.obj:  ..\memio\src\dbstring.cpp  hdr\system.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\dbstring.h \
+                         ..\memio\hdr\strngstr.h hdr\almsys.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\tstring.h \
+                         d:\borlandc\include\windows.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\rtuiddf.h hdr\intdebug.h
+
+$(OBJDIR)\exrecblk.obj:  ..\memio\src\exrecblk.cpp  ..\memio\hdr\rectypes.h \
+                         ..\memio\hdr\exrecblk.h hdr\system.h hdr\intalm.h \
+                         hdr\almsys.h d:\borlandc\include\mem.h \
+                         ..\memio\hdr\baserecb.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\seruid.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\rtuiddf.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\memio\hdr\strspace.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h hdr\intdebug.h
+
+$(OBJDIR)\exserblk.obj:  ..\memio\src\exserblk.cpp  ..\memio\hdr\rectypes.h \
+                         ..\memio\hdr\chunklib.h hdr\system.h \
+                         ..\memio\hdr\exserblk.h hdr\almsys.h \
+                         d:\borlandc\include\mem.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\fileobj.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\classdef.h \
+                         d:\borlandc\include\windows.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\memio\hdr\strspace.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\rtuiddf.h hdr\intdebug.h
+
+$(OBJDIR)\exserrec.obj:  ..\memio\src\exserrec.cpp  ..\memio\hdr\sereclib.h \
+                         ..\memio\hdr\exserrec.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\exrecblk.h hdr\almsys.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\baserecb.h \
+                         ..\memio\hdr\fileobj.h hdr\system.h \
+                         ..\memio\hdr\seruid.h hdr\switches.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\serdef.h \
+                         ..\pro\hdr\classdef.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\rtuiddf.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         hdr\intdebug.h hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\exstring.h hdr\persdata.h
+
+$(OBJDIR)\exstring.obj:  ..\memio\src\exstring.cpp  hdr\system.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\strngstr.h hdr\almsys.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                         ..\pro\hdr\classdef.h d:\borlandc\include\windows.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                         hdr\intdebug.h
+
+$(OBJDIR)\fastrecm.obj:  ..\memio\src\fastrecm.cpp  hdr\switches.h \
+                         ..\memio\hdr\sereclib.h ..\memio\hdr\exserblk.h \
+                         ..\memio\hdr\fastrecm.h ..\memio\hdr\serdef.h \
+                         hdr\almsys.h ..\memio\hdr\rtreclib.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         hdr\system.h ..\memio\hdr\seruid.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\baseblk.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\memclass.h \
+                         ..\memio\hdr\rtuiddf.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h hdr\intdebug.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h
+
+$(OBJDIR)\fileobj.obj:  ..\memio\src\fileobj.cpp  hdr\context.h \
+                        hdr\intdebug.h ..\memio\hdr\exserblk.h \
+                        ..\memio\hdr\serblk.h ..\memio\hdr\recblk.h \
+                        ..\memio\hdr\exrecblk.h ..\pro\hdr\tempobj.h \
+                        d:\borlandc\include\io.h ..\pro\hdr\exeobjs.h \
+                        ..\memio\hdr\memblk.h ..\memio\hdr\rectypes.h \
+                        ..\memio\hdr\sereclib.h hdr\system.h \
+                        ..\memio\hdr\fileobj.h hdr\almsys.h \
+                        ..\memio\hdr\rtreclib.h hdr\contextd.h \
+                        ..\memio\hdr\rtrec.h ..\memio\hdr\baseblk.h \
+                        ..\pro\hdr\classdef.h ..\memio\hdr\baserecb.h \
+                        ..\memio\hdr\seruid.h ..\memio\hdr\fastrecm.h \
+                        ..\pro\hdr\object.h ..\memio\hdr\tstring.h \
+                        ..\pro\hdr\ownerlst.h ..\memio\hdr\exstring.h \
+                        ..\pro\hdr\exeflwmg.h hdr\switches.h \
+                        ..\pro\hdr\exeinfo.h ..\memio\hdr\ememstr.h \
+                        d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                        ..\pro\hdr\splshdis.h ..\memio\hdr\uidtable.h \
+                        ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        d:\borlandc\include\windows.h ..\pro\hdr\mtypelst.h \
+                        hdr\eventque.h ..\pro\hdr\exefunc.h \
+                        ..\pro\hdr\exehead.h ..\memio\hdr\rtuiddf.h \
+                        ..\memio\hdr\serdef.h ..\pro\hdr\datasmgr.h \
+                        ..\dev\hdr\compuid.h ..\memio\hdr\array.h \
+                        ..\memio\hdr\exserrec.h ..\pro\hdr\winlist.h \
+                        ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuid.h \
+                        ..\memio\hdr\strngstr.h hdr\intalm.h \
+                        ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                        hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                        hdr\persdata.h
+
+$(OBJDIR)\list.obj:  ..\memio\src\list.cpp  ..\memio\hdr\listmbr.h \
+                     ..\memio\hdr\list.h hdr\almsys.h ..\pro\hdr\classdef.h \
+                     ..\memio\hdr\memclass.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\memblk.obj:  ..\memio\src\memblk.cpp  ..\memio\hdr\rectypes.h \
+                       ..\memio\hdr\chunklib.h hdr\system.h \
+                       ..\memio\hdr\memblk.h hdr\almsys.h \
+                       d:\borlandc\include\mem.h ..\pro\hdr\exeinfo.h \
+                       hdr\contextd.h ..\memio\hdr\ememstr.h \
+                       ..\memio\hdr\fileobj.h ..\memio\hdr\rtrec.h \
+                       ..\memio\hdr\baseblk.h ..\pro\hdr\classdef.h \
+                       d:\borlandc\include\windows.h ..\pro\hdr\mtypelst.h \
+                       hdr\eventque.h ..\memio\hdr\strspace.h \
+                       ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                       d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                       ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                       ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                       ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                       ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                       hdr\intalm.h ..\pro\hdr\bitree.h \
+                       ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                       hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                       ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                       ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                       ..\memio\hdr\exserrec.h hdr\persdata.h \
+                       ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                       ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                       hdr\intdebug.h
+
+$(OBJDIR)\memclass.obj:  ..\memio\src\memclass.cpp  ..\memio\hdr\memclass.h \
+                         ..\memio\hdr\memlib.h hdr\almsys.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\memlib.obj:  ..\memio\src\memlib.cpp  hdr\intdebug.h \
+                       ..\memio\hdr\memlib.h hdr\almsys.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\recblk.obj:  ..\memio\src\recblk.cpp  ..\memio\hdr\rectypes.h \
+                       ..\memio\hdr\recblk.h hdr\system.h hdr\intalm.h \
+                       hdr\almsys.h d:\borlandc\include\mem.h \
+                       ..\memio\hdr\baserecb.h ..\pro\hdr\classdef.h \
+                       ..\memio\hdr\seruid.h ..\pro\hdr\exeinfo.h \
+                       hdr\contextd.h ..\memio\hdr\ememstr.h \
+                       ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                       ..\memio\hdr\listmbr.h ..\memio\hdr\rtrec.h \
+                       ..\memio\hdr\rtuiddf.h ..\pro\hdr\mtypelst.h \
+                       hdr\eventque.h ..\memio\hdr\strspace.h \
+                       ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                       d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                       ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                       ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                       ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                       ..\memio\hdr\version.h ..\pro\hdr\bitree.h \
+                       ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                       hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                       ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                       ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                       hdr\persdata.h ..\pro\hdr\winlist.h \
+                       ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                       hdr\intdebug.h
+
+$(OBJDIR)\rtrec.obj:  ..\memio\src\rtrec.cpp  ..\memio\hdr\rtrec.h \
+                      hdr\almsys.h hdr\system.h ..\memio\hdr\rtreclst.h \
+                      d:\borlandc\include\windows.h ..\pro\hdr\exeinfo.h \
+                      hdr\contextd.h ..\memio\hdr\ememstr.h \
+                      ..\memio\hdr\fileobj.h ..\memio\hdr\list.h \
+                      ..\pro\hdr\classdef.h ..\pro\hdr\mtypelst.h \
+                      hdr\eventque.h ..\memio\hdr\strspace.h \
+                      ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                      d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                      ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                      ..\memio\hdr\uidtable.h ..\memio\hdr\listmbr.h \
+                      ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                      hdr\intalm.h ..\pro\hdr\bitree.h \
+                      ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                      hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                      ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                      ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                      ..\memio\hdr\exserrec.h hdr\persdata.h \
+                      ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                      ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                      hdr\intdebug.h
+
+$(OBJDIR)\rtreclst.obj:  ..\memio\src\rtreclst.cpp  ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\rtreclst.h hdr\almsys.h hdr\system.h \
+                         ..\memio\hdr\list.h d:\borlandc\include\windows.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\classdef.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\listmbr.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\rtuiddf.h hdr\intdebug.h
+
+$(OBJDIR)\serblk.obj:  ..\memio\src\serblk.cpp  ..\memio\hdr\rectypes.h \
+                       ..\memio\hdr\chunklib.h hdr\system.h \
+                       ..\memio\hdr\serblk.h hdr\almsys.h \
+                       d:\borlandc\include\mem.h ..\pro\hdr\exeinfo.h \
+                       hdr\contextd.h ..\memio\hdr\ememstr.h \
+                       ..\memio\hdr\fileobj.h ..\memio\hdr\baseblk.h \
+                       d:\borlandc\include\windows.h ..\pro\hdr\classdef.h \
+                       ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                       ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                       ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                       ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                       ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                       ..\memio\hdr\rtreclst.h ..\memio\hdr\listmbr.h \
+                       ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                       ..\memio\hdr\version.h ..\memio\hdr\rtrec.h \
+                       hdr\intalm.h ..\pro\hdr\bitree.h \
+                       ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                       hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                       ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                       ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                       ..\memio\hdr\exserrec.h hdr\persdata.h \
+                       ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                       ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                       hdr\intdebug.h
+
+$(OBJDIR)\serrec.obj:  ..\memio\src\serrec.cpp  ..\memio\hdr\rtreclib.h \
+                       ..\memio\hdr\baserecb.h ..\memio\hdr\serrec.h \
+                       ..\memio\hdr\uidtable.h ..\memio\hdr\serblk.h \
+                       hdr\almsys.h ..\memio\hdr\rtrec.h \
+                       ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                       ..\pro\hdr\classdef.h ..\memio\hdr\seruid.h \
+                       ..\memio\hdr\listmbr.h ..\memio\hdr\rtuid.h \
+                       ..\memio\hdr\serdef.h ..\memio\hdr\baseblk.h \
+                       d:\borlandc\include\windows.h ..\memio\hdr\rtreclst.h \
+                       d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                       ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                       ..\memio\hdr\strspace.h ..\memio\hdr\list.h \
+                       ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                       ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                       ..\memio\hdr\ememstr.h ..\memio\hdr\rtuiddf.h \
+                       ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                       ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                       hdr\eventque.h ..\pro\hdr\exefunc.h \
+                       ..\pro\hdr\exehead.h hdr\intdebug.h hdr\intalm.h \
+                       ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                       hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                       ..\pro\hdr\exeflwmg.h ..\memio\hdr\exstring.h \
+                       ..\memio\hdr\exserrec.h hdr\persdata.h
+
+$(OBJDIR)\strspace.obj:  ..\memio\src\strspace.cpp  ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\strngstr.h hdr\almsys.h \
+                         ..\pro\hdr\classdef.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\tstring.obj:  ..\memio\src\tstring.cpp  hdr\system.h \
+                        ..\memio\hdr\dbstring.h ..\memio\hdr\tstring.h \
+                        hdr\almsys.h ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                        ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                        d:\borlandc\include\windows.h ..\pro\hdr\classdef.h \
+                        ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                        ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                        ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        hdr\intalm.h ..\pro\hdr\bitree.h \
+                        ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                        hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                        ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                        ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                        ..\memio\hdr\exserrec.h hdr\persdata.h \
+                        ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                        ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                        hdr\intdebug.h
+
+$(OBJDIR)\uidstack.obj:  ..\memio\src\uidstack.cpp  ..\memio\hdr\rtreclib.h \
+                         ..\memio\hdr\memblk.h ..\memio\hdr\uidstack.h \
+                         hdr\almsys.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         hdr\system.h hdr\switches.h ..\memio\hdr\baseblk.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\seruid.h \
+                         d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\rtuiddf.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         hdr\intdebug.h hdr\intalm.h ..\pro\hdr\bitree.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h
+
+$(OBJDIR)\uidtable.obj:  ..\memio\src\uidtable.cpp  hdr\switches.h \
+                         ..\memio\hdr\rectypes.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\serdef.h hdr\almsys.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\seruid.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtuiddf.h \
+                         ..\pro\hdr\classdef.h
+
+$(OBJDIR)\bitree.obj:  ..\pro\src\bitree.cpp ..\pro\hdr\stckarry.h \
+                       hdr\intdebug.h ..\pro\hdr\bitree.h hdr\almsys.h \
+                       ..\memio\hdr\memclass.h ..\pro\hdr\classdef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\datasmgr.obj:  ..\pro\src\datasmgr.cpp  hdr\intdebug.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\sereclib.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\serblk.h \
+                         ..\pro\hdr\datasmgr.h hdr\almsys.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                         ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                         ..\memio\hdr\seruid.h ..\memio\hdr\baseblk.h \
+                         ..\memio\hdr\rtreclst.h \
+                         d:\borlandc\include\windows.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\rtuiddf.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h
+
+$(OBJDIR)\dibitmap.obj:  ..\pro\src\dibitmap.cpp ..\pro\hdr\progsys.h \
+                         ..\pro\hdr\dibitmap.h d:\borlandc\include\io.h \
+                         hdr\almsys.h ..\memio\hdr\fileobj.h \
+                         ..\pro\hdr\exeinfo.h hdr\system.h \
+                         ..\pro\hdr\classdef.h hdr\intdebug.h \
+                         ..\memio\hdr\memclass.h \
+                         d:\borlandc\include\windows.h \
+                         d:\borlandc\include\time.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\pro\hdr\winlist.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\seruid.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h ..\memio\hdr\rtuiddf.h \
+                         hdr\intalm.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h
+
+$(OBJDIR)\exeevntl.obj:  ..\pro\src\exeevntl.cpp  ..\pro\hdr\exeevntl.h \
+                         hdr\intalm.h hdr\almsys.h ..\pro\hdr\exelistb.h \
+                         ..\pro\hdr\exeevnt.h hdr\kernel.h \
+                         ..\pro\hdr\classdef.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\recblk.h \
+                         ..\memio\hdr\exrecblk.h ..\memio\hdr\exserblk.h \
+                         ..\memio\hdr\sereclib.h ..\pro\hdr\exerespl.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                         ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                         ..\memio\hdr\seruid.h ..\memio\hdr\baseblk.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\exeresp.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\rtuiddf.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h d:\borlandc\include\stdlib.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h hdr\intdebug.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h
+
+$(OBJDIR)\exeflwmg.obj:  ..\pro\src\exeflwmg.cpp  ..\pro\hdr\exefunc.h \
+                         ..\memio\hdr\rectypes.h ..\pro\hdr\exeflow.h \
+                         ..\memio\hdr\exrecblk.h ..\memio\hdr\sereclib.h \
+                         ..\pro\hdr\exeflwmg.h hdr\almsys.h hdr\intalm.h \
+                         ..\memio\hdr\seruid.h ..\memio\hdr\exserrec.h \
+                         ..\pro\hdr\flowflgs.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\rtreclib.h \
+                         ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                         ..\memio\hdr\rtuiddf.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\listmbr.h \
+                         ..\memio\hdr\rtrec.h d:\borlandc\include\time.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exehead.h hdr\intdebug.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\exstring.h hdr\persdata.h
+
+$(OBJDIR)\exefunc.obj:  ..\pro\src\exefunc.cpp  hdr\intdebug.h \
+                        ..\memio\hdr\rtreclib.h ..\memio\hdr\exrecblk.h \
+                        ..\pro\hdr\exeparam.h ..\pro\hdr\tempobj.h \
+                        ..\dev\hdr\compuid.h ..\pro\hdr\exeobjs.h \
+                        ..\memio\hdr\rectypes.h ..\memio\hdr\sereclib.h \
+                        ..\pro\hdr\funcmask.h ..\pro\hdr\param.h \
+                        ..\pro\hdr\exefunc.h hdr\almsys.h \
+                        ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                        ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                        ..\pro\hdr\classdef.h ..\memio\hdr\seruid.h \
+                        ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                        ..\pro\hdr\parmmask.h ..\memio\hdr\fastrecm.h \
+                        ..\pro\hdr\object.h ..\memio\hdr\tstring.h \
+                        ..\pro\hdr\ownerlst.h ..\pro\hdr\exeflwmg.h \
+                        ..\dev\hdr\objdesc.h ..\memio\hdr\serrec.h \
+                        ..\pro\hdr\cfglibp.h hdr\intalm.h \
+                        d:\borlandc\include\windows.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                        ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                        ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                        hdr\contextd.h ..\memio\hdr\ememstr.h \
+                        ..\memio\hdr\rtuiddf.h ..\memio\hdr\rtuid.h \
+                        ..\memio\hdr\dbstring.h ..\memio\hdr\serdef.h \
+                        ..\pro\hdr\datasmgr.h ..\memio\hdr\array.h \
+                        ..\dev\hdr\response.h ..\dev\hdr\sericon.h \
+                        ..\dev\hdr\routines.h ..\dev\hdr\compdesc.h \
+                        ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                        ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                        hdr\eventque.h ..\pro\hdr\exehead.h \
+                        ..\memio\hdr\dbsarray.h ..\pro\hdr\bitree.h \
+                        ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                        hdr\eventqnd.h hdr\persdata.h
+
+$(OBJDIR)\exehead.obj:  ..\pro\src\exehead.cpp  ..\memio\hdr\rtreclib.h \
+                        ..\pro\hdr\exebeadl.h ..\pro\hdr\exelibl.h \
+                        ..\pro\hdr\exeevntl.h ..\pro\hdr\exelistb.h \
+                        ..\pro\hdr\exefunc.h ..\pro\hdr\exetypes.h \
+                        ..\memio\hdr\rectypes.h ..\memio\hdr\sereclib.h \
+                        ..\pro\hdr\exehead.h hdr\almsys.h \
+                        ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                        ..\memio\hdr\fileobj.h hdr\system.h hdr\switches.h \
+                        ..\pro\hdr\exebead.h ..\pro\hdr\exelib.h \
+                        ..\pro\hdr\classdef.h ..\pro\hdr\exeevnt.h \
+                        hdr\kernel.h ..\memio\hdr\recblk.h \
+                        ..\memio\hdr\exrecblk.h ..\memio\hdr\exserblk.h \
+                        hdr\intalm.h ..\memio\hdr\seruid.h \
+                        ..\pro\hdr\exeflwmg.h ..\pro\hdr\basetype.h \
+                        ..\memio\hdr\exserrec.h ..\memio\hdr\rtuid.h \
+                        ..\memio\hdr\exstring.h hdr\persdata.h \
+                        d:\borlandc\include\windows.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                        ..\memio\hdr\strspace.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                        ..\memio\hdr\ememstr.h ..\pro\hdr\exeprocl.h \
+                        ..\pro\hdr\exerespl.h ..\memio\hdr\baseblk.h \
+                        ..\memio\hdr\rtuiddf.h hdr\intdebug.h \
+                        ..\pro\hdr\mtypelst.h ..\pro\hdr\datasmgr.h \
+                        ..\dev\hdr\compuid.h ..\pro\hdr\winlist.h \
+                        ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                        ..\memio\hdr\strngstr.h hdr\eventque.h \
+                        ..\pro\hdr\exeproc.h ..\pro\hdr\exeresp.h \
+                        ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                        hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                        d:\borlandc\include\stdlib.h
+
+$(OBJDIR)\exelibl.obj:  ..\pro\src\exelibl.cpp  ..\pro\hdr\exelibl.h \
+                        hdr\almsys.h ..\pro\hdr\exehead.h \
+                        ..\pro\hdr\exelistb.h ..\pro\hdr\exelib.h \
+                        ..\pro\hdr\classdef.h d:\borlandc\include\windows.h \
+                        ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                        ..\memio\hdr\exserrec.h ..\memio\hdr\seruid.h \
+                        hdr\persdata.h ..\memio\hdr\rtreclib.h \
+                        ..\memio\hdr\recblk.h ..\memio\hdr\exrecblk.h \
+                        ..\memio\hdr\exserblk.h ..\memio\hdr\sereclib.h \
+                        ..\pro\hdr\exeprocl.h ..\memio\hdr\rtuiddf.h \
+                        d:\borlandc\include\time.h ..\memio\hdr\rtrec.h \
+                        ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                        hdr\system.h hdr\switches.h ..\memio\hdr\baseblk.h \
+                        ..\pro\hdr\exeproc.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h ..\memio\hdr\memclass.h \
+                        ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                        ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                        ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                        hdr\contextd.h ..\memio\hdr\ememstr.h hdr\kernel.h \
+                        ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                        ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                        ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                        ..\pro\hdr\exefunc.h hdr\intdebug.h hdr\intalm.h \
+                        ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                        hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                        ..\pro\hdr\exeflwmg.h
+
+$(OBJDIR)\exelistb.obj:  ..\pro\src\exelistb.cpp  ..\pro\hdr\exelistb.h \
+                         ..\memio\hdr\serdef.h hdr\almsys.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\recblk.h \
+                         ..\memio\hdr\exrecblk.h ..\memio\hdr\exserblk.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         hdr\system.h hdr\switches.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\seruid.h ..\memio\hdr\baseblk.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\rtuiddf.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h hdr\intdebug.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h
+
+$(OBJDIR)\exeobjs.obj:  ..\pro\src\exeobjs.cpp  hdr\oiputils.h \
+                        ..\pro\hdr\ownerlst.h hdr\system.h \
+                        ..\memio\hdr\sereclib.h ..\memio\hdr\exserblk.h \
+                        ..\pro\hdr\exeobjs.h hdr\almsys.h \
+                        ..\memio\hdr\array.h ..\pro\hdr\exeinfo.h \
+                        hdr\contextd.h ..\memio\hdr\ememstr.h \
+                        ..\memio\hdr\fileobj.h ..\memio\hdr\rtreclib.h \
+                        ..\memio\hdr\baserecb.h ..\memio\hdr\seruid.h \
+                        hdr\switches.h ..\memio\hdr\rtrec.h \
+                        ..\memio\hdr\baseblk.h ..\pro\hdr\classdef.h \
+                        ..\memio\hdr\tstring.h ..\memio\hdr\exstring.h \
+                        ..\pro\hdr\object.h ..\pro\hdr\exeflwmg.h \
+                        d:\borlandc\include\windows.h ..\memio\hdr\rtuiddf.h \
+                        ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                        ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                        ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        ..\pro\hdr\datasmgr.h ..\dev\hdr\compuid.h \
+                        ..\memio\hdr\exserrec.h hdr\intalm.h \
+                        ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                        hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                        ..\memio\hdr\strngstr.h ..\memio\hdr\rtuid.h \
+                        hdr\persdata.h ..\pro\hdr\winlist.h \
+                        ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                        hdr\intdebug.h
+
+$(OBJDIR)\exeproc.obj:  ..\pro\src\exeproc.cpp  ..\pro\hdr\exebeadl.h \
+                        ..\pro\hdr\exeproc.h ..\pro\hdr\exehead.h \
+                        ..\memio\hdr\sereclib.h hdr\almsys.h \
+                        ..\pro\hdr\exelistb.h ..\pro\hdr\exebead.h \
+                        ..\memio\hdr\seruid.h ..\memio\hdr\exstring.h \
+                        hdr\kernel.h ..\memio\hdr\rtuid.h \
+                        ..\memio\hdr\exserrec.h hdr\persdata.h \
+                        ..\pro\hdr\classdef.h ..\memio\hdr\rtreclib.h \
+                        ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                        hdr\system.h hdr\switches.h \
+                        d:\borlandc\include\windows.h ..\memio\hdr\recblk.h \
+                        ..\memio\hdr\exrecblk.h ..\memio\hdr\exserblk.h \
+                        ..\memio\hdr\rtuiddf.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\rtrec.h ..\memio\hdr\listmbr.h \
+                        ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                        ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                        ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                        hdr\contextd.h ..\memio\hdr\ememstr.h \
+                        ..\memio\hdr\baseblk.h ..\pro\hdr\winlist.h \
+                        ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                        ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                        hdr\eventque.h ..\pro\hdr\exefunc.h hdr\intdebug.h \
+                        hdr\intalm.h ..\pro\hdr\bitree.h \
+                        ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                        hdr\eventqnd.h ..\pro\hdr\exeflwmg.h
+
+$(OBJDIR)\exeprocl.obj:  ..\pro\src\exeprocl.cpp  ..\pro\hdr\exeprocl.h \
+                         ..\memio\hdr\sereclib.h hdr\almsys.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\exelistb.h \
+                         ..\pro\hdr\exeproc.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\baserecb.h \
+                         ..\memio\hdr\fileobj.h hdr\system.h \
+                         ..\memio\hdr\seruid.h hdr\switches.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\memio\hdr\recblk.h \
+                         ..\memio\hdr\exrecblk.h ..\memio\hdr\exserblk.h \
+                         hdr\kernel.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\rtuiddf.h ..\memio\hdr\baseblk.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h hdr\intdebug.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h
+
+$(OBJDIR)\exerespl.obj:  ..\pro\src\exerespl.cpp  ..\pro\hdr\exerespl.h \
+                         ..\memio\hdr\sereclib.h hdr\intalm.h hdr\almsys.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\exelistb.h \
+                         ..\pro\hdr\exeresp.h ..\memio\hdr\rtreclib.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         hdr\system.h ..\memio\hdr\seruid.h hdr\switches.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\recblk.h ..\memio\hdr\exrecblk.h \
+                         ..\memio\hdr\exserblk.h d:\borlandc\include\stdlib.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\rtuiddf.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\mtypelst.h \
+                         hdr\eventque.h ..\pro\hdr\exefunc.h hdr\intdebug.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h
+
+$(OBJDIR)\exetypes.obj:  ..\pro\src\exetypes.cpp  ..\memio\hdr\rtreclib.h \
+                         ..\pro\hdr\exeobjs.h ..\memio\hdr\exrecblk.h \
+                         ..\memio\hdr\sereclib.h hdr\system.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\exetypes.h \
+                         ..\memio\hdr\rectypes.h ..\memio\hdr\serdef.h \
+                         hdr\intalm.h hdr\almsys.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         hdr\switches.h ..\memio\hdr\tstring.h \
+                         ..\pro\hdr\ownerlst.h ..\memio\hdr\exstring.h \
+                         ..\pro\hdr\object.h ..\pro\hdr\exeflwmg.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h \
+                         ..\pro\hdr\basetype.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\array.h ..\pro\hdr\datasmgr.h \
+                         ..\dev\hdr\compuid.h ..\memio\hdr\rtuiddf.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h hdr\intdebug.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h
+
+$(OBJDIR)\ownerlst.obj:  ..\pro\src\ownerlst.cpp  ..\pro\hdr\ownerlst.h \
+                         hdr\almsys.h ..\memio\hdr\array.h \
+                         d:\borlandc\include\windows.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\rtuiddf.h
+
+$(OBJDIR)\mtypelst.obj:  ..\pro\src\mtypelst.cpp hdr\intdebug.h \
+                         ..\pro\hdr\mtypelst.h hdr\almsys.h \
+                         ..\pro\hdr\classdef.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\memclass.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\splshdis.obj:  ..\pro\src\splshdis.cpp hdr\intdebug.h \
+                         ..\pro\hdr\splshdis.h d:\borlandc\include\io.h \
+                         hdr\almsys.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\memclass.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\stckarry.obj:  ..\pro\src\stckarry.cpp hdr\intdebug.h \
+                         ..\pro\hdr\stckarry.h hdr\almsys.h \
+                         ..\memio\hdr\memclass.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\winlist.obj:  ..\pro\src\winlist.cpp ..\memio\hdr\memlib.h \
+                        ..\pro\hdr\winlist.h hdr\almsys.h \
+                        ..\memio\hdr\memclass.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\classes.obj:  ..\upsf\classes.cpp  hdr\upsf_cls.h hdr\upsf_env.h \
+                        hdr\almsys.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\nat2univ.obj:  ..\upsf\nat2univ.cpp  hdr\upsf_cls.h hdr\almsys.h \
+                         d:\borlandc\include\stdlib.h hdr\upsf_env.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\req_size.obj:  ..\upsf\req_size.cpp  hdr\upsf_cls.h hdr\almsys.h \
+                         d:\borlandc\include\windows.h hdr\upsf_env.h
+
+$(OBJDIR)\univ2nat.obj:  ..\upsf\univ2nat.cpp  hdr\upsf_cls.h hdr\almsys.h \
+                         d:\borlandc\include\stdlib.h hdr\upsf_env.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\upsf.obj:  ..\upsf\upsf.cpp  hdr\upsf_cls.h hdr\almsys.h \
+                     hdr\upsf_env.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\context.obj:  .\src\context.cpp  hdr\eventqms.i hdr\eventqnd.i \
+                        ..\pro\hdr\exetypes.h hdr\oiptime.h hdr\oiputils.h \
+                        ..\dev\hdr\inifile.h ..\pro\hdr\exeobjs.h \
+                        hdr\persdata.h ..\memio\hdr\memlib.h \
+                        ..\memio\hdr\sereclib.h hdr\context.h hdr\almsys.h \
+                        ..\memio\hdr\fastrecm.h hdr\system.h \
+                        ..\pro\hdr\basetype.h ..\memio\hdr\exserrec.h \
+                        ..\memio\hdr\tstring.h ..\pro\hdr\ownerlst.h \
+                        ..\memio\hdr\exstring.h ..\pro\hdr\object.h \
+                        ..\pro\hdr\exeflwmg.h d:\borlandc\include\time.h \
+                        ..\memio\hdr\rtreclib.h ..\memio\hdr\baserecb.h \
+                        ..\memio\hdr\fileobj.h ..\memio\hdr\seruid.h \
+                        hdr\switches.h hdr\contextd.h \
+                        d:\borlandc\include\windows.h ..\memio\hdr\serdef.h \
+                        ..\memio\hdr\memclass.h ..\memio\hdr\rtuiddf.h \
+                        ..\pro\hdr\classdef.h ..\pro\hdr\exeinfo.h \
+                        ..\memio\hdr\ememstr.h hdr\intdebug.h \
+                        ..\pro\hdr\mtypelst.h ..\pro\hdr\datasmgr.h \
+                        ..\dev\hdr\compuid.h ..\memio\hdr\rtuid.h \
+                        ..\memio\hdr\array.h ..\memio\hdr\rtrec.h \
+                        ..\memio\hdr\listmbr.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                        ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        hdr\eventque.h ..\pro\hdr\exefunc.h \
+                        ..\pro\hdr\exehead.h hdr\intalm.h ..\pro\hdr\bitree.h \
+                        ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                        ..\memio\hdr\strngstr.h ..\memio\hdr\uidstack.h \
+                        hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h
+
+$(OBJDIR)\eventque.obj:  .\src\eventque.cpp  hdr\oiptime.h hdr\oipdebug.h \
+                         ..\pro\hdr\tempobj.h hdr\context.h hdr\eventqms.i \
+                         hdr\eventqnd.i ..\memio\hdr\rectypes.h \
+                         ..\pro\hdr\exeflow.h ..\pro\hdr\exeobjs.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exerespl.h \
+                         ..\pro\hdr\exeevntl.h hdr\system.h hdr\eventque.h \
+                         hdr\intalm.h hdr\almsys.h \
+                         d:\borlandc\include\stdlib.h ..\memio\hdr\fastrecm.h \
+                         ..\pro\hdr\object.h ..\memio\hdr\rtreclib.h \
+                         hdr\contextd.h ..\memio\hdr\seruid.h \
+                         ..\memio\hdr\exserrec.h ..\pro\hdr\flowflgs.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\tstring.h \
+                         ..\pro\hdr\ownerlst.h ..\memio\hdr\exstring.h \
+                         ..\pro\hdr\exeflwmg.h ..\pro\hdr\exehead.h \
+                         ..\pro\hdr\exelistb.h ..\pro\hdr\exeresp.h \
+                         ..\pro\hdr\exeevnt.h hdr\kernel.h \
+                         ..\pro\hdr\exeinfo.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\fileobj.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\memclass.h ..\memio\hdr\rtuiddf.h \
+                         ..\pro\hdr\datasmgr.h ..\dev\hdr\compuid.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                         hdr\switches.h ..\pro\hdr\mtypelst.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\array.h hdr\persdata.h \
+                         ..\memio\hdr\recblk.h ..\memio\hdr\exrecblk.h \
+                         ..\memio\hdr\exserblk.h ..\memio\hdr\sereclib.h \
+                         d:\borlandc\include\time.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\strngstr.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h hdr\intdebug.h
+
+$(OBJDIR)\heap.obj:  .\src\heap.cpp  hdr\heapint.h hdr\heap.h hdr\intdebug.h \
+                     d:\borlandc\include\stdlib.h
+
+$(OBJDIR)\main.obj:  .\src\main.cpp  hdr\heap.h hdr\rsrcmgr.h hdr\system.h \
+                     hdr\intdebug.h hdr\almsys.h ..\pro\hdr\exeinfo.h \
+                     hdr\contextd.h ..\memio\hdr\ememstr.h \
+                     ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                     ..\pro\hdr\classdef.h ..\pro\hdr\mtypelst.h \
+                     hdr\eventque.h ..\memio\hdr\strspace.h \
+                     ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                     d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                     ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                     ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                     ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                     ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                     hdr\intalm.h ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                     hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                     ..\memio\hdr\strngstr.h ..\memio\hdr\seruid.h \
+                     ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                     ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                     hdr\persdata.h ..\pro\hdr\winlist.h \
+                     ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                     ..\memio\hdr\rtuiddf.h
+
+$(OBJDIR)\markstac.obj:  .\src\markstac.cpp  hdr\markstac.h hdr\eventqnd.h \
+                         hdr\almsys.h hdr\eventqms.h \
+                         d:\borlandc\include\windows.h
+
+$(OBJDIR)\oipcreat.obj:  .\src\oipcreat.cpp  hdr\context.h hdr\oipdebug.h \
+                         hdr\oiputils.h ..\pro\hdr\tempobj.h \
+                         ..\memio\hdr\sereclib.h ..\pro\hdr\exeobjs.h \
+                         ..\pro\hdr\exetypes.h hdr\intalm.h hdr\almsys.h \
+                         ..\memio\hdr\rtreclib.h hdr\contextd.h hdr\system.h \
+                         ..\memio\hdr\fastrecm.h ..\pro\hdr\object.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         ..\memio\hdr\seruid.h hdr\switches.h \
+                         ..\memio\hdr\tstring.h ..\pro\hdr\ownerlst.h \
+                         ..\memio\hdr\exstring.h ..\pro\hdr\exeflwmg.h \
+                         ..\pro\hdr\basetype.h ..\memio\hdr\exserrec.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtrec.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exeinfo.h ..\pro\hdr\exehead.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\memclass.h ..\memio\hdr\rtuiddf.h \
+                         ..\pro\hdr\classdef.h ..\pro\hdr\datasmgr.h \
+                         ..\dev\hdr\compuid.h ..\memio\hdr\listmbr.h \
+                         d:\borlandc\include\time.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h ..\memio\hdr\array.h \
+                         hdr\intdebug.h ..\memio\hdr\rtuid.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h hdr\persdata.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h
+
+$(OBJDIR)\oipdatas.obj:  .\src\oipdatas.cpp  hdr\oipdebug.h hdr\oiputils.h \
+                         ..\pro\hdr\project.h ..\pro\hdr\exetypes.h \
+                         ..\memio\hdr\rectypes.h ..\pro\hdr\tempobj.h \
+                         ..\pro\hdr\exeobjs.h ..\pro\hdr\objinst.h \
+                         ..\memio\hdr\sereclib.h hdr\system.h \
+                         ..\pro\hdr\object.h ..\memio\hdr\recblk.h \
+                         hdr\almsys.h ..\pro\hdr\scopstak.h \
+                         ..\pro\hdr\objgroup.h ..\pro\hdr\progsys.h \
+                         ..\pro\hdr\unitree.h ..\memio\hdr\memclass.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\rtuid.h \
+                         ..\dev\hdr\sericon.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\wrksheet.h ..\pro\hdr\classdef.h \
+                         ..\pro\hdr\basetype.h ..\memio\hdr\exserrec.h \
+                         ..\memio\hdr\fastrecm.h ..\memio\hdr\tstring.h \
+                         ..\pro\hdr\ownerlst.h ..\memio\hdr\exstring.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\dbstring.h \
+                         ..\memio\hdr\serrec.h ..\pro\hdr\flowmgr.h \
+                         ..\memio\hdr\rtreclib.h ..\memio\hdr\baserecb.h \
+                         ..\memio\hdr\fileobj.h hdr\switches.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\pro\hdr\datasmgr.h \
+                         ..\dev\hdr\compuid.h d:\borlandc\include\windows.h \
+                         ..\pro\hdr\winlist.h ..\memio\hdr\serblk.h \
+                         ..\pro\hdr\subject.h ..\pro\hdr\fwinobj.h \
+                         ..\pro\hdr\dibitmap.h ..\pro\hdr\bitree.h \
+                         ..\memio\hdr\rtuiddf.h ..\pro\hdr\navitem.h \
+                         hdr\intdebug.h ..\pro\hdr\mtypelst.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\array.h \
+                         ..\memio\hdr\rtrec.h d:\borlandc\include\time.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                         ..\memio\hdr\version.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\sjtwin.h \
+                         ..\pro\hdr\uidlist.h ..\pro\hdr\funcmask.h \
+                         hdr\intalm.h ..\memio\hdr\strngstr.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h hdr\persdata.h \
+                         ..\pro\hdr\basewin.h
+
+$(OBJDIR)\oipdebug.obj:  .\src\oipdebug.cpp  hdr\oipdebug.h hdr\sassoc2.h \
+                         ..\pro\hdr\object.h hdr\system.h hdr\intdebug.h \
+                         hdr\almsys.h d:\borlandc\include\stdlib.h \
+                         ..\pro\hdr\datasmgr.h ..\pro\hdr\classdef.h \
+                         ..\dev\hdr\compuid.h ..\pro\hdr\exeinfo.h \
+                         hdr\contextd.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\seruid.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\rtuiddf.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h
+
+$(OBJDIR)\oiptime.obj:  .\src\oiptime.cpp  hdr\sassoc2.h hdr\oiptime.h \
+                        hdr\almsys.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\oipevnts.obj:  .\src\oipevnts.cpp  hdr\context.h \
+                         ..\dev\hdr\objdesc.h ..\pro\hdr\objtype.h \
+                         ..\pro\hdr\exetypes.h ..\pro\hdr\subject.h \
+                         ..\pro\hdr\project.h hdr\kernel.h hdr\system.h \
+                         hdr\eventque.h hdr\intalm.h hdr\almsys.h \
+                         ..\memio\hdr\rtreclib.h hdr\contextd.h \
+                         ..\dev\hdr\response.h ..\dev\hdr\sericon.h \
+                         ..\dev\hdr\routines.h ..\dev\hdr\compdesc.h \
+                         ..\pro\hdr\classdef.h ..\memio\hdr\sereclib.h \
+                         ..\pro\hdr\basetype.h ..\memio\hdr\serrec.h \
+                         ..\memio\hdr\dbstring.h ..\memio\hdr\exserrec.h \
+                         ..\pro\hdr\bitree.h ..\pro\hdr\sjtwin.h \
+                         ..\pro\hdr\uidlist.h ..\memio\hdr\recblk.h \
+                         ..\pro\hdr\wrksheet.h ..\pro\hdr\scopstak.h \
+                         ..\pro\hdr\objgroup.h ..\pro\hdr\progsys.h \
+                         ..\pro\hdr\unitree.h ..\memio\hdr\memclass.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\seruid.h ..\pro\hdr\exeinfo.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                         ..\memio\hdr\uidstack.h hdr\markstac.h \
+                         hdr\eventqms.h hdr\eventqnd.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baserecb.h hdr\switches.h \
+                         ..\pro\hdr\mtypelst.h ..\memio\hdr\strspace.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         ..\memio\hdr\array.h ..\dev\hdr\compuid.h \
+                         ..\memio\hdr\dbsarray.h ..\memio\hdr\tstring.h \
+                         hdr\intdebug.h ..\pro\hdr\datasmgr.h \
+                         ..\pro\hdr\basewin.h ..\pro\hdr\navitem.h \
+                         ..\pro\hdr\winlist.h ..\memio\hdr\serblk.h \
+                         ..\pro\hdr\fwinobj.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\rtuiddf.h d:\borlandc\include\time.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\uidtable.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\exstring.h hdr\persdata.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\funcmask.h \
+                         ..\memio\hdr\serdef.h
+
+$(OBJDIR)\oipexe.obj:  .\src\oipexe.cpp  ..\pro\hdr\splshdis.h \
+                       ..\pro\hdr\tempobj.h ..\memio\hdr\fastrecm.h \
+                       hdr\oiptime.h hdr\oipdebug.h hdr\context.h \
+                       hdr\oiputils.h ..\memio\hdr\rectypes.h \
+                       ..\pro\hdr\exebead.h ..\pro\hdr\exeevntl.h \
+                       ..\pro\hdr\exefunc.h ..\pro\hdr\exetypes.h \
+                       ..\pro\hdr\exeprocl.h ..\pro\hdr\exelibl.h \
+                       ..\pro\hdr\exeinfo.h hdr\eventque.h \
+                       ..\pro\hdr\oipexe.h hdr\intdebug.h hdr\intalm.h \
+                       hdr\almsys.h ..\pro\hdr\winlist.h \
+                       ..\pro\hdr\dibitmap.h ..\memio\hdr\memclass.h \
+                       hdr\system.h ..\pro\hdr\object.h ..\memio\hdr\serdef.h \
+                       ..\memio\hdr\rtuiddf.h ..\pro\hdr\classdef.h \
+                       ..\memio\hdr\rtreclib.h hdr\contextd.h hdr\kernel.h \
+                       ..\memio\hdr\seruid.h ..\pro\hdr\exelistb.h \
+                       ..\pro\hdr\exeevnt.h ..\pro\hdr\exeflwmg.h \
+                       ..\pro\hdr\basetype.h ..\memio\hdr\exserrec.h \
+                       ..\pro\hdr\exehead.h ..\pro\hdr\exeproc.h \
+                       ..\pro\hdr\exelib.h ..\memio\hdr\uidstack.h \
+                       hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                       d:\borlandc\include\windows.h ..\memio\hdr\ememstr.h \
+                       ..\memio\hdr\fileobj.h ..\pro\hdr\datasmgr.h \
+                       ..\dev\hdr\compuid.h ..\memio\hdr\rtrec.h \
+                       ..\memio\hdr\baserecb.h hdr\switches.h \
+                       ..\pro\hdr\mtypelst.h ..\memio\hdr\strspace.h \
+                       ..\memio\hdr\recblk.h ..\memio\hdr\exrecblk.h \
+                       ..\memio\hdr\exserblk.h ..\memio\hdr\sereclib.h \
+                       ..\pro\hdr\exerespl.h ..\memio\hdr\rtuid.h \
+                       ..\memio\hdr\exstring.h hdr\persdata.h \
+                       d:\borlandc\include\time.h ..\memio\hdr\tstring.h \
+                       ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                       ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                       ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                       ..\pro\hdr\bitree.h ..\memio\hdr\strngstr.h \
+                       ..\memio\hdr\baseblk.h ..\pro\hdr\exeresp.h \
+                       d:\borlandc\include\stdlib.h
+
+$(OBJDIR)\oipmem.obj:  .\src\oipmem.cpp  ..\memio\hdr\sereclib.h \
+                       ..\memio\hdr\memblk.h hdr\almsys.h \
+                       ..\memio\hdr\rtreclib.h ..\memio\hdr\baserecb.h \
+                       ..\memio\hdr\fileobj.h hdr\system.h \
+                       ..\memio\hdr\seruid.h hdr\switches.h \
+                       ..\memio\hdr\rtrec.h ..\memio\hdr\baseblk.h \
+                       ..\pro\hdr\classdef.h d:\borlandc\include\windows.h \
+                       ..\memio\hdr\listmbr.h d:\borlandc\include\time.h \
+                       ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                       ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                       ..\memio\hdr\strspace.h ..\memio\hdr\rtreclst.h \
+                       ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                       ..\memio\hdr\version.h ..\pro\hdr\exeinfo.h \
+                       hdr\contextd.h ..\memio\hdr\ememstr.h \
+                       ..\memio\hdr\rtuiddf.h ..\pro\hdr\winlist.h \
+                       ..\pro\hdr\dibitmap.h ..\memio\hdr\rtuid.h \
+                       ..\memio\hdr\serdef.h ..\memio\hdr\strngstr.h \
+                       ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                       ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                       hdr\intdebug.h hdr\intalm.h ..\pro\hdr\bitree.h \
+                       ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                       hdr\eventqnd.h ..\pro\hdr\exeflwmg.h \
+                       ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                       hdr\persdata.h
+
+$(OBJDIR)\oipmisc.obj:  .\src\oipmisc.cpp  ..\pro\hdr\objtype.h \
+                        ..\dev\hdr\objdesc.h ..\dev\hdr\sericon.h \
+                        hdr\oiputils.h hdr\context.h ..\pro\hdr\objinst.h \
+                        hdr\system.h hdr\almsys.h ..\memio\hdr\sereclib.h \
+                        ..\pro\hdr\basetype.h ..\memio\hdr\serrec.h \
+                        ..\memio\hdr\dbstring.h ..\pro\hdr\classdef.h \
+                        ..\dev\hdr\response.h ..\dev\hdr\routines.h \
+                        ..\dev\hdr\compdesc.h ..\memio\hdr\memclass.h \
+                        ..\memio\hdr\rtreclib.h hdr\contextd.h \
+                        ..\pro\hdr\flowmgr.h ..\pro\hdr\object.h \
+                        ..\pro\hdr\exeinfo.h ..\memio\hdr\ememstr.h \
+                        ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                        ..\memio\hdr\baserecb.h ..\memio\hdr\seruid.h \
+                        hdr\switches.h hdr\intdebug.h ..\pro\hdr\mtypelst.h \
+                        ..\pro\hdr\datasmgr.h ..\dev\hdr\compuid.h \
+                        ..\memio\hdr\rtuid.h ..\memio\hdr\tstring.h \
+                        ..\memio\hdr\array.h ..\memio\hdr\dbsarray.h \
+                        ..\memio\hdr\rtrec.h hdr\eventque.h \
+                        ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                        ..\pro\hdr\exehead.h ..\memio\hdr\recblk.h \
+                        d:\borlandc\include\time.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        ..\memio\hdr\rtuiddf.h hdr\intalm.h \
+                        ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                        hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                        ..\memio\hdr\strngstr.h ..\pro\hdr\exeflwmg.h \
+                        ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                        hdr\persdata.h ..\pro\hdr\winlist.h \
+                        ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h
+
+$(OBJDIR)\oipobjs.obj:  .\src\oipobjs.cpp  ..\pro\hdr\objgroup.h \
+                        hdr\oiputils.h ..\pro\hdr\exeflow.h \
+                        ..\pro\hdr\objtype.h ..\memio\hdr\seruid.h \
+                        ..\pro\hdr\oipexe.h ..\pro\hdr\exeinfo.h \
+                        ..\pro\hdr\flow.h ..\pro\hdr\tempobj.h \
+                        ..\pro\hdr\exetypes.h ..\pro\hdr\exeobjs.h \
+                        ..\pro\hdr\objinst.h ..\memio\hdr\rectypes.h \
+                        hdr\system.h ..\dev\hdr\compdesc.h \
+                        ..\dev\hdr\compuid.h ..\pro\hdr\project.h \
+                        ..\pro\hdr\subject.h ..\pro\hdr\exehead.h \
+                        ..\memio\hdr\fileobj.h hdr\intdebug.h hdr\almsys.h \
+                        ..\memio\hdr\serblk.h ..\memio\hdr\memclass.h \
+                        ..\memio\hdr\dbstring.h ..\pro\hdr\fwinobj.h \
+                        ..\pro\hdr\classdef.h ..\memio\hdr\exserrec.h \
+                        ..\pro\hdr\flowflgs.h ..\memio\hdr\sereclib.h \
+                        ..\pro\hdr\basetype.h ..\memio\hdr\serrec.h \
+                        ..\memio\hdr\rtuiddf.h ..\pro\hdr\progsys.h \
+                        ..\memio\hdr\fastrecm.h ..\pro\hdr\object.h \
+                        ..\memio\hdr\tstring.h ..\pro\hdr\ownerlst.h \
+                        ..\memio\hdr\exstring.h ..\pro\hdr\exeflwmg.h \
+                        ..\pro\hdr\flowmgr.h hdr\contextd.h \
+                        ..\memio\hdr\ememstr.h ..\pro\hdr\scopstak.h \
+                        ..\pro\hdr\unitree.h ..\memio\hdr\listmbr.h \
+                        ..\memio\hdr\rtuid.h ..\dev\hdr\sericon.h \
+                        ..\pro\hdr\wrksheet.h ..\pro\hdr\bitree.h \
+                        ..\pro\hdr\sjtwin.h ..\pro\hdr\uidlist.h \
+                        ..\memio\hdr\recblk.h hdr\persdata.h \
+                        d:\borlandc\include\time.h ..\pro\hdr\splshdis.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                        ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        d:\borlandc\include\windows.h ..\memio\hdr\baseblk.h \
+                        ..\pro\hdr\funcmask.h ..\memio\hdr\rtreclib.h \
+                        ..\memio\hdr\baserecb.h hdr\switches.h \
+                        ..\pro\hdr\mtypelst.h ..\pro\hdr\datasmgr.h \
+                        ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                        ..\memio\hdr\array.h hdr\eventque.h \
+                        ..\pro\hdr\exefunc.h ..\pro\hdr\winlist.h \
+                        ..\pro\hdr\navitem.h ..\pro\hdr\basewin.h \
+                        ..\memio\hdr\strngstr.h ..\memio\hdr\rtrec.h \
+                        hdr\intalm.h ..\memio\hdr\uidstack.h hdr\markstac.h \
+                        hdr\eventqms.h hdr\eventqnd.h
+
+$(OBJDIR)\oipowner.obj:  .\src\oipowner.cpp  ..\memio\hdr\recblk.h \
+                         ..\memio\hdr\rectypes.h ..\pro\hdr\exeobjs.h \
+                         ..\memio\hdr\sereclib.h hdr\system.h \
+                         ..\pro\hdr\object.h hdr\almsys.h \
+                         ..\memio\hdr\baserecb.h ..\pro\hdr\classdef.h \
+                         ..\memio\hdr\seruid.h ..\memio\hdr\tstring.h \
+                         ..\pro\hdr\ownerlst.h ..\memio\hdr\exstring.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtreclib.h \
+                         ..\memio\hdr\fileobj.h hdr\switches.h \
+                         ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\pro\hdr\datasmgr.h \
+                         ..\dev\hdr\compuid.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\rtuiddf.h ..\memio\hdr\array.h \
+                         ..\memio\hdr\exserrec.h d:\borlandc\include\time.h \
+                         ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         ..\memio\hdr\rtuid.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\strngstr.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         hdr\persdata.h hdr\intdebug.h
+
+$(OBJDIR)\oipparms.obj:  .\src\oipparms.cpp  hdr\context.h hdr\system.h \
+                         hdr\almsys.h ..\memio\hdr\rtreclib.h hdr\contextd.h \
+                         ..\pro\hdr\exeinfo.h ..\memio\hdr\ememstr.h \
+                         ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                         ..\memio\hdr\rtrec.h ..\memio\hdr\baserecb.h \
+                         hdr\switches.h ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\classdef.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\seruid.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                         hdr\intdebug.h
+
+$(OBJDIR)\oiputils.obj:  .\src\oiputils.cpp  hdr\oiputils.h \
+                         ..\pro\hdr\objtype.h ..\pro\hdr\subject.h \
+                         ..\pro\hdr\project.h ..\pro\hdr\exetypes.h \
+                         ..\memio\hdr\rectypes.h ..\pro\hdr\tempobj.h \
+                         ..\pro\hdr\exeobjs.h ..\pro\hdr\objinst.h \
+                         ..\memio\hdr\sereclib.h hdr\system.h \
+                         ..\pro\hdr\object.h ..\memio\hdr\recblk.h \
+                         hdr\almsys.h ..\pro\hdr\basetype.h \
+                         ..\memio\hdr\serrec.h ..\memio\hdr\dbstring.h \
+                         ..\pro\hdr\classdef.h ..\pro\hdr\bitree.h \
+                         ..\pro\hdr\sjtwin.h ..\pro\hdr\uidlist.h \
+                         ..\pro\hdr\wrksheet.h ..\pro\hdr\scopstak.h \
+                         ..\pro\hdr\objgroup.h ..\pro\hdr\progsys.h \
+                         ..\pro\hdr\unitree.h ..\memio\hdr\memclass.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\rtuid.h \
+                         ..\dev\hdr\sericon.h ..\memio\hdr\seruid.h \
+                         ..\memio\hdr\exserrec.h ..\memio\hdr\fastrecm.h \
+                         ..\memio\hdr\tstring.h ..\pro\hdr\ownerlst.h \
+                         ..\memio\hdr\exstring.h ..\pro\hdr\exeflwmg.h \
+                         ..\pro\hdr\flowmgr.h ..\memio\hdr\rtreclib.h \
+                         ..\memio\hdr\baserecb.h ..\memio\hdr\fileobj.h \
+                         hdr\switches.h ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                         ..\memio\hdr\ememstr.h ..\pro\hdr\datasmgr.h \
+                         ..\dev\hdr\compuid.h d:\borlandc\include\windows.h \
+                         hdr\intdebug.h ..\pro\hdr\mtypelst.h \
+                         ..\pro\hdr\basewin.h ..\pro\hdr\navitem.h \
+                         ..\pro\hdr\winlist.h ..\memio\hdr\serblk.h \
+                         ..\pro\hdr\fwinobj.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\rtuiddf.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\array.h ..\memio\hdr\rtrec.h \
+                         d:\borlandc\include\time.h ..\pro\hdr\splshdis.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\strspace.h \
+                         ..\memio\hdr\rtreclst.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         hdr\eventque.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h hdr\intalm.h \
+                         ..\memio\hdr\baseblk.h ..\pro\hdr\funcmask.h \
+                         ..\memio\hdr\strngstr.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         hdr\persdata.h
+
+$(OBJDIR)\oipwindo.obj:  .\src\oipwindo.cpp  hdr\context.h hdr\system.h \
+                         hdr\intdebug.h hdr\almsys.h ..\memio\hdr\rtreclib.h \
+                         hdr\contextd.h ..\pro\hdr\exeinfo.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baserecb.h hdr\switches.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                         ..\pro\hdr\exehead.h ..\pro\hdr\classdef.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\seruid.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\memio\hdr\strngstr.h ..\pro\hdr\exeflwmg.h \
+                         ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                         ..\memio\hdr\exserrec.h hdr\persdata.h \
+                         ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                         ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h
+
+$(OBJDIR)\rsrcmgr.obj:  .\src\rsrcmgr.cpp  hdr\a_almutl.h hdr\rsrcmgr.h \
+                        hdr\system.h hdr\almsys.h ..\pro\hdr\exeinfo.h \
+                        hdr\contextd.h ..\memio\hdr\ememstr.h \
+                        ..\memio\hdr\fileobj.h d:\borlandc\include\windows.h \
+                        ..\pro\hdr\classdef.h ..\pro\hdr\mtypelst.h \
+                        hdr\eventque.h ..\memio\hdr\strspace.h \
+                        ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                        d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                        ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                        ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                        ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                        ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                        hdr\intalm.h ..\pro\hdr\bitree.h \
+                        ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                        hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                        ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                        ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                        ..\memio\hdr\exserrec.h hdr\persdata.h \
+                        ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                        ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                        hdr\intdebug.h
+
+$(OBJDIR)\sassoc2.obj:  .\src\sassoc2.cpp  hdr\sassoc2.h \
+                        d:\borlandc\include\windows.h
+
+$(OBJDIR)\serdlg.obj:  .\src\serdlg.cpp  hdr\oiputils.h ..\pro\hdr\exeinfo.h \
+                       hdr\system.h hdr\almsys.h \
+                       d:\borlandc\include\windows.h ..\pro\hdr\classdef.h \
+                       hdr\contextd.h ..\memio\hdr\ememstr.h \
+                       ..\memio\hdr\fileobj.h ..\pro\hdr\mtypelst.h \
+                       hdr\eventque.h ..\memio\hdr\strspace.h \
+                       ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                       d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                       ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                       ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                       ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                       ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                       hdr\intalm.h ..\pro\hdr\bitree.h \
+                       ..\memio\hdr\uidstack.h hdr\markstac.h hdr\eventqms.h \
+                       hdr\eventqnd.h ..\memio\hdr\strngstr.h \
+                       ..\memio\hdr\seruid.h ..\pro\hdr\exeflwmg.h \
+                       ..\memio\hdr\rtuid.h ..\memio\hdr\exstring.h \
+                       ..\memio\hdr\exserrec.h hdr\persdata.h \
+                       ..\pro\hdr\winlist.h ..\pro\hdr\dibitmap.h \
+                       ..\memio\hdr\serdef.h ..\memio\hdr\rtuiddf.h \
+                       hdr\intdebug.h
+
+$(OBJDIR)\ser_font.obj:  .\src\ser_font.cpp  hdr\chosfont.h hdr\a_almutl.h \
+                         hdr\almsys.h d:\borlandc\include\windows.h
+
+$(OBJDIR)\system.obj:  .\src\system.cpp  hdr\system.h hdr\almsys.h \
+                       ..\pro\hdr\exeinfo.h hdr\contextd.h \
+                       ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                       d:\borlandc\include\windows.h ..\pro\hdr\classdef.h \
+                       ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                       ..\memio\hdr\strspace.h ..\pro\hdr\exefunc.h \
+                       ..\pro\hdr\exehead.h d:\borlandc\include\time.h \
+                       ..\memio\hdr\memclass.h ..\pro\hdr\splshdis.h \
+                       ..\memio\hdr\tstring.h ..\memio\hdr\uidtable.h \
+                       ..\memio\hdr\rtreclst.h ..\memio\hdr\listmbr.h \
+                       ..\memio\hdr\list.h ..\memio\hdr\recprefx.h \
+                       ..\memio\hdr\version.h hdr\intalm.h \
+                       ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                       hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                       ..\memio\hdr\strngstr.h ..\memio\hdr\seruid.h \
+                       ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                       ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                       hdr\persdata.h ..\pro\hdr\winlist.h \
+                       ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                       ..\memio\hdr\rtuiddf.h hdr\intdebug.h
+
+$(OBJDIR)\systemfu.obj:  .\src\systemfu.cpp  hdr\context.h hdr\intdebug.h \
+                         ..\memio\hdr\strspace.h ..\memio\hdr\memlib.h \
+                         hdr\system.h hdr\almsys.h ..\memio\hdr\rtreclib.h \
+                         hdr\contextd.h ..\memio\hdr\strngstr.h \
+                         ..\pro\hdr\classdef.h ..\pro\hdr\exeinfo.h \
+                         ..\memio\hdr\ememstr.h ..\memio\hdr\fileobj.h \
+                         d:\borlandc\include\windows.h ..\memio\hdr\rtrec.h \
+                         ..\memio\hdr\baserecb.h hdr\switches.h \
+                         ..\pro\hdr\mtypelst.h hdr\eventque.h \
+                         ..\pro\hdr\exefunc.h ..\pro\hdr\exehead.h \
+                         d:\borlandc\include\time.h ..\memio\hdr\memclass.h \
+                         ..\pro\hdr\splshdis.h ..\memio\hdr\tstring.h \
+                         ..\memio\hdr\uidtable.h ..\memio\hdr\rtreclst.h \
+                         ..\memio\hdr\listmbr.h ..\memio\hdr\list.h \
+                         ..\memio\hdr\recprefx.h ..\memio\hdr\version.h \
+                         ..\memio\hdr\seruid.h hdr\intalm.h \
+                         ..\pro\hdr\bitree.h ..\memio\hdr\uidstack.h \
+                         hdr\markstac.h hdr\eventqms.h hdr\eventqnd.h \
+                         ..\pro\hdr\exeflwmg.h ..\memio\hdr\rtuid.h \
+                         ..\memio\hdr\exstring.h ..\memio\hdr\exserrec.h \
+                         hdr\persdata.h ..\pro\hdr\winlist.h \
+                         ..\pro\hdr\dibitmap.h ..\memio\hdr\serdef.h \
+                         ..\memio\hdr\rtuiddf.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\oip_rsrc.res 
+
+
+$(OBJDIR)\oip_rsrc.res:  .\src/oip_rsrc.rc
+

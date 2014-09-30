@@ -1,0 +1,18 @@
+LIBRARY     AW32ACUR
+
+DESCRIPTION 'Novell AppWare Loadable Module: Cursor Object'
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        SINGLE PRELOAD MOVEABLE
+SEGMENTS    _TEXT PRELOAD
+
+EXPORTS     DllEntryPoint										@0
+						mdrtPROC												@2
+						StartCursor											@3
+						StopCursor											@4
+						admnProc                       	@5
+						ArrowCursor											@6
+						HideCursor											@7
+						HourCursor											@8
+						SerShowCursor										@9
+						HandCursor											@10

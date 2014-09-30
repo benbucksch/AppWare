@@ -1,0 +1,15 @@
+LIBRARY     ALM_APPL
+
+DESCRIPTION 'Novell AppWare Loadable Module: Launcher Object'
+
+EXETYPE     WINDOWS
+PROTMODE
+
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+
+DATA        PRELOAD MOVEABLE SINGLE
+
+EXPORTS     WEP                            @1     RESIDENTNAME
+            LAUNCHADMN                     @10
+            SETAPPLICATION                 @11
+            LAUNCHAPPLICATION              @12          

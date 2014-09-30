@@ -1,0 +1,33 @@
+# Projects that can be compiled
+APPLICAT
+BALLOON
+BROWSER
+BUTTON
+CALC
+CURSOR
+DATABASE
+DATE
+FILE
+FILEOPS
+FLAG
+GENERAL
+LOOP
+MENUS
+NOTIFY
+NUMBER
+POLY
+RADGROUP
+RESIZER
+SHAPES
+SUB
+TABLE
+TEXT
+TEXTFACT
+TIME
+WINDOW
+W_LAYOUT
+
+# Projects that should just be retrieved
+CONFIGS                             nomake              
+INCLUDE                             nomake              alwaysget
+MAKE                                nomake              

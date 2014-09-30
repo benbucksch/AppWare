@@ -1,0 +1,46 @@
+LIBRARY         AW32NMBR
+DESCRIPTION     'Novell Appware Loadable Module: Number Object'
+;EXETYPE         WINDOWS
+;CODE            LOADONCALL MOVEABLE DISCARDABLE
+CODE            LOADONCALL DISCARDABLE
+;DATA            PRELOAD MOVEABLE SINGLE
+DATA            PRELOAD SINGLE
+HEAPSIZE        32768
+STACKSIZE       20480
+
+EXPORTS         
+                NumAdminProc                   @103
+                CreateVisualInstance           @104
+                NmbrEvent_ObjectToText         @105
+                NmbrEvent_TextToObject         @106
+
+
+                ; APIs
+                ONmbrFormatInteger              @10
+                ONmbrFormatReal                 @11
+                ONmbrConvertToString            @12
+                ONmbrConvertFromString          @13
+                ONmbrGetInteger                 @14
+                ONmbrGetReal                    @15
+                ONmbrSetInteger                 @16
+                ONmbrSetReal                    @17
+                ONmbrGetType                    @18
+                ONmbrSetType                    @19
+                ONmbrGetStatus                  @20
+								ONmbrParseFormatedNumber				@21
+
+
+					 			;The following functions need to be in the def file to be
+								;exported.  They do not need an ordinal number because they
+								;are used by name. (GetProcAddress)
+								 NmbrFunction_Add
+								 NmbrFunction_Sub
+								 NmbrFunction_Mult
+								 NmbrFunction_Div
+								 NmbrFunction_Inc
+								 NmbrFunction_Dec
+								 NmbrFunction_Comp
+								 NmbrFunction_Rand
+								 NmbrFunction_Randomize
+								 NmbrFunction_SetFontSize
+								 NmbrFunction_OipTime

@@ -1,0 +1,85 @@
+#include <windows.h>
+#include <ver.h>
+#include "tm_dialg.h"
+
+time ICON "time.ico"
+
+TIME_SETUP_DIALOG DIALOG 19, 28, 235, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CLASS "bordlg"
+CAPTION "Time Object Setup"
+FONT 8, "Helv"
+BEGIN
+  ICON "time", -1, 11, 7, 18, 19, WS_CHILD | WS_VISIBLE
+  LTEXT "&Time:", -1, 8, 36, 166, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  LTEXT "Display St&yle", -1, 8, 71, 166, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "24 &Hour Time", RB_24HOUR, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 14, 81, 99, 12
+  CONTROL "12 Hour T&ime", RB_12HOUR, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 14, 93, 99, 12
+  CONTROL "&Use system profile", RB_DEFHOUR, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 14, 105, 99, 12
+  LTEXT "&Options", -1, 8, 124, 166, 10, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", 120, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 8, 134, 167, 57
+  CONTROL "&Editable", RB_EDITABLE, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 14, 137, 52, 10
+  CONTROL "Keep &Current", RB_KEEPCURRENT, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 14, 150, 57, 10
+  CONTROL "S&tatic", RB_NEITHER, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 15, 163, 57, 10
+  CONTROL "Show &Frame", CB_FRAME, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 137, 61, 12
+  CONTROL "&Display Seconds", CB_SECONDS, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 150, 66, 12
+  CONTROL "&Select All When Activated", CB_SELECTALL, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 163, 99, 12
+  CONTROL "Can Activate", CB_CANACTIVATE, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 163, 98, 12
+  CONTROL "&Initially Display Empty", CB_DISPLAYEMPTY, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 176, 90, 12
+  LTEXT "", ST_OBJECTNAME, 31, 7, 185, 19, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", 119, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 1, 27, 236, 1
+  CONTROL "", 121, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 8, 45, 166, 20
+  CONTROL "", 122, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 8, 80, 166, 39
+  CONTROL "OK", PB_OK, "BUTTON", WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 182, 45, 50, 14
+  PUSHBUTTON "Cancel", PB_CANCEL, 182, 65, 50, 14
+  PUSHBUTTON "&Attributes...", PB_FONTS, 182, 85, 50, 14
+  PUSHBUTTON "&Help", PB_HELP, 182, 118, 50, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+  EDITTEXT ED_TITLE, 12, 48, 159, 14, ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
+END
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Time Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_TIME\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_TIME.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

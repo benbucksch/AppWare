@@ -1,0 +1,104 @@
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_flag.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_genrl.h
+
+	+++  copy N:\OBJECTS\include\o_genrl.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_genrl.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_list.h
+
+	+++  copy N:\OBJECTS\include\o_list.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_list.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_menus.h
+
+	+++  copy N:\OBJECTS\include\o_menus.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_menus.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_number.h
+
+	+++  copy N:\OBJECTS\include\o_number.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_number.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_nwmhs.h
+
+	+++  copy N:\OBJECTS\include\o_nwmhs.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_nwmhs.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_nwmsg.h
+
+	+++  copy N:\OBJECTS\include\o_nwmsg.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_nwmsg.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_pict.h
+
+	+++  copy N:\OBJECTS\include\o_pict.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_pict.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_sql.h
+
+	+++  copy N:\OBJECTS\include\o_sql.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_sql.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_table.h
+
+	+++  copy N:\OBJECTS\include\o_table.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_table.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_text.h
+
+	+++  copy N:\OBJECTS\include\o_text.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_text.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_time.h
+
+	+++  copy N:\OBJECTS\include\o_time.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_time.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_wnd.h
+
+	+++  copy N:\OBJECTS\include\o_wnd.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_wnd.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_wndlay.h
+
+	+++  copy N:\OBJECTS\include\o_wndlay.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_wndlay.h
+
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_wndshp.h
+
+	+++  copy N:\OBJECTS\include\o_wndshp.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_wndshp.h
+
+Starting make of system
+
+********************************
+Starting make of WINDOW

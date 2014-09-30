@@ -1,0 +1,36 @@
+;
+[OPTIONS]
+ROOT=o:\help\textfact
+ERRORLOG=o:\help\textfact\awustfct.log
+TITLE=Text Builder ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+txtbalm.rtf
+;
+[BITMAPS]
+o:\help\textfact\graphics\i_taof.bmp
+o:\help\textfact\graphics\i_taon.bmp
+o:\help\textfact\graphics\i_tfcl.bmp
+o:\help\textfact\graphics\i_tfst.bmp
+o:\help\textfact\graphics\f_taof.bmp
+o:\help\textfact\graphics\f_taon.bmp
+o:\help\textfact\graphics\f_tfcl.bmp
+o:\help\textfact\graphics\f_tfst.bmp
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awustfct.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Text Builder ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_tfct.h>

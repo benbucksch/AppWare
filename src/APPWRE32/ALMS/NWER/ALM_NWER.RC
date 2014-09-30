@@ -1,0 +1,71 @@
+/*---------------------------
+   Fileobj.RC resource script
+  ---------------------------*/
+
+#include <bwcc.h>
+#include <windows.h>
+#include <ver.h>
+#include "nwerror.h"
+
+NW_ERROR ICON "nwerror.ico"
+
+nwerror DIALOG 11, 26, 183, 105
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "NetWare Error"
+FONT 8, "Helv"
+BEGIN
+   ICON "NW_ERROR", -1, 7, 6, 18, 20, WS_CHILD | WS_VISIBLE
+   LTEXT "", IDC_OBJECT, 34, 4, 133, 17
+   CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 138, 37, 40, 14
+   PUSHBUTTON "Cancel", IDCANCEL, 138, 56, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   PUSHBUTTON "&Help", IDHELP, 138, 84, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 28, 185, 3
+   CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 131, 36, 2, 66
+   CONTROL "Show All NetWare Errors", IDC_ShowNWErrors, "BorCheck", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 12, 61, 102, 10
+END
+
+/* Version Info */
+
+1 VERSIONINFO LOADONCALL MOVEABLE
+FILEVERSION	1, 2, 1, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: NetWare Error Reporting Object\0"
+      VALUE "FileVersion",	"1.21\0"
+      VALUE "InternalName",     "ALM_NWER\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_NWER.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, NetWare, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE
+BEGIN
+  10001, "VeRsIoN=1.21\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END

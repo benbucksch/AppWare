@@ -1,0 +1,11 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32TEXT.DLL
+OBJECTDEFNAME = TINYTEXT.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  =
+LOCALLIBS     = 
+#OBJECTAPI			= AW32TEXT.LIB

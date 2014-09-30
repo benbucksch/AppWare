@@ -1,0 +1,695 @@
+Thompson AWK Documentation Version 2.03a
+Copyright 1993 by Thompson Automation, Inc.
+All Rights Reserved.
+For more information call Thompson Automation at: 503-224-1639
+
+Building Combined AWK and C programs.
+
+	The AWK Compiler allows you to combine your AWK program
+	with code written in C, or other languages that support
+	the C calling convention.  In such a combined program,
+	your AWK code is invoked like a normal AWK program, and the
+	AWK code may then call functions written in C.
+	To build combined AWK/C programs you must do the following:
+	
+	1)  Own and install a C compiler supported by the AWK compiler;
+	    You must do this even if you are using third party libraries
+	    and not writing any C code yourself, because to build
+	    combined executables the AWK compiler uses the linker
+	    and the C libraries provided with your C compiler.
+	2)  Compile the files containing your C functions (if any)
+	    into object (.obj) files.
+	3)  Place "extern" declarations in your AWK program to tell
+	    AWK how to call the functions written in C.
+	3)  Invoke the AWK compiler to link your AWK program
+	    with your object and/or library files.
+
+
+Calling C functions from AWK.
+
+	To call a C function from AWK you must include an extern declaration
+	for the C function in your AWK program.  An extern declaration tells
+	the AWK compiler the name of the C function and the number and types
+	of the arguments required for the C function.
+	Extern declarations may appear in any AWK source file, and become
+	globally defined names for the entire AWK program.
+	Each global name in AWK can have only one meaning, so predefined
+	AWK function names can not be declared extern, nor can an extern name
+	also be used as a global AWK function or global variable.
+	The same extern declaration may be duplicated in multiple files
+	as long as all such declarations are identical.
+
+	The syntax for an extern declaration is:
+	
+	    extern [ <return_type> ] <fun_name>( [ <type> , <type> ... ] )
+	
+	Extern declarations may appear each on a separate line, or
+	may be separated or terminated by semi-colons.
+	The return_type specifies the type of return value from the function.
+	If no return_type is specified, "int" is assumed.
+	The types within parentheses are optional and specify the types
+	of the function parameters.  The types may be any of:
+	   
+	    char	# 8 bit character;
+	    short	# 16 bit integer;
+	    int		# Also a 16 bit integer;
+	    long	# 32 bit integer;
+	    double	# double precision floating point number;
+	    char*	# Pointer to an array of characters;
+	    string	# Special AWK data type;
+	    void	# May appear only as return_type; means no return value.
+   
+	The "int" type is currently a 16 bit integer, but may be 32 bits
+	in future releases supporting 32 bit compilers.
+	The "char*" type must point to an array of characters that
+	is terminated by a 0 (nul) character.
+	The "string" data type is an AWK internal data type that allows
+	you to pass binary data containing 0 (nul) characters
+	between AWK and C functions.  It is documented below.
+	
+	Examples:
+	    extern int max(int,int)
+	    extern double log10(double);
+	    extern int rename( char * ,char*)
+	   
+	Bad Examples:
+	    # Reserved names and predefined AWK functions are illegal:
+	    extern print(char*)      # Print is already an AWK function name.
+	    extern if()              # "if" is a reserved keyword.
+
+	    # If a C function returns a char*, then AWK copies the string
+	    # data immediately after calling the C function.  So calling
+	    # malloc directly does not return a pointer to a newly allocated
+	    # buffer, but to a copy of that buffer, and in fact the program
+	    # may crash because the string returned by malloc is
+	    # uninitialized and may not contain a '\0' character to indicate
+	    # where the string ends.
+	    extern char *malloc(int)    /* This is bad! */
+
+Creating combined AWK/C programs with the AWK Compiler.
+
+	To create combined AWK/C programs you need to specify the following
+	on the AWK Compiler command line:
+
+	    a)	The names of the AWK source (.awk) files, the object (.obj)
+	    	files, and the library (.lib) files that you want to be
+	    	compiled together.  The filename extension must be specified
+	    	for .obj and .lib files, for example: mfile.obj or
+	    	graphics.lib, but is optional for .awk files.
+	    
+	    b)	An appropriate -x option to indicate that you want to create
+		a combined AWK/C program.  Note: The -x option is optional
+		if you specified .obj or .lib files on the command line.
+	    
+	    c)	An appropriate -c option to specify the C compiler you
+	    	are using.
+
+	The AWK Compiler automatically performs these steps:
+	
+	    1)  The AWK source files are compiled and three files
+	        are created: an object (.obj) file; a linker
+	        response (.lnk) file that is the input to the
+	        linker in step two; an AWK executable (.ae)
+	        file that contains additional AWK code needed
+	        in step three below.
+	    2)  The AWK Compiler calls your linker using the
+	        linker response (.lnk) file, which combines:
+	          a) The AWK .obj file;
+	          b) Your object and library files, if any;
+	          c) The C library supplied with your C compiler.
+	    3)  In the OS2 version only: if the output is to be a bound
+	        executable that will run under both DOS and OS2, the
+	        AWK Compiler calls the Microsoft bind program.
+	    4)  The AWK Compiler then calls the awkbind program to
+	        combine the AWK executable (.ae) file with the regular
+	        executable (.exe) file created by the linker to create
+	        the end product: a stand-alone executable file.
+
+
+    There are three ways the AWK Compiler can create combined AWK/C
+    programs, controlled by the -x option as follows:
+
+    -xl     Causes the AWK Compiler to automatically call the linker.
+	    This option is the default case if you specify a .obj
+	    or .lib file on the AWK command line and no other -x options.
+	    You can specify the names of any object and/or library
+	    files to be linked in on the AWK command line.
+	    The filename extension is required for object and library
+	    files, for example: mfile.obj or graphics.lib.
+	    Note that you need not specify any object or library files
+	    on the command line if the C functions you wish to call are
+	    defined in the default C library supplied with your compiler.
+    -xf     Like -xl, but compiles faster by not running the linker if
+	    no external references have changed in your AWK program.
+	    Rather, the AWK code is modified directly in the existing
+	    .exe file.  You must not use this option if your object
+	    or library files have changed since the last AWK compile,
+	    as the AWK Compiler does not check the dates of these files
+	    and may not relink and get the lastest version of these
+	    files included in your .exe program.
+    -xo     Causes AWK to create an object file that you must link yourself.
+	    The name of the object file is the same as the AWK output
+	    file but with a .obj extension.  The AWK compiler places
+	    additional AWK code in a file with the same name but with
+	    a .ae extension.
+
+	    After running the linker you can call the awkbind program
+	    yourself to combine the .ae file with your .exe file to
+	    create a stand-alone executable file.  The awkbind program
+	    takes one argument, which is the basename (without extension)
+	    of both the .exe and .ae files.  Both the .exe and .ae files
+	    must be present in the same directory.
+
+
+Specifying a C Compiler:
+
+	The AWK Compiler -c option specifies which C compiler to use.
+	The AWK Compiler uses libraries tailored for the specific C
+	compiler, and attempts to call the linker supplied with that
+	C compiler.  The default is -cm6 for Microsoft version 6, which
+	also happens to work with Microsoft version 7 in most cases.
+	
+	The following list is the most up-to-date information about
+	the C compilers currently supported by the AWK Compiler.
+	Different C Compilers have different specific odditities,
+	which are listed here.
+
+	In all versions you must compile your C code with the large or
+	huge memory model and use the default floating point emulator option.
+
+    Microsoft C:
+
+	We fully support the Microsoft C Compiler version 6 and 7.
+	We also have libraries available for Microsoft C version 5,
+	which are not included as part of the standard release, but
+	are available upon request.  Call us at 503-224-1639.
+
+	Specify the AWK Compiler -cm5, -cm6, or -cm7 options to use
+	Microsoft C version 5, 6 or 7.  Support by the AWK Compiler
+	for Microsoft C versions 6 and 7 is identical except
+	that for version 7 the AWK Compiler links in the library:
+	oldnames.lib, which defines the names of some C functions
+	used by AWK.
+
+	When you install the Microsoft C compiler you must install
+	the large model libraries and must build the "combined libraries".
+	The Microsoft combined library name is "llibce.lib", and this
+	library must be installed properly to create combined AWK/C programs.
+
+	The Microsoft linker is creatively named: "link.exe".
+	Former versions of DOS included a linker with the same name
+	which is obsolete.  Either remove the DOS linker, or make SURE
+	your PATH gets the Microsoft linker first.
+	
+	The Microsoft linker requires the LIB environment variable
+	be set to the directory containing the Microsoft libraries,
+	so you must set it before calling the AWK Compiler.
+	You do not need to worry about the Microsoft linker finding
+	the AWK libraries: the AWK Compiler furnishes their full path
+	name to the Microsoft linker.
+
+    Linking for OS2 with Microsoft C:
+	
+	For OS2 the AWK Compiler supports the Microsoft C version 6 compiler.
+	Microsoft C version 7 does not support OS/2.
+	We also have OS2 libraries available for Microsoft C version 5,
+	which are not included as part of the standard release, but
+	are available upon request.  Call us at 503-224-1639.
+	However, the OS2 support in version 5 was imperfect, and we
+	suggest you look elsewhere for OS2 support.
+
+	Linking programs for OS/2 is tricky.  The following problems
+	may be encountered:
+
+	1)  You must use the proper Microsoft OS2 compatible library when
+	linking.  Under Microsoft C version 6 if the library is incorrect
+	you will be alerted by a link error message similar to the following:
+
+	C:\awk\m_awkp.lib:(../maini.c): error L2029:
+	'__aenvseg' : unresolved external.
+
+	Microsoft allows the C library for OS/2 to be named either
+	"llibce.lib" or "llibcep.lib", and the C library for DOS to be
+	named either "llibce.lib" or "llibcer.lib".   The choice of names
+	is made when Microsoft C is installed.  The Microsoft C linker
+	automatically links in the library "llibce.lib".  This name can
+	only be right for linking either DOS or OS2 programs, but not both.
+	If your OS/2 library is named "llibcep.lib", you must over-ride the
+	linker defaults to specify the correct library.  Using the AWK
+	Compiler you do it like this:
+
+	    awkc -tp -xl -linkopts "/NOD:llibce" llibcep.lib  ...
+
+	Note that the converse is true if you want to link DOS programs,
+	that is, if you installed the Microsoft C Compiler using the
+	name "llibce.lib" for the OS2 library, then you will need to
+	over-ride the default library when linking for DOS.
+	
+	2)  You MUST use the Microsoft linker designed for OS/2, which
+	Microsoft supplies in its binb directory.  Make sure your PATH
+	specifies this directory first.
+	
+	3)  The Microsoft bind program also needs to be in your PATH
+	to use the AWK Compiler -tb option (which is the default) to link
+	a program.  The Microsoft bind program invokes the Microsoft linker
+	blithely assuming that there is only one link.exe on your system.
+	If bind does not work, check your PATH again.
+	
+	4)  The Microsoft bind program refuses to bind any program that
+	contains external references to OS2 specific functions unless
+	those are specifically called out on the bind command line.  If this
+	is a problem you will have to link by hand.
+
+    Borland C and Turbo C:
+
+	The AWK Compiler supports Borland C and Turbo C for DOS version 3.
+	Specify the -cb or -cb3 option to the AWK Compiler.  We also provide
+	libraries that allow you to use Borland C version 2 (specify -cb2),
+	but we recommend that you purchase the upgrade from Borland.
+	In both cases the AWK Compiler calls the linker supplied
+	by Borland: tlink.exe.  Borland does not yet support OS/2.
+	
+	Note: We had a problem report that Borland C version 3.0 will
+	not link AWK programs when 386MAX is installed.  To solve this
+	problem uninstall 386MAX or upgrade your Borland compiler
+	to version 3.1, which works OK.
+
+    Zortech C:
+
+	The AWK Compiler supports Zortech version 3. Specify the
+	-cz option to use the Zortech linker.  The AWK Compiler
+	will call the linker supplied with Zortech C (blink.exe).
+	The AWK Compiler does not support the Zortech 32-bit
+	compilation options.
+	
+	The floating point exception handler provided with AWK does
+	not work properly under Zortech C.  It ignores floating point
+	overflow errors and appears to crash on some other errors,
+	including using the result of a divide-by-zero in another
+	calculation.  We could not identify the problem, so just
+	be careful.
+
+    Linking for OS2 with Zortech C:
+
+	To link for OS2 using Zortech C you must set your LIB environment
+	variable to the Zortech protected-mode library directory FIRST,
+	followed by the DOS directory, for example:
+	
+		LIB=C:\zortech\plib;C:\zortech\lib
+	
+	The os2.lib file needed to link is not supplied with Zortech C;
+	previously part of the Microsoft Softset for OS2, it must now
+	be puchased from IBM.  If you attempt to create a bound executable
+	(awkc -tb option) the AWK Compiler will attempt to call the
+	bind.exe program.  We have not yet tested the os2.lib supplied
+	by IBM, nor the IBM bind.exe program.
+
+
+==================== ADVANCED AWK PROGRAMMING TOPICS. ====================
+
+What is the AWK Executable File?
+
+	The AWK executable file contains the AWK code and the unified
+	symbol table for your entire AWK program.  The advantage
+	of using the AWK executable file rather than placing
+	all the AWK code in the .obj file (which would actually
+	be easier to do) is that the AWK code is virtualized,
+	that is, it can be read from the executable file on demand,
+	and swapped out if additional memory space is required.
+	At runtime, the DOS version of AWK determines the optimal use
+	of memory by allowing compiled AWK code and your program data
+	to share the same memory space.  This technique, combined
+	with the incremental linking feature, allows gigantic AWK
+	programs to be developed quite easily.  Programs with more
+	than 640K of compiled code have been developed under DOS using AWK.
+
+
+Debugging with Microsoft CodeView:
+
+	You can not use Microsoft codeview on an AWK program created
+	by the awkbind program, or created with the -xl or -xf options
+	which automatically call the awkbind program.  The reason for
+	this is that the awkbind program places the executable AWK code
+	in the same position in the executable file that codeview normally
+	uses to store debugging information.  So to use codeview on a
+	compiled AWK program you must follow these steps:
+	
+		1)  Compile the AWK program using -xo, which creates
+		    an output .OBJ file, a .AE file containing AWK
+		    executable code, and a .LNK linker response file.
+		2)  Run the linker by hand.
+		3)  The resulting executable program can be run by
+		    specifying the name of the .AE file as the first
+		    argument to the program.  The other program arguments
+		    come after the name of the .AE file.  The name of
+		    the .AE file is removed from the program's ARGV array,
+		    so the program executes normally.
+
+	For example, to debug the combined program consisting
+	of doit.awk and cfile.c:
+	
+		# Create cfile.obj:
+		cl -c -AL -Zi cfile.c
+		# Create doit.obj, doit.ae, and doit.lnk:
+		awkc -xo doit.awk cfile.obj
+		# Run the linker with codeview support enabled:
+		link /CODEVIEW @doit.lnk
+		# Invoke the codeview debugger:
+		cv doit.exe doit.ae
+
+
+Sharing file handles between AWK and C.
+
+	In an AWK program the file handles returned by fopen(), and the
+	pre-defined file handles stdin, stdout, and stderr can be passed
+	to C functions by declaring the corresponding argument in the
+	extern declaration as type "long".  For example, the C fputs()
+	function can be called from AWK as follows:
+	
+	    extern fputs(char*,long)  # Second argument is actually a FILE*
+
+	    BEGIN { fputs("hello world\n",stdout); }
+   
+	You can also determine the underlying DOS numeric file descriptor
+	given the AWK file handle using the built-in AWK function fileno().
+	As in C, the following are always true:
+
+		fileno(stdin) == 0
+		fileno(stdout) == 1
+		fileno(stderr) == 2
+
+	The following example calls the C _commit() function, which causes
+	buffered output for a file descriptor to be written to disk.
+   
+	    extern int _commit(int)		# Argument is a file desciptor.
+	   
+	    BEGIN {
+		pf = fopen("foo","w")
+		print "hello world" > pf
+		fflush(pf)                 # Sends data buffered by AWK to DOS.
+		_commit(fileno(pf))        # Sends data buffered by DOS to disk.
+	    }
+ 
+ 	Just for interest, note that the DOS commit function can be
+ 	called directly from AWK using interrupt 0x21 function 0x68:
+ 
+ 		# Under DOS this is the same as _commit(fileno(pf))
+ 		interrupt(0x21,0x6800,fileno(pf));
+
+
+Using TEXT/BINARY mode:
+
+	RAWMODE works differently in combined AWK/C programs.
+	In normal AWK programs that are not linked with C, AWK does all
+	text mode translation and RAWMODE works perfectly.  In a combined
+	AWK/C program the underlying C library is used to perform
+	text mode translation.  Specifically: changing the RAWMODE
+	variable in a combined AWK/C program causes AWK to make an
+	appropriate setmode() call to the underlying C library for
+	stdin, stdout, stderr, and all files opened in AWK
+	except those that were opened with fopen() with a
+	specific text ("t") or binary ("b") mode.
+	
+	The problems with text mode translation in a combined AWK/C
+	program (or any C program) are as follows:
+	
+	1)  When changing the mode translation for an input file the
+	    new mode does not take effect until any currently buffered
+	    input for the specified file has been read.  You can, however,
+	    reliably change the mode before you read any data from the file.
+	2)  The least significant bit of the RAWMODE variable is ignored.
+	    This is the bit that controls how Control-Z is handled for
+	    input files.  The C libraries do not support this feature.
+
+
+Memory Allocation:
+
+	Real memory (the first 640K or so of memory) is a limited resource
+	for programs that run under DOS.  In a combined AWK/C program,
+	both the AWK and the C parts of the program may wish to use memory.
+	The AWK compiler comes with a file called "malloc.obj" that is
+	normally linked in with all compiled AWK programs targeted to run
+	under DOS.  Malloc.obj redefines the functions: malloc(), calloc(),
+	realloc(), and free() to versions that use the internal AWK memory
+	allocator.  These versions of malloc(), etc., allow C code and
+	AWK code to peacefully share the first 640K of memory, and you do
+	not normally need to worry about it.
+
+	The advantages of the versions of malloc(), etc., provided
+	by AWK in malloc.obj are:
+
+	1)  If there is insufficient memory available in the first 640K to
+	satisfy an allocation request the AWK memory allocator will attempt
+	to free up additional real memory by swapping out AWK code and/or
+	data to EMS/XMS memory or disk space.  When you create large arrays
+	in AWK it uses up all the real memory before starting to use
+	EMS or XMS memory or disk space.  If you were not using the AWK
+	version of malloc(), etc., then there would be no more room
+	in real memory for your C program to allocate memory.
+	2)  The system() and spawn() functions automatically swap out
+	the memory allocated by these functions while running an
+	external program to make more room for that program.
+	
+	Unfortunately, there are also disadvantages as follows:
+
+	1)  The AWK versions of malloc(), calloc(), and realloc() are
+	currently limited to allocating items up to about 8100 bytes in size.
+	2)  Some programs allocate memory with _fmalloc() or _nmalloc(),
+	but then use free(), rather than _ffree() or _nfree() to release
+	the allocated memory.  These programs will crash when
+	using malloc.obj.
+
+	If for some reason you do not want to use the AWK version
+	of malloc(), etc., you have several options:
+	
+	1)  Use the alternate routine names provided by your C Compiler.
+	    In Microsoft C they are _fmalloc(), _fcalloc(), _frealloc()
+	    and _ffree().  In Borland C they are farmalloc(), farcalloc(),
+	    farrealloc() and farfree().
+	2)  Use the DOS memory allocator directly.  You can do this using
+	    the C functions: halloc() (Microsoft C), or dos_allocmem().
+	3)  Link your combined AWK/C program manually after removing
+	    "malloc.obj" from the linker response file, which will
+	    cause the combined AWK/C program to use whatever malloc(),
+	    etc., routines are defined in your C library.  No AWK code
+	    calls malloc() directly.
+
+	AWK allocates memory in the first 640K only as it needs it,
+	so even if you do NOT use the AWK memory allocator, it is
+	still possible to link together combined AWK/C programs with
+	modest memory requirements with no further effort.
+	
+	Alternatively, you can set the C variable awk_heapkreserve to an
+	amount of memory specified in Kbytes that you want AWK not to use.
+	For example, including the following line in your C program:
+      
+		int awk_heapkreserve = 100;
+   
+	will cause the AWK memory allocator to try to leave the last 100K
+	bytes of main memory alone, thus reserving it for use by your
+	C program, or for spawning external programs.
+	This number is advisory only: if AWK can not continue without
+	using this memory, it will allocate it anyway, but it will try
+	to use XMS/EMS or disk space first.  If you reserve too much
+	heap space the AWK program will thrash trying not to use the
+	memory you want reserved, and your program may slow down enormously.
+
+	WARNINGS:
+
+	You must NEVER allocate memory with one memory allocator and
+	free it with another.  The following examples are guaranteed
+	to crash your program:
+
+	    free(_fmalloc(10))     or    _ffree(malloc(10))
+
+	Using any memory allocator other than the AWK ones will
+	undoubtedly reduce the memory available to external commands
+	invoked by the AWK system() or spawn() functions, possibly
+	making it impossible to run any external commands.
+
+
+Using the Near Heap
+
+	In the Microsoft C versions 6 and 7, AWK normally calls the
+	_nheapmin() function to eliminate the near heap.  To keep it
+	from doing this define the variable awk_nheap in your C program
+	and initialize it to 1 as follows:
+	
+		int awk_nheap = 1;
+	
+Printf/fprintf/sprintf
+
+	The AWK library includes functions named awk_printf(), awk_fprintf(),
+	and awk_sprintf() that behave like printf(), fprintf() and sprintf(),
+	except that they take the format specifiers defined by AWK
+	(see the section entitled "Printf Flags" in the awk.doc file),
+	and the sprintf() function always returns 0.  If your program
+	uses printf(), etc., you can make your compiled .exe file smaller
+	by using the awk_printf(), etc., versions instead.  By doing this
+	the compiled .exe file does not include redundant copies of
+	nearly identical code.
+
+The String Data Type
+
+	A "string" is an AWK internal data type that can be passed
+	to or from C functions.  This has two advantages: you can pass
+	string data containing 0 (nul) characters; you can eliminate
+	unneeded memory allocations.  When a "char*" type is returned
+	from a C function, AWK copies the information into a "string" type.
+	By returning a string directly you can eliminate this overhead.
+	
+	The "string" data type is defined in "awk.h", which must be included
+	in your C program that wishes to use strings.  A string is currently
+	defined as follows:
+
+		#define string struct _string
+		struct _string {
+			short reserved;
+			unsigned short slen;    /* Length of sdata. */
+			char sdata[];  /* Variable sized array of data. */
+		};
+
+	This definition will change in future versions, so include "awk.h"
+	in your C program rather than copying this definition.
+	The reserved field is reserved for use by AWK.  NEVER change it.
+	The slen field is the length of the string.
+	The sdata field is the data itself in a buffer of size slen+1.
+	The last character at location sdata[slen] is always a 0 (nul)
+	making it easy to use the sdata in C functions that require a
+	nul terminated string.
+
+	RULES FOR USING STRINGS:
+	
+	1)  AWK provides functions for allocating and deallocating strings.
+	You should use these functions: do not allocate strings yourself and
+	pass them to AWK.  The memory allocated for strings is not allocated by
+	malloc() and should not be freed by free().  Further, you must NEVER
+	modify any fields of a string that is passed to you by AWK
+	unless you make a private copy of the string with the
+	awk_string_copy() function, because there may be other pointers
+	to the same string within AWK.
+	
+	2)  The strings passed as parameters to your function by AWK are
+	automatically deallocated by AWK when your C function returns.
+	Do not call string_free() on them yourself.
+	
+	3)  You MUST NOT return a string passed to a C function directly as
+	the return value of that function.  The reason is that the string
+	arguments are destroyed when the C function returns, so the string
+	that your C function returns will also be destroyed.  Use the
+	awk_string_dup() or awk_string_copy() function on the string
+	parameter before returning it.  For example:
+	
+	    /* Calling this function from AWK will crash your AWK program:
+	     */
+	    string *wrong(string *ss) {  return(ss); }
+	   
+	    /* This is the correct way:
+	     */
+	    string *correct(string *ss) {  return(awk_string_dup(ss)); }
+
+	    /* This is also correct:
+	     */
+	    string *correct2(string *ss) {
+		    string *newss = awk_string_copy(ss);
+		    /* You can modify newss->sdata before returning it.
+		     */
+		    return(newss);
+	    }
+
+Functions to manipulate AWK strings:
+
+    These functions are provided in the awk libraries (m_awk.lib, etc.):
+	
+    string *awk_string_init( int len )
+	    Allocates a new string of length len, and sets the slen field,
+	    but copies no data into the string.
+    string *awk_string_new(char * str)
+	    Allocates a string that is a copy of char *str.
+    string *awk_string_new1(char *str, int len)
+	    Like awk_string_new, but the length of str is given by len.
+	    This function can be used if str contains nul characters.
+    string *awk_string_copy(string *str)
+	    This function returns a newly allocated copy of str.
+	    You can modify the copy with impunity, or save it for future use.
+    string *awk_string_dup(string *str)
+	    This function increments the reference count of the string,
+	    thus informing the AWK system that the string should not be
+	    deallocated when the C function returns, but does not actually
+	    copy the data to a new memory location.  This function should
+	    be called on a string that was passed to a function as a
+	    parameter if that string is to be used as the return value
+	    from the function.
+    awk_string_free(string * str)
+	    This function frees the string if no one else is using it.
+	    Note that the following code has no net effect:
+	   
+		awk_string_free(awk_string_dup(ss))
+
+
+========================== LIST OF FILES ===============================
+
+The DOS and OS2 versions of the AWK Compiler are supplied separately.
+The DOS version of the AWK Compiler contains the following files:
+
+Documentation Files:
+	readme.doc  - This file;
+	awk.doc     - Thompson AWK Compiler General Documentation;
+	awkprog.doc - Documentation on creating combined AWK/C programs;
+	examples    - Directory containing AWK examples.
+
+Program Files
+	awkc.exe    - Thompson AWK Compiler for DOS;
+	awk.exe     - Thompson Instant-AWK for DOS;
+	awkbind.exe - Binds AWK code into linked programs (used by awkc.exe);
+
+Files used to create combined (linked) AWK/C programs:
+	awk.h       - Include file for C programs;
+	malloc.obj  - Interface to AWK memory allocator;
+	b_awk.lib   - AWK library for Borland/Turbo C version 3;
+	b2_awk.lib  - Extra library needed by Borland/Turbo C version 2.
+	m_awk.lib   - AWK library for Microsoft C version 6/7 (DOS);
+	z_awk.lib   - AWK library for Zortech C version 3 (DOS);
+
+Other Support Files (* represents optional characters):
+	awkcm.ovl   - Stub program used by the AWK Compiler to create
+		programs with the awkc -xm option.
+	awkr*.exe   - Overlays needed by the AWK Compiler, Instant-AWK,
+		and AWK programs compiled with -xm option;
+
+The OS2 version of the AWK Compiler contains the following files:
+
+Documentation Files:
+	Identical to DOS version above, but with fewer examples.
+
+Program Files
+	awkcp.exe    - Thompson AWK Compiler for OS2;
+	awkp.exe     - Thompson Instant-AWK for OS2;
+	awkbindp.exe - Binds AWK code into linked programs (used by awkcp.exe);
+
+Files used to create combined (linked) AWK/C programs:
+	awk.h       - Include file for C programs (identical to DOS version);
+	m_awkp.lib  - AWK library for Microsoft C version 6 (OS2);
+	z_awkp.lib  - AWK library for Zortech C version 3 (OS2);
+
+Other Support Files (* represents optional characters):
+	awkcm*.ovl  - Stub programs which are combined with AWK code
+		by the AWK Compiler to create programs created with
+		the awkc -xm option.  Awkcmp.ovl is for protected
+		mode programs, and awkcmb.ovl is for bound (dual-mode)
+		programs.
+	awkr*.exe   - This program contains the AWK runtime code.
+		It is used as an overlay by Instant-AWK, and by
+		any AWK programs compiled with -xm option.  This program
+		comes in multiple versions: the program name consists
+		of "awkr", a number, and a letter.  The number is the
+		last AWK Compiler release number that required a major
+		change in this program.  The letter is "p" for protected
+		mode OS2, "b" for bound (DOS/OS2), "" (no letter) for DOS,
+		and "t" for a DOS version that is not compressed using pklite.
+		The number is changed so that multiple versions of the AWK
+		Compiler can reside on your computer simultaneously.
+		This is necessary because any programs compiled with the
+		awkc -xm option (which is the default) continue to call
+		this program, even after a new version of the AWK Compiler
+		is installed.

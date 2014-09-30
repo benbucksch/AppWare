@@ -1,0 +1,33 @@
+OBJECTFILES= \
+	$(OBJDIR)\dll_adlg.obj \
+	$(OBJDIR)\dll_adm.obj \
+	$(OBJDIR)\dll_edit.obj \
+	$(OBJDIR)\dll_exhd.obj \
+	$(OBJDIR)\dll_fun.obj \
+	$(OBJDIR)\dll_main.obj \
+	$(OBJDIR)\dll_obj.obj \
+	$(OBJDIR)\dll_rdlg.obj 
+
+
+$(OBJDIR)\dll_adlg.obj:  .\dll_adlg.cpp .\dll.h
+
+$(OBJDIR)\dll_adm.obj:  .\dll_adm.cpp .\dll.h
+
+$(OBJDIR)\dll_edit.obj:  .\dll_edit.cpp .\dll.h
+
+$(OBJDIR)\dll_exhd.obj:  .\dll_exhd.cpp .\dllexehd.h .\dll.h
+
+$(OBJDIR)\dll_fun.obj:  .\dll_fun.cpp .\dll.h
+
+$(OBJDIR)\dll_main.obj:  .\dll_main.cpp .\dll.h
+
+$(OBJDIR)\dll_obj.obj:  .\dll_obj.cpp .\dll.h
+
+$(OBJDIR)\dll_rdlg.obj:  .\dll_rdlg.cpp .\dll.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\alm_dll.res 
+
+
+$(OBJDIR)\alm_dll.res:  .\alm_dll.rc
+

@@ -1,0 +1,122 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL, INC. EMPLOYEES
+//  WHO HAVE A NEED TO KNOW HOW TO PERFORM THEIR TASKS WITHIN THE SCOPE
+//  OF THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL, INC. WHO
+//  HAVE ENTERED INTO APPROPRIATE LICENSE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL, INC.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:        SHAPES.RC
+//
+// AUTHOR:      Scott McCarty
+//
+// DESCRIPTION: Contains references to bitmaps for the standard shapes
+//
+// CHANGES:
+//
+////////////////////////////////////////////////////////////////////////////
+
+#define RCINVOKED
+
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include <o_wndshp.h>
+#include "shapepal.h"       
+#include "shapes.h"
+
+//////////////// Dialogs
+
+rcinclude   rc/fill_ed.dlg
+rcinclude   rc/fillshap.dlg
+rcinclude   rc/groupbox.dlg
+rcinclude   rc/line_ed.dlg
+rcinclude   rc/textshap.dlg
+
+//////////////// Bitmaps for library-supplied tools
+
+ID(SHP_TOOL_BITMAP)         BITMAP  rc/bitmap.bmp
+ID(SHP_TOOL_FILLCIRCLE)     BITMAP  rc/fillcirc.bmp
+ID(SHP_TOOL_FILLRRECT)      BITMAP  rc/fillrrec.bmp
+ID(SHP_TOOL_FILLSQUARE)     BITMAP  rc/fillsqua.bmp
+ID(SHP_TOOL_GROUPBOX)       BITMAP  rc/groupbox.bmp
+ID(SHP_TOOL_LINE)           BITMAP  rc/line.bmp
+ID(SHP_TOOL_TEXT)           BITMAP  rc/text.bmp
+ID(SHP_TOOL_UNFILLCIRCLE)   BITMAP  rc/unfillci.bmp
+ID(SHP_TOOL_UNFILLRRECT)    BITMAP  rc/unfillrr.bmp
+ID(SHP_TOOL_UNFILLSQUARE)   BITMAP  rc/unfillsq.bmp
+
+//////////////// Cursors for library-supplied tools
+
+ID(SHP_TOOL_FILLCIRCLE)     CURSOR  rc/fillcirc.cur
+ID(SHP_TOOL_FILLRRECT)      CURSOR  rc/fillrrec.cur
+ID(SHP_TOOL_FILLSQUARE)     CURSOR  rc/fillsqua.cur
+ID(SHP_TOOL_GROUPBOX)       CURSOR  rc/groupbox.cur
+ID(SHP_TOOL_LINE)           CURSOR  rc/line.cur
+ID(SHP_TOOL_TEXT)           CURSOR  rc/text.cur
+ID(SHP_TOOL_UNFILLCIRCLE)   CURSOR  rc/unfillci.cur
+ID(SHP_TOOL_UNFILLRRECT)    CURSOR  rc/unfillrr.cur
+ID(SHP_TOOL_UNFILLSQUARE)   CURSOR  rc/unfillsq.cur
+
+//////////////////////////// Cursor for line moving
+
+ID(CUR_LINEMOVE)            CURSOR  rc/linemove.cur
+
+////////////////////////////////////// Version Info
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Shape Library\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32SHAP\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32SHAP.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

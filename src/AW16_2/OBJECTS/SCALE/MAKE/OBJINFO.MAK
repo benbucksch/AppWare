@@ -1,0 +1,10 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = ALM_SCAL.DLL
+OBJECTDEFNAME = SCALE.DEF
+LOCALCCFLAGS  =
+LOCALINCLUDE  =
+LOCALLIBS     = ALM_WND.LIB ALM_NMBR.LIB

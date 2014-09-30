@@ -1,0 +1,18 @@
+OBJECTFILES= \
+	$(OBJDIR)\loop.obj \
+	$(OBJDIR)\loop_dlg.obj \
+	$(OBJDIR)\loopmain.obj 
+
+
+$(OBJDIR)\loop.obj:  .\loop.cpp .\loop_rc.h .\loop.h
+
+$(OBJDIR)\loop_dlg.obj:  .\loop_dlg.cpp .\loop_rc.h .\loop.h
+
+$(OBJDIR)\loopmain.obj:  .\loopmain.cpp .\loop.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\loop.res 
+
+
+$(OBJDIR)\loop.res:  .\loop.rc .\loop_rc.h
+

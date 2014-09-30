@@ -1,0 +1,10 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32CTRL.DLL
+OBJECTDEFNAME = MOVCTRL.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  = .
+LOCALLIBS     = .\QTW.LIB AW32WND.LIB

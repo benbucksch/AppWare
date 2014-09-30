@@ -1,0 +1,11 @@
+#TYPE    NAME       BUILD-NUMBER-FILE  
+
+EXE      APEBLDR    vabnum.bld
+EXE      ALMBLDR
+EXE      SHELL
+
+NOMAKE   MEMIO
+NOMAKE   ENVMAKE
+
+DLL      KERNEL     kernnum.bld
+

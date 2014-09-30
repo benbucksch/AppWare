@@ -1,0 +1,21 @@
+LIBRARY     AW32TFCT
+
+DESCRIPTION 'Novell AppWare Loadable Module: Text Builder Object'
+EXETYPE     WINDOWS
+
+HEAPSIZE    8192
+
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+
+DATA        PRELOAD MOVEABLE SINGLE
+
+SEGMENTS
+
+EXPORTS
+						DllEntryPoint																@1
+						Administration															@100
+						Event																				@101
+						AutoUpdateOn																@120
+						AutoUpdateOff																@121
+						BuildText																		@122
+						SetExpress																	@123

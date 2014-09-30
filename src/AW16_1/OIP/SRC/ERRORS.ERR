@@ -1,0 +1,340 @@
+
+N:\OIP\SRC>d:
+
+D:\APPWRE32\ENVIRON\KERNEL\SRC>cd d:\appwre32\environ\apebldr
+
+D:\APPWRE32\ENVIRON\APEBLDR>make
+MAKE Version 3.7  Copyright (c) 1987, 1994 Borland International
+	bcc32 @MAKE0000.@@@ ..\ALMBLDR\SRC\cfgdesc.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\almbldr\src\cfgdesc.cpp:
+	bcc32 @MAKE0000.@@@ ..\ALMBLDR\SRC\funcdesc.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\almbldr\src\funcdesc.cpp:
+Warning ..\almbldr\src\funcdesc.cpp 174: Conversion may lose significant digits in function FUNCDESC::GetInput(int)
+Warning ..\almbldr\src\funcdesc.cpp 195: Conversion may lose significant digits in function FUNCDESC::GetOutput(int)
+Warning ..\almbldr\src\funcdesc.cpp 217: Conversion may lose significant digits in function FUNCDESC::GetFlow(int)
+	bcc32 @MAKE0000.@@@ ..\ALMBLDR\SRC\iconedit.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\almbldr\src\iconedit.cpp:
+Warning ..\almbldr\src\iconedit.cpp 252: Parameter 'lParam' is never used in function __stdcall ICONEDITOR::IconEditorDlgProc(HWND__ *,unsigned int,unsigned int,long)
+Warning ..\almbldr\src\iconedit.cpp 380: Parameter 'pszFilePath' is never used in function ICONEDITOR::CheckIconFile(void *,const char *)
+Warning ..\almbldr\src\iconedit.cpp 393: 'result' is assigned a value that is never used in function ICONEDITOR::VerifyClose()
+	bcc32 @MAKE0000.@@@ ..\ALMBLDR\SRC\objdesc.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\almbldr\src\objdesc.cpp:
+	bcc32 @MAKE0000.@@@ ..\ALMBLDR\SRC\pixelwin.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\almbldr\src\pixelwin.cpp:
+	bcc32 @MAKE0000.@@@ ..\ALMBLDR\SRC\sericon.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\almbldr\src\sericon.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\array.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\array.cpp:
+Warning ..\memio\src\array.cpp 143: Conversion may lose significant digits in function SERIUSARRAY::Insert(unsigned short)
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\baseblk.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\baseblk.cpp:
+Warning ..\memio\src\baseblk.cpp 80: 'pCurrBlock' is assigned a value that is never used in function BASEBLOCK::Read(void *,RUNTIMERECLIST *)
+Warning ..\memio\src\baseblk.cpp 458: 'pData' is assigned a value that is never used in function BASEBLOCK::Write(void *,unsigned long &)
+Warning ..\memio\src\baseblk.cpp 570: 'pBlock' is declared but never used in function BASEBLOCK::ReadBlockRecords(void *,RUNTIMERECLIST *)
+Warning ..\memio\src\baseblk.cpp 597: 'writeCount' is declared but never used in function BASEBLOCK::ReadBlockData(void *,RUNTIMERECLIST *)
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\baserecb.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\baserecb.cpp:
+Warning ..\memio\src\baserecb.cpp 97: Conversion may lose significant digits in function BASERECORDBLOCK::BASERECORDBLOCK(RUNTIMERECLIST *,long,long)
+Warning ..\memio\src\baserecb.cpp 135: Conversion may lose significant digits in function BASERECORDBLOCK::BASERECORDBLOCK(RUNTIMERECLIST *,long,long,long)
+Warning ..\memio\src\baserecb.cpp 201: Conversion may lose significant digits in function BASERECORDBLOCK::PreAllocate(long)
+Warning ..\memio\src\baserecb.cpp 340: Conversion may lose significant digits in function BASERECORDBLOCK::AddRecord(unsigned int)
+Warning ..\memio\src\baserecb.cpp 769: Conversion may lose significant digits in function BASERECORDBLOCK::DeleteRecord(void *,unsigned int)
+Warning ..\memio\src\baserecb.cpp 781: 'recSeg' is assigned a value that is never used in function BASERECORDBLOCK::DeleteRecord(void *,unsigned int)
+Warning ..\memio\src\baserecb.cpp 1277: 'recSeg' is assigned a value that is never used in function BASERECORDBLOCK::NextRec(void *)
+Warning ..\memio\src\baserecb.cpp 1365: 'recSeg' is assigned a value that is never used in function BASERECORDBLOCK::pNextRec(void *)
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\chunklib.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\chunklib.cpp:
+Warning ..\memio\src\chunklib.cpp 88: Parameter 'chunkID' is never used in function CheckBlock(long,void *,long)
+Warning ..\memio\src\chunklib.cpp 88: Parameter 'theData' is never used in function CheckBlock(long,void *,long)
+Warning ..\memio\src\chunklib.cpp 88: Parameter 'byteCount' is never used in function CheckBlock(long,void *,long)
+Warning ..\memio\src\chunklib.cpp 231: Conversion may lose significant digits in function CompactFree(MEMCHUNK *,FREEBLOCK)
+Warning ..\memio\src\chunklib.cpp 246: Conversion may lose significant digits in function CompactFree(MEMCHUNK *,FREEBLOCK)
+Warning ..\memio\src\chunklib.cpp 338: Conversion may lose significant digits in function AllocateBlock(long,long &)
+Warning ..\memio\src\chunklib.cpp 394: Conversion may lose significant digits in function AllocateBlock(long,long &)
+Warning ..\memio\src\chunklib.cpp 437: Conversion may lose significant digits in function AllocateChunk(long)
+Warning ..\memio\src\chunklib.cpp 620: Conversion may lose significant digits in function ReleaseBlock(long,long,void *)
+Warning ..\memio\src\chunklib.cpp 641: 'blockMemID' is assigned a value that is never used in function ReleaseBlock(long,long,void *)
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\dbsarray.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\dbsarray.cpp:
+Warning ..\memio\src\dbsarray.cpp 52: Conversion may lose significant digits in function DBSTRINGARRAY::DBSTRINGARRAY(unsigned short)
+Warning ..\memio\src\dbsarray.cpp 83: Conversion may lose significant digits in function DBSTRINGARRAY::Resize(unsigned short)
+Warning ..\memio\src\dbsarray.cpp 92: Conversion may lose significant digits in function DBSTRINGARRAY::Resize(unsigned short)
+Warning ..\memio\src\dbsarray.cpp 84: 'result' is assigned a value that is never used in function DBSTRINGARRAY::Resize(unsigned short)
+Warning ..\memio\src\dbsarray.cpp 151: Conversion may lose significant digits in function DBSTRINGARRAY::operator =(DBSTRINGARRAY &)
+Warning ..\memio\src\dbsarray.cpp 151: Conversion may lose significant digits in function DBSTRINGARRAY::operator =(DBSTRINGARRAY &)
+Warning ..\memio\src\dbsarray.cpp 181: Conversion may lose significant digits in function DBSTRINGARRAY::ConvertToPointers()
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\dbstring.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\dbstring.cpp:
+Warning ..\memio\src\dbstring.cpp 234: Conversion may lose significant digits in function DBSTRING::strlen()
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\exrecblk.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\exrecblk.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\exserblk.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\exserblk.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\exserrec.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\exserrec.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\exstring.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\exstring.cpp:
+Warning ..\memio\src\exstring.cpp 37: Conversion may lose significant digits in function EXESTRING::operator =(EXESTRING &)
+Warning ..\memio\src\exstring.cpp 73: Conversion may lose significant digits in function EXESTRING::operator =(const char *)
+Warning ..\memio\src\exstring.cpp 105: Conversion may lose significant digits in function EXESTRING::EXESTRING(const char *)
+Warning ..\memio\src\exstring.cpp 135: Conversion may lose significant digits in function EXESTRING::EXESTRING(TSTRING &)
+Warning ..\memio\src\exstring.cpp 157: Conversion may lose significant digits in function EXESTRING::EXESTRING(const EXESTRING &)
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\fastrecm.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\fastrecm.cpp:
+Warning ..\memio\src\fastrecm.cpp 50: Conversion may lose significant digits in function FASTRECMGR::FASTRECMGR(unsigned short,long)
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\memblk.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\memblk.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\recblk.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\recblk.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\rtreclst.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\rtreclst.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\serblk.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\serblk.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\serrec.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\serrec.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\tstring.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\tstring.cpp:
+	bcc32 @MAKE0001.@@@ ..\MEMIO\SRC\uidarray.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\memio\src\uidarray.cpp:
+	bcc32 @MAKE0002.@@@ ..\KERNEL\SRC\oiputils.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\kernel\src\oiputils.cpp:
+Warning ..\kernel\src\oiputils.cpp 97: 'pObjectRecord' is assigned a value that is never used in function GetObjectsTypeRecord(long)
+Warning ..\kernel\src\oiputils.cpp 148: 'pBaseType' is assigned a value that is never used in function GetTypeRecord(long)
+	bcc32 @MAKE0002.@@@ ..\KERNEL\SRC\system.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\kernel\src\system.cpp:
+	bcc32 @MAKE0002.@@@ ..\KERNEL\SRC\systemmi.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+..\kernel\src\systemmi.cpp:
+Warning ..\kernel\src\systemmi.cpp 214: Parameter 'pContext' is never used in function SYSTEMMIN::NextContext(APPCONTEXT *)
+	bcc32 @MAKE0004.@@@ src\basewin.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\basewin.cpp:
+	bcc32 @MAKE0004.@@@ src\bitree.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\bitree.cpp:
+	bcc32 @MAKE0004.@@@ src\cfglibp.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\cfglibp.cpp:
+Warning src\cfglibp.cpp 151: 'nextRec' is assigned a value that is never used in function SORTEDLIST::GetNextData(void * &,long &)
+Warning src\cfglibp.cpp 504: Conversion may lose significant digits in function cfgReadConfigs()
+Warning src\cfglibp.cpp 558: 'configKey' is assigned a value that is never used in function cfgReadConfigs()
+	bcc32 @MAKE0004.@@@ src\clipcom.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipcom.cpp:
+	bcc32 @MAKE0004.@@@ src\clipflow.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipflow.cpp:
+	bcc32 @MAKE0004.@@@ src\clipfunc.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipfunc.cpp:
+	bcc32 @MAKE0004.@@@ src\clipgrup.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipgrup.cpp:
+	bcc32 @MAKE0004.@@@ src\cliphead.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\cliphead.cpp:
+	bcc32 @MAKE0004.@@@ src\clipobj.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipobj.cpp:
+	bcc32 @MAKE0004.@@@ src\clipparm.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipparm.cpp:
+	bcc32 @MAKE0004.@@@ src\clipsjt.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\clipsjt.cpp:
+	bcc32 @MAKE0004.@@@ src\comment.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\comment.cpp:
+	bcc32 @MAKE0004.@@@ src\compstat.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\compstat.cpp:
+	bcc32 @MAKE0004.@@@ src\datasmgr.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\datasmgr.cpp:
+Warning src\datasmgr.cpp 258: 'theData' is assigned a value that is never used in function DATASMGR::LockDataPtr(long)
+Warning src\datasmgr.cpp 336: 'byteCount' is assigned a value that is never used in function DATASMGR::GetDataSize(long)
+	bcc32 @MAKE0004.@@@ src\exeevntl.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exeevntl.cpp:
+	bcc32 @MAKE0004.@@@ src\exeflwmg.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exeflwmg.cpp:
+	bcc32 @MAKE0004.@@@ src\exefunc.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exefunc.cpp:
+	bcc32 @MAKE0004.@@@ src\exehead.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exehead.cpp:
+	bcc32 @MAKE0004.@@@ src\exelibl.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exelibl.cpp:
+	bcc32 @MAKE0004.@@@ src\exelistb.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exelistb.cpp:
+	bcc32 @MAKE0004.@@@ src\exeobjs.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exeobjs.cpp:
+	bcc32 @MAKE0004.@@@ src\exeproc.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exeproc.cpp:
+	bcc32 @MAKE0004.@@@ src\exeprocl.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exeprocl.cpp:
+	bcc32 @MAKE0004.@@@ src\exerespl.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exerespl.cpp:
+	bcc32 @MAKE0004.@@@ src\exetypes.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\exetypes.cpp:
+	bcc32 @MAKE0004.@@@ src\flow.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\flow.cpp:
+	bcc32 @MAKE0004.@@@ src\flowmgr.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\flowmgr.cpp:
+	bcc32 @MAKE0004.@@@ src\font.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\font.cpp:
+	bcc32 @MAKE0004.@@@ src\funcinst.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\funcinst.cpp:
+	bcc32 @MAKE0004.@@@ src\fwinobj.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\fwinobj.cpp:
+	bcc32 @MAKE0004.@@@ src\helpcls.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\helpcls.cpp:
+	bcc32 @MAKE0004.@@@ src\mdiclass.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\mdiclass.cpp:
+	bcc32 @MAKE0004.@@@ src\msgwin.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\msgwin.cpp:
+	bcc32 @MAKE0004.@@@ src\navcls.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\navcls.cpp:
+	bcc32 @MAKE0004.@@@ src\objgroup.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\objgroup.cpp:
+Warning src\objgroup.cpp 702: 'i' is assigned a value that is never used in function OBJGROUP::DrawAllObjects(HDC__ *,tagRECT *,int)
+Warning src\objgroup.cpp 2947: Conversion may lose significant digits in function OBJGROUP::EditObjTitle(OBJINST *,unsigned short,unsigned int,long,int,int)
+Warning src\objgroup.cpp 2948: Conversion may lose significant digits in function OBJGROUP::EditObjTitle(OBJINST *,unsigned short,unsigned int,long,int,int)
+	bcc32 @MAKE0004.@@@ src\objinst.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\objinst.cpp:
+Warning src\objinst.cpp 121: Possibly incorrect assignment in function OBJINST::PostReadInit()
+	bcc32 @MAKE0004.@@@ src\objshare.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\objshare.cpp:
+Warning src\objshare.cpp 284: Parameter 'lParam' is never used in function __stdcall OBJECTSHARE::AliasDlgProc(HWND__ *,unsigned int,unsigned int,long)
+	bcc32 @MAKE0004.@@@ src\objtype.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\objtype.cpp:
+Warning src\objtype.cpp 187: Conversion may lose significant digits in function OBJTYPE::CheckObjectVersion(SERUID,long)
+	bcc32 @MAKE0004.@@@ src\palette.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\palette.cpp:
+Warning src\palette.cpp 323: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 332: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 338: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 339: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 358: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 361: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 413: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 433: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 446: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 573: Conversion may lose significant digits in function PALETTE::WndProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\palette.cpp 1567: Conversion may lose significant digits in function PALETTE::FillFuncList(CFGDESC *)
+Warning src\palette.cpp 1803: 'projectPtr' is assigned a value that is never used in function PALETTE::PopupObjList(tagPOINT)
+Warning src\palette.cpp 2232: Conversion may lose significant digits in function PALETTE::ConfigureTurboPalette()
+Warning src\palette.cpp 2257: Conversion may lose significant digits in function PALETTE::ConfigureTurboPalette()
+	bcc32 @MAKE0004.@@@ src\param.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\param.cpp:
+	bcc32 @MAKE0004.@@@ src\popupmen.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\popupmen.cpp:
+	bcc32 @MAKE0004.@@@ src\printer.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\printer.cpp:
+	bcc32 @MAKE0004.@@@ src\prjwin.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\prjwin.cpp:
+Warning src\prjwin.cpp 834: 'holdDC' is assigned a value that is never used in function PROJECTWINDOW::DrawAllSubjects(HDC__ *,tagRECT *)
+Warning src\prjwin.cpp 833: 'refreshBitmap' is assigned a value that is never used in function PROJECTWINDOW::DrawAllSubjects(HDC__ *,tagRECT *)
+Warning src\prjwin.cpp 1051: Conversion may lose significant digits in function PROJECTWINDOW::FigureSelection(long,unsigned int,int)
+Warning src\prjwin.cpp 1671: Parameter 'lParam' is never used in function PROJECTWINDOW::ArbitraryHScroll(unsigned int,long)
+Warning src\prjwin.cpp 1754: Parameter 'lParam' is never used in function PROJECTWINDOW::ArbitraryVScroll(unsigned int,long)
+	bcc32 @MAKE0004.@@@ src\progsys.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\progsys.cpp:
+Warning src\progsys.cpp 129: Conversion may lose significant digits in function PROGSYSTEM::SetUpCompileContext()
+Warning src\progsys.cpp 155: Conversion may lose significant digits in function PROGSYSTEM::SetUpRunContext()
+Warning src\progsys.cpp 271: Conversion may lose significant digits in function PROGSYSTEM::RegisterFileObj(FILEOBJECT *)
+Warning src\progsys.cpp 1203: Conversion may lose significant digits in function __stdcall PROGSYSTEM::PreferenceDlgProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\progsys.cpp 1206: Conversion may lose significant digits in function __stdcall PROGSYSTEM::PreferenceDlgProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\progsys.cpp 1210: Conversion may lose significant digits in function __stdcall PROGSYSTEM::PreferenceDlgProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\progsys.cpp 1218: Conversion may lose significant digits in function __stdcall PROGSYSTEM::PreferenceDlgProc(HWND__ *,unsigned int,unsigned int,long)
+Warning src\progsys.cpp 1293: Parameter 'lParam' is never used in function __stdcall PROGSYSTEM::PreferenceDlgProc(HWND__ *,unsigned int,unsigned int,long)
+	bcc32 @MAKE0004.@@@ src\project.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\project.cpp:
+Warning src\project.cpp 310: Conversion may lose significant digits in function PROJECT::PROJECT(char)
+Warning src\project.cpp 1734: Conversion may lose significant digits in function PROJECT::WriteShellExe(void *,void *)
+	bcc32 @MAKE0004.@@@ src\serprog.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\serprog.cpp:
+	bcc32 @MAKE0004.@@@ src\sjtwin.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\sjtwin.cpp:
+Warning src\sjtwin.cpp 1013: 'refreshBitmap' is assigned a value that is never used in function SUBJECTWINDOW::DrawScreen(HDC__ *,tagRECT *,SCROLLINFO *)
+Warning src\sjtwin.cpp 1717: Conversion may lose significant digits in function SUBJECTWINDOW::FigureSelection(const tagPOINT &,unsigned short)
+Warning src\sjtwin.cpp 1808: Conversion may lose significant digits in function SUBJECTWINDOW::HandleGroupObjHit(HDC__ *,OBJGROUP *,OBJINST *,unsigned int,unsigned short,const tagPOINT &)
+Warning src\sjtwin.cpp 1974: 'paramPtr' is assigned a value that is never used in function SUBJECTWINDOW::FigureDoubleClick(long)
+Warning src\sjtwin.cpp 2963: 'objInstPtr' is assigned a value that is never used in function SUBJECTWINDOW::EndDrag(unsigned int,long)
+Warning src\sjtwin.cpp 4197: 'result' is assigned a value that is never used in function SUBJECTWINDOW::MoveGroupObjs(HDC__ *,tagPOINT)
+Warning src\sjtwin.cpp 4633: 'count' is assigned a value that is never used in function SUBJECTWINDOW::ChangeObjectSelection(HDC__ *,SERUID,unsigned short)
+Warning src\sjtwin.cpp 5004: 'member' is assigned a value that is never used in function SUBJECTWINDOW::UnSelectFunctions(HDC__ *,SERUID)
+Warning src\sjtwin.cpp 5734: 'response' is assigned a value that is never used in function SUBJECTWINDOW::AddComment()
+Warning src\sjtwin.cpp 5772: 'response' is assigned a value that is never used in function SUBJECTWINDOW::CommentDialog(COMMENT *)
+Warning src\sjtwin.cpp 6297: Parameter 'lParam' is never used in function __stdcall SUBJECTWINDOW::NewComment(HWND__ *,unsigned int,unsigned int,long)
+	bcc32 @MAKE0004.@@@ src\splshmgr.cpp
+Borland C++ 4.5 for Win32 Copyright (c) 1993, 1994 Borland International
+src\splshmgr.cpp:
+Warning src\splshmgr.cpp 70: 'dlgProc' is assigned a value that is never used in function SPLASHMGR::ImportSplashScreen(DIBITMAP *,unsigned short)
+Warning src\splshmgr.cpp 131: Conversion may lose significant digits in function __stdcall SPLASHMGR::ImportSplashDlgProc(HWND__ *,unsigned int,unsigned int,long)
+Error src\splshmgr.cpp 364: Cannot convert 'int (*)(void *,char *)' to 'int (*)(void *,const char *)' in function SPLASHMGR::LoadBitmapFile()
+Error src\splshmgr.cpp 364: Type mismatch in parameter 'pfnCheck' in call to 'SetupHook(tagOFNA *,int (*)(void *,const char *))' in function SPLASHMGR::LoadBitmapFile()
+Error src\splshmgr.cpp 399: Call to undefined function 'filelength' in function SPLASHMGR::CheckDIBFile(void *,char *)
+*** 3 errors in Compile ***
+
+** error 1 ** deleting obj\splshmgr.obj
+
+D:\APPWRE32\ENVIRON\APEBLDR>
+D:\APPWRE32\ENVIRON\APEBLDR>

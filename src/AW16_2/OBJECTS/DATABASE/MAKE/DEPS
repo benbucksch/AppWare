@@ -1,0 +1,127 @@
+OBJECTFILES= \
+	$(OBJDIR)\strutl.obj \
+	$(OBJDIR)\btree.obj \
+	$(OBJDIR)\cmpfunc.obj \
+	$(OBJDIR)\datb_adm.obj \
+	$(OBJDIR)\datb_fnc.obj \
+	$(OBJDIR)\datb_mth.obj \
+	$(OBJDIR)\datb_def.obj \
+	$(OBJDIR)\dbkey.obj \
+	$(OBJDIR)\datbpows.obj \
+	$(OBJDIR)\macroexe.obj \
+	$(OBJDIR)\macrotrn.obj \
+	$(OBJDIR)\memblock.obj \
+	$(OBJDIR)\safemem.obj \
+	$(OBJDIR)\stack.obj \
+	$(OBJDIR)\vrfile.obj 
+
+
+$(OBJDIR)\strutl.obj:  .\strutl.cpp .\strutl.h
+
+$(OBJDIR)\btree.obj:  .\btree.cpp .\btree.h .\cmpfunc.h .\safemem.h .\index.h \
+                      .\vrfile.h g:\internal\include\a_alm.h .\dbkey.h \
+                      g:\internal\include\o_datb.h
+
+$(OBJDIR)\cmpfunc.obj:  .\cmpfunc.cpp .\dbkey.h .\cmpfunc.h \
+                        g:\internal\include\a_alm.h \
+                        g:\internal\include\o_datb.h
+
+$(OBJDIR)\datb_adm.obj:  .\datb_adm.cpp .\strutl.h .\memblock.h .\safemem.h \
+                         .\dbkey.h .\datb_fnc.h .\datb.h .\stack.h \
+                         g:\internal\include\a_alm.h \
+                         g:\internal\include\o_datb.h \
+                         g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\datb_fnc.obj:  .\datb_fnc.cpp .\macroexe.h .\macrotrn.h .\cmpfunc.h \
+                         .\btree.h .\dbkey.h .\strutl.h .\safemem.h \
+                         .\memblock.h .\datb_fnc.h .\macro.h .\index.h \
+                         .\vrfile.h g:\internal\include\o_datb.h \
+                         g:\internal\include\a_alm.h .\stack.h .\datb.h \
+                         g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\datb_mth.obj:  .\datb_mth.cpp .\cmpfunc.h .\btree.h .\safemem.h \
+                         .\memblock.h .\datb_fnc.h .\index.h .\vrfile.h \
+                         g:\internal\include\a_alm.h .\stack.h .\datb.h \
+                         .\dbkey.h g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_datb.h
+
+$(OBJDIR)\datb_def.obj:  .\datb_def.cpp g:\internal\include\helpids.h \
+                         g:\internal\include\a_almutl.h .\strutl.h \
+                         .\safemem.h .\memblock.h .\dbkey.h .\datb_rc.h \
+                         .\datb.h g:\internal\include\a_alm.h .\stack.h \
+                         g:\internal\include\o_datb.h \
+                         g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\dbkey.obj:  .\dbkey.cpp g:\internal\include\o_text.h \
+                      g:\internal\include\o_number.h \
+                      g:\internal\include\o_time.h \
+                      g:\internal\include\o_date.h .\safemem.h .\memblock.h \
+                      .\dbkey.h .\datb.h g:\internal\include\a_alm.h \
+                      .\stack.h g:\internal\include\o_datb.h \
+                      g:\internal\include\o_pict.h
+
+$(OBJDIR)\datbpows.obj:  .\datbpows.cpp g:\internal\include\helpids.h \
+                         .\safemem.h .\memblock.h .\dbkey.h .\macroexe.h \
+                         .\datb_rc.h .\datb_fnc.h g:\internal\include\a_alm.h \
+                         .\stack.h g:\internal\include\o_datb.h .\macro.h \
+                         .\datb.h g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\macroexe.obj:  .\macroexe.cpp .\safemem.h .\memblock.h .\cmpfunc.h \
+                         .\btree.h .\macroexe.h g:\internal\include\a_alm.h \
+                         .\stack.h .\index.h .\vrfile.h .\datb_fnc.h \
+                         .\macro.h .\dbkey.h .\datb.h \
+                         g:\internal\include\o_datb.h \
+                         g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\macrotrn.obj:  .\macrotrn.cpp .\safemem.h .\dbkey.h .\macrotrn.h \
+                         g:\internal\include\a_alm.h \
+                         g:\internal\include\o_datb.h .\memblock.h .\strutl.h \
+                         .\macro.h .\datb_fnc.h .\stack.h .\datb.h \
+                         g:\internal\include\o_pict.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\memblock.obj:  .\memblock.cpp .\safemem.h .\memblock.h \
+                         g:\internal\include\a_alm.h .\stack.h
+
+$(OBJDIR)\safemem.obj:  .\safemem.cpp .\safemem.h g:\internal\include\a_alm.h
+
+$(OBJDIR)\stack.obj:  .\stack.cpp .\safemem.h .\stack.h \
+                      g:\internal\include\a_alm.h
+
+$(OBJDIR)\vrfile.obj:  .\vrfile.cpp .\safemem.h .\vrfile.h \
+                       g:\internal\include\a_alm.h .\index.h .\dbkey.h \
+                       g:\internal\include\o_datb.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\datb.res 
+
+
+$(OBJDIR)\datb.res:  .\datb.rc .\datb_rc.h
+

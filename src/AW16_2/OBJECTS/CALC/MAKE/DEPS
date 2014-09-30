@@ -1,0 +1,43 @@
+OBJECTFILES= \
+	$(OBJDIR)\calc.obj \
+	$(OBJDIR)\calc_ar.obj \
+	$(OBJDIR)\calc_fn.obj \
+	$(OBJDIR)\calc_gbl.obj \
+	$(OBJDIR)\calc_md.obj \
+	$(OBJDIR)\calc_dlg.obj \
+	$(OBJDIR)\parser.obj \
+	$(OBJDIR)\strclass.obj \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\listdata.obj 
+
+
+$(OBJDIR)\calc.obj:  .\calc.cpp .\calc_dlg.h .\listdata.h .\heap.h .\calc.h \
+                     .\strclass.h .\calc_obj.h
+
+$(OBJDIR)\calc_ar.obj:  .\calc_ar.cpp .\calc_dlg.h .\calc.h .\strclass.h \
+                        .\calc_obj.h
+
+$(OBJDIR)\calc_fn.obj:  .\calc_fn.cpp .\calc.h .\calc_obj.h .\strclass.h
+
+$(OBJDIR)\calc_gbl.obj:  .\calc_gbl.cpp .\calc_obj.h
+
+$(OBJDIR)\calc_md.obj:  .\calc_md.cpp .\calc.h .\calc_obj.h .\strclass.h
+
+$(OBJDIR)\calc_dlg.obj:  .\calc_dlg.cpp .\calc_dlg.h .\listdata.h .\heap.h \
+                         .\calc.h .\strclass.h .\calc_obj.h
+
+$(OBJDIR)\parser.obj:  .\parser.cpp .\listdata.h .\calc.h .\strclass.h \
+                       .\calc_obj.h .\calc_cls.h
+
+$(OBJDIR)\strclass.obj:  .\strclass.cpp .\strclass.h
+
+$(OBJDIR)\heap.obj:  .\heap.cpp .\heapint.h .\heap.h
+
+$(OBJDIR)\listdata.obj:  .\listdata.cpp .\listdata.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\calc.res 
+
+
+$(OBJDIR)\calc.res:  .\calc.rc .\calc_dlg.h
+

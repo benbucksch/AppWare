@@ -1,0 +1,11 @@
+LIBRARY           AW32PAGE
+DESCRIPTION       'Novell AppWare Loadable Module: Page Layout Object'
+EXETYPE           WINDOWS
+CODE              LOADONCALL MOVEABLE DISCARDABLE
+DATA              PRELOAD MOVEABLE SINGLE
+SEGMENTS          _TEXT PRELOAD
+HEAPSIZE          8192
+
+EXPORTS           PageAdminProc               @10
+
+       

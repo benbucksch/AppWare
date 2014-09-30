@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\menuitem
+ERRORLOG=o:\help\menuitem\awusmeni.log
+TITLE=Menu Item ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+mnitem.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusmeni.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Menu Item ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_mitm.h>

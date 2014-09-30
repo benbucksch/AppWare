@@ -1,0 +1,88 @@
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "calc_dlg.h"
+
+CALCDLG DIALOG 21, 17, 261, 229
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Calculation Object"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", IDOK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 214, 36, 40, 14
+  PUSHBUTTON "Cancel", IDCANCEL, 214, 55, 40, 14
+  PUSHBUTTON "Eva&luate", IDD_EVALUATE, 214, 74, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Help", IDHELP, 214, 103, 40, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+  CONTROL "<< A&dd <<", IDD_ADD, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 83, 52, 40, 14
+  PUSHBUTTON "&Remove", IDD_REMOVE, 83, 71, 40, 14
+  PUSHBUTTON "&Edit", IDD_EDIT, 83, 90, 40, 14
+  LTEXT "E&xpression Objects:", -1, 10, 38, 68, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_VARIABLES, "LISTBOX", LBS_NOTIFY | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 10, 49, 65, 70
+  LTEXT "Available &Objects:", -1, 132, 38, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_OBJECTS, "LISTBOX", LBS_NOTIFY | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 132, 49, 65, 70
+  LTEXT "&Variable Name:", IDD_ALIAS_TITLE, 11, 125, 57, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  EDITTEXT IDD_ALIAS, 10, 135, 85, 12, ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
+  LTEXT "Re&sult Object:", -1, 106, 125, 57, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_RESULT, "COMBOBOX", CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 106, 135, 92, 60
+  LTEXT "Ex&pression:", -1, 11, 160, 41, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", IDD_EXPRESSION, "EDIT", ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 10, 171, 188, 49
+  ICON "CalcIcon", -1, 5, 4, 18, 20, WS_CHILD | WS_VISIBLE
+  LTEXT "", 201, 28, 5, 228, 19, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 261, 2
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 36, 73, 81
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 128, 36, 74, 81
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 122, 196, 29
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 157, 196, 67
+  CONTROL "Auto &Update", IDD_AUTO_UPDATE, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 143, 160, 56, 10
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 207, 36, 2, 188
+END
+
+CalcIcon ICON "calculat.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Calculation Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_CALC\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_CALC.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  1, "VeRsIoN=1.20\0"
+  2, "\0"
+  3, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

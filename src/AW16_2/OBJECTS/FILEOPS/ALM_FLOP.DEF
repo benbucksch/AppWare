@@ -1,0 +1,27 @@
+LIBRARY       ALM_FLOP
+DESCRIPTION   'Novell AppWare Loadable Module: File Operation Functions'
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+HEAPSIZE      32768
+STACKSIZE     20480
+
+
+EXPORTS       WEP                       @1      RESIDENTNAME
+              PATHNAMEFUNC              @2
+              CREATEDIRECTORYFUNC       @3
+              DISKLABELFUNC             @4
+              DIRECTORYFUNC             @5
+              DELETEFILEFUNC            @6
+              COPYFILEFUNC              @7
+              CHOOSEFILEFUNC            @8
+              PUTFILEFUNC               @9
+              GETFILENAMESFUNC          @10
+              GETFILESFUNC              @11
+              MOVEFILEFUNC              @12
+              RENAMEFILEFUNC            @13
+			  GETCREATIONINFOFUNC		@14
+			  GETMODIFICATIONINFOFUNC	@15
+			  GETSIZEFUNC				@16
+			  GETTYPESFUNC				@17
+			  

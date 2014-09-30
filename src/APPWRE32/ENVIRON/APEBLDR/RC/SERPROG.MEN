@@ -1,0 +1,156 @@
+//This file contains the definition of all menus and accelerators
+
+MainMenu MENU
+	{
+	POPUP "&File"
+		{
+		MENUITEM "New &Project\tCtrl+J", IDM_NEWPROJECT
+		MENUITEM "&New Subject\tCtrl+N", IDM_NEWSUBJECT, GRAYED
+		MENUITEM "&Open Project...\tCtrl+O", IDM_OPEN
+		MENUITEM SEPARATOR
+		MENUITEM "&Close\tCtrl+W", IDM_CLOSE, GRAYED
+		MENUITEM "&Save\tCtrl+S", IDM_SAVE, GRAYED
+		MENUITEM "Save &As...", IDM_SAVEAS, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "&Import...", IDM_IMPORTUPSF, GRAYED
+    MENUITEM "&Export...", IDM_EXPORTUPSF, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Prin&t...\tCtrl+P", IDM_PRINT, GRAYED
+		MENUITEM "P&rint Setup...", IDM_PAGESETUP
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit\tAlt+X", IDM_QUIT
+		}
+	POPUP "&Edit"
+		{
+		MENUITEM "&Undo\tCtrl+Z", IDM_UNDO, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Cu&t\tCtrl+X", IDM_CUT, GRAYED
+		MENUITEM "&Copy\tCtrl+C", IDM_COPY, GRAYED
+		MENUITEM "&Paste\tCtrl+V", IDM_PASTE, GRAYED
+		MENUITEM "&Delete\tDel", IDM_CLEAR, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Select &All\tCtrl+A", IDM_SELECTALL, GRAYED
+		MENUITEM "&Show Selection", IDM_SHOWSELECT, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "&Find...\tCtrl+F", IDM_FIND, GRAYED
+		MENUITEM "Find &Next\tCtrl+G", IDM_FINDNEXT, GRAYED
+		}
+	POPUP   "&Project"
+		{
+		MENUITEM "Check for &Errors", IDM_PROJERRORS, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "&Run\tCtrl+R", IDM_RUN, GRAYED
+    MENUITEM "Si&ngle Step\tF7", IDM_STEP, GRAYED
+		MENUITEM "&Continue\tCtrl+T", IDM_CONTINUERUN, GRAYED
+		MENUITEM "Rese&t\tCtrl+Y", IDM_RESETRUN, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "&Stops Enabled", IDM_ENABLESTOPS, CHECKED
+		MENUITEM "C&lear Stops", IDM_PROJCLEARSTOPS
+		MENUITEM SEPARATOR
+		MENUITEM "A&uto Save Before Run", IDM_AUTOSAVE
+    MENUITEM "C&onfirm Saves", IDM_CONFIRMAUTOSAVES, GRAYED
+    MENUITEM SEPARATOR
+		MENUITEM "Arrange Subject I&cons", IDM_ARRANGESUBJECTS, GRAYED
+		MENUITEM "Use Subject &Grid", IDM_PROJECTGRID, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Edit Application &Icon...", IDM_EDITICON, GRAYED
+		MENUITEM "Create &Application...", IDM_CREATEAPP, GRAYED
+    MENUITEM SEPARATOR
+    MENUITEM "Import S&plash Screen...", IDM_IMPORTSPLASH
+		}
+	POPUP   "&Subject"
+		{
+		MENUITEM "Check for &Errors", IDM_SUBJERRORS, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Use Small &Object Icons", IDM_SMALLICONS, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Set To Small &Icons", IDM_SETSMALLICONS, GRAYED
+		MENUITEM "Set To &Large Icons", IDM_SETLARGEICONS, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Show &Flow Names", IDM_SIGNALNAME, GRAYED
+		MENUITEM "Use &Grid", IDM_FUNCGRID, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "&Toggle Stops\tF9", IDM_TOGGLESTOPS, GRAYED
+		MENUITEM "Clear &Stops", IDM_CLEARSTOPS, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "New &Comment\tCtrl+I", IDM_COMMENT, GRAYED
+		}
+	POPUP   "&Object"
+		{
+		MENUITEM "Check for &Errors", IDM_OBJERRORS, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "Make &Persistent", IDM_MAKEPERSIST, GRAYED
+		MENUITEM "Make &Non-persistent", IDM_MAKENONPERSIST, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "&Share", IDM_SHARE, GRAYED
+		MENUITEM "&Unshare", IDM_UNSHARE, GRAYED
+		MENUITEM "New &Alias...", IDM_ALIAS, GRAYED
+		}
+	POPUP "&Windows"
+		{
+		MENUITEM "Hide &Palette\tCtrl+L", IDM_PALETTE
+		MENUITEM "Show &Navigator\tCtrl+H", IDM_NAVIGATOR
+		MENUITEM "&Cascade\tShift+F5", IDM_CASCADE, GRAYED
+		MENUITEM "&Tile\tShift+F4", IDM_TILE, GRAYED
+		MENUITEM "&Arrange Icons", IDM_ARRANGE, GRAYED
+		}
+	POPUP   "&Help"
+		{
+		MENUITEM "&Index", IDM_HELP_INDEX,
+		MENUITEM "Using &Help", IDM_USING_HELP
+		MENUITEM SEPARATOR
+		MENUITEM "&About AppWare", IDM_ABOUT
+		}
+	}
+
+//Icon Editor menu
+
+IconEditorMenu MENU
+	{
+	POPUP "&Icon"
+		{
+		MENUITEM "&Save", IDM_SAVEICON
+		MENUITEM "&Clear", IDM_CLEARICON
+		MENUITEM "&Restore", IDM_RESTOREICON
+		}
+	}
+
+
+
+//This is the main accelerator table
+
+AccelTable ACCELERATORS
+	{
+	"J",				IDM_NEWPROJECT,			VIRTKEY,				CONTROL
+	"N",		 		IDM_NEWSUBJECT,     VIRTKEY,        CONTROL
+	"O",	     	IDM_OPEN,           VIRTKEY,       	CONTROL
+	"W",	    	IDM_CLOSE,    	    VIRTKEY,        CONTROL
+	"S",		   	IDM_SAVE,           VIRTKEY,        CONTROL
+	"P",    	 	IDM_PRINT,          VIRTKEY,        CONTROL
+	"X",    	 	IDM_QUIT,           VIRTKEY,        ALT
+	"Z",    	 	IDM_UNDO,           VIRTKEY,        CONTROL
+	VK_BACK, 		IDM_UNDO,           VIRTKEY,        ALT
+	"X",    	 	IDM_CUT,            VIRTKEY,        CONTROL
+	VK_DELETE, 	IDM_CUT,            VIRTKEY,        SHIFT
+	"C",			  IDM_COPY,           VIRTKEY,        CONTROL
+	VK_INSERT,  IDM_COPY,           VIRTKEY,        CONTROL
+	"V",				IDM_PASTE,          VIRTKEY,        CONTROL
+	VK_INSERT,  IDM_PASTE,          VIRTKEY,        SHIFT
+	"A",    	  IDM_SELECTALL,      VIRTKEY,        CONTROL
+  "F",				IDM_FIND,						VIRTKEY, 				CONTROL
+	"G",				IDM_FINDNEXT,				VIRTKEY,				CONTROL
+	VK_F3,			IDM_FINDNEXT,				VIRTKEY
+	"R",        IDM_RUN,            VIRTKEY,        CONTROL
+	"T",        IDM_CONTINUERUN,    VIRTKEY,        CONTROL
+	"Y",        IDM_RESETRUN,       VIRTKEY,        CONTROL
+	"I",        IDM_COMMENT,        VIRTKEY,        CONTROL
+	"L",        IDM_PALETTE, 		    VIRTKEY,        CONTROL
+	"H",        IDM_NAVIGATOR,      VIRTKEY,        CONTROL
+	VK_F1,      IDM_HELP_INDEX,     VIRTKEY
+	VK_F1,      ID_HELPCURSOR,      VIRTKEY,        CONTROL
+	VK_F4,      IDM_TILE,           VIRTKEY,        SHIFT
+	VK_F5,      IDM_CASCADE,        VIRTKEY,        SHIFT
+	VK_ESCAPE,  ID_ESCAPE,          VIRTKEY
+	VK_F9,      IDM_TOGGLESTOPS,    VIRTKEY
+  VK_F7,			IDM_STEP,						VIRTKEY
+	}

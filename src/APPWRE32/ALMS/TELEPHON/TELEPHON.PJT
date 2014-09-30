@@ -1,0 +1,82 @@
+;Codewright Project File (do not remove or modify this line)
+[ProjInit]
+ProjSetConfigFlags=0x00010140
+
+[Files]
+d:\telephon\alm_csta.def
+d:\telephon\alm_csta.dll
+d:\telephon\alm_csta.dsk
+d:\telephon\alm_csta.h
+d:\telephon\alm_csta.prj
+d:\telephon\alm_csta.rc
+d:\telephon\csta.doc
+d:\telephon\o_tdev.h
+d:\telephon\o_tlin.h
+d:\telephon\tcconfig.tc
+d:\telephon\tdevadmn.cpp
+d:\telephon\tdevevnt.cpp
+d:\telephon\tdevuser.cpp
+d:\telephon\telephny.cfg
+d:\telephon\telephon.bak
+d:\telephon\telephon.pjt
+d:\telephon\tlinadmn.cpp
+d:\telephon\tlinmdrt.cpp
+d:\telephon\tlintest.pjt
+d:\telephon\tlintest.req
+d:\telephon\tlinuser.cpp
+d:\telephon\tlinvisu.cpp
+d:\telephon\tlinvisu.h
+d:\telephon\ts__evnt.cpp
+d:\telephon\ts__func.cpp
+d:\telephon\ts__main.cpp
+d:\telephon\attsdk\include\acs.h
+d:\telephon\attsdk\include\acsdefs.h
+d:\telephon\attsdk\include\acslimit.h
+d:\telephon\attsdk\include\csta.h
+d:\telephon\attsdk\include\cstadefs.h
+d:\telephon\attsdk\include\tdi.h
+
+
+[State]
+SysSetCwd='D:\TELEPHON'
+SrchSetFlags=0x600b
+FileSortMode=0x0
+StateWindowFrame=14,64,900,570,0x0b097fce
+_OutputWindowPosition=0,242,242,778,454,0,0
+_StateWindow=220,220,654,460,0x00000018,'d:\telephon\tlinmdrt.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,1,10,'',12,255,48,0,8,243,14,15,241,252,249,1,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=198,198,654,460,0x00000008,'d:\telephon\tlinvisu.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,56,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=176,176,654,460,0x00000008,'d:\telephon\tlinadmn.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,56,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=154,154,654,460,0x00000008,'d:\telephon\tdevuser.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,56,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=132,132,654,460,0x00000008,'d:\telephon\tdevevnt.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,1,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=110,110,654,460,0x00000008,'d:\telephon\tdevadmn.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,1,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=88,88,654,460,0x00000008,'d:\telephon\ts__func.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,1,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=66,66,654,460,0x00000008,'d:\telephon\ts__evnt.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,1,1,400,0,244,246,242,252,0,0,0,0,0
+_StateWindow=44,44,654,460,0x00000008,'d:\telephon\ts__main.cpp',240,15,244,32,32,0,32,32,32,32,8,0,0,0,10,'',12,255,48,0,8,243,14,15,241,252,249,1,1,400,0,244,246,242,252,0,0,0,0,0
+_StateBuffer='d:\telephon\ts__main.cpp',0x0400048a,1,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\ts__evnt.cpp',0x0400048a,1,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\ts__func.cpp',0x0400048a,1,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\tdevadmn.cpp',0x0400048a,1,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\tdevevnt.cpp',0x0400048a,1,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\tdevuser.cpp',0x0400048a,56,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\tlinadmn.cpp',0x0400048a,56,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\tlinvisu.cpp',0x0400048a,56,1,25,'3 5','',0x0,''
+_StateBuffer='d:\telephon\tlinmdrt.cpp',0x0400048a,1,1,25,'3 5','',0x0,''
+WrapEnable=0
+_StateHistory=FILELIST,'d:\telephon\ts__main.cpp','d:\telephon\ts__evnt.cpp','d:\telephon\ts__func.cpp','d:\telephon\tdevadmn.cpp','d:\telephon\tdevevnt.cpp','d:\telephon\tdevuser.cpp','d:\telephon\tlinadmn.cpp','d:\telephon\tlinvisu.cpp','d:\telephon\tlinmdrt.cpp'
+
+[Editor]
+ClipboardSetTermStr='\r\n',0
+ClipboardEnableTermStr=1
+ClipboardSetSepStr='\r\n',0
+ClipboardEnableSepStr=1
+ScrapSetCount=1
+_RestoreSysFlags=0x0b097fce, 0xfffffffc
+
+[Compiler]
+TagSetFile=''
+BrowseSetFile=''
+CompilerAssign='Borland C++','.cpp'
+CompilerAddBuild='Borland C++',1073741832,'ftee bcc -ml -c -W %b%e','','','','','','','','','','','','',0
+CompilerAddResponse='Borland C++',
+CompilerAddBuild='$_cw_proj_hash_$',1073741872,'','make','build','','','_ErrorInfoDefault','proj.err','%v%p','','','','','',0
+CompilerAddResponse='$_cw_proj_hash_$',

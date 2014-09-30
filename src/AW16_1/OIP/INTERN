@@ -1,0 +1,87 @@
+	+++  ss get * -r
+
+$/appware/appbuild/OIP:
+ALMKRNL.PRJ
+MAKEFILE
+
+$/appware/appbuild/OIP/hdr:
+ALMSYS.H
+AP_MACRO.H
+A_ALM.H
+A_ALMUTL.H
+CHOSFONT.H
+CONTEXT.H
+CONTEXTD.H
+EVENTQMS.H
+EVENTQMS.I
+EVENTQND.H
+EVENTQND.I
+EVENTQUE.H
+HEAP.H
+HEAPINT.H
+INTALM.H
+INTDEBUG.H
+KERNEL.H
+MARKSTAC.H
+OIPDEBUG.H
+OIPUTILS.H
+PERSDATA.H
+RSRCMGR.H
+SASSOC2.H
+SERIUSID.H
+SWITCHES.H
+SYSTEM.H
+UPSF_CLS.H
+UPSF_ENV.H
+
+$/appware/appbuild/OIP/make:
+DLLINFO.MAK
+FILES.LST
+RCFILES.LST
+
+$/appware/appbuild/OIP/src:
+CHOSFONT.DLG
+CONTEXT.CPP
+EVENTQUE.CPP
+HEAP.CPP
+MAIN.CPP
+MARKSTAC.CPP
+OIP.DEF
+OIPCREAT.CPP
+OIPDATAS.CPP
+OIPDEBUG.CPP
+OIPEVNTS.CPP
+OIPEXE.CPP
+OIPMEM.CPP
+OIPMISC.CPP
+OIPOBJS.CPP
+OIPOWNER.CPP
+OIPPARMS.CPP
+OIPUTILS.CPP
+OIPWINDO.CPP
+OIP_RSRC.RC
+RSRCMGR.CPP
+SASSOC2.CPP
+SERDLG.CPP
+SER_FONT.CPP
+SYSTEM.CPP
+SYSTEMFU.CPP
+SYSTEMMI.CPP
+
+Getting files from SourceSafe in project PRO
+	+++  ss cd $/appware/appbuild/PRO
+
+Current project is $/appware/appbuild/PRO
+--> Updating dependencies
+	+++  updeps
+
+--> Performing make
+make   INTERNAL=1
+	+++  make   INTERNAL=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 13815808 bytes
+
+********************************
+Starting make of PRO

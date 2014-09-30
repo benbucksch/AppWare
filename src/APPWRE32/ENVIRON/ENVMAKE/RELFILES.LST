@@ -1,0 +1,130 @@
+## API      <filename>          SHIP            INTERNAL
+## LIB      <filename>          SHIP            INTERNAL
+## CONFIG   <filename>          SHIP            INTERNAL
+## EXE      <filename>          SHIP            INTERNAL
+## DLL      <filename>          SHIP            INTERNAL 
+
+
+EXE     AW32CFG.EXE             SHIP            INTERNAL        
+EXE     AW32.EXE                SHIP            INTERNAL
+EXE     AW32.DAT                SHIP            INTERNAL
+
+DLL     AW32ACUR.DLL            SHIP            INTERNAL
+DLL     AW32RUN.DLL             SHIP            INTERNAL
+DLL     AW32APPL.DLL            SHIP            INTERNAL
+DLL     AW32BRWS.DLL            SHIP            INTERNAL
+DLL     AW32BUTN.DLL            SHIP            INTERNAL
+DLL     AW32CALC.DLL            SHIP            INTERNAL
+DLL     AW32DATE.DLL            SHIP            INTERNAL
+DLL     AW32DATB.DLL            SHIP            INTERNAL
+DLL     AW32FILE.DLL            SHIP            INTERNAL
+DLL     AW32FLAG.DLL            SHIP            INTERNAL
+DLL     AW32FLOP.DLL            SHIP            INTERNAL
+DLL     AW32GNRL.DLL            SHIP            INTERNAL
+DLL     AW32LOOP.DLL            SHIP            INTERNAL
+DLL     AW32MENU.DLL            SHIP            INTERNAL
+DLL     AW32NMBR.DLL            SHIP            INTERNAL
+DLL     AW32NTFY.DLL            SHIP            INTERNAL
+DLL     AW32POLY.DLL            SHIP            INTERNAL
+DLL     AW32RADG.DLL            SHIP            INTERNAL
+DLL     AW32SHAP.DLL            SHIP            INTERNAL
+DLL     AW32SUBR.DLL            SHIP            INTERNAL
+DLL     AW32SYSM.DLL            SHIP            INTERNAL
+DLL     AW32TABL.DLL            SHIP            INTERNAL
+DLL     AW32TEXT.DLL            SHIP            INTERNAL
+DLL     AW32TFCT.DLL            SHIP            INTERNAL
+DLL     AW32TIME.DLL            SHIP            INTERNAL
+DLL     AW32WLAY.DLL            SHIP            INTERNAL
+DLL     AW32WND.DLL             SHIP            INTERNAL
+DLL     TIPS32.DLL              SHIP            INTERNAL
+DLL     RESIZE32.DLL            SHIP            INTERNAL
+
+LIB     AW32RUN.LIB             SHIP            INTERNAL
+LIB     aw32BUTN.LIB            SHIP            INTERNAL
+LIB     aw32CNCT.LIB            SHIP            INTERNAL
+LIB     aw32DATE.LIB            SHIP            INTERNAL
+LIB     aw32DATB.LIB            SHIP            INTERNAL
+LIB     aw32FLAG.LIB            SHIP            INTERNAL
+LIB     aw32MENU.LIB            SHIP            INTERNAL
+LIB     aw32NMBR.LIB            SHIP            INTERNAL
+LIB     aw32PAGE.LIB            SHIP            INTERNAL
+LIB     aw32PICT.LIB                            INTERNAL
+LIB     aw32TABL.LIB            SHIP            INTERNAL
+LIB     aw32TEXT.LIB            SHIP            INTERNAL
+LIB     aw32TIME.LIB            SHIP            INTERNAL
+LIB     aw32WND.LIB             SHIP            INTERNAL
+LIB     tips32.LIB                              INTERNAL
+LIB     BWCC.LIB                                INTERNAL
+
+
+API     A_ALM.H                 SHIP            INTERNAL
+API     a_alm.h                 SHIP            INTERNAL
+API     a_almutl.h              SHIP            INTERNAL
+API     ap_macro.h              SHIP            INTERNAL
+API     attribut.H                              INTERNAL
+API     helpids.h                               INTERNAL
+API     intdebug.h                              INTERNAL
+API     intutl.h                                INTERNAL
+API     O_GENRL.H               SHIP            INTERNAL
+API     O_DATE.H                SHIP            INTERNAL
+API     O_BUTTON.H              SHIP            INTERNAL
+API     O_DATB.H                SHIP            INTERNAL
+API     O_DATE.H                SHIP            INTERNAL
+API     O_FLAG.H                SHIP            INTERNAL
+API     O_LIST.H                SHIP            INTERNAL
+API     O_MENUS.H                               INTERNAL
+API     O_NUMBER.H              SHIP            INTERNAL
+API     O_PICT.H                SHIP            INTERNAL
+API     O_PRINT.H               SHIP            INTERNAL
+API     O_TABLE.H               SHIP            INTERNAL
+API     O_TEXT.H                                INTERNAL
+API     O_TIME.H                SHIP            INTERNAL
+API     O_UPSF.H                SHIP            INTERNAL
+API     O_WND.H                 SHIP            INTERNAL
+API     O_WNDGRP.H                              INTERNAL
+API     O_WNDLAY.H                              INTERNAL
+API     O_WNDSHP.H                              INTERNAL
+API     OP_WND.H                SHIP            INTERNAL
+
+CONFIG  AWUSACUR.ALM            SHIP            INTERNAL
+CONFIG  AWUSAPPL.ALM            SHIP            INTERNAL
+CONFIG  AWUSBNDL.ALM            SHIP            INTERNAL
+CONFIG  AWUSBRWS.ALM            SHIP            INTERNAL
+CONFIG  AWUSBUTN.ALM            SHIP            INTERNAL
+CONFIG  AWUSCALC.ALM            SHIP            INTERNAL
+CONFIG  AWUSCNCT.ALM            SHIP            INTERNAL
+CONFIG  AWUSDATB.ALM            SHIP            INTERNAL
+CONFIG  AWUSDATE.ALM            SHIP            INTERNAL
+CONFIG  AWUSDLL.ALM             SHIP            INTERNAL
+CONFIG  AWUSFILE.ALM            SHIP            INTERNAL
+CONFIG  AWUSFLAG.ALM            SHIP            INTERNAL
+CONFIG  AWUSFLOP.ALM            SHIP            INTERNAL
+CONFIG  AWUSFLTR.ALM            SHIP            INTERNAL
+CONFIG  AWUSGNRL.ALM            SHIP            INTERNAL
+CONFIG  AWUSGRUP.ALM            SHIP            INTERNAL
+CONFIG  AWUSIMEX.ALM            SHIP            INTERNAL
+CONFIG  AWUSKEYB.ALM            SHIP            INTERNAL
+CONFIG  AWUSLIST.ALM            SHIP            INTERNAL
+CONFIG  AWUSLOOP.ALM            SHIP            INTERNAL
+CONFIG  AWUSMENB.ALM            SHIP            INTERNAL
+CONFIG  AWUSMENI.ALM            SHIP            INTERNAL
+CONFIG  AWUSMENU.ALM            SHIP            INTERNAL
+CONFIG  AWUSNMBR.ALM            SHIP            INTERNAL
+CONFIG  AWUSNTFY.ALM            SHIP            INTERNAL
+CONFIG  AWUSPAGE.ALM            SHIP            INTERNAL
+CONFIG  AWUSPICT.ALM            SHIP            INTERNAL
+CONFIG  AWUSPOLY.ALM            SHIP            INTERNAL
+CONFIG  AWUSPRNT.ALM            SHIP            INTERNAL
+CONFIG  AWUSRADG.ALM            SHIP            INTERNAL
+CONFIG  AWUSSBAR.ALM            SHIP            INTERNAL
+CONFIG  AWUSSCAL.ALM            SHIP            INTERNAL
+CONFIG  AWUSSIGS.ALM            SHIP            INTERNAL
+CONFIG  AWUSSOUN.ALM            SHIP            INTERNAL
+CONFIG  AWUSSUBR.ALM            SHIP            INTERNAL
+CONFIG  AWUSSYSM.ALM            SHIP            INTERNAL
+CONFIG  AWUSTABL.ALM            SHIP            INTERNAL
+CONFIG  AWUSTEXT.ALM            SHIP            INTERNAL
+CONFIG  AWUSTFCT.ALM            SHIP            INTERNAL
+CONFIG  AWUSTIME.ALM            SHIP            INTERNAL
+CONFIG  AWUSTMNL.ALM            SHIP            INTERNAL
+CONFIG  AWUSWND.ALM             SHIP            INTERNAL

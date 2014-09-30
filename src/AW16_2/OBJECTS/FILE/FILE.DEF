@@ -1,0 +1,18 @@
+LIBRARY     ALM_FILE
+
+DESCRIPTION 'Novell AppWare Loadable Module: File Object'
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD SINGLE MOVEABLE
+SEGMENTS    _TEXT PRELOAD
+
+EXPORTS
+      WEP                            @1   RESIDENTNAME
+      EDITOBJECTDIALOGPROC           @2
+      OPENFILEFUNC                   @6
+      LOADFILEFUNC                   @7
+      SAVEASFILEFUNC                 @8
+      SAVEFILEFUNC                   @9
+      NEWFILEFUNC                    @10
+      FILENAMEFUNC                   @11
+      ADMINISTRATIONROUTINE          @12

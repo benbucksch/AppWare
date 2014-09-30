@@ -1,0 +1,22 @@
+LIBRARY     AW32GNRL
+
+DESCRIPTION 'Novell AppWare Loadable Module: General Functions'
+EXETYPE     WINDOWS
+
+DATA        PRELOAD MOVEABLE MULTIPLE
+
+EXPORTS     
+								gen_Assign				@10
+								gen_Beep					@11
+								gen_Copy					@12
+								gen_Cut						@13
+								gen_Delay					@14
+								gen_FreeMemory		@15
+								gen_IsColorOn			@16
+								gen_IsSameObject	@17
+								gen_IsSameType		@18
+								gen_Paste					@19
+								gen_Quit					@20
+								gen_Undo					@21
+								gen_GetTicks			@22
+								gen_YesNoCancel		@23

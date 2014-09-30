@@ -1,0 +1,18 @@
+LIBRARY        ALM_BUTN
+
+DESCRIPTION    'Novell Appware Loadable Module: Button Object'
+
+EXETYPE        WINDOWS
+
+CODE           LOADONCALL MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+
+HEAPSIZE       32768
+
+EXPORTS        WEP                             @1   RESIDENTNAME
+
+               OBUTNISSELECTED                 @10
+               OBUTNSETSELECTED                @11
+               OBUTNGETTYPE                    @12
+
+

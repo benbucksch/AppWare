@@ -1,0 +1,22 @@
+LIBRARY       AW32KEYB
+
+DESCRIPTION   'Novell AppWare Loadable Module: Keyboard Object'
+
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+SEGMENTS      _TEXT PRELOAD
+PROTMODE
+
+EXPORTS
+              admnProc                      @10
+              AltKey                        @11
+              CntrlKey                      @12
+              CommandKey                    @13
+              HandleShutDown                @14
+              HandleStartup                 @15
+              KeybrdOff                     @16
+              KeybrdOn                      @17
+              ShiftKey                      @19
+			  KeyKeyboardHook				@20
+			  KeyMouseHook					@21

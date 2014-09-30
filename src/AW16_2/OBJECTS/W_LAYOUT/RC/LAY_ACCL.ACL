@@ -1,0 +1,47 @@
+#ifndef WLAY_RSC_H
+#include  "wlay_rsc.h"
+#endif
+
+// WARNING: do not use the following accelerators:
+//      Ctrl+H -- maps to the delete key
+//      Ctrl+I -- maps to the tab key
+
+ACCEL_LAYOUT ACCELERATORS
+BEGIN
+  // duplicate accelerators for CUA
+  VK_DELETE,  IDM_CUT,          VIRTKEY,  SHIFT     ; Shift+Del
+  VK_INSERT,  IDM_COPY,         VIRTKEY, CONTROL    ; Ctrl+Insert
+  VK_INSERT,  IDM_PASTE,        VIRTKEY,  SHIFT     ; Shift+Insert
+  VK_BACK,    IDM_UNDO,         ASCII,    ALT       ; Alt+Backspace
+  VK_INSERT,  IDM_REDO,         VIRTKEY,  ALT       ; Alt+Insert
+  VK_BACK,    IDM_DELETE,       VIRTKEY             ; Backspace
+  
+  VK_DELETE,  IDM_DELETE,       VIRTKEY             ; Del
+  VK_RETURN,  IDM_EDITITEM,     VIRTKEY             ; Enter
+  "^A",       IDM_SELECTALL                         ; Ctrl+A
+  "^B",       IDM_SENDTOBACK                        ; Ctrl+B
+  "^C",       IDM_COPY                              ; Ctrl+C
+  "^D",       IDM_DUPLICATE                         ; Ctrl+D
+  "^E",       IDM_HIDEALL                           ; Ctrl+E
+  "^F",       IDM_BRINGTOFRONT                      ; Ctrl+F
+  "^G",       IDM_GROUP                             ; Ctrl+G
+  "^K",       IDM_WNDBACKGROUND                     ; Ctrl+K
+  "^L",       IDM_SHOWALL                           ; Ctrl+L
+  "^N",       IDM_OBJECTNAME                        ; Ctrl+N
+  "^P",       IDM_LAYPREFERENCES                    ; Ctrl+P
+  "^R",       IDM_GRID                              ; Ctrl+R
+  "^S",       IDM_UPDATE                            ; Ctrl+S
+  "^T",       IDM_WNDSIZES                          ; Ctrl+T
+  "^U",       IDM_UNGROUP                           ; Ctrl+U
+  "^V",       IDM_PASTE                             ; Ctrl+V
+  "^W",       IDM_WNDATTRIBUTES                     ; Ctrl+W
+  "^X",       IDM_CUT                               ; Ctrl+X
+  "Z",        IDM_UNDO,         VIRTKEY,  CONTROL   ; Ctrl+Z
+  
+  // Accelerators that should not be used:
+      ; Key         Reason
+      ;---------    -----------------------------------------
+      ; Ctrl+H      sent with Backspace key
+      ; Ctrl+I      sent with Tab key
+END
+

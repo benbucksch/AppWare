@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\notify
+ERRORLOG=o:\help\notify\awusntfy.log
+TITLE=Notification ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+notalm.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusntfy.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Notification ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_ntfy.h>

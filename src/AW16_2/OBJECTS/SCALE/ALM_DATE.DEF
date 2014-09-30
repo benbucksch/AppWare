@@ -1,0 +1,30 @@
+LIBRARY       ALM_DATE
+DESCRIPTION   'Novell AppWare Loadable Module: Date Object'
+EXETYPE       WINDOWS
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+HEAPSIZE      32768
+STACKSIZE     20480
+
+EXPORTS       ; DLL entry and exit
+              WEP                                 @1 RESIDENTNAME
+              
+              ; Dynamically Loaded Function Pointers
+              DATEADMINPROC                       @2
+              CREATEVISUALINSTANCE                @3  
+              DATEEVENT_STARTUP                   @4
+              DATEEVENT_DATEUPDATE                @5
+              DATEEVENT_OBJECTTOTEXT              @6
+              DATEEVENT_TEXTTOOBJECT              @7
+
+              ; APIs
+              ODATESTRINGTODATE                   @10
+              ODATECONVERTTOSTRING                @11
+              ODATECONVERTFROMSTRING              @12
+              ODATEFORMATDATE                     @13
+              ODATEGETVALUE                       @14
+              ODATESETVALUE                       @15
+              ODATETOYMD                          @16
+              ODATEFROMYMD                        @17
+              ODATEGETSTYLE                       @18
+              ODATEPARSESTRING                    @19

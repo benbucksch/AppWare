@@ -1,0 +1,20 @@
+LIBRARY         AW32SOUN
+DESCRIPTION     'Novell AppWare Loadable Module: Sound Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD SINGLE MOVEABLE
+SEGMENTS        _TEXT PRELOAD
+
+EXPORTS         SoundAdmn               @10
+                ClearSound              @11
+                DevicePresent           @12
+                IsSoundPlaying          @13
+                LoadSound               @14
+                Play                    @15
+                PlayFromFile            @16
+                PlayRepeatedly          @17
+                Record                  @18
+                RecordToFile            @19
+                SoundEmpty              @20
+                StopSounds              @21
+                WaitUntilDone           @22

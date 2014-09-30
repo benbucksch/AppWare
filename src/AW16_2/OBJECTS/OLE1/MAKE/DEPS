@@ -1,0 +1,80 @@
+OBJECTFILES= \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\olemod.obj \
+	$(OBJDIR)\ole_data.obj \
+	$(OBJDIR)\ole_func.obj \
+	$(OBJDIR)\ole_obj.obj \
+	$(OBJDIR)\ole_wip.obj \
+	$(OBJDIR)\srassoc.obj \
+	$(OBJDIR)\sroleapp.obj \
+	$(OBJDIR)\sroledoc.obj \
+	$(OBJDIR)\srolefun.obj \
+	$(OBJDIR)\srolemod.obj \
+	$(OBJDIR)\sroleobj.obj \
+	$(OBJDIR)\srolstrm.obj \
+	$(OBJDIR)\srreg.obj 
+
+
+$(OBJDIR)\heap.obj:  .\heap.cpp .\heapint.h .\heap.h \
+                     g:\internal\include\intdebug.h
+
+$(OBJDIR)\olemod.obj:  .\olemod.cpp .\srolemod.h .\srole.h .\heap.h \
+                       g:\internal\include\intdebug.h
+
+$(OBJDIR)\ole_data.obj:  .\ole_data.cpp .\ole_data.h .\ole_obj.h .\sroleobj.h \
+                         .\sroledoc.h .\sroleapp.h .\srolemod.h .\srolefun.h \
+                         .\srole.h g:\internal\include\intdebug.h .\ushort.h \
+                         .\srassoc.h
+
+$(OBJDIR)\ole_func.obj:  .\ole_func.cpp .\ole_wip.h .\ole_obj.h .\ole_func.h \
+                         .\srreg.h .\srolefun.h .\sroleobj.h .\sroledoc.h \
+                         .\sroleapp.h .\srolemod.h .\srole.h \
+                         g:\internal\include\intdebug.h .\ushort.h \
+                         .\srassoc.h
+
+$(OBJDIR)\ole_obj.obj:  .\ole_obj.cpp .\ole_wip.h .\ole_data.h .\ole_obj.h \
+                        .\olerc.h .\srreg.h .\sroleobj.h .\sroledoc.h \
+                        .\sroleapp.h .\srolemod.h .\srolefun.h .\srole.h \
+                        g:\internal\include\intdebug.h .\ushort.h .\srassoc.h
+
+$(OBJDIR)\ole_wip.obj:  .\ole_wip.cpp .\ole_wip.h .\ole_obj.h .\sroleobj.h \
+                        .\sroledoc.h .\sroleapp.h .\srolefun.h .\srole.h \
+                        g:\internal\include\intdebug.h .\ushort.h .\srassoc.h
+
+$(OBJDIR)\srassoc.obj:  .\srassoc.cpp .\srassoc.h .\srole.h \
+                        g:\internal\include\intdebug.h
+
+$(OBJDIR)\sroleapp.obj:  .\sroleapp.cpp .\sroleapp.h .\sroledoc.h .\srole.h \
+                         g:\internal\include\intdebug.h .\srassoc.h \
+                         .\ushort.h
+
+$(OBJDIR)\sroledoc.obj:  .\sroledoc.cpp .\sroleobj.h .\sroledoc.h \
+                         .\sroleapp.h .\srolemod.h .\ole_obj.h .\srole.h \
+                         g:\internal\include\intdebug.h .\ushort.h \
+                         .\srassoc.h
+
+$(OBJDIR)\srolefun.obj:  .\srolefun.cpp .\srolefun.h .\srole.h .\sroleapp.h \
+                         .\srolemod.h g:\internal\include\intdebug.h
+
+$(OBJDIR)\srolemod.obj:  .\srolemod.cpp .\sroleobj.h .\srolemod.h \
+                         .\srolefun.h .\sroleapp.h .\srole.h \
+                         g:\internal\include\intdebug.h .\ushort.h
+
+$(OBJDIR)\sroleobj.obj:  .\sroleobj.cpp .\srolstrm.h .\sroleobj.h \
+                         .\sroledoc.h .\sroleapp.h .\srolemod.h .\srreg.h \
+                         .\ole_data.h .\ole_obj.h .\srole.h \
+                         g:\internal\include\intdebug.h .\ushort.h \
+                         .\srassoc.h
+
+$(OBJDIR)\srolstrm.obj:  .\srolstrm.cpp .\sroleobj.h .\srolstrm.h .\ole_obj.h \
+                         .\srole.h g:\internal\include\intdebug.h .\ushort.h
+
+$(OBJDIR)\srreg.obj:  .\srreg.cpp .\srreg.h .\srole.h \
+                      g:\internal\include\intdebug.h .\ushort.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\olerc.res 
+
+
+$(OBJDIR)\olerc.res:  .\olerc.rc .\olerc.h
+

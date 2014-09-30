@@ -1,0 +1,101 @@
+/*---------------------------
+   Flop.RC resource script
+  ---------------------------*/
+
+#include <windows.h>
+#include <ver.h>
+
+#include "flop.h"
+
+STRINGTABLE
+	{
+	IDS_FILTERSTRING "All Files (*.*)|*.*|Data Files (*.DAT)|*.dat|VAB Files (*.VAB)|*.vab|Text Files (*.TXT)|*.txt|"
+	}
+
+GetFiles DIALOG 18, 20, 271, 129
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Get Files"
+FONT 8, "helv"
+BEGIN
+	LTEXT "&Drive:", -1, 10, 7, 22, 8
+	CONTROL "A", IDCB_DRIVES, "COMBOBOX", CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP, 32, 5, 31, 60
+	LTEXT "Directory Path:", -1, 70, 7, 51, 8
+	LTEXT "c:\\appware\\bin\\*.cpp", IDS_PATH, 121, 7, 145, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+	LTEXT "A&vailable Files:", -1, 11, 21, 55, 8
+	CONTROL "", IDL_DIRECTORY, "LISTBOX", LBS_STANDARD | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 10, 31, 83, 95
+	CONTROL "&Add", IDD_ADD, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_TABSTOP, 98, 47, 35, 14
+	LTEXT "&Chosen Files:", -1, 137, 21, 65, 8
+	CONTROL "", IDL_CHOSEN, "LISTBOX", LBS_NOTIFY | LBS_USETABSTOPS | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 138, 31, 83, 95
+	CONTROL "&Remove", IDD_REMOVE, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_TABSTOP, 98, 97, 35, 14
+	DEFPUSHBUTTON "OK", IDOK, 226, 18, 40, 14
+	PUSHBUTTON "Cancel", IDCANCEL, 227, 38, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+END
+
+DIRECTORY DIALOG 31, 24, 167, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open"
+FONT 8, "Helv"
+BEGIN
+	LTEXT "File &Name:", 1090, 178, 78, 76, 9
+	CONTROL "", 1152, "EDIT", ES_LEFT | ES_AUTOHSCROLL | ES_OEMCONVERT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 178, 88, 90, 12
+	CONTROL "", 1120, "LISTBOX", LBS_STANDARD | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 178, 104, 90, 68
+	LTEXT "&Directories:", -1, 13, 4, 92, 9
+	CONTROL "", 1088, "STATIC", SS_LEFT | SS_NOPREFIX | WS_CHILD | WS_VISIBLE | WS_GROUP, 13, 16, 92, 9
+	CONTROL "", 1121, "LISTBOX", LBS_STANDARD | LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 13, 30, 92, 68
+	LTEXT "List Files of &Type:", 1089, 178, 176, 90, 9
+	CONTROL "", 1136, "COMBOBOX", CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 178, 186, 90, 36
+	LTEXT "Dri&ves:", 1091, 13, 102, 92, 9
+	CONTROL "", 1137, "COMBOBOX", CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP, 13, 112, 92, 68
+	CONTROL "OK", 1, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 111, 4, 50, 14
+	CONTROL "Cancel", 2, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 111, 22, 50, 14
+	CONTROL "&Help", 1038, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 111, 44, 50, 14
+	CONTROL "&Read Only", 1040, "BUTTON", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 179, 59, 50, 12
+END
+
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: File Operation Functions\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_FLOP\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_FLOP.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

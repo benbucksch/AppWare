@@ -1,0 +1,11 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = AW32NMBR.DLL
+OBJECTDEFNAME = TINYNUMB.DEF
+LOCALCCFLAGS  = 
+LOCALINCLUDE  =
+LOCALLIBS     = 
+OBJECTAPI			= AW32NMBR.LIB

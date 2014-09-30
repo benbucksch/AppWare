@@ -1,0 +1,12 @@
+LIBRARY     AW32PRNT
+
+DESCRIPTION 'Novell AppWare Loadable Module: Printer Object'
+
+EXETYPE     WINDOWS
+
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE SINGLE
+SEGMENTS    _TEXT PRELOAD
+
+EXPORTS     PrintAdmn                      @3
+               

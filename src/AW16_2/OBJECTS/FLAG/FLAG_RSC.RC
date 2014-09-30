@@ -1,0 +1,112 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+//  A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+//  THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+//  ENTERED INTO APPROPRIATE LICENCE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:
+//
+// AUTHOR:
+//
+// DESCRIPTION:
+//
+// CHANGES:
+//
+////////////////////////////////////////////////////////////////////////////
+
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "flag_rsc.h"
+
+FLAGDIALOG DIALOG 31, 37, 205, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Flag Object"
+FONT 8, "Helv"
+BEGIN
+	CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 154, 37, 43, 14
+	PUSHBUTTON "Cancel", IDCANCEL, 154, 56, 43, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+	PUSHBUTTON "&Help", IDHELP, 154, 85, 43, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+	LTEXT " Initial Value", -1, 7, 37, 49, 10, WS_CHILD | WS_VISIBLE
+	CONTROL "&Set", IDD_SET, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 13, 53, 39, 10
+	CONTROL "&Clear", IDD_CLEAR, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 13, 64, 39, 10
+	LTEXT " Signal Priority", -1, 61, 37, 77, 10, WS_CHILD | WS_VISIBLE
+	CONTROL "&After Chains", IDD_AFTERCHAIN, "BorRadio", 9 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 67, 53, 67, 10
+	CONTROL "&Interrupt Chains", IDD_INTERRUPT, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 67, 64, 67, 10
+	LTEXT "When Se&t:", -1, 13, 104, 39, 8, WS_CHILD | WS_VISIBLE
+	CONTROL "", IDD_SETTEXT, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP, 57, 102, 74, 12
+	CONTROL "When Clea&r:", -1, "STATIC", SS_LEFTNOWORDWRAP | WS_CHILD | WS_VISIBLE, 13, 119, 41, 10
+	CONTROL "", IDD_CLEARTEXT, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 57, 117, 74, 12
+	CONTROL "", -1, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 7, 47, 49, 33
+	CONTROL "", -1, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 61, 47, 77, 33
+	CONTROL " Text Equivalent", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 7, 87, 131, 9
+	CONTROL "", -1, "BorShade", 1 | WS_CHILD | WS_VISIBLE, 7, 96, 132, 39
+	ICON FLAGICON, FLAGICON, 5, 4, 18, 20, WS_CHILD | WS_VISIBLE
+	LTEXT "", IDD_OBJECT, 28, 5, 172, 19, WS_CHILD | WS_VISIBLE
+	CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 145, 36, 2, 99
+	CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 205, 2
+END
+
+FLAGICON ICON "flag_obj.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Flag Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_FLAG\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_FLAG.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

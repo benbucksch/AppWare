@@ -1,0 +1,79 @@
+#include "windows.h"
+#include "ver.h"
+#include "resconst.h"
+#include "serdev.men"
+#include "newcomp.dlg"
+#include "about.dlg"
+#include "objdesc.dlg"
+#include "editcfg.dlg"
+#include "funcdesc.dlg"
+#include "evntdesc.dlg"
+#include "funchelp.dlg"
+#include "parmdesc.dlg"
+#include "flowdesc.dlg"
+#include "response.dlg"
+#include "iconedit.dlg"
+#include "rplcdll.dlg"
+#include "rplchelp.dlg"
+
+seriusDeveloperIcon ICON almbldr.ico
+childWindowIcon ICON childwin.ico
+
+smalls 			BITMAP 	smalls.bmp
+smalli 			BITMAP 	smalli.bmp
+
+STRINGTABLE
+	{
+	STR_APPNAME,	"ALM Builder"
+	}
+
+IDBMP_8BIT_SPLASH  	BITMAP  DISCARDABLE		"splshab4.bmp"
+IDBMP_4BIT_SPLASH		BITMAP	DISCARDABLE		"splshab4.bmp"
+
+PARMARROWMASK     BITMAP "..\\..\\apebldr\\rc\\parwmask.bmp"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION     1, 1, 0, 0
+PRODUCTVERSION  1, 1, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "ALM Builder\0"
+      VALUE "FileVersion",      "1.10\0"
+      VALUE "InternalName",     "ALMBLDR\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1994.\0"
+      VALUE "OriginalFilename", "AW32CFG.EXE\0"
+      VALUE "ProductName",      "ALM Builder Version 1.1\0"
+      VALUE "ProductVersion",   "1.10\0"
+      VALUE "LegalTrademarks",  "AppWare, AppWare Loadable Module, Configuration Editor, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.10\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1994.  All rights reserved.\0"
+END
+////////////////////////////////////////////////////////////////////////////

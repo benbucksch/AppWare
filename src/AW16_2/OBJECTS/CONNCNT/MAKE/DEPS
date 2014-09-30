@@ -1,0 +1,37 @@
+OBJECTFILES= \
+	$(OBJDIR)\admconn.obj \
+	$(OBJDIR)\conndlg.obj \
+	$(OBJDIR)\editsgnl.obj \
+	$(OBJDIR)\buildcom.obj \
+	$(OBJDIR)\fun_conn.obj \
+	$(OBJDIR)\evt_conn.obj \
+	$(OBJDIR)\comm_api.obj 
+
+
+$(OBJDIR)\admconn.obj:  .\admconn.cpp .\commobj.h .\conn.h .\macro.h \
+                        g:\internal\include\intdebug.h
+
+$(OBJDIR)\conndlg.obj:  .\conndlg.cpp .\commobj.h .\com_dlg.h .\conn.h \
+                        .\macro.h g:\internal\include\intdebug.h
+
+$(OBJDIR)\editsgnl.obj:  .\editsgnl.cpp .\commobj.h .\com_dlg.h .\conn.h \
+                         .\macro.h g:\internal\include\intdebug.h
+
+$(OBJDIR)\buildcom.obj:  .\buildcom.cpp .\commobj.h .\com_dlg.h .\conn.h \
+                         .\macro.h g:\internal\include\intdebug.h
+
+$(OBJDIR)\fun_conn.obj:  .\fun_conn.cpp .\commobj.h .\conn.h .\macro.h \
+                         g:\internal\include\intdebug.h
+
+$(OBJDIR)\evt_conn.obj:  .\evt_conn.cpp .\commobj.h .\conn.h .\macro.h \
+                         g:\internal\include\intdebug.h
+
+$(OBJDIR)\comm_api.obj:  .\comm_api.cpp .\commobj.h .\conn.h .\macro.h \
+                         g:\internal\include\intdebug.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\connctn.res 
+
+
+$(OBJDIR)\connctn.res:  .\connctn.rc .\com_dlg.h
+

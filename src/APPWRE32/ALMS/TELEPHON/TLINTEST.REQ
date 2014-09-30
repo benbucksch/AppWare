@@ -1,0 +1,13 @@
+Wed Mar 30 12:41:27 1994
+
+Required DLLs for C:\PROJECTS\CSTA\TLINTEST.PJT
+
+    almkrnl.dll
+    alm_wnd.dll
+    alm_text.dll
+    alm_nmbr.dll
+    alm_butn.dll
+    alm_list.dll
+    alm_csta.dll
+    alm_gnrl.dll
+    alm_ntfy.dll

@@ -1,0 +1,13 @@
+LIBRARY         AW32NMBR
+
+DESCRIPTION     'Test module'
+EXETYPE         WINDOWS
+
+DATA            PRELOAD MULTIPLE MOVEABLE
+
+EXPORTS
+		TinyNumbAdmin				@10
+		ONmbrGetInteger			@11
+		ONmbrSetInteger			@12
+		TinyNumbObjToText		@13
+		TinyNumbTextToObj		@14

@@ -1,0 +1,15 @@
+LIBRARY     AW32WLAY
+
+DESCRIPTION 'Novell AppWare Loadable Module: Window Layout'
+
+CODE        MOVEABLE DISCARDABLE LOADONCALL
+
+DATA        SINGLE MOVEABLE PRELOAD
+
+SEGMENTS    _TEXT PRELOAD
+
+HEAPSIZE    32768
+
+EXPORTS     ; hooks to the window object
+            OWndEditLayout                              @10
+            OWndItemFromUID                             @11

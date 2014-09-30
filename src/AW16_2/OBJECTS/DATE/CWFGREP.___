@@ -1,0 +1,11 @@
+File n:\objects\date\dt_api.cpp:
+103        BOOL ALMAPI	ODateSetValue(OBJECTID 	oiDate,	long theDate)
+108        	I_ASSERT_TYPEID(oiDate, OTYPE_DATE, "ODateSetValue", return 0);
+111        	I_ASSERT_DATE(date, "ODateSetValue", return 0);
+File n:\objects\date\dt_event.cpp:
+35         /* SetValue for all KeepCurrent dates and post 				*/
+File n:\objects\date\dt_func.cpp:
+259        	OTextSetValueFromBuffer(oiDayOfWeek, dayOfWeek);
+260        	OTextSetValueFromBuffer(oiMonth, month);
+261        	OTextSetValueFromBuffer(oiDayOfMonth, dayOfMonth);
+262        	OTextSetValueFromBuffer(oiYear, year);

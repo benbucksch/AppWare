@@ -1,0 +1,35 @@
+LIBRARY        AW32BUTN
+
+DESCRIPTION    'Novell Appware Loadable Module: Button Object'
+
+EXETYPE        WINDOWS
+
+CODE           LOADONCALL MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE SINGLE
+
+HEAPSIZE       32768
+
+EXPORTS      	OButnIsSelected         	@100
+               OButnSetSelected            @101
+               OButnGetType                @102
+
+
+				ButtonFunction_Clear		@200
+				ButtonFunction_Set			@201
+				ButtonFunction_Disable		@202
+				ButtonFunction_Enable		@203
+				ButtonFunction_GetTitle		@204
+				ButtonFunction_SetTitle		@205
+				ButtonFunction_IsSet		@206
+	
+
+				ButtonEvent_TrackButton		@300
+				ButtonEvent_TextToObject	@301
+				ButtonEvent_ObjectToText	@302
+				ButtonEvent_SendKey			@303
+
+				ButtonAdminProc				@400 
+				DllEntryPoint				@1
+
+
+

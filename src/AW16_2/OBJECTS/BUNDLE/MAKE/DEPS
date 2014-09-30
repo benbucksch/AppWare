@@ -1,0 +1,20 @@
+OBJECTFILES= \
+	$(OBJDIR)\bundfnc.obj \
+	$(OBJDIR)\bundlea.obj \
+	$(OBJDIR)\dialogb.obj 
+
+
+$(OBJDIR)\bundfnc.obj:  .\bundfnc.cpp .\bundle.h \
+                        g:\internal\include\intdebug.h
+
+$(OBJDIR)\bundlea.obj:  .\bundlea.cpp .\bundle.h \
+                        g:\internal\include\intdebug.h
+
+$(OBJDIR)\dialogb.obj:  .\dialogb.cpp .\bundle.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\bundle.res 
+
+
+$(OBJDIR)\bundle.res:  .\bundle.rc .\bundle.h
+

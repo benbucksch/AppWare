@@ -1,0 +1,13 @@
+LIBRARY         AW32TEST
+
+DESCRIPTION     'Novell AppWare Loadable Module:  Admin Message Test'
+EXETYPE         WINDOWS
+
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD SINGLE MOVEABLE
+PROTMODE
+
+SEGMENTS
+
+EXPORTS         WEP                            @1     RESIDENTNAME
+                TESTADMN                       @10

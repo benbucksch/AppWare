@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\general
+ERRORLOG=o:\help\general\awusgnrl.log
+TITLE=General ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+alm_gnrl.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusgnrl.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="General ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_gnrl.h>

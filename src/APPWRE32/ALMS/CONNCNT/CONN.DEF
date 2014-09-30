@@ -1,0 +1,56 @@
+LIBRARY         AW32CNCT
+DESCRIPTION     'Novell AppWare Loadable Module: Connection Object'
+EXETYPE         WINDOWS
+
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+
+HEAPSIZE        32768
+
+EXPORTS         ConnectAdmn                    @1 
+				Conn_HexToTextFunc			   @2
+				Conn_TextToHexFunc			   @3
+				Conn_CheckSumFunc              @4
+                Conn_CharToValueFunc           @5  
+                Conn_ValueToCharFunc           @6  
+                Conn_SendTextFunc              @7  
+                Conn_CloseCommFunc             @8  
+                Conn_OpenCommFunc              @9 
+                Conn_ConfigureFunc             @10
+                Conn_UnscheduleTextFunc        @11
+                Conn_ScheduleTextFunc          @12  
+                Conn_CancelListenFunc          @13  
+                Conn_ListenFunc                @14  
+                Conn_BreakFunc                 @15  
+                Conn_SetConfigFunc             @16  
+                Conn_GetConfigFunc             @17  
+                Conn_SetSearchFunc             @18  
+                Conn_DeactivateFunc            @19  
+                Conn_ActivateFunc              @20  
+				Conn_AsynchListenEvent         @21
+                Conn_SendScheduleTextEvent     @22  
+                Conn_IdleEvent                 @23  
+                Conn_ShutDownEvent             @24  
+                Conn_StartUpEvent              @25  
+                CommGetMemLen                  @26 
+                CommGetMem                     @27  
+                CommPutString                  @28  
+                CommPutChar                    @29  
+                CommPutBuffer                  @30  
+                CommWaitChar                   @31 
+                CommGetChar                    @32  
+                CommGetString                  @33  
+                CommGetBuffer                  @34  
+                CommSetXONXOFF                 @35  
+                CommSetHandShake               @36  
+                CommSetParity                  @37  
+                CommSetStopBits                @38  
+                CommSetBaudRate                @39  
+                CommGetHandShake               @40  
+                CommGetParity                  @41  
+                CommGetStopBits                @42  
+                CommFlushQueue                 @43  
+                CommTxCount                    @44  
+                CommRxCount                    @45  
+                CommIsPortOpen                 @46  

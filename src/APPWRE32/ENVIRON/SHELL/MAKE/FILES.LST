@@ -1,0 +1,6 @@
+..\memio\src\memlib.cpp 
+..\memio\src\strspace.cpp 
+..\kernel\src\system.cpp 
+..\kernel\src\systemmi.cpp 
+sershell.cpp 
+shellsys.cpp 

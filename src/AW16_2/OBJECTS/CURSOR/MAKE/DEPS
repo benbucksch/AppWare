@@ -1,0 +1,100 @@
+OBJECTFILES= \
+	$(OBJDIR)\arrocurs.obj \
+	$(OBJDIR)\colorpal.obj \
+	$(OBJDIR)\cursadmn.obj \
+	$(OBJDIR)\cursmdrt.obj \
+	$(OBJDIR)\dlgproc.obj \
+	$(OBJDIR)\handcurs.obj \
+	$(OBJDIR)\hidecurs.obj \
+	$(OBJDIR)\hourcurs.obj \
+	$(OBJDIR)\iconedit.obj \
+	$(OBJDIR)\memclass.obj \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\pixelwin.obj \
+	$(OBJDIR)\sericon.obj \
+	$(OBJDIR)\showcurs.obj \
+	$(OBJDIR)\stopcurs.obj \
+	$(OBJDIR)\strtcurs.obj \
+	$(OBJDIR)\winlist.obj 
+
+
+$(OBJDIR)\arrocurs.obj:  .\arrocurs.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\colorpal.obj:  .\colorpal.cpp .\winlist.h .\iconedit.h .\colorpal.h \
+                         .\position.h .\memclass.h .\sericon.h .\pixelwin.h
+
+$(OBJDIR)\cursadmn.obj:  .\cursadmn.cpp .\cursor.h .\iconeditor.h \
+                         d:\borlandc\include\mem.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\cursmdrt.obj:  .\cursmdrt.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\dlgproc.obj:  .\dlgproc.cpp .\cursordlg.h .\cursor.h .\position.h \
+                        d:\borlandc\include\commdlg.h .\pixelwin.h \
+                        .\iconedit.h .\memclass.h \
+                        g:\internal\include\helpids.h \
+                        g:\internal\include\a_almutl.h \
+                        g:\internal\include\a_alm.h \
+                        d:\borlandc\include\time.h \
+                        d:\borlandc\include\stdlib.h \
+                        d:\borlandc\include\stdio.h .\fileopen.h .\sericon.h \
+                        .\winlist.h
+
+$(OBJDIR)\handcurs.obj:  .\handcurs.cpp .\cursordl.h .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\hidecurs.obj:  .\hidecurs.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\hourcurs.obj:  .\hourcurs.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\iconedit.obj:  .\iconedit.cpp d:\borlandc\include\complex.h \
+                         d:\borlandc\include\commdlg.h .\cursordl.h \
+                         .\cursor.h g:\internal\include\a_alm.h .\winlist.h \
+                         .\colorpal.h .\iconedit.h .\position.h .\resconst.h \
+                         .\sericon.h .\memclass.h .\pixelwin.h
+
+$(OBJDIR)\memclass.obj:  .\memclass.cpp .\memclass.h .\heap.h
+
+$(OBJDIR)\heap.obj:  .\heap.cpp .\heapint.h .\heap.h \
+                     g:\internal\include\a_alm.h d:\borlandc\include\stdio.h \
+                     d:\borlandc\include\stdlib.h
+
+$(OBJDIR)\pixelwin.obj:  .\pixelwin.cpp .\cursordl.h .\cursor.h \
+                         g:\internal\include\a_alm.h .\winlist.h .\colorpal.h \
+                         .\pixelwin.h .\iconedit.h .\sericon.h .\memclass.h \
+                         .\position.h
+
+$(OBJDIR)\sericon.obj:  .\sericon.cpp d:\borlandc\include\io.h \
+                        d:\borlandc\include\mem.h .\sericon.h .\memclass.h
+
+$(OBJDIR)\showcurs.obj:  .\showcurs.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\stopcurs.obj:  .\stopcurs.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\strtcurs.obj:  .\strtcurs.cpp .\cursor.h \
+                         g:\internal\include\a_alm.h .\iconedit.h .\sericon.h \
+                         .\winlist.h .\memclass.h
+
+$(OBJDIR)\winlist.obj:  .\winlist.cpp .\heap.h .\winlist.h .\memclass.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\cursor.res 
+
+
+$(OBJDIR)\cursor.res:  .\cursor.rc .\hand.cur .\smalls.bmp .\smalli.bmp \
+                       .\cursordl.h d:\borlandc\include\windows.h
+

@@ -1,0 +1,77 @@
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "dialogs.h"
+
+radiogrp ICON "radiogro.ico"
+RADIO_SETUP_DIALOG DIALOG 27, 103, 252, 140
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Radio Group"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 205, 37, 40, 14
+  PUSHBUTTON "Cancel", IDCANCEL, 205, 56, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Help", IDHELP, 205, 84, 40, 14, WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+  CONTROL " << A&dd <<", PB_ADD, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 79, 57, 40, 14
+  PUSHBUTTON "&Remove", PB_REMOVE, 79, 77, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Edit", PB_EDIT, 79, 97, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  LTEXT "Buttons in &Group", -1, 10, 38, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", LB_ITEMS, "LISTBOX", LBS_NOTIFY | LBS_MULTIPLESEL | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP, 10, 49, 60, 78
+  CONTROL "", -1, "BorShade", 1 | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 36, 69, 98
+  LTEXT "Available &Buttons", -1, 128, 38, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", LB_OBJECTS, "LISTBOX", LBS_NOTIFY | LBS_MULTIPLESEL | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP, 128, 49, 60, 78
+  CONTROL "", -1, "BorShade", 1 | WS_CHILD | WS_VISIBLE | WS_GROUP, 124, 36, 69, 98
+  ICON "radiogrp", -1, 5, 4, 18, 20, WS_CHILD | WS_VISIBLE
+  LTEXT "", ST_OBJECTNAME,28, 5, 218, 19, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 252, 2
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 198, 36, 2, 98
+END
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Radio Group Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "ALM_RADG\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "ALM_RADG.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

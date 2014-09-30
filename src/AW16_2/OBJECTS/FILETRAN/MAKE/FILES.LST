@@ -1,0 +1,15 @@
+admfltr.cpp
+filetrns.cpp
+fun_fltr.cpp
+filedlg.cpp
+status.cpp
+ftrnrun.cpp
+xmodem.cpp
+ymodem.cpp
+zmodem.cpp
+zmodems.cpp
+zmodemr.cpp
+zmodemc.cpp
+kermit.cpp
+evt_fltr.cpp
+crc.cpp

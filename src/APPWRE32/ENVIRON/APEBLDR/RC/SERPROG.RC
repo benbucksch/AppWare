@@ -1,0 +1,157 @@
+#include "windows.h"
+#include "ver.h"
+#include "resconst.h"
+#include "serprog.men"
+#include "newsub.dlg"
+#include "about.dlg"
+#include "comment.dlg"
+#include "magdlg.rc"
+#include "paramdlg.rc"
+#include "iconedit.dlg"
+#include "prmconst.rc"
+#include "alias.dlg"
+#include "prtabort.dlg"
+#include "printdlg.dlg"
+#include "fontdlg.dlg"
+#include "compile.dlg"
+#include "objvalue.dlg"
+#include "upsfstat.dlg"
+#include "switches.h"
+#include "msgwin.dlg"
+#include "prefdlg.rc"
+#include "finddlg.rc"
+#include "grpname.rc"
+#include "turbpal.dlg"
+#include "splshmgr.dlg"
+
+IDIC_APPWARE	 			ICON appware.ico
+IDIC_PROJECTEXE			ICON apwrun.ico
+IDIC_SUBJECT				ICON subject.ico
+IDIC_PROJECT				ICON project.ico
+IDIC_SEARCHWINDOW		ICON srchwin.ico
+
+persist     BITMAP persist.bmp
+
+rightArrow  BITMAP aright.bmp
+leftArrow   BITMAP aleft.bmp
+upArrow     BITMAP aup.bmp
+downArrow   BITMAP adown.bmp
+
+smalls      BITMAP smalls.bmp
+smalli      BITMAP smalli.bmp
+
+ParmArrowMask BITMAP parwmask.bmp
+FuncArrowMask BITMAP farwmask.bmp
+FuncMask      BITMAP funcmask.bmp
+ShadeMask     BITMAP shademsk.bmp
+
+HelpCursor   CURSOR help.cur
+magnifyGlass CURSOR magnify.cur
+vertArrow    CURSOR vertarro.cur
+horzSplit    CURSOR horzsplt.cur
+INVALIDDROP CURSOR baddrop.cur
+
+REDSTOPSIGN     BITMAP redstop.bmp
+REDSIGNMASK     BITMAP redmask.bmp
+GREENSTOPSIGN BITMAP grnstop.bmp
+GREENSIGNMASK BITMAP grnmask.bmp
+
+upsf_PICTURE	BITMAP 	upsfpict.bmp
+
+IDBMP_UPARROW				BITMAP  uparrow.bmp
+
+//group selection rectangle pattern
+GROUPSELRECTPATTERN BITMAP grpselpt.bmp
+
+#ifdef DEMO
+IDBMP_8BIT_SPLASH  	BITMAP  DISCARDABLE		"DEMO4.bmp"
+IDBMP_4BIT_SPLASH		BITMAP	DISCARDABLE		"DEMO4.bmp"
+#else
+IDBMP_8BIT_SPLASH  	BITMAP  DISCARDABLE		"splash4.bmp"
+IDBMP_4BIT_SPLASH		BITMAP	DISCARDABLE		"splash4.bmp"
+#endif
+
+STRINGTABLE
+	{
+#ifdef DEMO
+	STR_FRAMENAME,  "AppWare Demo"
+#else
+	STR_FRAMENAME,  "AppWare"
+#endif
+
+	STR_PROJECTNAME, "PROJECT"
+	STR_SHORTPROJECTNAME "PRJECT"
+	STR_SHORTESTPROJECTNAME "PRJCT"
+	STR_SUBJECTNAME, "Subject"
+	STR_NAVIGATOR,   "Navigator"
+	STR_COMPILING,  "Compiling Project:"
+	STR_CREATING,  "Creating Application:"
+	}
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION     1, 1, 0, 0
+PRODUCTVERSION  1, 1, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare(TM) Version 1.10\0"
+      VALUE "FileVersion",      "1.10\0"
+      VALUE "InternalName",     "APPWARE\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1994.\0"
+      VALUE "OriginalFilename", "AW32.EXE\0"
+      VALUE "ProductName",      "AppWare Version 1.1\0"
+      VALUE "ProductVersion",   "1.10\0"
+      VALUE "LegalTrademarks",  "AppWare, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.10\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1994.  All rights reserved.\0"
+END
+
+
+//Build Stuff
+
+#ifdef BUILD_OFFICIAL
+
+#include "vabnum.bld"
+
+#else
+
+#define BUILD_NUMBER 		"unknown"
+#define BUILD_DATE			"unknown"
+
+#endif
+
+STRINGTABLE
+BEGIN
+    IDS_BUILDVER,    	BUILD_NUMBER
+    IDS_BUILDDATE, 		BUILD_DATE
+END
+
+
+////////////////////////////////////////////////////////////////////////////

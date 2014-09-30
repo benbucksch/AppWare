@@ -1,0 +1,17 @@
+LIBRARY     RESIZE32
+DESCRIPTION 'Resizer Control Library'
+EXETYPE     WINDOWS
+CODE        MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE SINGLE
+
+SEGMENTS    RESIZER_TEXT      MOVEABLE DISCARDABLE PRELOAD
+            INFO_TEXT         MOVEABLE DISCARDABLE
+            _TEXT             MOVEABLE DISCARDABLE
+            _DATA             MOVEABLE PRELOAD
+
+HEAPSIZE    2048
+
+EXPORTS     
+            CustomControlInfoA
+						ResizerCtlStyleDlg
+						ResizerSizeToText

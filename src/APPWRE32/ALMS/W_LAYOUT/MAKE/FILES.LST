@@ -1,0 +1,17 @@
+bttncur.c
+hierlist.cpp
+lay_algn.cpp
+lay_dlg.cpp
+lay_item.cpp
+lay_main.cpp
+lay_prot.cpp
+lay_shap.cpp
+lay_util.cpp
+lay_wdat.cpp
+lay_wnd.cpp
+lay_wprc.cpp
+layout.cpp
+menudata.cpp
+objlist.cpp
+palette.cpp
+shp_attr.cpp

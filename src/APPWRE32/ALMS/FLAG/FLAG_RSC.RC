@@ -1,0 +1,104 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+//  A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+//  THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+//  ENTERED INTO APPROPRIATE LICENCE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:
+//
+// AUTHOR:
+//
+// DESCRIPTION:
+//
+// CHANGES:
+//
+////////////////////////////////////////////////////////////////////////////
+
+#include <windows.h>
+#include <ver.h>
+
+#include "flag_rsc.h"
+
+FLAGDIALOG DIALOG 31, 37, 214, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "bordlg"
+CAPTION "Flag Object"
+FONT 8, "Helv"
+{
+ DEFPUSHBUTTON "OK", IDOK, 156, 8, 50, 14, BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 156, 26, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "&Help", IDHELP, 156, 44, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ CONTROL "&Set", IDD_SET, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 18, 18, 29, 12
+ CONTROL "&Clear", IDD_CLEAR, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 18, 30, 32, 12
+ CONTROL "&After Chains", IDD_AFTERCHAIN, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 75, 18, 53, 12
+ CONTROL "&Interrupt Chains", IDD_INTERRUPT, "BorRadio", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 75, 30, 64, 12
+ LTEXT "Se&t:", -1, 18, 71, 23, 11
+ EDITTEXT IDD_SETTEXT, 55, 70, 74, 14, ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP
+ LTEXT "Clea&r:", -1, 18, 89, 23, 11, SS_LEFTNOWORDWRAP
+ EDITTEXT IDD_CLEARTEXT, 55, 89, 74, 14, ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
+ GROUPBOX "Initial Value", IDC_GROUPBOX1, 8, 5, 52, 48, BS_GROUPBOX
+ GROUPBOX "Signal Prioirity", IDC_GROUPBOX2, 65, 5, 83, 48, BS_GROUPBOX
+ GROUPBOX "Text Equivalent", IDC_GROUPBOX3, 8, 58, 140, 53, BS_GROUPBOX
+}
+
+FLAGICON ICON "flag_obj.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Flag Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32FLAG\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32FLAG.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

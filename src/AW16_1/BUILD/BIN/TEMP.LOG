@@ -1,0 +1,518 @@
+******************************
+Copying files to common include
+	+++  attrib -r n:\internal\INCLUDE\op_wnd.h
+
+	+++  copy N:\OBJECTS\include\op_wnd.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\op_wnd.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_button.h
+
+	+++  copy N:\OBJECTS\include\o_button.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_button.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_datb.h
+
+	+++  copy N:\OBJECTS\include\o_datb.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_datb.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_date.h
+
+	+++  copy N:\OBJECTS\include\o_date.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_date.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_flag.h
+
+	+++  copy N:\OBJECTS\include\o_flag.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_flag.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_genrl.h
+
+	+++  copy N:\OBJECTS\include\o_genrl.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_genrl.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_list.h
+
+	+++  copy N:\OBJECTS\include\o_list.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_list.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_menus.h
+
+	+++  copy N:\OBJECTS\include\o_menus.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_menus.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_number.h
+
+	+++  copy N:\OBJECTS\include\o_number.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_number.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_nwmhs.h
+
+	+++  copy N:\OBJECTS\include\o_nwmhs.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_nwmhs.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_nwmsg.h
+
+	+++  copy N:\OBJECTS\include\o_nwmsg.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_nwmsg.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_pict.h
+
+	+++  copy N:\OBJECTS\include\o_pict.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_pict.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_table.h
+
+	+++  copy N:\OBJECTS\include\o_table.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_table.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_text.h
+
+	+++  copy N:\OBJECTS\include\o_text.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_text.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_time.h
+
+	+++  copy N:\OBJECTS\include\o_time.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_time.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_wnd.h
+
+	+++  copy N:\OBJECTS\include\o_wnd.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_wnd.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_wndlay.h
+
+	+++  copy N:\OBJECTS\include\o_wndlay.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_wndlay.h
+
+	+++  attrib -r n:\internal\INCLUDE\o_wndshp.h
+
+	+++  copy N:\OBJECTS\include\o_wndshp.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_wndshp.h
+
+Starting make of system
+
+********************************
+Starting make of DATABASE
+--> Performing make
+	+++  make   INTERNAL=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 13242368 bytes
+
+Copying .LIB files to common lib
+	+++  attrib -r n:\internal\LIB\alm_butn.lib
+
+	+++  copy N:\OBJECTS\button\obj\alm_butn.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_butn.lib
+
+	+++  attrib -r n:\internal\LIB\alm_datb.lib
+
+	+++  copy N:\OBJECTS\database\obj\alm_datb.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_datb.lib
+
+	+++  attrib -r n:\internal\LIB\alm_date.lib
+
+	+++  copy N:\OBJECTS\date\obj\alm_date.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_date.lib
+
+	+++  attrib -r n:\internal\LIB\alm_flag.lib
+
+	+++  copy N:\OBJECTS\flag\obj\alm_flag.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_flag.lib
+
+	+++  attrib -r n:\internal\LIB\alm_nmbr.lib
+
+	+++  copy N:\OBJECTS\number\obj\alm_nmbr.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_nmbr.lib
+
+	+++  attrib -r n:\internal\LIB\alm_mhs.lib
+
+	+++  copy N:\OBJECTS\nwmhs\obj\alm_mhs.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_mhs.lib
+
+	+++  attrib -r n:\internal\LIB\alm_msg.lib
+
+	+++  copy N:\OBJECTS\nwmsg\obj\alm_msg.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_msg.lib
+
+	+++  attrib -r n:\internal\LIB\alm_pict.lib
+
+	+++  copy N:\OBJECTS\picture\obj\alm_pict.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_pict.lib
+
+	+++  attrib -r n:\internal\LIB\alm_tabl.lib
+
+	+++  copy N:\OBJECTS\table\obj\alm_tabl.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_tabl.lib
+
+	+++  attrib -r n:\internal\LIB\alm_text.lib
+
+	+++  copy N:\OBJECTS\text\obj\alm_text.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_text.lib
+
+	+++  attrib -r n:\internal\LIB\alm_time.lib
+
+	+++  copy N:\OBJECTS\time\obj\alm_time.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_time.lib
+
+	+++  attrib -r n:\internal\LIB\alm_wnd.lib
+
+	+++  copy N:\OBJECTS\window\obj\alm_wnd.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_wnd.lib
+
+Copying .DLL files to common BIN
+	+++  attrib -r n:\internal\BIN\alm_sysm.dll
+
+	+++  copy N:\OBJECTS\applicat\obj\alm_sysm.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_sysm.dll
+
+	+++  attrib -r n:\internal\BIN\alm_brws.dll
+
+	+++  copy N:\OBJECTS\browser\obj\alm_brws.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_brws.dll
+
+	+++  attrib -r n:\internal\BIN\alm_bndl.dll
+
+	+++  copy N:\OBJECTS\bundle\obj\alm_bndl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_bndl.dll
+
+	+++  attrib -r n:\internal\BIN\alm_butn.dll
+
+	+++  copy N:\OBJECTS\button\obj\alm_butn.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_butn.dll
+
+	+++  attrib -r n:\internal\BIN\alm_calc.dll
+
+	+++  copy N:\OBJECTS\calc\obj\alm_calc.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_calc.dll
+
+	+++  attrib -r n:\internal\BIN\alm_acur.dll
+
+	+++  copy N:\OBJECTS\cursor\obj\alm_acur.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_acur.dll
+
+	+++  attrib -r n:\internal\BIN\alm_datb.dll
+
+	+++  copy N:\OBJECTS\database\obj\alm_datb.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_datb.dll
+
+	+++  attrib -r n:\internal\BIN\alm_date.dll
+
+	+++  copy N:\OBJECTS\date\obj\alm_date.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_date.dll
+
+	+++  attrib -r n:\internal\BIN\alm_ddec.dll
+
+	+++  copy N:\OBJECTS\ddeclien\obj\alm_ddec.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ddec.dll
+
+	+++  attrib -r n:\internal\BIN\alm_flop.dll
+
+	+++  copy N:\OBJECTS\fileops\obj\alm_flop.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_flop.dll
+
+	+++  attrib -r n:\internal\BIN\alm_file.dll
+
+	+++  copy N:\OBJECTS\file\obj\alm_file.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_file.dll
+
+	+++  attrib -r n:\internal\BIN\alm_flag.dll
+
+	+++  copy N:\OBJECTS\flag\obj\alm_flag.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_flag.dll
+
+	+++  attrib -r n:\internal\BIN\alm_gnrl.dll
+
+	+++  copy N:\OBJECTS\general\obj\alm_gnrl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_gnrl.dll
+
+	+++  attrib -r n:\internal\BIN\alm_grup.dll
+
+	+++  copy N:\OBJECTS\group\obj\alm_grup.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_grup.dll
+
+	+++  attrib -r n:\internal\BIN\alm_imex.dll
+
+	+++  copy N:\OBJECTS\imp-exp\obj\alm_imex.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_imex.dll
+
+	+++  attrib -r n:\internal\BIN\alm_keyb.dll
+
+	+++  copy N:\OBJECTS\keyboard\obj\alm_keyb.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_keyb.dll
+
+	+++  attrib -r n:\internal\BIN\alm_appl.dll
+
+	+++  copy N:\OBJECTS\launch\obj\alm_appl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_appl.dll
+
+	+++  attrib -r n:\internal\BIN\alm_list.dll
+
+	+++  copy N:\OBJECTS\list\obj\alm_list.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_list.dll
+
+	+++  attrib -r n:\internal\BIN\alm_loop.dll
+
+	+++  copy N:\OBJECTS\loop\obj\alm_loop.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_loop.dll
+
+	+++  attrib -r n:\internal\BIN\alm_menu.dll
+
+	+++  copy N:\OBJECTS\menus\obj\alm_menu.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_menu.dll
+
+	+++  attrib -r n:\internal\BIN\alm_nds.dll
+
+	+++  copy N:\OBJECTS\nds\obj\alm_nds.dll	n:\internal\BIN
+
+        0 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_nds.dll
+
+	+++  attrib -r n:\internal\BIN\alm_ntfy.dll
+
+	+++  copy N:\OBJECTS\notify\obj\alm_ntfy.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ntfy.dll
+
+	+++  attrib -r n:\internal\BIN\alm_nmbr.dll
+
+	+++  copy N:\OBJECTS\number\obj\alm_nmbr.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_nmbr.dll
+
+	+++  attrib -r n:\internal\BIN\alm_mhs.dll
+
+	+++  copy N:\OBJECTS\nwmhs\obj\alm_mhs.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_mhs.dll
+
+	+++  attrib -r n:\internal\BIN\alm_msg.dll
+
+	+++  copy N:\OBJECTS\nwmsg\obj\alm_msg.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_msg.dll
+
+	+++  attrib -r n:\internal\BIN\alm_ole1.dll
+
+	+++  copy N:\OBJECTS\ole1\obj\alm_ole1.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ole1.dll
+
+	+++  attrib -r n:\internal\BIN\alm_pict.dll
+
+	+++  copy N:\OBJECTS\picture\obj\alm_pict.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_pict.dll
+
+	+++  attrib -r n:\internal\BIN\alm_prnt.dll
+
+	+++  copy N:\OBJECTS\print\obj\alm_prnt.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_prnt.dll
+
+	+++  attrib -r n:\internal\BIN\alm_qsql.dll
+
+	+++  copy N:\OBJECTS\qpluse\obj\alm_qsql.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_qsql.dll
+
+	+++  attrib -r n:\internal\BIN\alm_radg.dll
+
+	+++  copy N:\OBJECTS\radgroup\obj\alm_radg.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_radg.dll
+
+	+++  attrib -r n:\internal\BIN\alm_scal.dll
+
+	+++  copy N:\OBJECTS\scale\obj\alm_scal.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_scal.dll
+
+	+++  attrib -r n:\internal\BIN\alm_sbar.dll
+
+	+++  copy N:\OBJECTS\scrolbar\obj\alm_sbar.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_sbar.dll
+
+	+++  attrib -r n:\internal\BIN\alm_shap.dll
+
+	+++  copy N:\OBJECTS\shapes\obj\alm_shap.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_shap.dll
+
+	+++  attrib -r n:\internal\BIN\alm_stop.dll
+
+	+++  copy N:\OBJECTS\stop\obj\alm_stop.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_stop.dll
+
+	+++  attrib -r n:\internal\BIN\alm_subr.dll
+
+	+++  copy N:\OBJECTS\sub\obj\alm_subr.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_subr.dll
+
+	+++  attrib -r n:\internal\BIN\alm_tabl.dll
+
+	+++  copy N:\OBJECTS\table\obj\alm_tabl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_tabl.dll
+
+	+++  attrib -r n:\internal\BIN\alm_text.dll
+
+	+++  copy N:\OBJECTS\text\obj\alm_text.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_text.dll
+
+	+++  attrib -r n:\internal\BIN\alm_tfct.dll
+
+	+++  copy N:\OBJECTS\textfact\obj\alm_tfct.dll	n:\internal\BIN
+
+        0 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_tfct.dll
+
+	+++  attrib -r n:\internal\BIN\alm_time.dll
+
+	+++  copy N:\OBJECTS\time\obj\alm_time.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_time.dll
+
+	+++  attrib -r n:\internal\BIN\alm_wnd.dll
+
+	+++  copy N:\OBJECTS\window\obj\alm_wnd.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_wnd.dll
+
+	+++  attrib -r n:\internal\BIN\alm_wlay.dll
+
+	+++  copy N:\OBJECTS\w_layout\obj\alm_wlay.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_wlay.dll
+
+	+++  attrib -r n:\internal\BIN\alm_ddes.dll
+
+	+++  copy N:\OBJECTS\ddeserve\obj\alm_ddes.dll	n:\internal\BIN
+
+	+++  attrib +r n:\internal\BIN\alm_ddes.dll
+

@@ -1,0 +1,39 @@
+OBJECTFILES= \
+	$(OBJDIR)\altkey.obj \
+	$(OBJDIR)\cntrlkey.obj \
+	$(OBJDIR)\comkey.obj \
+	$(OBJDIR)\kba.obj \
+	$(OBJDIR)\kbdesc.obj \
+	$(OBJDIR)\kbmgr.obj \
+	$(OBJDIR)\keybrdof.obj \
+	$(OBJDIR)\keybrdon.obj \
+	$(OBJDIR)\shiftkey.obj 
+
+
+$(OBJDIR)\altkey.obj:  .\altkey.cpp .\keyboard.h
+
+$(OBJDIR)\cntrlkey.obj:  .\cntrlkey.cpp .\keyboard.h
+
+$(OBJDIR)\comkey.obj:  .\comkey.cpp .\keyboard.h
+
+$(OBJDIR)\kba.obj:  .\kba.cpp .\keyboard.h
+
+$(OBJDIR)\kbdesc.obj:  .\kbdesc.cpp g:\internal\include\helpids.h \
+                       .\keyboard.h
+
+$(OBJDIR)\kbmgr.obj:  .\kbmgr.cpp .\keyboard.h
+
+$(OBJDIR)\keybrdof.obj:  .\keybrdof.cpp .\keyboard.h
+
+$(OBJDIR)\keybrdon.obj:  .\keybrdon.cpp .\keyboard.h
+
+$(OBJDIR)\shiftkey.obj:  .\shiftkey.cpp .\keyboard.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\keyboard.res 
+
+
+$(OBJDIR)\keyboard.res:  .\keyboard.rc .\keyboard.h d:\borlandc\include\ver.h \
+                         d:\borlandc\include\bwcc.h \
+                         d:\borlandc\include\windows.h
+

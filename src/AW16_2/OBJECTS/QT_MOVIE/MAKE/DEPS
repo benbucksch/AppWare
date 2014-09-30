@@ -1,0 +1,53 @@
+OBJECTFILES= \
+	$(OBJDIR)\movadmn.obj \
+	$(OBJDIR)\movdspfn.obj \
+	$(OBJDIR)\movedit.obj \
+	$(OBJDIR)\movie_hi.obj \
+	$(OBJDIR)\moviedit.obj \
+	$(OBJDIR)\moviefnc.obj \
+	$(OBJDIR)\movimpex.obj \
+	$(OBJDIR)\movinffn.obj \
+	$(OBJDIR)\movmain.obj \
+	$(OBJDIR)\movmeth.obj \
+	$(OBJDIR)\movmetr.obj 
+
+
+$(OBJDIR)\movadmn.obj:  .\movadmn.cpp .\movctrl.h .\movieexp.h .\moviedat.h \
+                        .\qtw.h .\moviedlg.h
+
+$(OBJDIR)\movdspfn.obj:  .\movdspfn.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                         .\moviedlg.h
+
+$(OBJDIR)\movedit.obj:  .\movedit.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                        .\moviedlg.h
+
+$(OBJDIR)\movie_hi.obj:  .\movie_hi.cpp .\movctrl.h .\movieexp.h .\moviedat.h \
+                         .\qtw.h .\moviedlg.h
+
+$(OBJDIR)\moviedit.obj:  .\moviedit.cpp .\movctrl.h .\movieexp.h .\moviedat.h \
+                         .\moviedlg.h .\qtw.h
+
+$(OBJDIR)\moviefnc.obj:  .\moviefnc.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                         .\moviedlg.h
+
+$(OBJDIR)\movimpex.obj:  .\movimpex.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                         .\moviedlg.h
+
+$(OBJDIR)\movinffn.obj:  .\movinffn.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                         .\moviedlg.h
+
+$(OBJDIR)\movmain.obj:  .\movmain.cpp .\moviedat.h .\movieexp.h .\qtw.h \
+                        .\moviedlg.h
+
+$(OBJDIR)\movmeth.obj:  .\movmeth.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                        .\moviedlg.h
+
+$(OBJDIR)\movmetr.obj:  .\movmetr.cpp .\movieexp.h .\moviedat.h .\qtw.h \
+                        .\moviedlg.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\qtmovie.res 
+
+
+$(OBJDIR)\qtmovie.res:  .\qtmovie.rc .\qtw.err .\movie.ver .\moviedlg.h
+

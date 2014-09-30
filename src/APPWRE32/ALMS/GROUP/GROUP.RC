@@ -1,0 +1,80 @@
+/*---------------------------
+   Fileobj.RC resource script
+  ---------------------------*/
+
+#include <windows.h>
+#include <ver.h>
+
+#include "groupobj.h"
+
+group ICON "group.ico"
+
+group DIALOG 27, 30, 324, 131
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Group"
+FONT 8, "MS Sans Serif"
+{
+ DEFPUSHBUTTON "OK", IDOK, 266, 8, 50, 14, BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 266, 26, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "&Help", IDHELP, 266, 44, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ LTEXT "Objects in &Group:", -1, 18, 18, 63, 11, WS_CHILD | WS_VISIBLE | WS_GROUP
+ LISTBOX IDD_FIELDSLIST, 18, 29, 60, 78, LBS_NOTIFY | LBS_MULTIPLESEL | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ PUSHBUTTON " << &Add <<", addB, 86, 37, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "&Remove", removeB, 86, 55, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_TABSTOP
+ PUSHBUTTON "&Edit...", editB, 86, 75, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_TABSTOP
+ LTEXT "A&vailable Objects:", -1, 144, 18, 70, 11, WS_CHILD | WS_VISIBLE | WS_GROUP
+ LISTBOX IDD_OBJECTSLIST, 144, 29, 60, 78, LBS_NOTIFY | LBS_MULTIPLESEL | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+ CONTROL "Text", textB, "BUTTON", BS_AUTORADIOBUTTON, 212, 37, 29, 12
+ CONTROL "Number", numberB, "BUTTON", BS_AUTORADIOBUTTON, 212, 49, 39, 12
+ CONTROL "Picture", pictureB, "BUTTON", BS_AUTORADIOBUTTON, 212, 61, 36, 12
+ CONTROL "List", listB, "BUTTON", BS_AUTORADIOBUTTON, 212, 73, 30, 12
+ CONTROL "Other", otherB, "BUTTON", BS_AUTORADIOBUTTON, 212, 85, 32, 12
+ GROUPBOX "Group", IDC_GROUPBOX1, 8, 5, 250, 115, BS_GROUPBOX
+}
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Group Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32GRUP\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32GRUP.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

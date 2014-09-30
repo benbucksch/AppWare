@@ -1,0 +1,2877 @@
+******************************
+Getting files from SourceSafe in project NWMHS
+	+++  ss cd $/appware/objects/NWMHS
+
+Current project is $/appware/objects/NWMHS
+	+++  ss get * -r
+
+$/appware/objects/NWMHS:
+ALM_MHS.DEF
+MAKEFILE
+MHS-ADMN.CPP
+MHS-API.CPP
+MHS-EDIT.CPP
+MHS-FUNC.CPP
+MHS-METH.CPP
+MHS-SEND.CPP
+MHSPARSE.CPP
+MHSRECIP.CPP
+NW-MHS.H
+NW-MHS.ICO
+NW-MHS.RC
+NW-MHSRC.H
+
+$/appware/objects/NWMHS/help:
+MHS-HELP.DOC
+MHS-HELP.HH
+MHS-HELP.HPJ
+MHS-HELP.PH
+MHS-HELP.RBH
+MHS-HELP.RTF
+
+$/appware/objects/NWMHS/make:
+FILES.LST
+OBJINFO.MAK
+RCFILES.LST
+
+Getting files from SourceSafe in project NWMSG
+	+++  ss cd $/appware/objects/NWMSG
+
+Current project is $/appware/objects/NWMSG
+	+++  ss get * -r
+
+$/appware/objects/NWMSG:
+ALM_MSG.DEF
+DELIVOPT.CPP
+MAKEFILE
+MSGADMN.CPP
+MSGAPI.CPP
+MSGAPI2.CPP
+MSGATTCH.CPP
+MSGEDIT.CPP
+MSGFUNC.CPP
+MSGMETH.CPP
+MSGRECIP.CPP
+MSGVALUE.CPP
+NW-MSG.H
+NW-MSG.RC
+NW-MSGRC.H
+NWSMFMSG.ICO
+
+$/appware/objects/NWMSG/help:
+MSG-HELP.DOC
+MSG-HELP.HH
+MSG-HELP.HPJ
+MSG-HELP.PH
+MSG-HELP.RBH
+MSG-HELP.RTF
+
+$/appware/objects/NWMSG/make:
+FILES.LST
+OBJINFO.MAK
+RCFILES.LST
+
+Copying files to common include
+	+++  attrib -r n:\internal\INCLUDE\op_wnd.h
+
+--a--- n:op_wnd.h
+	+++  copy N:\OBJECTS\include\op_wnd.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\op_wnd.h
+
+r-a--- n:op_wnd.h
+	+++  attrib -r n:\internal\INCLUDE\o_button.h
+
+--a--- n:o_button.h
+	+++  copy N:\OBJECTS\include\o_button.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_button.h
+
+r-a--- n:o_button.h
+	+++  attrib -r n:\internal\INCLUDE\o_comm.h
+
+--a--- n:o_comm.h
+	+++  copy N:\OBJECTS\include\o_comm.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_comm.h
+
+r-a--- n:o_comm.h
+	+++  attrib -r n:\internal\INCLUDE\o_datb.h
+
+--a--- n:o_datb.h
+	+++  copy N:\OBJECTS\include\o_datb.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_datb.h
+
+r-a--- n:o_datb.h
+	+++  attrib -r n:\internal\INCLUDE\o_date.h
+
+--a--- n:o_date.h
+	+++  copy N:\OBJECTS\include\o_date.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_date.h
+
+r-a--- n:o_date.h
+	+++  attrib -r n:\internal\INCLUDE\o_flag.h
+
+--a--- n:o_flag.h
+	+++  copy N:\OBJECTS\include\o_flag.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_flag.h
+
+r-a--- n:o_flag.h
+	+++  attrib -r n:\internal\INCLUDE\o_genrl.h
+
+--a--- n:o_genrl.h
+	+++  copy N:\OBJECTS\include\o_genrl.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_genrl.h
+
+r-a--- n:o_genrl.h
+	+++  attrib -r n:\internal\INCLUDE\o_list.h
+
+--a--- n:o_list.h
+	+++  copy N:\OBJECTS\include\o_list.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_list.h
+
+r-a--- n:o_list.h
+	+++  attrib -r n:\internal\INCLUDE\o_menus.h
+
+--a--- n:o_menus.h
+	+++  copy N:\OBJECTS\include\o_menus.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_menus.h
+
+r-a--- n:o_menus.h
+	+++  attrib -r n:\internal\INCLUDE\o_number.h
+
+--a--- n:o_number.h
+	+++  copy N:\OBJECTS\include\o_number.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_number.h
+
+r-a--- n:o_number.h
+	+++  attrib -r n:\internal\INCLUDE\o_nwmhs.h
+
+--a--- n:o_nwmhs.h
+	+++  copy N:\OBJECTS\include\o_nwmhs.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_nwmhs.h
+
+r-a--- n:o_nwmhs.h
+	+++  attrib -r n:\internal\INCLUDE\o_nwmsg.h
+
+--a--- n:o_nwmsg.h
+	+++  copy N:\OBJECTS\include\o_nwmsg.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_nwmsg.h
+
+r-a--- n:o_nwmsg.h
+	+++  attrib -r n:\internal\INCLUDE\o_pict.h
+
+--a--- n:o_pict.h
+	+++  copy N:\OBJECTS\include\o_pict.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_pict.h
+
+r-a--- n:o_pict.h
+	+++  attrib -r n:\internal\INCLUDE\o_print.h
+
+--a--- n:o_print.h
+	+++  copy N:\OBJECTS\include\o_print.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_print.h
+
+r-a--- n:o_print.h
+	+++  attrib -r n:\internal\INCLUDE\o_sql.h
+
+--a--- n:o_sql.h
+	+++  copy N:\OBJECTS\include\o_sql.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_sql.h
+
+r-a--- n:o_sql.h
+	+++  attrib -r n:\internal\INCLUDE\o_table.h
+
+--a--- n:o_table.h
+	+++  copy N:\OBJECTS\include\o_table.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_table.h
+
+r-a--- n:o_table.h
+	+++  attrib -r n:\internal\INCLUDE\o_text.h
+
+--a--- n:o_text.h
+	+++  copy N:\OBJECTS\include\o_text.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_text.h
+
+r-a--- n:o_text.h
+	+++  attrib -r n:\internal\INCLUDE\o_time.h
+
+--a--- n:o_time.h
+	+++  copy N:\OBJECTS\include\o_time.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_time.h
+
+r-a--- n:o_time.h
+	+++  attrib -r n:\internal\INCLUDE\o_wnd.h
+
+--a--- n:o_wnd.h
+	+++  copy N:\OBJECTS\include\o_wnd.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_wnd.h
+
+r-a--- n:o_wnd.h
+	+++  attrib -r n:\internal\INCLUDE\o_wndlay.h
+
+--a--- n:o_wndlay.h
+	+++  copy N:\OBJECTS\include\o_wndlay.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_wndlay.h
+
+r-a--- n:o_wndlay.h
+	+++  attrib -r n:\internal\INCLUDE\o_wndshp.h
+
+--a--- n:o_wndshp.h
+	+++  copy N:\OBJECTS\include\o_wndshp.h	n:\internal\INCLUDE
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\o_wndshp.h
+
+r-a--- n:o_wndshp.h
+Starting make of system
+
+********************************
+Starting make of NWMHS
+--> Updating dependencies
+	+++  updeps
+
+--> Forcing rebuild of all
+	+++  make -i -B INTERNAL=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 9625600 bytes
+
+        bcc @MAKE0000.$$$ .\mhs-admn.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-admn.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhs-admn.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-api.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-api.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhs-api.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-edit.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-edit.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'OBJ\mhs-edit.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-func.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-func.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhs-func.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-meth.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-meth.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhs-meth.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-send.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-send.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhs-send.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhsparse.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhsparse.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhsparse.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhsrecip.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhsrecip.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\mhsrecip.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        rc -r -DINTERNAL -foobj\nw-mhs.res .\nw-mhs.rc
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+
+RC : fatal error RW1009: Error Creating obj\nw-mhs.res
+        tlink -c -C -x -P- -Twd -v -LN:\INTERNAL\LIB;R:\BORLANDC\LIB @MAKE0002.$$$
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Fatal: Unable to open file 'obj\alm_mhs.dll'
+        rc -31 -t  obj\nw-mhs.res  obj\alm_mhs.dll
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+        implib obj\alm_mhs.lib ALM_MHS.DEF
+Turbo ImpLib  Version 1.0  Copyright (c) 1992 Borland International
+All rights reserved.  
+
+Error: obj\alm_mhs.lib - Permission denied
+********************************
+Starting make of NWMSG
+--> Updating dependencies
+	+++  updeps
+
+--> Forcing rebuild of all
+	+++  make -i -B INTERNAL=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 9625600 bytes
+
+        bcc @MAKE0000.$$$ .\delivopt.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\delivopt.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\delivopt.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgadmn.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgadmn.cpp:
+Fatal R:\BORLANDC\INCLUDE\mem.h 9: Unable to create output file 'OBJ\msgadmn.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgapi.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgapi.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\msgapi.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgapi2.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgapi2.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\msgapi2.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgattch.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgattch.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\msgattch.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgedit.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgedit.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'OBJ\msgedit.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgfunc.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgfunc.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\msgfunc.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgmeth.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgmeth.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'OBJ\msgmeth.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgrecip.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgrecip.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\msgrecip.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgvalue.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgvalue.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'OBJ\msgvalue.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        rc -r -DINTERNAL -foobj\nw-msg.res .\nw-msg.rc
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+
+RC : fatal error RW1009: Error Creating obj\nw-msg.res
+        tlink -c -C -x -P- -Twd -v -LN:\INTERNAL\LIB;R:\BORLANDC\LIB @MAKE0002.$$$
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Fatal: Unable to open file 'obj\alm_msg.dll'
+        rc -31 -t  obj\nw-msg.res  obj\alm_msg.dll
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+        implib obj\alm_msg.lib ALM_MSG.DEF
+Turbo ImpLib  Version 1.0  Copyright (c) 1992 Borland International
+All rights reserved.  
+
+Error: obj\alm_msg.lib - Permission denied
+Copying .LIB files to common lib
+	+++  attrib -r n:\internal\LIB\alm_butn.lib
+
+--a--- n:alm_butn.lib
+	+++  copy N:\OBJECTS\button\obj\alm_butn.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_butn.lib
+
+r-a--- n:alm_butn.lib
+	+++  attrib -r n:\internal\LIB\alm_cnct.lib
+
+--a--- n:alm_cnct.lib
+	+++  copy N:\OBJECTS\conncnt\obj\alm_cnct.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_cnct.lib
+
+r-a--- n:alm_cnct.lib
+	+++  attrib -r n:\internal\LIB\alm_datb.lib
+
+--a--- n:alm_datb.lib
+	+++  copy N:\OBJECTS\database\obj\alm_datb.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_datb.lib
+
+r-a--- n:alm_datb.lib
+	+++  attrib -r n:\internal\LIB\alm_date.lib
+
+--a--- n:alm_date.lib
+	+++  copy N:\OBJECTS\date\obj\alm_date.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_date.lib
+
+r-a--- n:alm_date.lib
+	+++  attrib -r n:\internal\LIB\alm_flag.lib
+
+--a--- n:alm_flag.lib
+	+++  copy N:\OBJECTS\flag\obj\alm_flag.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_flag.lib
+
+r-a--- n:alm_flag.lib
+	+++  attrib -r n:\internal\LIB\alm_menu.lib
+
+--a--- n:alm_menu.lib
+	+++  copy N:\OBJECTS\menus\obj\alm_menu.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_menu.lib
+
+r-a--- n:alm_menu.lib
+	+++  attrib -r n:\internal\LIB\alm_nmbr.lib
+
+--a--- n:alm_nmbr.lib
+	+++  copy N:\OBJECTS\number\obj\alm_nmbr.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_nmbr.lib
+
+r-a--- n:alm_nmbr.lib
+	+++  attrib -r n:\internal\LIB\alm_mhs.lib
+
+--a--- n:alm_mhs.lib
+	+++  copy N:\OBJECTS\nwmhs\obj\alm_mhs.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_mhs.lib
+
+r-a--- n:alm_mhs.lib
+	+++  attrib -r n:\internal\LIB\alm_msg.lib
+
+--a--- n:alm_msg.lib
+	+++  copy N:\OBJECTS\nwmsg\obj\alm_msg.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_msg.lib
+
+r-a--- n:alm_msg.lib
+	+++  attrib -r n:\internal\LIB\alm_osql.lib
+
+--a--- n:alm_osql.lib
+	+++  copy N:\OBJECTS\oracle\obj\alm_osql.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_osql.lib
+
+r-a--- n:alm_osql.lib
+	+++  attrib -r n:\internal\LIB\alm_pict.lib
+
+--a--- n:alm_pict.lib
+	+++  copy N:\OBJECTS\picture\obj\alm_pict.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_pict.lib
+
+r-a--- n:alm_pict.lib
+	+++  attrib -r n:\internal\LIB\alm_tabl.lib
+
+--a--- n:alm_tabl.lib
+	+++  copy N:\OBJECTS\table\obj\alm_tabl.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_tabl.lib
+
+r-a--- n:alm_tabl.lib
+	+++  attrib -r n:\internal\LIB\alm_text.lib
+
+--a--- n:alm_text.lib
+	+++  copy N:\OBJECTS\text\obj\alm_text.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_text.lib
+
+r-a--- n:alm_text.lib
+	+++  attrib -r n:\internal\LIB\alm_time.lib
+
+--a--- n:alm_time.lib
+	+++  copy N:\OBJECTS\time\obj\alm_time.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_time.lib
+
+r-a--- n:alm_time.lib
+	+++  attrib -r n:\internal\LIB\alm_wnd.lib
+
+--a--- n:alm_wnd.lib
+	+++  copy N:\OBJECTS\window\obj\alm_wnd.lib	n:\internal\LIB
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\alm_wnd.lib
+
+r-a--- n:alm_wnd.lib
+Copying .DLL files to common BIN
+	+++  attrib -r n:\internal\BIN\alm_sysm.dll
+
+--a--- n:alm_sysm.dll
+	+++  copy N:\OBJECTS\applicat\obj\alm_sysm.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_sysm.dll
+
+r-a--- n:alm_sysm.dll
+	+++  attrib -r n:\internal\BIN\alm_brws.dll
+
+--a--- n:alm_brws.dll
+	+++  copy N:\OBJECTS\browser\obj\alm_brws.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_brws.dll
+
+r-a--- n:alm_brws.dll
+	+++  attrib -r n:\internal\BIN\alm_bndl.dll
+
+--a--- n:alm_bndl.dll
+	+++  copy N:\OBJECTS\bundle\obj\alm_bndl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_bndl.dll
+
+r-a--- n:alm_bndl.dll
+	+++  attrib -r n:\internal\BIN\alm_butn.dll
+
+--a--- n:alm_butn.dll
+	+++  copy N:\OBJECTS\button\obj\alm_butn.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_butn.dll
+
+r-a--- n:alm_butn.dll
+	+++  attrib -r n:\internal\BIN\alm_calc.dll
+
+--a--- n:alm_calc.dll
+	+++  copy N:\OBJECTS\calc\obj\alm_calc.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_calc.dll
+
+r-a--- n:alm_calc.dll
+	+++  attrib -r n:\internal\BIN\alm_cnct.dll
+
+--a--- n:alm_cnct.dll
+	+++  copy N:\OBJECTS\conncnt\obj\alm_cnct.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_cnct.dll
+
+r-a--- n:alm_cnct.dll
+	+++  attrib -r n:\internal\BIN\alm_acur.dll
+
+--a--- n:alm_acur.dll
+	+++  copy N:\OBJECTS\cursor\obj\alm_acur.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_acur.dll
+
+r-a--- n:alm_acur.dll
+	+++  attrib -r n:\internal\BIN\alm_datb.dll
+
+--a--- n:alm_datb.dll
+	+++  copy N:\OBJECTS\database\obj\alm_datb.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_datb.dll
+
+r-a--- n:alm_datb.dll
+	+++  attrib -r n:\internal\BIN\alm_date.dll
+
+--a--- n:alm_date.dll
+	+++  copy N:\OBJECTS\date\obj\alm_date.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_date.dll
+
+r-a--- n:alm_date.dll
+	+++  attrib -r n:\internal\BIN\alm_ddec.dll
+
+--a--- n:alm_ddec.dll
+	+++  copy N:\OBJECTS\ddeclien\obj\alm_ddec.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ddec.dll
+
+r-a--- n:alm_ddec.dll
+	+++  attrib -r n:\internal\BIN\alm_ddes.dll
+
+--a--- n:alm_ddes.dll
+	+++  copy N:\OBJECTS\ddeserve\obj\alm_ddes.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ddes.dll
+
+r-a--- n:alm_ddes.dll
+	+++  attrib -r n:\internal\BIN\alm_dll.dll
+
+--a--- n:alm_dll.dll
+	+++  copy N:\OBJECTS\dll\obj\alm_dll.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_dll.dll
+
+r-a--- n:alm_dll.dll
+	+++  attrib -r n:\internal\BIN\alm_flop.dll
+
+--a--- n:alm_flop.dll
+	+++  copy N:\OBJECTS\fileops\obj\alm_flop.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_flop.dll
+
+r-a--- n:alm_flop.dll
+	+++  attrib -r n:\internal\BIN\alm_file.dll
+
+--a--- n:alm_file.dll
+	+++  copy N:\OBJECTS\file\obj\alm_file.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_file.dll
+
+r-a--- n:alm_file.dll
+	+++  attrib -r n:\internal\BIN\alm_fltr.dll
+
+--a--- n:alm_fltr.dll
+	+++  copy N:\OBJECTS\filetran\obj\alm_fltr.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_fltr.dll
+
+r-a--- n:alm_fltr.dll
+	+++  attrib -r n:\internal\BIN\alm_flag.dll
+
+--a--- n:alm_flag.dll
+	+++  copy N:\OBJECTS\flag\obj\alm_flag.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_flag.dll
+
+r-a--- n:alm_flag.dll
+	+++  attrib -r n:\internal\BIN\alm_gnrl.dll
+
+--a--- n:alm_gnrl.dll
+	+++  copy N:\OBJECTS\general\obj\alm_gnrl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_gnrl.dll
+
+r-a--- n:alm_gnrl.dll
+	+++  attrib -r n:\internal\BIN\alm_grup.dll
+
+--a--- n:alm_grup.dll
+	+++  copy N:\OBJECTS\group\obj\alm_grup.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_grup.dll
+
+r-a--- n:alm_grup.dll
+	+++  attrib -r n:\internal\BIN\alm_imex.dll
+
+--a--- n:alm_imex.dll
+	+++  copy N:\OBJECTS\imp-exp\obj\alm_imex.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_imex.dll
+
+r-a--- n:alm_imex.dll
+	+++  attrib -r n:\internal\BIN\alm_keyb.dll
+
+--a--- n:alm_keyb.dll
+	+++  copy N:\OBJECTS\keyboard\obj\alm_keyb.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_keyb.dll
+
+r-a--- n:alm_keyb.dll
+	+++  attrib -r n:\internal\BIN\alm_appl.dll
+
+--a--- n:alm_appl.dll
+	+++  copy N:\OBJECTS\launch\obj\alm_appl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_appl.dll
+
+r-a--- n:alm_appl.dll
+	+++  attrib -r n:\internal\BIN\alm_list.dll
+
+--a--- n:alm_list.dll
+	+++  copy N:\OBJECTS\list\obj\alm_list.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_list.dll
+
+r-a--- n:alm_list.dll
+	+++  attrib -r n:\internal\BIN\alm_loop.dll
+
+--a--- n:alm_loop.dll
+	+++  copy N:\OBJECTS\loop\obj\alm_loop.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_loop.dll
+
+r-a--- n:alm_loop.dll
+	+++  attrib -r n:\internal\BIN\alm_menu.dll
+
+--a--- n:alm_menu.dll
+	+++  copy N:\OBJECTS\menus\obj\alm_menu.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_menu.dll
+
+r-a--- n:alm_menu.dll
+	+++  attrib -r n:\internal\BIN\alm_ntfy.dll
+
+--a--- n:alm_ntfy.dll
+	+++  copy N:\OBJECTS\notify\obj\alm_ntfy.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ntfy.dll
+
+r-a--- n:alm_ntfy.dll
+	+++  attrib -r n:\internal\BIN\alm_nmbr.dll
+
+--a--- n:alm_nmbr.dll
+	+++  copy N:\OBJECTS\number\obj\alm_nmbr.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_nmbr.dll
+
+r-a--- n:alm_nmbr.dll
+	+++  attrib -r n:\internal\BIN\alm_mhs.dll
+
+--a--- n:alm_mhs.dll
+	+++  copy N:\OBJECTS\nwmhs\obj\alm_mhs.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_mhs.dll
+
+r-a--- n:alm_mhs.dll
+	+++  attrib -r n:\internal\BIN\alm_msg.dll
+
+--a--- n:alm_msg.dll
+	+++  copy N:\OBJECTS\nwmsg\obj\alm_msg.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_msg.dll
+
+r-a--- n:alm_msg.dll
+	+++  attrib -r n:\internal\BIN\alm_ole1.dll
+
+--a--- n:alm_ole1.dll
+	+++  copy N:\OBJECTS\ole1\obj\alm_ole1.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_ole1.dll
+
+r-a--- n:alm_ole1.dll
+	+++  attrib -r n:\internal\BIN\alm_osql.dll
+
+--a--- n:alm_osql.dll
+	+++  copy N:\OBJECTS\oracle\obj\alm_osql.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_osql.dll
+
+r-a--- n:alm_osql.dll
+	+++  attrib -r n:\internal\BIN\alm_page.dll
+
+--a--- n:alm_page.dll
+	+++  copy N:\OBJECTS\page\obj\alm_page.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_page.dll
+
+r-a--- n:alm_page.dll
+	+++  attrib -r n:\internal\BIN\alm_pict.dll
+
+--a--- n:alm_pict.dll
+	+++  copy N:\OBJECTS\picture\obj\alm_pict.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_pict.dll
+
+r-a--- n:alm_pict.dll
+	+++  attrib -r n:\internal\BIN\alm_prnt.dll
+
+--a--- n:alm_prnt.dll
+	+++  copy N:\OBJECTS\print\obj\alm_prnt.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_prnt.dll
+
+r-a--- n:alm_prnt.dll
+	+++  attrib -r n:\internal\BIN\alm_qsql.dll
+
+--a--- n:alm_qsql.dll
+	+++  copy N:\OBJECTS\qpluse\obj\alm_qsql.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_qsql.dll
+
+r-a--- n:alm_qsql.dll
+	+++  attrib -r n:\internal\BIN\alm_radg.dll
+
+--a--- n:alm_radg.dll
+	+++  copy N:\OBJECTS\radgroup\obj\alm_radg.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_radg.dll
+
+r-a--- n:alm_radg.dll
+	+++  attrib -r n:\internal\BIN\alm_scal.dll
+
+--a--- n:alm_scal.dll
+	+++  copy N:\OBJECTS\scale\obj\alm_scal.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_scal.dll
+
+r-a--- n:alm_scal.dll
+	+++  attrib -r n:\internal\BIN\alm_sbar.dll
+
+--a--- n:alm_sbar.dll
+	+++  copy N:\OBJECTS\scrolbar\obj\alm_sbar.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_sbar.dll
+
+r-a--- n:alm_sbar.dll
+	+++  attrib -r n:\internal\BIN\alm_shap.dll
+
+--a--- n:alm_shap.dll
+	+++  copy N:\OBJECTS\shapes\obj\alm_shap.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_shap.dll
+
+r-a--- n:alm_shap.dll
+	+++  attrib -r n:\internal\BIN\alm_sigs.dll
+
+--a--- n:alm_sigs.dll
+	+++  copy N:\OBJECTS\signal\obj\alm_sigs.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_sigs.dll
+
+r-a--- n:alm_sigs.dll
+	+++  attrib -r n:\internal\BIN\alm_subr.dll
+
+--a--- n:alm_subr.dll
+	+++  copy N:\OBJECTS\sub\obj\alm_subr.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_subr.dll
+
+r-a--- n:alm_subr.dll
+	+++  attrib -r n:\internal\BIN\alm_tabl.dll
+
+--a--- n:alm_tabl.dll
+	+++  copy N:\OBJECTS\table\obj\alm_tabl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_tabl.dll
+
+r-a--- n:alm_tabl.dll
+	+++  attrib -r n:\internal\BIN\alm_tmnl.dll
+
+--a--- n:alm_tmnl.dll
+	+++  copy N:\OBJECTS\terminal\obj\alm_tmnl.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_tmnl.dll
+
+r-a--- n:alm_tmnl.dll
+	+++  attrib -r n:\internal\BIN\alm_tfct.dll
+
+--a--- n:alm_tfct.dll
+	+++  copy N:\OBJECTS\textfact\obj\alm_tfct.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_tfct.dll
+
+r-a--- n:alm_tfct.dll
+	+++  attrib -r n:\internal\BIN\alm_text.dll
+
+--a--- n:alm_text.dll
+	+++  copy N:\OBJECTS\text\obj\alm_text.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_text.dll
+
+r-a--- n:alm_text.dll
+	+++  attrib -r n:\internal\BIN\alm_time.dll
+
+--a--- n:alm_time.dll
+	+++  copy N:\OBJECTS\time\obj\alm_time.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_time.dll
+
+r-a--- n:alm_time.dll
+	+++  attrib -r n:\internal\BIN\alm_wnd.dll
+
+--a--- n:alm_wnd.dll
+	+++  copy N:\OBJECTS\window\obj\alm_wnd.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_wnd.dll
+
+r-a--- n:alm_wnd.dll
+	+++  attrib -r n:\internal\BIN\alm_wlay.dll
+
+--a--- n:alm_wlay.dll
+	+++  copy N:\OBJECTS\w_layout\obj\alm_wlay.dll	n:\internal\BIN
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\alm_wlay.dll
+
+r-a--- n:alm_wlay.dll
+******************************
+Copying files to common include
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\op_wnd.h
+
+--a--- n:op_wnd.h
+	+++  copy N:\OBJECTS\include\op_wnd.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\op_wnd.h
+
+r-a--- n:op_wnd.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_button.h
+
+--a--- n:o_button.h
+	+++  copy N:\OBJECTS\include\o_button.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_button.h
+
+r-a--- n:o_button.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_comm.h
+
+--a--- n:o_comm.h
+	+++  copy N:\OBJECTS\include\o_comm.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_comm.h
+
+r-a--- n:o_comm.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_datb.h
+
+--a--- n:o_datb.h
+	+++  copy N:\OBJECTS\include\o_datb.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_datb.h
+
+r-a--- n:o_datb.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_date.h
+
+--a--- n:o_date.h
+	+++  copy N:\OBJECTS\include\o_date.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_date.h
+
+r-a--- n:o_date.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_flag.h
+
+--a--- n:o_flag.h
+	+++  copy N:\OBJECTS\include\o_flag.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_flag.h
+
+r-a--- n:o_flag.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_genrl.h
+
+--a--- n:o_genrl.h
+	+++  copy N:\OBJECTS\include\o_genrl.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_genrl.h
+
+r-a--- n:o_genrl.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_list.h
+
+--a--- n:o_list.h
+	+++  copy N:\OBJECTS\include\o_list.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_list.h
+
+r-a--- n:o_list.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_menus.h
+
+--a--- n:o_menus.h
+	+++  copy N:\OBJECTS\include\o_menus.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_menus.h
+
+r-a--- n:o_menus.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_number.h
+
+--a--- n:o_number.h
+	+++  copy N:\OBJECTS\include\o_number.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_number.h
+
+r-a--- n:o_number.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_nwmhs.h
+
+--a--- n:o_nwmhs.h
+	+++  copy N:\OBJECTS\include\o_nwmhs.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_nwmhs.h
+
+r-a--- n:o_nwmhs.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_nwmsg.h
+
+--a--- n:o_nwmsg.h
+	+++  copy N:\OBJECTS\include\o_nwmsg.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_nwmsg.h
+
+r-a--- n:o_nwmsg.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_pict.h
+
+--a--- n:o_pict.h
+	+++  copy N:\OBJECTS\include\o_pict.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_pict.h
+
+r-a--- n:o_pict.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_print.h
+
+--a--- n:o_print.h
+	+++  copy N:\OBJECTS\include\o_print.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_print.h
+
+r-a--- n:o_print.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_sql.h
+
+--a--- n:o_sql.h
+	+++  copy N:\OBJECTS\include\o_sql.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_sql.h
+
+r-a--- n:o_sql.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_table.h
+
+--a--- n:o_table.h
+	+++  copy N:\OBJECTS\include\o_table.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_table.h
+
+r-a--- n:o_table.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_text.h
+
+--a--- n:o_text.h
+	+++  copy N:\OBJECTS\include\o_text.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_text.h
+
+r-a--- n:o_text.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_time.h
+
+--a--- n:o_time.h
+	+++  copy N:\OBJECTS\include\o_time.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_time.h
+
+r-a--- n:o_time.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_wnd.h
+
+--a--- n:o_wnd.h
+	+++  copy N:\OBJECTS\include\o_wnd.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_wnd.h
+
+r-a--- n:o_wnd.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_wndlay.h
+
+--a--- n:o_wndlay.h
+	+++  copy N:\OBJECTS\include\o_wndlay.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_wndlay.h
+
+r-a--- n:o_wndlay.h
+	+++  attrib -r n:\internal\INCLUDE\DEBUG\o_wndshp.h
+
+--a--- n:o_wndshp.h
+	+++  copy N:\OBJECTS\include\o_wndshp.h	n:\internal\INCLUDE\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\DEBUG\o_wndshp.h
+
+r-a--- n:o_wndshp.h
+Starting make of system
+
+********************************
+Starting make of NWMHS
+--> Forcing rebuild of all
+	+++  make -i -B DEBUG=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 9625600 bytes
+
+        bcc @MAKE0000.$$$ .\mhs-admn.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-admn.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhs-admn.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-api.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-api.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhs-api.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-edit.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-edit.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'DOBJ\mhs-edit.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-func.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-func.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhs-func.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-meth.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-meth.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhs-meth.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-send.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-send.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhs-send.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhsparse.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhsparse.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhsparse.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhsrecip.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhsrecip.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\mhsrecip.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        rc -r -DDEBUGRELEASE -fodobj\nw-mhs.res .\nw-mhs.rc
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+
+RC : fatal error RW1009: Error Creating dobj\nw-mhs.res
+        tlink -c -C -x -P- -Twd  -LN:\INTERNAL\LIB;R:\BORLANDC\LIB @MAKE0002.$$$
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Fatal: Unable to open file 'dobj\alm_mhs.dll'
+        rc -31 -t  dobj\nw-mhs.res  dobj\alm_mhs.dll
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+        implib dobj\alm_mhs.lib ALM_MHS.DEF
+Turbo ImpLib  Version 1.0  Copyright (c) 1992 Borland International
+All rights reserved.  
+
+Error: dobj\alm_mhs.lib - Permission denied
+********************************
+Starting make of NWMSG
+--> Forcing rebuild of all
+	+++  make -i -B DEBUG=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 9625600 bytes
+
+        bcc @MAKE0000.$$$ .\delivopt.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\delivopt.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\delivopt.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgadmn.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgadmn.cpp:
+Fatal R:\BORLANDC\INCLUDE\mem.h 9: Unable to create output file 'DOBJ\msgadmn.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgapi.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgapi.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\msgapi.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgapi2.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgapi2.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\msgapi2.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgattch.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgattch.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\msgattch.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgedit.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgedit.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'DOBJ\msgedit.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgfunc.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgfunc.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\msgfunc.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgmeth.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgmeth.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'DOBJ\msgmeth.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgrecip.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgrecip.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\msgrecip.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgvalue.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgvalue.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'DOBJ\msgvalue.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        rc -r -DDEBUGRELEASE -fodobj\nw-msg.res .\nw-msg.rc
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+
+RC : fatal error RW1009: Error Creating dobj\nw-msg.res
+        tlink -c -C -x -P- -Twd  -LN:\INTERNAL\LIB;R:\BORLANDC\LIB @MAKE0002.$$$
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Fatal: Unable to open file 'dobj\alm_msg.dll'
+        rc -31 -t  dobj\nw-msg.res  dobj\alm_msg.dll
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+        implib dobj\alm_msg.lib ALM_MSG.DEF
+Turbo ImpLib  Version 1.0  Copyright (c) 1992 Borland International
+All rights reserved.  
+
+Error: dobj\alm_msg.lib - Permission denied
+Copying .LIB files to common lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_butn.lib
+
+--a--- n:alm_butn.lib
+	+++  copy N:\OBJECTS\button\DOBJ\alm_butn.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_butn.lib
+
+r-a--- n:alm_butn.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_cnct.lib
+
+--a--- n:alm_cnct.lib
+	+++  copy N:\OBJECTS\conncnt\DOBJ\alm_cnct.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_cnct.lib
+
+r-a--- n:alm_cnct.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_datb.lib
+
+--a--- n:alm_datb.lib
+	+++  copy N:\OBJECTS\database\DOBJ\alm_datb.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_datb.lib
+
+r-a--- n:alm_datb.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_date.lib
+
+--a--- n:alm_date.lib
+	+++  copy N:\OBJECTS\date\DOBJ\alm_date.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_date.lib
+
+r-a--- n:alm_date.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_flag.lib
+
+--a--- n:alm_flag.lib
+	+++  copy N:\OBJECTS\flag\DOBJ\alm_flag.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_flag.lib
+
+r-a--- n:alm_flag.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_menu.lib
+
+--a--- n:alm_menu.lib
+	+++  copy N:\OBJECTS\menus\DOBJ\alm_menu.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_menu.lib
+
+r-a--- n:alm_menu.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_nmbr.lib
+
+--a--- n:alm_nmbr.lib
+	+++  copy N:\OBJECTS\number\DOBJ\alm_nmbr.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_nmbr.lib
+
+r-a--- n:alm_nmbr.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_mhs.lib
+
+--a--- n:alm_mhs.lib
+	+++  copy N:\OBJECTS\nwmhs\DOBJ\alm_mhs.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_mhs.lib
+
+r-a--- n:alm_mhs.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_msg.lib
+
+--a--- n:alm_msg.lib
+	+++  copy N:\OBJECTS\nwmsg\DOBJ\alm_msg.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_msg.lib
+
+r-a--- n:alm_msg.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_osql.lib
+
+--a--- n:alm_osql.lib
+	+++  copy N:\OBJECTS\oracle\DOBJ\alm_osql.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_osql.lib
+
+r-a--- n:alm_osql.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_pict.lib
+
+--a--- n:alm_pict.lib
+	+++  copy N:\OBJECTS\picture\DOBJ\alm_pict.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_pict.lib
+
+r-a--- n:alm_pict.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_tabl.lib
+
+--a--- n:alm_tabl.lib
+	+++  copy N:\OBJECTS\table\DOBJ\alm_tabl.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_tabl.lib
+
+r-a--- n:alm_tabl.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_text.lib
+
+--a--- n:alm_text.lib
+	+++  copy N:\OBJECTS\text\DOBJ\alm_text.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_text.lib
+
+r-a--- n:alm_text.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_time.lib
+
+--a--- n:alm_time.lib
+	+++  copy N:\OBJECTS\time\DOBJ\alm_time.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_time.lib
+
+r-a--- n:alm_time.lib
+	+++  attrib -r n:\internal\LIB\DEBUG\alm_wnd.lib
+
+--a--- n:alm_wnd.lib
+	+++  copy N:\OBJECTS\window\DOBJ\alm_wnd.lib	n:\internal\LIB\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\DEBUG\alm_wnd.lib
+
+r-a--- n:alm_wnd.lib
+Copying .DLL files to common BIN
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_sysm.dll
+
+--a--- n:alm_sysm.dll
+	+++  copy N:\OBJECTS\applicat\DOBJ\alm_sysm.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_sysm.dll
+
+r-a--- n:alm_sysm.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_brws.dll
+
+--a--- n:alm_brws.dll
+	+++  copy N:\OBJECTS\browser\DOBJ\alm_brws.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_brws.dll
+
+r-a--- n:alm_brws.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_bndl.dll
+
+--a--- n:alm_bndl.dll
+	+++  copy N:\OBJECTS\bundle\DOBJ\alm_bndl.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_bndl.dll
+
+r-a--- n:alm_bndl.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_butn.dll
+
+--a--- n:alm_butn.dll
+	+++  copy N:\OBJECTS\button\DOBJ\alm_butn.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_butn.dll
+
+r-a--- n:alm_butn.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_calc.dll
+
+--a--- n:alm_calc.dll
+	+++  copy N:\OBJECTS\calc\DOBJ\alm_calc.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_calc.dll
+
+r-a--- n:alm_calc.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_cnct.dll
+
+--a--- n:alm_cnct.dll
+	+++  copy N:\OBJECTS\conncnt\DOBJ\alm_cnct.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_cnct.dll
+
+r-a--- n:alm_cnct.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_acur.dll
+
+--a--- n:alm_acur.dll
+	+++  copy N:\OBJECTS\cursor\DOBJ\alm_acur.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_acur.dll
+
+r-a--- n:alm_acur.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_datb.dll
+
+--a--- n:alm_datb.dll
+	+++  copy N:\OBJECTS\database\DOBJ\alm_datb.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_datb.dll
+
+r-a--- n:alm_datb.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_date.dll
+
+--a--- n:alm_date.dll
+	+++  copy N:\OBJECTS\date\DOBJ\alm_date.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_date.dll
+
+r-a--- n:alm_date.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_ddec.dll
+
+--a--- n:alm_ddec.dll
+	+++  copy N:\OBJECTS\ddeclien\DOBJ\alm_ddec.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_ddec.dll
+
+r-a--- n:alm_ddec.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_ddes.dll
+
+--a--- n:alm_ddes.dll
+	+++  copy N:\OBJECTS\ddeserve\DOBJ\alm_ddes.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_ddes.dll
+
+r-a--- n:alm_ddes.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_dll.dll
+
+--a--- n:alm_dll.dll
+	+++  copy N:\OBJECTS\dll\DOBJ\alm_dll.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_dll.dll
+
+r-a--- n:alm_dll.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_flop.dll
+
+--a--- n:alm_flop.dll
+	+++  copy N:\OBJECTS\fileops\DOBJ\alm_flop.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_flop.dll
+
+r-a--- n:alm_flop.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_file.dll
+
+--a--- n:alm_file.dll
+	+++  copy N:\OBJECTS\file\DOBJ\alm_file.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_file.dll
+
+r-a--- n:alm_file.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_fltr.dll
+
+--a--- n:alm_fltr.dll
+	+++  copy N:\OBJECTS\filetran\DOBJ\alm_fltr.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_fltr.dll
+
+r-a--- n:alm_fltr.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_flag.dll
+
+--a--- n:alm_flag.dll
+	+++  copy N:\OBJECTS\flag\DOBJ\alm_flag.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_flag.dll
+
+r-a--- n:alm_flag.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_gnrl.dll
+
+--a--- n:alm_gnrl.dll
+	+++  copy N:\OBJECTS\general\DOBJ\alm_gnrl.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_gnrl.dll
+
+r-a--- n:alm_gnrl.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_grup.dll
+
+--a--- n:alm_grup.dll
+	+++  copy N:\OBJECTS\group\DOBJ\alm_grup.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_grup.dll
+
+r-a--- n:alm_grup.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_imex.dll
+
+--a--- n:alm_imex.dll
+	+++  copy N:\OBJECTS\imp-exp\DOBJ\alm_imex.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_imex.dll
+
+r-a--- n:alm_imex.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_keyb.dll
+
+--a--- n:alm_keyb.dll
+	+++  copy N:\OBJECTS\keyboard\DOBJ\alm_keyb.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_keyb.dll
+
+r-a--- n:alm_keyb.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_appl.dll
+
+--a--- n:alm_appl.dll
+	+++  copy N:\OBJECTS\launch\DOBJ\alm_appl.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_appl.dll
+
+r-a--- n:alm_appl.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_list.dll
+
+--a--- n:alm_list.dll
+	+++  copy N:\OBJECTS\list\DOBJ\alm_list.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_list.dll
+
+r-a--- n:alm_list.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_loop.dll
+
+--a--- n:alm_loop.dll
+	+++  copy N:\OBJECTS\loop\DOBJ\alm_loop.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_loop.dll
+
+r-a--- n:alm_loop.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_menu.dll
+
+--a--- n:alm_menu.dll
+	+++  copy N:\OBJECTS\menus\DOBJ\alm_menu.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_menu.dll
+
+r-a--- n:alm_menu.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_ntfy.dll
+
+--a--- n:alm_ntfy.dll
+	+++  copy N:\OBJECTS\notify\DOBJ\alm_ntfy.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_ntfy.dll
+
+r-a--- n:alm_ntfy.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_nmbr.dll
+
+--a--- n:alm_nmbr.dll
+	+++  copy N:\OBJECTS\number\DOBJ\alm_nmbr.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_nmbr.dll
+
+r-a--- n:alm_nmbr.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_mhs.dll
+
+--a--- n:alm_mhs.dll
+	+++  copy N:\OBJECTS\nwmhs\DOBJ\alm_mhs.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_mhs.dll
+
+r-a--- n:alm_mhs.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_msg.dll
+
+--a--- n:alm_msg.dll
+	+++  copy N:\OBJECTS\nwmsg\DOBJ\alm_msg.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_msg.dll
+
+r-a--- n:alm_msg.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_ole1.dll
+
+--a--- n:alm_ole1.dll
+	+++  copy N:\OBJECTS\ole1\DOBJ\alm_ole1.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_ole1.dll
+
+r-a--- n:alm_ole1.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_osql.dll
+
+--a--- n:alm_osql.dll
+	+++  copy N:\OBJECTS\oracle\DOBJ\alm_osql.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_osql.dll
+
+r-a--- n:alm_osql.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_page.dll
+
+--a--- n:alm_page.dll
+	+++  copy N:\OBJECTS\page\DOBJ\alm_page.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_page.dll
+
+r-a--- n:alm_page.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_pict.dll
+
+--a--- n:alm_pict.dll
+	+++  copy N:\OBJECTS\picture\DOBJ\alm_pict.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_pict.dll
+
+r-a--- n:alm_pict.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_prnt.dll
+
+--a--- n:alm_prnt.dll
+	+++  copy N:\OBJECTS\print\DOBJ\alm_prnt.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_prnt.dll
+
+r-a--- n:alm_prnt.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_qsql.dll
+
+--a--- n:alm_qsql.dll
+	+++  copy N:\OBJECTS\qpluse\DOBJ\alm_qsql.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_qsql.dll
+
+r-a--- n:alm_qsql.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_radg.dll
+
+--a--- n:alm_radg.dll
+	+++  copy N:\OBJECTS\radgroup\DOBJ\alm_radg.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_radg.dll
+
+r-a--- n:alm_radg.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_scal.dll
+
+--a--- n:alm_scal.dll
+	+++  copy N:\OBJECTS\scale\DOBJ\alm_scal.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_scal.dll
+
+r-a--- n:alm_scal.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_sbar.dll
+
+--a--- n:alm_sbar.dll
+	+++  copy N:\OBJECTS\scrolbar\DOBJ\alm_sbar.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_sbar.dll
+
+r-a--- n:alm_sbar.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_shap.dll
+
+--a--- n:alm_shap.dll
+	+++  copy N:\OBJECTS\shapes\DOBJ\alm_shap.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_shap.dll
+
+r-a--- n:alm_shap.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_sigs.dll
+
+--a--- n:alm_sigs.dll
+	+++  copy N:\OBJECTS\signal\DOBJ\alm_sigs.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_sigs.dll
+
+r-a--- n:alm_sigs.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_subr.dll
+
+--a--- n:alm_subr.dll
+	+++  copy N:\OBJECTS\sub\DOBJ\alm_subr.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_subr.dll
+
+r-a--- n:alm_subr.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_tabl.dll
+
+--a--- n:alm_tabl.dll
+	+++  copy N:\OBJECTS\table\DOBJ\alm_tabl.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_tabl.dll
+
+r-a--- n:alm_tabl.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_tmnl.dll
+
+--a--- n:alm_tmnl.dll
+	+++  copy N:\OBJECTS\terminal\DOBJ\alm_tmnl.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_tmnl.dll
+
+r-a--- n:alm_tmnl.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_tfct.dll
+
+--a--- n:alm_tfct.dll
+	+++  copy N:\OBJECTS\textfact\DOBJ\alm_tfct.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_tfct.dll
+
+r-a--- n:alm_tfct.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_text.dll
+
+--a--- n:alm_text.dll
+	+++  copy N:\OBJECTS\text\DOBJ\alm_text.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_text.dll
+
+r-a--- n:alm_text.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_time.dll
+
+--a--- n:alm_time.dll
+	+++  copy N:\OBJECTS\time\DOBJ\alm_time.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_time.dll
+
+r-a--- n:alm_time.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_wnd.dll
+
+--a--- n:alm_wnd.dll
+	+++  copy N:\OBJECTS\window\DOBJ\alm_wnd.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_wnd.dll
+
+r-a--- n:alm_wnd.dll
+	+++  attrib -r n:\internal\BIN\DEBUG\alm_wlay.dll
+
+--a--- n:alm_wlay.dll
+	+++  copy N:\OBJECTS\w_layout\DOBJ\alm_wlay.dll	n:\internal\BIN\DEBUG
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\DEBUG\alm_wlay.dll
+
+r-a--- n:alm_wlay.dll
+******************************
+Copying files to common include
+	+++  attrib -r n:\internal\INCLUDE\SHIP\op_wnd.h
+
+--a--- n:op_wnd.h
+	+++  copy N:\OBJECTS\include\op_wnd.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\op_wnd.h
+
+r-a--- n:op_wnd.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_button.h
+
+--a--- n:o_button.h
+	+++  copy N:\OBJECTS\include\o_button.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_button.h
+
+r-a--- n:o_button.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_comm.h
+
+--a--- n:o_comm.h
+	+++  copy N:\OBJECTS\include\o_comm.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_comm.h
+
+r-a--- n:o_comm.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_datb.h
+
+--a--- n:o_datb.h
+	+++  copy N:\OBJECTS\include\o_datb.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_datb.h
+
+r-a--- n:o_datb.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_date.h
+
+--a--- n:o_date.h
+	+++  copy N:\OBJECTS\include\o_date.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_date.h
+
+r-a--- n:o_date.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_flag.h
+
+--a--- n:o_flag.h
+	+++  copy N:\OBJECTS\include\o_flag.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_flag.h
+
+r-a--- n:o_flag.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_genrl.h
+
+--a--- n:o_genrl.h
+	+++  copy N:\OBJECTS\include\o_genrl.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_genrl.h
+
+r-a--- n:o_genrl.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_list.h
+
+--a--- n:o_list.h
+	+++  copy N:\OBJECTS\include\o_list.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_list.h
+
+r-a--- n:o_list.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_menus.h
+
+--a--- n:o_menus.h
+	+++  copy N:\OBJECTS\include\o_menus.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_menus.h
+
+r-a--- n:o_menus.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_number.h
+
+--a--- n:o_number.h
+	+++  copy N:\OBJECTS\include\o_number.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_number.h
+
+r-a--- n:o_number.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_nwmhs.h
+
+--a--- n:o_nwmhs.h
+	+++  copy N:\OBJECTS\include\o_nwmhs.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_nwmhs.h
+
+r-a--- n:o_nwmhs.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_nwmsg.h
+
+--a--- n:o_nwmsg.h
+	+++  copy N:\OBJECTS\include\o_nwmsg.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_nwmsg.h
+
+r-a--- n:o_nwmsg.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_pict.h
+
+--a--- n:o_pict.h
+	+++  copy N:\OBJECTS\include\o_pict.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_pict.h
+
+r-a--- n:o_pict.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_print.h
+
+--a--- n:o_print.h
+	+++  copy N:\OBJECTS\include\o_print.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_print.h
+
+r-a--- n:o_print.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_sql.h
+
+--a--- n:o_sql.h
+	+++  copy N:\OBJECTS\include\o_sql.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_sql.h
+
+r-a--- n:o_sql.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_table.h
+
+--a--- n:o_table.h
+	+++  copy N:\OBJECTS\include\o_table.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_table.h
+
+r-a--- n:o_table.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_text.h
+
+--a--- n:o_text.h
+	+++  copy N:\OBJECTS\include\o_text.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_text.h
+
+r-a--- n:o_text.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_time.h
+
+--a--- n:o_time.h
+	+++  copy N:\OBJECTS\include\o_time.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_time.h
+
+r-a--- n:o_time.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_wnd.h
+
+--a--- n:o_wnd.h
+	+++  copy N:\OBJECTS\include\o_wnd.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_wnd.h
+
+r-a--- n:o_wnd.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_wndlay.h
+
+--a--- n:o_wndlay.h
+	+++  copy N:\OBJECTS\include\o_wndlay.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_wndlay.h
+
+r-a--- n:o_wndlay.h
+	+++  attrib -r n:\internal\INCLUDE\SHIP\o_wndshp.h
+
+--a--- n:o_wndshp.h
+	+++  copy N:\OBJECTS\include\o_wndshp.h	n:\internal\INCLUDE\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\INCLUDE\SHIP\o_wndshp.h
+
+r-a--- n:o_wndshp.h
+Starting make of system
+
+********************************
+Starting make of NWMHS
+--> Forcing rebuild of all
+	+++  make -i -B SHIP=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 9625600 bytes
+
+        bcc @MAKE0000.$$$ .\mhs-admn.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-admn.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhs-admn.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-api.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-api.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhs-api.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-edit.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-edit.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'SOBJ\mhs-edit.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-func.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-func.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhs-func.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-meth.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-meth.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhs-meth.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhs-send.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhs-send.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhs-send.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhsparse.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhsparse.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhsparse.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\mhsrecip.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\mhsrecip.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\mhsrecip.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        rc -r -DSHIPPING -fosobj\nw-mhs.res .\nw-mhs.rc
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+
+RC : fatal error RW1009: Error Creating sobj\nw-mhs.res
+        tlink -c -C -x -P- -Twd  -LN:\INTERNAL\LIB;R:\BORLANDC\LIB @MAKE0002.$$$
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Fatal: Unable to open file 'sobj\alm_mhs.dll'
+        rc -31 -t  sobj\nw-mhs.res  sobj\alm_mhs.dll
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+        implib sobj\alm_mhs.lib ALM_MHS.DEF
+Turbo ImpLib  Version 1.0  Copyright (c) 1992 Borland International
+All rights reserved.  
+
+Error: sobj\alm_mhs.lib - Permission denied
+********************************
+Starting make of NWMSG
+--> Forcing rebuild of all
+	+++  make -i -B SHIP=1
+
+MAKE Version 3.6  Copyright (c) 1992 Borland International
+
+Available memory 9625600 bytes
+
+        bcc @MAKE0000.$$$ .\delivopt.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\delivopt.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\delivopt.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgadmn.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgadmn.cpp:
+Fatal R:\BORLANDC\INCLUDE\mem.h 9: Unable to create output file 'SOBJ\msgadmn.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgapi.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgapi.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\msgapi.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgapi2.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgapi2.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\msgapi2.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgattch.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgattch.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\msgattch.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgedit.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgedit.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'SOBJ\msgedit.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgfunc.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgfunc.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\msgfunc.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgmeth.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgmeth.cpp:
+Fatal R:\BORLANDC\INCLUDE\windows.h 68: Unable to create output file 'SOBJ\msgmeth.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgrecip.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgrecip.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\msgrecip.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        bcc @MAKE0000.$$$ .\msgvalue.cpp
+Borland C++  Version 3.1 Copyright (c) 1992 Borland International
+.\msgvalue.cpp:
+Fatal R:\BORLANDC\INCLUDE\stdio.h 9: Unable to create output file 'SOBJ\msgvalue.obj'
+*** 1 errors in Compile ***
+
+        Available memory 4031824
+        rc -r -DSHIPPING -fosobj\nw-msg.res .\nw-msg.rc
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+
+RC : fatal error RW1009: Error Creating sobj\nw-msg.res
+        tlink -c -C -x -P- -Twd  -LN:\INTERNAL\LIB;R:\BORLANDC\LIB @MAKE0002.$$$
+Turbo Link  Version 5.1 Copyright (c) 1992 Borland International
+Fatal: Unable to open file 'sobj\alm_msg.dll'
+        rc -31 -t  sobj\nw-msg.res  sobj\alm_msg.dll
+Microsoft (R) Windows Resource Compiler  Version 3.10
+Copyright (C) Microsoft Corp. 1985-1992.  All rights reserved.
+
+        implib sobj\alm_msg.lib ALM_MSG.DEF
+Turbo ImpLib  Version 1.0  Copyright (c) 1992 Borland International
+All rights reserved.  
+
+Error: sobj\alm_msg.lib - Permission denied
+Copying .LIB files to common lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_butn.lib
+
+--a--- n:alm_butn.lib
+	+++  copy N:\OBJECTS\button\SOBJ\alm_butn.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_butn.lib
+
+r-a--- n:alm_butn.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_cnct.lib
+
+--a--- n:alm_cnct.lib
+	+++  copy N:\OBJECTS\conncnt\SOBJ\alm_cnct.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_cnct.lib
+
+r-a--- n:alm_cnct.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_datb.lib
+
+--a--- n:alm_datb.lib
+	+++  copy N:\OBJECTS\database\SOBJ\alm_datb.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_datb.lib
+
+r-a--- n:alm_datb.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_date.lib
+
+--a--- n:alm_date.lib
+	+++  copy N:\OBJECTS\date\SOBJ\alm_date.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_date.lib
+
+r-a--- n:alm_date.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_flag.lib
+
+--a--- n:alm_flag.lib
+	+++  copy N:\OBJECTS\flag\SOBJ\alm_flag.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_flag.lib
+
+r-a--- n:alm_flag.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_menu.lib
+
+--a--- n:alm_menu.lib
+	+++  copy N:\OBJECTS\menus\SOBJ\alm_menu.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_menu.lib
+
+r-a--- n:alm_menu.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_nmbr.lib
+
+--a--- n:alm_nmbr.lib
+	+++  copy N:\OBJECTS\number\SOBJ\alm_nmbr.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_nmbr.lib
+
+r-a--- n:alm_nmbr.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_mhs.lib
+
+--a--- n:alm_mhs.lib
+	+++  copy N:\OBJECTS\nwmhs\SOBJ\alm_mhs.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_mhs.lib
+
+r-a--- n:alm_mhs.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_msg.lib
+
+--a--- n:alm_msg.lib
+	+++  copy N:\OBJECTS\nwmsg\SOBJ\alm_msg.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_msg.lib
+
+r-a--- n:alm_msg.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_osql.lib
+
+--a--- n:alm_osql.lib
+	+++  copy N:\OBJECTS\oracle\SOBJ\alm_osql.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_osql.lib
+
+r-a--- n:alm_osql.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_pict.lib
+
+--a--- n:alm_pict.lib
+	+++  copy N:\OBJECTS\picture\SOBJ\alm_pict.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_pict.lib
+
+r-a--- n:alm_pict.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_tabl.lib
+
+--a--- n:alm_tabl.lib
+	+++  copy N:\OBJECTS\table\SOBJ\alm_tabl.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_tabl.lib
+
+r-a--- n:alm_tabl.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_text.lib
+
+--a--- n:alm_text.lib
+	+++  copy N:\OBJECTS\text\SOBJ\alm_text.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_text.lib
+
+r-a--- n:alm_text.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_time.lib
+
+--a--- n:alm_time.lib
+	+++  copy N:\OBJECTS\time\SOBJ\alm_time.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_time.lib
+
+r-a--- n:alm_time.lib
+	+++  attrib -r n:\internal\LIB\SHIP\alm_wnd.lib
+
+--a--- n:alm_wnd.lib
+	+++  copy N:\OBJECTS\window\SOBJ\alm_wnd.lib	n:\internal\LIB\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\LIB\SHIP\alm_wnd.lib
+
+r-a--- n:alm_wnd.lib
+Copying .DLL files to common BIN
+	+++  attrib -r n:\internal\BIN\SHIP\alm_sysm.dll
+
+--a--- n:alm_sysm.dll
+	+++  copy N:\OBJECTS\applicat\SOBJ\alm_sysm.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_sysm.dll
+
+r-a--- n:alm_sysm.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_brws.dll
+
+--a--- n:alm_brws.dll
+	+++  copy N:\OBJECTS\browser\SOBJ\alm_brws.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_brws.dll
+
+r-a--- n:alm_brws.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_bndl.dll
+
+--a--- n:alm_bndl.dll
+	+++  copy N:\OBJECTS\bundle\SOBJ\alm_bndl.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_bndl.dll
+
+r-a--- n:alm_bndl.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_butn.dll
+
+--a--- n:alm_butn.dll
+	+++  copy N:\OBJECTS\button\SOBJ\alm_butn.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_butn.dll
+
+r-a--- n:alm_butn.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_calc.dll
+
+--a--- n:alm_calc.dll
+	+++  copy N:\OBJECTS\calc\SOBJ\alm_calc.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_calc.dll
+
+r-a--- n:alm_calc.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_cnct.dll
+
+--a--- n:alm_cnct.dll
+	+++  copy N:\OBJECTS\conncnt\SOBJ\alm_cnct.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_cnct.dll
+
+r-a--- n:alm_cnct.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_acur.dll
+
+--a--- n:alm_acur.dll
+	+++  copy N:\OBJECTS\cursor\SOBJ\alm_acur.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_acur.dll
+
+r-a--- n:alm_acur.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_datb.dll
+
+--a--- n:alm_datb.dll
+	+++  copy N:\OBJECTS\database\SOBJ\alm_datb.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_datb.dll
+
+r-a--- n:alm_datb.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_date.dll
+
+--a--- n:alm_date.dll
+	+++  copy N:\OBJECTS\date\SOBJ\alm_date.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_date.dll
+
+r-a--- n:alm_date.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_ddec.dll
+
+--a--- n:alm_ddec.dll
+	+++  copy N:\OBJECTS\ddeclien\SOBJ\alm_ddec.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_ddec.dll
+
+r-a--- n:alm_ddec.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_ddes.dll
+
+--a--- n:alm_ddes.dll
+	+++  copy N:\OBJECTS\ddeserve\SOBJ\alm_ddes.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_ddes.dll
+
+r-a--- n:alm_ddes.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_dll.dll
+
+--a--- n:alm_dll.dll
+	+++  copy N:\OBJECTS\dll\SOBJ\alm_dll.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_dll.dll
+
+r-a--- n:alm_dll.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_flop.dll
+
+--a--- n:alm_flop.dll
+	+++  copy N:\OBJECTS\fileops\SOBJ\alm_flop.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_flop.dll
+
+r-a--- n:alm_flop.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_file.dll
+
+--a--- n:alm_file.dll
+	+++  copy N:\OBJECTS\file\SOBJ\alm_file.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_file.dll
+
+r-a--- n:alm_file.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_fltr.dll
+
+--a--- n:alm_fltr.dll
+	+++  copy N:\OBJECTS\filetran\SOBJ\alm_fltr.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_fltr.dll
+
+r-a--- n:alm_fltr.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_flag.dll
+
+--a--- n:alm_flag.dll
+	+++  copy N:\OBJECTS\flag\SOBJ\alm_flag.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_flag.dll
+
+r-a--- n:alm_flag.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_gnrl.dll
+
+--a--- n:alm_gnrl.dll
+	+++  copy N:\OBJECTS\general\SOBJ\alm_gnrl.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_gnrl.dll
+
+r-a--- n:alm_gnrl.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_grup.dll
+
+--a--- n:alm_grup.dll
+	+++  copy N:\OBJECTS\group\SOBJ\alm_grup.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_grup.dll
+
+r-a--- n:alm_grup.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_imex.dll
+
+--a--- n:alm_imex.dll
+	+++  copy N:\OBJECTS\imp-exp\SOBJ\alm_imex.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_imex.dll
+
+r-a--- n:alm_imex.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_keyb.dll
+
+--a--- n:alm_keyb.dll
+	+++  copy N:\OBJECTS\keyboard\SOBJ\alm_keyb.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_keyb.dll
+
+r-a--- n:alm_keyb.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_appl.dll
+
+--a--- n:alm_appl.dll
+	+++  copy N:\OBJECTS\launch\SOBJ\alm_appl.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_appl.dll
+
+r-a--- n:alm_appl.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_list.dll
+
+--a--- n:alm_list.dll
+	+++  copy N:\OBJECTS\list\SOBJ\alm_list.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_list.dll
+
+r-a--- n:alm_list.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_loop.dll
+
+--a--- n:alm_loop.dll
+	+++  copy N:\OBJECTS\loop\SOBJ\alm_loop.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_loop.dll
+
+r-a--- n:alm_loop.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_menu.dll
+
+--a--- n:alm_menu.dll
+	+++  copy N:\OBJECTS\menus\SOBJ\alm_menu.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_menu.dll
+
+r-a--- n:alm_menu.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_ntfy.dll
+
+--a--- n:alm_ntfy.dll
+	+++  copy N:\OBJECTS\notify\SOBJ\alm_ntfy.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_ntfy.dll
+
+r-a--- n:alm_ntfy.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_nmbr.dll
+
+--a--- n:alm_nmbr.dll
+	+++  copy N:\OBJECTS\number\SOBJ\alm_nmbr.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_nmbr.dll
+
+r-a--- n:alm_nmbr.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_mhs.dll
+
+--a--- n:alm_mhs.dll
+	+++  copy N:\OBJECTS\nwmhs\SOBJ\alm_mhs.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_mhs.dll
+
+r-a--- n:alm_mhs.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_msg.dll
+
+--a--- n:alm_msg.dll
+	+++  copy N:\OBJECTS\nwmsg\SOBJ\alm_msg.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_msg.dll
+
+r-a--- n:alm_msg.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_ole1.dll
+
+--a--- n:alm_ole1.dll
+	+++  copy N:\OBJECTS\ole1\SOBJ\alm_ole1.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_ole1.dll
+
+r-a--- n:alm_ole1.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_osql.dll
+
+--a--- n:alm_osql.dll
+	+++  copy N:\OBJECTS\oracle\SOBJ\alm_osql.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_osql.dll
+
+r-a--- n:alm_osql.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_page.dll
+
+--a--- n:alm_page.dll
+	+++  copy N:\OBJECTS\page\SOBJ\alm_page.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_page.dll
+
+r-a--- n:alm_page.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_pict.dll
+
+--a--- n:alm_pict.dll
+	+++  copy N:\OBJECTS\picture\SOBJ\alm_pict.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_pict.dll
+
+r-a--- n:alm_pict.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_prnt.dll
+
+--a--- n:alm_prnt.dll
+	+++  copy N:\OBJECTS\print\SOBJ\alm_prnt.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_prnt.dll
+
+r-a--- n:alm_prnt.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_qsql.dll
+
+--a--- n:alm_qsql.dll
+	+++  copy N:\OBJECTS\qpluse\SOBJ\alm_qsql.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_qsql.dll
+
+r-a--- n:alm_qsql.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_radg.dll
+
+--a--- n:alm_radg.dll
+	+++  copy N:\OBJECTS\radgroup\SOBJ\alm_radg.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_radg.dll
+
+r-a--- n:alm_radg.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_scal.dll
+
+--a--- n:alm_scal.dll
+	+++  copy N:\OBJECTS\scale\SOBJ\alm_scal.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_scal.dll
+
+r-a--- n:alm_scal.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_sbar.dll
+
+--a--- n:alm_sbar.dll
+	+++  copy N:\OBJECTS\scrolbar\SOBJ\alm_sbar.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_sbar.dll
+
+r-a--- n:alm_sbar.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_shap.dll
+
+--a--- n:alm_shap.dll
+	+++  copy N:\OBJECTS\shapes\SOBJ\alm_shap.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_shap.dll
+
+r-a--- n:alm_shap.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_sigs.dll
+
+--a--- n:alm_sigs.dll
+	+++  copy N:\OBJECTS\signal\SOBJ\alm_sigs.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_sigs.dll
+
+r-a--- n:alm_sigs.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_subr.dll
+
+--a--- n:alm_subr.dll
+	+++  copy N:\OBJECTS\sub\SOBJ\alm_subr.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_subr.dll
+
+r-a--- n:alm_subr.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_tabl.dll
+
+--a--- n:alm_tabl.dll
+	+++  copy N:\OBJECTS\table\SOBJ\alm_tabl.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_tabl.dll
+
+r-a--- n:alm_tabl.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_tmnl.dll
+
+--a--- n:alm_tmnl.dll
+	+++  copy N:\OBJECTS\terminal\SOBJ\alm_tmnl.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_tmnl.dll
+
+r-a--- n:alm_tmnl.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_tfct.dll
+
+--a--- n:alm_tfct.dll
+	+++  copy N:\OBJECTS\textfact\SOBJ\alm_tfct.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_tfct.dll
+
+r-a--- n:alm_tfct.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_text.dll
+
+--a--- n:alm_text.dll
+	+++  copy N:\OBJECTS\text\SOBJ\alm_text.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_text.dll
+
+r-a--- n:alm_text.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_time.dll
+
+--a--- n:alm_time.dll
+	+++  copy N:\OBJECTS\time\SOBJ\alm_time.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_time.dll
+
+r-a--- n:alm_time.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_wnd.dll
+
+--a--- n:alm_wnd.dll
+	+++  copy N:\OBJECTS\window\SOBJ\alm_wnd.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_wnd.dll
+
+r-a--- n:alm_wnd.dll
+	+++  attrib -r n:\internal\BIN\SHIP\alm_wlay.dll
+
+--a--- n:alm_wlay.dll
+	+++  copy N:\OBJECTS\w_layout\SOBJ\alm_wlay.dll	n:\internal\BIN\SHIP
+
+        1 file(s) copied
+	+++  attrib +r n:\internal\BIN\SHIP\alm_wlay.dll
+
+r-a--- n:alm_wlay.dll

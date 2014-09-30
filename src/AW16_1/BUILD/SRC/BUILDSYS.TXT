@@ -1,0 +1,130 @@
+(Created 8/19/93 by Scott McCarty)
+
+
+The following discussion of compilation modes, directory structures,
+etc. is appropriate for the server ONLY.  It addresses issues related
+to creating and maintaining the system in a reasonable and controlled
+way.
+
+
+----------------
+Terms:
+
+  Compile for debug:  the appropriate compiler-supplied information required
+  for debug has been generated.
+
+  Debug release:  compiled with the ADBG_DEBUG macro.
+
+  Shipping release:  compiled with no debug information and with optimizations
+
+----------------
+Things we can control:
+
+  1.  The ADBG_DEBUG macro.
+  2.  The AW_I_DEBUG macro.
+  3.  The compiler flag to create debug code.
+
+
+"Compile for debug" will turn on 1, 2, and 3.
+"Debug release"     will turn on 1 only.
+"Shipping release"  will turn off all.
+
+----------------
+
+The process model is as follows:
+
+  The environment will be compiled for debug for environment use and
+for objects' use.  The rationale is that the objects will be testing
+the environment, so we need to have #2 on for that.
+
+  Objects will be compiled for debug for internal use only.
+
+  When we ship, we will compile the debug release and the shipping
+release of both environment and objects.  The debug release will be
+used by object developers only, and the shipping release will be used
+by both developers and end-users.
+
+----------------
+
+Directory structures:
+
+  Release:
+
+    \release\bin           configuration app, appbuilder, ...
+    \release\debug         debug release .LIBs and .DLLs
+    \release\nodebug       shipping release .LIBs and .DLLs
+    \release\include       ALM & object header files
+    \release\configs       object configs
+
+
+  Objects:
+
+    ../include             cross-object information (e.g. help)
+    .                      all source, .def, .rc
+    obj                    compile for debug .OBJ and .RES
+    dobj                   debug release .OBJ and .RES
+    sobj                   shipping release .OBJ and .RES
+    ../make                cross-object make information (e.g. makefile)
+    make                   object-specific make information
+    
+
+
+  Environment:
+
+    src,hdr                .CPP and .H source
+    rc                     RC source
+    obj                    compile for debug .OBJ and .RES
+    dobj                   debug release .OBJ and .RES
+    sobj                   shipping release .OBJ and .RES
+    make                   make information
+
+
+  Internal files:
+
+    \internal\include      internally "released" .H files
+    \internal\configs      internally "released" config files
+    \internal\bin          internally "released" and compiled for
+                                  debug.DLLs, .EXEs, and .LIBs
+
+
+The \RELEASE directory is what is shipped to the customer.  It is
+composed of .EXEs, .DLLs, .LIBs, source, and configs.
+
+The internal debug counterparts are in \INTERNAL\BIN (for all .EXEs,
+.DLLs, & .LIBs), and \INTERNAL\INCLUDE (for source).  The configs are
+in \INTERNAL\CONFIGS.
+
+
+----------------
+
+  To create an internal debug release (i.e. "compile for debug"), a
+make must be done on the environment and the objects, and the
+appropriate files copied to \BIN.
+
+  To create a debug or shipping release, ALL files must be recompiled
+in the environment and the objects (in that order).  Once a debug
+release or shipping release has been compiled, it is moved to the
+\RELEASE directory.
+
+
+  The above structure implies that we will be compiling both
+environment and objects when an internal "release" is done.
+
+----------------------------------------------------------------
+
+As mentioned before, the above discussion relates to issues on the
+server.  Developers of the objects will probably end up doing
+something like the following:
+
+  - point to <server>:\BIN in their PATH
+  - point to <server>:\INCLUDE in their INCLUDE path
+  - point to a local CONFIGS directory
+  - maintaining a ../INCLUDE and a ../MAKE locally
+
+  Developers of the environment probably end up doing something like
+the following:
+
+  - reference the different environment .EXE and .DLLs
+  - reference the different paths in their INCLUDE path
+  - point to <server>:\BIN in their PATH for object DLLs
+  - point to <server>:\CONFIGS for their object configs

@@ -1,0 +1,33 @@
+LIBRARY     AW32OLE1
+
+DESCRIPTION 'Novell AppWare Loadable Module: OLE 1.0 Client Object'
+
+CODE				MOVEABLE DISCARDABLE LOADONCALL
+
+DATA				SINGLE MOVEABLE PRELOAD
+
+SEGMENTS		_TEXT PRELOAD
+
+HEAPSIZE		4096
+
+EXPORTS			; dll entry and exit
+            WEP														@1   RESIDENTNAME
+
+            ;  admn
+						OLEADMIN											@3
+
+						;  functions
+						CHECKOLEOBJECT								@6
+						CREATEOLEOBJECT								@7
+						DELETEOLEOBJECT								@8
+            ACTIVATEOLEOBJECT							@9  		
+
+						; event handlers
+						OLESTARTUPEVENT								@10
+						OLESHUTDOWNEVENT							@11
+						OLEMENUEVENT									@13
+
+						; WIP
+						OLEOBJECTVICREATE							@12
+
+; last used:  13

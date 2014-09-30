@@ -1,0 +1,24 @@
+LIBRARY         AW32IMEX
+
+DESCRIPTION     'Novell AppWare Loadable Module: Import/Export Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD SINGLE MOVEABLE
+SEGMENTS        _TEXT PRELOAD
+
+EXPORTS
+                ShutdownMeth                   @2   
+                StopImportExportFunc           @3   
+                StartImportExportFunc          @4   
+                ImportRecordFunc               @5   
+                ExportRecordFunc               @6   
+                CreateExportFunc               @7   
+                ConfigureImportFunc            @8   
+                ConfigureExportFunc            @9   
+                ChooseFileFunc                 @10  
+                StatusDlgProc                  @11  
+                EditObjectDialogProc           @12
+                AdministrationRoutine          @14  
+                EditAddDlgBox                  @15  
+                ConfigExportDlgProc            @16  
+                ConfigImportDlgProc            @17  

@@ -1,0 +1,43 @@
+#define  idh_contents                0x42696e44 /* BinD */
+#define  idh_change_password         0x43506173 /* CPas */
+#define  idh_close_bindery           0x436c5365 /* ClSe */
+#define  idh_create_object           0x43724f62 /* CrOb */
+#define  idh_create_property         0x43725072 /* CrPr */
+#define  idh_delete_object           0x44654f62 /* DeOb */
+#define  idh_delete_property         0x44655072 /* DePr */
+#define  idh_get_conn_handle         0x47434861 /* GCHa */
+#define  idh_get_object_id           0x474f6964 /* GOid */
+#define  idh_get_object_name         0x474f6e61 /* GOna */
+#define  idh_is_emulation            0x426e4461 /* BnDa */
+#define  idh_list_objects            0x4c694f62 /* LiOb */
+#define  idh_list_properties         0x4c695072 /* LiPr */
+#define  idh_open_bindery            0x4f704269 /* OpBi */
+#define  idh_rename_object           0x52654f62 /* ReOb */
+#define  idh_verify_password         0x56506173 /* VPas */
+#define  idh_get_date_time_property  0x426E446a /* BnDj */
+#define  idh_get_net_addr_property   0x426E446b /* BnDk */
+#define  idh_get_number_property     0x426E446c /* BnDl */
+#define  idh_get_table_property      0x426E446d /* BnDm */
+#define  idh_get_text_property       0x426E446e /* BnDn */
+#define  idh_get_time_property       0x426E446f /* BnDo */
+#define  idh_set_date_time_property  0x426E4470 /* BnDp */
+#define  idh_set_net_addr_property   0x426E4471 /* BnDq */
+#define  idh_set_number_property     0x426E4472 /* BnDr */
+#define  idh_set_table_property      0x426E4473 /* BnDs */
+#define  idh_set_text_property       0x426E4474 /* BnDt */
+#define  idh_set_time_property       0x426E4475 /* BnDu */
+#define  idh_clear_property          0x426E4464 /* BnDd */
+#define  idh_list_obj_types          0x426E4465 /* BnDe */
+#define  idh_object_exists           0x426E4466 /* BnDf */
+#define  idh_property_supports_type  0x426E4476 /* BnDv */
+#define  idh_get_object_info         0x426E4467 /* BnDg */
+#define  idh_get_property_info       0x426E4468 /* BnDh */
+#define  idh_get_primary_server      0x426E4469 /* BnDi */
+/* #define  idh_read_property_value     0x426E4462 */ /* BnDb */
+/* #define  idh_write_property_value    0x426E4463 */ /* BnDc */
+#define  idh_who_am_i                0x426E447a /* BnDz */
+#define  idh_change_obj_security     0x426E4479 /* BnDy */
+#define  idh_change_prop_security    0x426E4478 /* BnDx */
+#define  idh_archive_bindery         0x426E4462 /* BnDb */
+#define  idh_restore_bindery         0x426E4463 /* BnDc */
+#define  idh_obj_edit_dlg_help       901

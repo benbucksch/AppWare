@@ -1,0 +1,52 @@
+OBJECTFILES= \
+	$(OBJDIR)\bttncur.obj \
+	$(OBJDIR)\heap.obj \
+	$(OBJDIR)\palette.obj \
+	$(OBJDIR)\shapepal.obj \
+	$(OBJDIR)\shapeutl.obj \
+	$(OBJDIR)\shp_attr.obj \
+	$(OBJDIR)\shp_prot.obj \
+	$(OBJDIR)\tmp.obj 
+
+
+$(OBJDIR)\BTTNCUR.obj:  .\bttncur.c .\bttncuri.h .\bttncur.h
+
+$(OBJDIR)\HEAP.obj:  .\heap.cpp .\heapint.h .\heap.h \
+                     g:\internal\include\intdebug.h
+
+$(OBJDIR)\PALETTE.obj:  .\palette.cpp .\xp_macro.h .\palette.h .\bttncur.h \
+                        g:\internal\include\intdebug.h
+
+$(OBJDIR)\SHAPEPAL.obj:  .\shapepal.cpp .\shapepal.h .\palette.h .\shp_prot.h \
+                         .\shp_attr.h .\tmp.h g:\internal\include\intdebug.h \
+                         .\xp_macro.h
+
+$(OBJDIR)\SHAPEUTL.obj:  .\shapeutl.cpp .\shapeutl.h \
+                         g:\internal\include\intdebug.h
+
+$(OBJDIR)\SHP_ATTR.obj:  .\shp_attr.cpp .\xp_macro.h .\tmp.h .\shp_attr.h \
+                         ..\include\o_upsf.h g:\internal\include\intdebug.h
+
+$(OBJDIR)\SHP_PROT.obj:  .\shp_prot.cpp .\heap.h .\xp_macro.h .\tmp.h \
+                         .\shapeutl.h .\shapepal.h .\shp_prot.h .\shp_attr.h \
+                         ..\include\o_upsf.h g:\internal\include\intdebug.h \
+                         .\palette.h
+
+$(OBJDIR)\TMP.obj:  .\tmp.cpp .\palette.h g:\internal\include\intdebug.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\shapes.res 
+
+
+$(OBJDIR)\shapes.res:  .\shapes.rc .\rc/linemove.cur .\rc/unfillsq.cur \
+                       .\rc/unfillrr.cur .\rc/unfillci.cur .\rc/text.cur \
+                       .\rc/line.cur .\rc/groupbox.cur .\rc/fillsqua.cur \
+                       .\rc/fillrrec.cur .\rc/fillcirc.cur .\rc/unfillsq.bmp \
+                       .\rc/unfillrr.bmp .\rc/unfillci.bmp .\rc/text.bmp \
+                       .\rc/line.bmp .\rc/groupbox.bmp .\rc/fillsqua.bmp \
+                       .\rc/fillrrec.bmp .\rc/fillcirc.bmp .\rc/bitmap.bmp \
+                       .\rc/textshap.dlg .\rc/line_ed.dlg .\rc/groupbox.dlg \
+                       .\rc/fillshap.dlg .\rc/fill_ed.dlg .\shapes.h \
+                       .\shapepal.h .\shp_prot.h .\shp_attr.h .\palette.h \
+                       .\xp_macro.h
+

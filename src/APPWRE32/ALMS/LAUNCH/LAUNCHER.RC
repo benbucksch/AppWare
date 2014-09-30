@@ -1,0 +1,152 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+//  A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+//  THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+//  ENTERED INTO APPROPRIATE LICENCE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:          "launcher.rc"
+//
+// AUTHOR:        Kevin J. Smart
+//
+// DESCRIPTION:   Launcher resource file
+//
+// CHANGES:
+//
+////////////////////////////////////////////////////////////////////////////
+
+#define RCINVOKED
+
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "launc_rc.h"
+
+DLG_DESIGNLAUNCH DIALOG 18, 20, 205, 125
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "BorDlg"
+CAPTION "Launcher"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 157, 37, 40, 14
+  PUSHBUTTON "Cancel", IDCANCEL, 157, 57, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Browse...", PB_BROWSE, 157, 77, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  CONTROL "&Help", IDHELP, "BUTTON", WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP, 157, 104, 40, 14
+  CONTROL ICON_LAUNCHER, -1, "STATIC", SS_ICON | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 4, 18, 20
+  LTEXT "", ST_OBJECT, 28, 5, 171, 19, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", -1, "BorShade", BSS_HDIP | WS_CHILD | WS_VISIBLE, 0, 29, 205, 2
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 37, 135, 58
+  LTEXT "&Command Line:", -1, 12, 41, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", ED_CMDLINE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 51, 122, 12
+  LTEXT "Working &Directory:", -1, 12, 67, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", ED_STARTDIR, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 77, 122, 12
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 101, 135, 18
+  CONTROL "&Run Minimized", XB_RUNMIN, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 12, 105, 95, 10
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 148, 37, 2, 82
+END
+
+
+DLG_RUNTIMELAUNCH DIALOG 34, 32, 205, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CLASS "BorDlg"
+CAPTION "Launcher"
+FONT 8, "Helv"
+BEGIN
+  CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 157, 6, 40, 14
+  PUSHBUTTON "Cancel", IDCANCEL, 157, 25, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  PUSHBUTTON "&Browse...", PB_BROWSE, 157, 50, 40, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+  CONTROL "", -1, "BorShade", 1 | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 6, 135, 58
+  LTEXT "&Command Line:", -1, 12, 10, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", ED_CMDLINE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 20, 122, 12
+  LTEXT "Working &Directory:", -1, 12, 36, 63, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+  CONTROL "", ED_STARTDIR, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 12, 46, 122, 12
+  CONTROL "", -1, "BorShade", BSS_GROUP | WS_CHILD | WS_VISIBLE, 6, 70, 135, 18
+  CONTROL "&Run Minimized", XB_RUNMIN, "BorCheck", 3 | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 12, 74, 95, 10
+  CONTROL "", -1, "BorShade", BSS_VBUMP | WS_CHILD | WS_VISIBLE, 148, 6, 2, 82
+END
+
+ICON_LAUNCHER ICON "launcher.ico"
+
+STRINGTABLE 
+BEGIN
+   0, "System was out of memory, executable file was corrupt, or relocations were invalid.\0"
+   2, "File was not found.\0"
+   3, "Path was not found.\0"
+   5, "Attempt was made to dynamically link to a task, or there was a sharing or network-protection error.\0"
+   6, "Library required separate data segments for each task.\0"
+   8, "There was insufficient memory to start the application.\0"
+  10, "Windows version was incorrect.\0"
+  11, "Executable file was invalid. Either it was not a Windows application or there was an error in the .EXE image.\0"
+  12, "Application was designed for a different operating system.\0"
+  13, "Application was designed for MS-DOS 4.0.\0"
+  14, "Type of executable file was unknown.\0"
+  15, "Attempt was made to load a real-mode application (developed for an earlier version of Windows).\0"
+  16, "Attempt was made to load a second instance of an executable file containing multiple data segments that were not marked read-only.\0"
+  17, "Attempt in large-frame EMS mode to load a second instance of an application that links to certain nonshareable DLLs already in use.\0"
+  18, "Attempt in real mode to load an application marked for protected mode only.\0"
+  19, "Attempt was made to load a compressed executable file. The file must be decompressed before it can be loaded.\0"
+  20, "Dynamic-link library (DLL) file was invalid. One of the DLLs required to run this application was corrupt.\0"
+  21, "Application requires 32-bit extensions.\0"
+
+  STR_UNKNOWNERROR, "Unknown error.\0"
+END
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Launcher Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32APPL\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32APPL.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

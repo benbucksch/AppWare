@@ -1,0 +1,29 @@
+LIBRARY     TIPS32
+
+DESCRIPTION 'Novell AppWare Balloon Support'
+
+CODE        MOVEABLE DISCARDABLE LOADONCALL
+DATA        SINGLE MOVEABLE PRELOAD
+
+SEGMENTS    _TEXT PRELOAD
+
+HEAPSIZE    32768
+
+EXPORTS   	
+			Balloon_RegisterClient		@10
+			Balloon_UnregisterClient	@11
+			Balloon_ShutdownServer		@12
+			Balloon_SuppressPrompts		@13
+			Balloon_ActivatePrompts		@14
+ 			Balloon_SetPointSize		@15
+ 			Balloon_SetItalics			@16
+ 			Balloon_SetUnderline		@17
+ 			Balloon_SetFontWeight		@18
+ 			Balloon_SetFont				@19
+ 			Balloon_SetTextColor		@20
+ 			Balloon_SetBackgroundColor	@21
+ 			Balloon_SetBorderColor		@22
+ 			Balloon_SetBorderStyle		@23
+ 			Balloon_SetBorderWidth		@24
+ 			Balloon_SetDelayRate		@25
+

@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL, INC. EMPLOYEES
+//  WHO HAVE A NEED TO KNOW HOW TO PERFORM THEIR TASKS WITHIN THE SCOPE
+//  OF THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL, INC. WHO
+//  HAVE ENTERED INTO APPROPRIATE LICENSE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL, INC.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:  "tbl_wlay.h"
+//
+// AUTHOR:
+//
+// DESCRIPTION:
+//
+// CHANGES:
+//
+//////////////////////////////////////////////////////////////////////////////
+
+#ifndef TBL_WLAY_H
+#define TBL_WLAY_H
+
+// TABLE WLAY class definition //////////////////////////////////////////////////
+
+class TABLE_WLAY :
+  public OpLiteWndItem // window Item Protocol class
+  // private TABLE_ATTRIBUTES,
+  // private COLUMN
+
+  {
+  public:
+    TABLE *table;
+
+  public:
+    TABLE_WLAY(AOBJECTID oiItem, AOBJECTID oiParent, RECT* rcItem,  long  status);
+    ~TABLE_WLAY();
+
+    void ALMAPI ParentOpened();
+    void ALMAPI ParentClosing();
+    long ALMAPI AdjustNewRect(LPRECT lpRect, LONG flag);
+    void ALMAPI Move(LPRECT newRect);
+    void ALMAPI Destroy();
+    void ALMAPI Draw(HDC hDC, RECT *clipRect);
+    void ALMAPI Hide(void);
+    void ALMAPI Show(void);
+  };
+
+#endif

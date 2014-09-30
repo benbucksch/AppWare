@@ -1,0 +1,15 @@
+LIBRARY     ALM_NWER
+DESCRIPTION 'AppWare NetWare Error Object, Copyright 1994 Novell, Inc.'
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD SINGLE MOVEABLE
+SEGMENTS    'code 1' PRELOAD
+EXPORTS
+            WEP                            @1
+            ISREPORTINGON                  @2
+            REPORTNWERROR                  @3
+            NETWAREERRORADMINISTRATION     @4
+            EDITOBJECTDIALOGPROC           @5
+            ISREPORTINGONFUNC              @6
+            TURNREPORTINGOFFFUNC           @7
+            TURNREPORTINGONFUNC            @8

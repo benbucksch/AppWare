@@ -1,0 +1,7 @@
+SCC = This is a Source Code Control file
+
+[MAKEDLL.MAK]
+SCC_Project_Name = "$/AppWare32/ENVIRON/ENVMAKE", UADAAAAA
+
+[MAKEEXE.MAK]
+SCC_Project_Name = "$/AppWare32/ENVIRON/ENVMAKE", WADAAAAA

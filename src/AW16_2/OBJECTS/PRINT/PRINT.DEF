@@ -1,0 +1,16 @@
+LIBRARY     ALM_PRNT
+
+DESCRIPTION 'Novell AppWare Loadable Module: Printer Object'
+
+EXETYPE     WINDOWS
+
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE SINGLE
+SEGMENTS    _TEXT PRELOAD
+
+EXPORTS     WEP                            @1     RESIDENTNAME
+            PRINTADMN                      @3
+            PRINTOBJECTNOW                 @6
+            PRINTOBJECT                    @7   
+            PRINTSETUP                     @8   
+            PRINTDIALOG                    @9   

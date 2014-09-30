@@ -1,0 +1,97 @@
+#include <windows.h>				  
+#include <ver.h>
+
+#include "n_dialog.h"
+#include "n_string.h"
+
+number ICON "number.ico"
+NUMBER_SETUP_DIALOG DIALOG 57, 27, 219, 212
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Number Object Setup"
+FONT 8, "MS Sans Serif"
+{
+ PUSHBUTTON "OK", PB_OK, 162, 7, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", PB_CANCEL, 162, 24, 50, 14
+ PUSHBUTTON "&Font...", PB_FONTS, 162, 41, 50, 14
+ PUSHBUTTON "&Help", PB_HELP, 162, 58, 50, 14
+ LTEXT " &Value:", -1, 7, 9, 26, 10
+ EDITTEXT ED_TITLE, 39, 7, 116, 14, ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP
+ LTEXT " &Format:", ST_FORMAT, 7, 26, 27, 11
+ EDITTEXT ED_FORMAT, 39, 24, 116, 14, ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP
+ CONTROL "&Whole number", RB_INUMBER, "Button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 17, 57, 63, 10
+ CONTROL "Real nu&mber", RB_RNUMBER, "Button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 17, 69, 55, 10
+ CONTROL "&Left", RB_LEFT, "Button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 107, 57, 63, 10
+ CONTROL "&Right", RB_RIGHT, "Button", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 107, 69, 55, 10
+ CHECKBOX "&Border", CB_FRAME, 17, 163, 108, 10, BS_AUTOCHECKBOX | NOT WS_TABSTOP
+ CHECKBOX "&Select all when activated", CB_SELECTALL, 17, 175, 129, 10, BS_AUTOCHECKBOX | NOT WS_TABSTOP
+ CHECKBOX "Initially &displays empty", CB_DISPLAYEMPTY, 17, 187, 108, 10, BS_AUTOCHECKBOX | NOT WS_TABSTOP
+ GROUPBOX "&Type", -1, 7, 45, 83, 41, BS_GROUPBOX | WS_CHILD | WS_VISIBLE
+ GROUPBOX "&Align", -1, 97, 45, 58, 41, BS_GROUPBOX | WS_CHILD | WS_VISIBLE
+ GROUPBOX "O&ptions", -1, 7, 149, 149, 55, BS_GROUPBOX | WS_CHILD | WS_VISIBLE
+ GROUPBOX "Activation", 1011, 7, 91, 148, 53, BS_GROUPBOX
+ CONTROL "Can &not activate", RB_NOTACTIVATE, "BUTTON", BS_AUTORADIOBUTTON, 17, 103, 119, 10
+ CONTROL "Can &activate only", RB_ACTIVATEONLY, "BUTTON", BS_AUTORADIOBUTTON, 17, 115, 115, 10
+ CONTROL "Can activate and &edit", RB_ACTIVATEEDIT, "BUTTON", BS_AUTORADIOBUTTON, 17, 127, 113, 10
+}
+
+//////////////////////////////////////////////////
+
+STRINGTABLE 
+BEGIN
+  0, "Number Object"
+  ERR_NULL_NUM, "NULL num pointer in %s"
+  ERR_NULL_HNI, "NULL hni pointer in %s"
+  ERR_WRONG_TYPEID, "Incorrect Object Type in %s"
+  ERR_INVALIDWINDOW, "Invalid window handle in %s"
+  WARN_CANNOT_CHANGE_TYPE, "Can only change the type of temporary number objects"
+  ERR_GET_PARAMETER_FAILED, "Unable to get parameter #%d in %s"
+  ERR_CREATING_PSUEDO_OBJECT, "Unable to create pseudo object %s"
+  I_NUMBER_PARTS, "%()-+"
+END
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Number Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32NMBR\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32NMBR.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

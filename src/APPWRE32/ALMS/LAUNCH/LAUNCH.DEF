@@ -1,0 +1,15 @@
+LIBRARY     AW32APPL
+
+DESCRIPTION 'Novell AppWare Loadable Module: Launcher Object'
+
+EXETYPE     WINDOWS
+PROTMODE
+
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+
+DATA        PRELOAD MOVEABLE SINGLE
+
+EXPORTS     DllEntryPoint                  @1
+			LaunchAdmn                     @2
+            SetApplication                 @3
+            LaunchApplication              @4          

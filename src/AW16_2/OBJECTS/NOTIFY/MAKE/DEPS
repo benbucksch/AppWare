@@ -1,0 +1,15 @@
+OBJECTFILES= \
+	$(OBJDIR)\notif_fn.obj \
+	$(OBJDIR)\notify.obj 
+
+
+$(OBJDIR)\notif_fn.obj:  .\notif_fn.cpp .\notify.h
+
+$(OBJDIR)\notify.obj:  .\notify.cpp .\notify.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\notify.res 
+
+
+$(OBJDIR)\notify.res:  .\notify.rc
+

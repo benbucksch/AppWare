@@ -1,0 +1,3 @@
+INCLUDE   hdr;rc;..\almbldr\hdr;..\memio\hdr;..\memio\rc;..\kernel\hdr;..\apebldr\hdr;c:\msdev\include
+LIB       ..\kernel\obj;c:\msdev\lib
+PATH      \build\bin;c:\msdev\bin;n:\srcsafe\win32

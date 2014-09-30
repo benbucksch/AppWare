@@ -1,0 +1,10 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = ALM_DDEC.DLL
+OBJECTDEFNAME = DDEC.DEF
+LOCALCCFLAGS  =
+LOCALINCLUDE  =
+LOCALLIBS     = ALM_NMBR.LIB ALM_FLAG.LIB

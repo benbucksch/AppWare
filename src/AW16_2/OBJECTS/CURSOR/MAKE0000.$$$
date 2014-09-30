@@ -1,0 +1,4 @@
+-nobj
+-IG:\INTERNAL\INCLUDE;..\INCLUDE;R:\BORLANDC\INCLUDE
+-I
+-2 -c -ml! -Vf -V -w -WDE -k -N -Od -v -vi- -DADBG_DEBUG -DAW_I_DEBUG 

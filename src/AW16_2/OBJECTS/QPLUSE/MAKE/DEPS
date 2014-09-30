@@ -1,0 +1,117 @@
+OBJECTFILES= \
+	$(OBJDIR)\safemem.obj \
+	$(OBJDIR)\stack.obj \
+	$(OBJDIR)\queue.obj \
+	$(OBJDIR)\memblock.obj \
+	$(OBJDIR)\strutl.obj \
+	$(OBJDIR)\sqllib.obj \
+	$(OBJDIR)\qsqldc.obj \
+	$(OBJDIR)\qsqlpc.obj \
+	$(OBJDIR)\qcnc_adm.obj \
+	$(OBJDIR)\qcnc_def.obj \
+	$(OBJDIR)\qcnc_fnc.obj \
+	$(OBJDIR)\qsql_adm.obj \
+	$(OBJDIR)\qsql_def.obj \
+	$(OBJDIR)\qsql_fnc.obj \
+	$(OBJDIR)\qsql_mth.obj 
+
+
+$(OBJDIR)\safemem.obj:  .\safemem.cpp .\safemem.h g:\internal\include\a_alm.h
+
+$(OBJDIR)\stack.obj:  .\stack.cpp .\safemem.h .\stack.h \
+                      g:\internal\include\a_alm.h
+
+$(OBJDIR)\queue.obj:  .\queue.cpp .\safemem.h .\queue.h \
+                      g:\internal\include\a_alm.h
+
+$(OBJDIR)\memblock.obj:  .\memblock.cpp .\memblock.h .\safemem.h .\stack.h \
+                         g:\internal\include\a_alm.h
+
+$(OBJDIR)\strutl.obj:  .\strutl.cpp .\safemem.h .\strutl.h \
+                       g:\internal\include\a_alm.h
+
+$(OBJDIR)\sqllib.obj:  .\sqllib.cpp .\sqllib.h .\qelib.h \
+                       g:\internal\include\a_alm.h
+
+$(OBJDIR)\qsqldc.obj:  .\qsqldc.cpp .\memblock.h .\safemem.h .\qsqldc.h \
+                       .\stack.h g:\internal\include\a_alm.h .\qsql_fnc.h \
+                       g:\internal\include\op_dview.h .\sqllib.h .\qsql.h \
+                       .\qelib.h g:\internal\include\o_time.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h
+
+$(OBJDIR)\qsqlpc.obj:  .\qsqlpc.cpp .\safemem.h .\qsqlpc.h \
+                       g:\internal\include\a_alm.h .\memblock.h .\qsqldc.h \
+                       .\strutl.h .\qsql_fnc.h .\stack.h \
+                       g:\internal\include\op_dview.h .\sqllib.h .\qsql.h \
+                       .\qelib.h g:\internal\include\o_time.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_text.h
+
+$(OBJDIR)\qcnc_adm.obj:  .\qcnc_adm.cpp .\safemem.h .\memblock.h .\qcnc_fnc.h \
+                         g:\internal\include\a_alm.h .\stack.h .\sqllib.h \
+                         .\qsql.h .\qelib.h g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\qcnc_def.obj:  .\qcnc_def.cpp g:\internal\include\helpids.h \
+                         g:\internal\include\a_almutl.h .\memblock.h \
+                         .\qsql_rc.h .\qsql.h .\safemem.h .\stack.h \
+                         g:\internal\include\a_alm.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\qcnc_fnc.obj:  .\qcnc_fnc.cpp .\safemem.h .\memblock.h .\qsql_fnc.h \
+                         .\qcnc_fnc.h g:\internal\include\a_alm.h .\stack.h \
+                         g:\internal\include\op_dview.h .\sqllib.h .\qsql.h \
+                         .\qelib.h g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\qsql_adm.obj:  .\qsql_adm.cpp .\safemem.h .\memblock.h .\qsql_fnc.h \
+                         g:\internal\include\a_alm.h .\stack.h \
+                         g:\internal\include\op_dview.h .\sqllib.h .\qsql.h \
+                         .\qelib.h g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\qsql_def.obj:  .\qsql_def.cpp g:\internal\include\helpids.h \
+                         g:\internal\include\a_almutl.h .\safemem.h \
+                         .\memblock.h .\strutl.h .\qsql_rc.h .\qsql.h \
+                         g:\internal\include\a_alm.h .\stack.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\qsql_fnc.obj:  .\qsql_fnc.cpp g:\internal\include\o_table.h \
+                         .\safemem.h .\memblock.h .\queue.h .\qsqldc.h \
+                         .\qsqlpc.h .\qcnc_fnc.h .\qsql_fnc.h \
+                         g:\internal\include\a_alm.h .\stack.h .\strutl.h \
+                         .\sqllib.h .\qsql.h g:\internal\include\op_dview.h \
+                         .\qelib.h g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+$(OBJDIR)\qsql_mth.obj:  .\qsql_mth.cpp .\safemem.h .\memblock.h .\queue.h \
+                         .\qsql_fnc.h g:\internal\include\a_alm.h .\stack.h \
+                         g:\internal\include\op_dview.h .\sqllib.h .\qsql.h \
+                         .\qelib.h g:\internal\include\o_time.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_text.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\qsql.res 
+
+
+$(OBJDIR)\qsql.res:  .\qsql.rc .\qsql_rc.h
+

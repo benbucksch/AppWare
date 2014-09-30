@@ -1,0 +1,138 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+//  A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+//  THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+//  ENTERED INTO APPROPRIATE LICENCE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:          "sbar_rsc.rc"
+//
+// AUTHOR:        Kevin J. Smart
+//
+// DESCRIPTION:   This is resource file for the editing dialog, signal
+//                strings, etc..
+//
+// CHANGES:
+//
+////////////////////////////////////////////////////////////////////////////
+
+#include <windows.h>
+#include <bwcc.h>
+#include <ver.h>
+
+#include "sbar_rsc.h"
+#include "resstrng.h"
+
+DLG_EDITSCROLLBAR DIALOG 23, 33, 257, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scroll Bar"
+FONT 8, "Helv"
+{
+ PUSHBUTTON "OK", IDOK, 212, 36, 40, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 212, 54, 40, 14
+ PUSHBUTTON "&Help", IDHELP, 212, 76, 40, 14, BS_PUSHBUTTON | WS_CHILD | NOT WS_VISIBLE | WS_TABSTOP
+ ICON ICON_SCROLLBAR, -1, 6, 4, 18, 20, SS_ICON | WS_CHILD | WS_VISIBLE | WS_GROUP
+ LTEXT "", ST_OBJECT, 30, 4, 222, 18, SS_LEFT | WS_CHILD | WS_VISIBLE
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, -1, 27, 260, 1
+ GROUPBOX "Scroll &Type", -1, 7, 32, 68, 42, BS_GROUPBOX
+ CONTROL "Hori&zontal", RB_HORIZONTAL, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP, 13, 47, 59, 10
+ CONTROL "&Vertical", RB_VERTICAL, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE, 13, 60, 59, 10
+ GROUPBOX "Options", -1, 7, 80, 68, 56, BS_GROUPBOX
+ CHECKBOX "&Enabled", XB_ENABLED, 13, 94, 59, 10, BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ CHECKBOX "Can &Activate", XB_CANACTIVATE, 13, 108, 59, 10, BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ CHECKBOX "&Default Height", XB_DEFAULTSIZE, 13, 122, 59, 10, BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ GROUPBOX "Scroll Range", -1, 83, 32, 54, 68, BS_GROUPBOX
+ LTEXT "Le&ft:", ST_MINIMUM, 87, 46, 30, 8
+ EDITTEXT ED_MINIMUM, 87, 56, 40, 12
+ LTEXT "&Right:", ST_MAXIMUM, 87, 72, 33, 8
+ EDITTEXT ED_MAXIMUM, 87, 81, 40, 12
+ GROUPBOX " &Position Object", -1, 83, 106, 116, 30, BS_GROUPBOX
+ COMBOBOX CB_POSITIONOBJ, 87, 120, 108, 51, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+ GROUPBOX " Increment", -1, 145, 32, 54, 68, BS_GROUPBOX
+ LTEXT "&Line Scroll:", -1, 150, 46, 39, 8
+ EDITTEXT ED_LINESCROLL, 150, 56, 40, 12
+ LTEXT "Pa&ge Scroll:", -1, 150, 72, 42, 8
+ EDITTEXT ED_PAGESCROLL, 150, 81, 40, 12
+}
+
+ICON_SCROLLBAR ICON   "scrolbar.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION     1, 2, 0, 0
+PRODUCTVERSION  1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Scroll Bar Object\0"
+      VALUE "FileVersion",      "1.20\0"
+      VALUE "InternalName",     "AW32SBAR\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32SBAR.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",   "1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+ STR_SIGNAL_VLINEUP,            "Scroll Line Up\0"
+ STR_SIGNAL_VLINEDOWN,          "Scroll Line Down\0"
+ STR_SIGNAL_VPAGEUP,            "Scroll Page Up\0"
+ STR_SIGNAL_VPAGEDOWN,          "Scroll Page Down\0"
+ STR_SIGNAL_VTOP,               "Scroll Top\0"
+ STR_SIGNAL_VBOTTOM,            "Scroll Bottom\0"
+ STR_SIGNAL_HLINEUP,            "Scroll Line Left\0"
+ STR_SIGNAL_HLINEDOWN,          "Scroll Line Right\0"
+ STR_SIGNAL_HPAGEUP,            "Scroll Page Left\0"
+ STR_SIGNAL_HPAGEDOWN,          "Scroll Page Right\0"
+ STR_SIGNAL_HTOP,               "Scroll Full Left\0"
+ STR_SIGNAL_HBOTTOM,            "Scroll Full Right\0"
+ STR_SIGNAL_THUMBTRACK,         "Thumb Track\0"
+ STR_SIGNAL_THUMBPOSITION,      "Thumb Position\0"
+ STR_SIGNAL_ACTIVATED,          "Activated\0"
+ STR_SIGNAL_DEACTIVATED,        "Deactivated\0"
+ STR_SIGNAL_CHANGED,            "Changed\0"
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,15 @@
+File n:\oip\src\oipdebug.cpp:
+501        // DESCRIPTION:	Records the file,line that requested the object data for
+700        // DESCRIPTION:	Records the file,line that requested the object data for
+File n:\oip\src\context.cpp:
+231        		// DLLs in going to AppWare and therefore required a recompile.
+File n:\oip\src\eventque.cpp:
+565           // do any killing required
+607         // carry out any requested hit contract
+File n:\oip\src\heap.cpp:
+531        //					satisfy the request.  There is an option of using either
+907        //					this requires doing some (perhaps) frowned upon things to
+1056       //					and requesting the Page().
+1107       //					requesting a large block of memory and we need to grow the
+File n:\oip\src\oipmisc.cpp:
+152        //						be called during processing of a request message.  It brings

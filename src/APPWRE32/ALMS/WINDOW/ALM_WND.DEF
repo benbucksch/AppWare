@@ -1,0 +1,296 @@
+LIBRARY         AW32WND
+DESCRIPTION     'Novell AppWare Loadable Module: Window Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+HEAPSIZE        32768
+STACKSIZE       32768
+EXPORTS
+                WndAdminProc                           @10
+
+                ;Window funtions get ords 100-149
+                WndFunction_ActivateItem               @100
+                WndFunction_ActiveItem                 @101
+                WndFunction_CancelClose                @102
+                WndFunction_CenterWindow               @103
+                WndFunction_CloseWindow                @104
+                WndFunction_FrontWindow                @105
+                WndFunction_GetSelection               @106
+                WndFunction_GetTitle                   @107
+                WndFunction_HideItem                   @108
+                WndFunction_IsWindowOpen               @109
+                WndFunction_ItemLocation               @110
+                WndFunction_MouseLocation              @111
+                WndFunction_MoveItem                   @112
+                WndFunction_MoveWindow                 @113
+                WndFunction_OpenWindow                 @114
+                WndFunction_SetSelection               @115
+                WndFunction_SetTitle                   @116
+                WndFunction_ShowItem                   @117
+                WndFunction_SizeWindow                 @118
+                WndFunction_WindowPosition             @119
+
+
+                ;Window events get ords 150-199
+                WndEvent_CloseWindowObject             @150
+                WndEvent_ObjectChanged                 @151
+                WndEvent_OpenWindowObject              @152
+                WndEvent_Print                         @153
+                WndEvent_Shutdown                      @154
+                WndEvent_Startup                       @155
+                WndEvent_WindowStartup                 @156
+                WndEvent_CutCopyPasteUndo              @157
+
+
+                ;Hwnd window item functions get ords 200-299
+                OpHwiAccelKeyHit                       @200
+                OpHwiActivate                          @201
+                OpHwiAdjustNewRect                     @202
+                OpHwiCopy                              @203
+                OpHwiCut                               @204
+                OpHwiDataChanged                       @205
+                OpHwiDeactivated                       @206
+                OpHwiDestroy                           @207
+                OpHwiDrawGrabHandles                   @208
+                OpHwiDrawTrackingRect                  @209
+                OpHwiEdit                              @210
+                OpHwiGetExtraData                      @211
+                OpHwiGetSelection                      @212
+                OpHwiHide                              @213
+                OpHwiInit                              @214
+                OpHwiInvalidateGrabHandles             @215
+                OpHwiItemInRect                        @216
+                OpHwiItemInRegion                      @217
+                OpHwiMouseEntry                        @218
+                OpHwiMove                              @219
+                OpHwiObject                            @220
+                OpHwiParentClosing                     @221
+                OpHwiParentNotification                @222
+                OpHwiParentOpened                      @223
+                OpHwiPaste                             @224
+                OpHwiPointInGrabHandle                 @225
+                OpHwiPointInItem                       @226
+                OpHwiPrint                             @227
+                OpHwiQueryProtocol                     @228
+                OpHwiRemoveItemFromRegion              @229
+                OpHwiSetDefaultItem                    @230
+                OpHwiSetSelection                      @231
+                OpHwiShow                              @232
+                OpHwiType                              @233
+                OpHwiUndo                              @234
+                OpHwiEnable                            @235
+                OpHwiScreenLocationChanged             @236
+                OpHwiInvalidateItem                    @237
+                OpHwiExportExtraData                   @238
+                OpHwiImportExtraData                   @239
+							  OpHwiQueryDesiredPalette							 @240
+               
+                ;Lite window item functions get ords 300-399
+                OpLwiAccelKeyHit                       @300
+                OpLwiActivate                          @301
+                OpLwiAdjustNewRect                     @302
+                OpLwiCancelMode                        @303
+                OpLwiCopy                              @304
+                OpLwiCut                               @305
+                OpLwiDataChanged                        @306
+                OpLwiDeactivated                        @307
+                OpLwiDestroy                            @308
+                OpLwiDoubleClicked                     @309
+                OpLwiDraw                              @310
+                OpLwiDrawGrabHandles                   @311
+                OpLwiDrawTrackingRect                  @312
+                OpLwiEdit                              @313
+                OpLwiGetExtraData                      @314
+                OpLwiGetSelection                      @315
+                OpLwiHide                              @316
+                OpLwiInit                              @317
+                OpLwiInvalidateGrabHandles             @318
+                OpLwiItemInRect                        @319
+                OpLwiItemInRegion                      @320
+                OpLwiKeyDown                           @321
+                OpLwiKeyUp                             @322
+                OpLwiMouseDown                         @323
+                OpLwiMouseEntry                        @324
+                OpLwiMouseMove                         @325
+                OpLwiMouseUp                           @326
+                OpLwiMove                              @327
+                OpLwiObject                            @328
+                OpLwiParentClosing                     @329
+                OpLwiParentOpened                      @330
+                OpLwiPaste                             @331
+                OpLwiPointInGrabHandle                 @332
+                OpLwiPointInItem                       @333
+                OpLwiPrint                             @334
+                OpLwiQueryProtocol                     @335
+                OpLwiRemoveItemFromRegion              @336
+                OpLwiSetDefaultItem                    @337
+                OpLwiSetSelection                      @338
+                OpLwiShow                              @339
+                OpLwiType                              @340
+                OpLwiUndo                              @341
+                OpLwiEnable                            @342
+                OpLwiScreenLocationChanged             @343
+                OpLwiInvalidateItem                    @344
+                OpLwiExportExtraData                   @345
+                OpLwiImportExtraData                   @346
+							  OpLwiQueryDesiredPalette							 @347
+							  OpLwiParentNotification								 @348
+
+
+                ;Window API functions get ords 400-599
+                OWndActivateWindow                     @400
+                OWndCallEachVisualInstance             @401
+                OWndDoesItemUseCancelKey               @402
+                OWndDoesItemUseCursorKeys              @403
+                OWndDoesItemUseDefaultKey              @404
+                OWndDoesItemUseTab                     @405
+                OWndGetActiveItem                      @406
+                OWndGetActiveWindowObject              @407
+                OWndGetCaptureItem                     @408
+                OWndGetItemControlID                   @409
+                OWndGetNextItem                        @410
+                OWndGetPreviousItem                    @411
+                OWndIsItemActivatable                  @412
+                OWndIsItemCancel                       @413
+                OWndIsItemDefault                      @414
+                OWndIsItemEnabled                      @415
+                ; 416 is in the Window Layout API Section
+                OWndIsItemTransparent                  @417
+                OWndIsItemVisible                      @418
+                OWndIsLayoutTime                       @419
+                OWndIsWindowColor                      @420
+                OWndReleaseCapture                     @421
+                OWndReleaseCursor                      @422
+                OWndSetActiveItem                      @423
+                OWndSetCancelItem                      @424
+                OWndSetCaptureItem                     @425
+                OWndSetCursor                          @426
+                OWndSetDefaultItem                     @427
+                OWndSetItemAccelKey                    @428
+                OWndSetItemActivatable                 @429
+                OWndSetItemEnabled                     @430
+                ; 431 is in the Window Layout API Section
+                OWndSetItemTransparent                 @432
+                OWndSetItemUsesCancelKey               @433
+                OWndSetItemUsesCursorKeys              @434
+                OWndSetItemUsesDefaultKey              @435
+                OWndSetItemUsesTab                     @436
+                OWndSetItemVisible                     @437
+                OWndSimulateAccelKey                   @438
+                OWndIsLiteItem                         @439
+                OWndIsHwndItem                         @440
+                OWndDPtoLP                             @441
+                OWndLPtoDP                             @442
+                OWndInvalidateLogicalRect              @443
+                OWndValidateLogicalRect                @444
+                OWndCreateWindowEx                     @445
+                OWndMoveWindow                         @446
+                OWndGetActiveMenuBar                   @447
+                OWndShowMenuBar                        @448
+                OWndHideMenuBar                        @449
+                OWndSetMenuBar                         @450
+                OWndRedrawMenuBar                      @451
+                OWndCreateFontTmm                      @452
+                OWndDeleteFont                         @453
+                OWndWindowObjectFromHwnd               @454
+                OWndHideItem                           @455
+                OWndShowItem                           @456
+                ; 457 is in the Window Layout API Section
+                ; 458 is in the Window Layout API Section
+                OWndItemFromUID                        @459
+                OWndUIDFromItem                        @460
+                OWndDStoLS                             @461
+                OWndLStoDS                             @462
+                OWndGetHandle                          @463
+                OWndGetClientRect                      @464
+                OWndMoveItem                           @465
+                OWndIsItemObject                       @466
+                OWndSetMenuAccelKey                    @467
+                OWndGetPalette                         @468
+								OWndReconstructPalette								 @469
+
+                ;Window Layout API get ords 600-799
+                OWndLayIsItemShape                     @416  ; Name needed to change, but ordinal needed to be identical
+                OWndLaySetItemIsShape                  @431  ; Name needed to change, but ordinal needed to be identical
+                OWndLayIsItemGroup                     @458  ; Name needed to change, but ordinal needed to be identical
+                OWndLaySetItemIsGroup                  @457  ; Name needed to change, but ordinal needed to be identical
+                OWndLayCreateAllExistingItems          @600
+                OWndLayCreateNewItem                   @601
+                OWndLayDestroyAllExistingItems         @602
+                OWndLayDestroyItem                     @603
+                OWndLayDrawsSmooth                     @604
+                OWndLayGetInitialClientRect            @605
+                OWndLayGetInitialWindowState           @606
+                OWndLayGetMaxSize                      @607
+                OWndLayGetMenuBarID                    @608
+                OWndLayGetMinSize                      @609
+                OWndLayGetScrollSize                   @610
+                OWndLayGetTitle                        @611
+                OWndLayHasDialogFrame                  @612
+                OWndLayHasHScroll                      @613
+                OWndLayHasMaxbutton                    @614
+                OWndLayHasMaxSize                      @615
+                OWndLayHasResizeFrame                  @616
+                OWndLayHasSysmenu                      @617
+                OWndLayHasTitleBar                     @618
+                OWndLayHasVScroll                      @619
+                OWndLayIsInitVisible                   @620
+                OWndLayIsModal                         @621
+                OWndLayIsPopup                         @622
+                OWndLaySaveItems                       @623
+                OWndLaySetDrawsSmooth                  @624
+                OWndLaySetHasDialogFrame              @625
+                OWndLaySetHasHScroll                  @626
+                OWndLaySetHasMaxbutton                @627
+                OWndLaySetHasMaxSize                  @628
+                OWndLaySetHasResizeFrame              @629
+                OWndLaySetHasSysmenu                  @630
+                OWndLaySetHasTitleBar                 @631
+                OWndLaySetHasVScroll                  @632
+                OWndLaySetInitialClientRect            @633
+                OWndLaySetInitialWindowState           @634
+                OWndLaySetIsInitVisible                @635
+                OWndLaySetIsModal                      @636
+                OWndLaySetIsPopup                      @637
+                OWndLaySetMaxSize                      @638
+                OWndLaySetMenuBarID                    @639
+                OWndLaySetMinSize                      @640
+                OWndLaySetScrollSize                   @641
+                OWndLaySetTitle                        @642
+                OWndLayHasMinbutton                    @643
+                OWndLaySetHasMinbutton                 @644
+                OWndLaySetItemTabstop                  @645
+                OWndLayIsItemTabstop                   @646
+                OWndLaySetItemGroupstop                @647
+                OWndLayIsItemGroupstop                 @648
+                OWndLaySetMappingMode                  @649
+                OWndLaySetWindowHandle                 @650
+                OWndLayGetColorsAndPattern             @651
+                OWndLaySetColorsAndPattern             @652
+                OWndLaySetItemGrowflag                 @653
+                OWndLayGetItemGrowflag                 @654
+                OWndLayRecreateExistingItem            @655
+                OWndLayQuitsOnClose                    @656
+                OWndLaySetQuitsOnClose                 @657
+                OWndLayAdjWindowRectEx                 @658
+                OWndLaySetViewportOrgEx                @659
+                OWndLayGetViewportOrgEx                @660
+                OWndLaySetWindowOrgEx                  @661
+                OWndLayGetWindowOrgEx                  @662
+                OWndLaySetItemLocked                   @663
+                OWndLayIsItemLocked                    @664
+                OWndLayCreateNewGroup                  @665
+                OWndLaySetItemVisibleFlag              @666
+
+                ;Group window Item functions get ords 800-899
+                OpGwiNumItems                          @800
+                OpGwiAllObjects                        @801
+                OpGwiCreated                           @802
+                OpGwiSetVisible                        @803
+                OpGwiGetNextItem                       @804
+                OpGwiGetPrevItem                       @805
+                OpGwiItemRecreated                     @806
+                OpGwiUngrouped                         @807
+                OpGwiLock                              @808
+                OpGwiItemDeleted                       @809
+                OpGwiItemAdded                         @810

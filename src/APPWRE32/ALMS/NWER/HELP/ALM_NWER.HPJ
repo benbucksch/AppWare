@@ -1,0 +1,25 @@
+;
+[OPTIONS]
+ROOT=e:\appware\bin\alm_nwer\help
+ERRORLOG=e:\appware\bin\alm_nwer\help\alm_nwer.log
+TITLE=NW Error ALM Help
+WARNING=3
+COMPRESS=OFF
+BMROOT=e:\appware\bin\alm_nwer\help\bitmaps,w:\word_6.00\hb_bmaps
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+alm_nwer.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+;
+[WINDOWS]
+main="NW Error ALM Help",,,,(192, 192, 192),0
+[MAP]
+#include <nwerhelp.h>

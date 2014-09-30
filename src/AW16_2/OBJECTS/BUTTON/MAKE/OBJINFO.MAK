@@ -1,0 +1,11 @@
+# Object-specific make information:
+#
+#  DLL name
+#  .DEF name
+
+OBJECTDLLNAME = ALM_BUTN.DLL
+OBJECTDEFNAME = ALM_BUTN.DEF
+LOCALCCFLAGS  =
+LOCALINCLUDE  =	 ..\include
+LOCALLIBS     = ALM_WND.LIB ALM_TEXT.LIB
+OBJECTAPI     = ALM_BUTN.LIB

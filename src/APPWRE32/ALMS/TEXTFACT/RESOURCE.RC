@@ -1,0 +1,94 @@
+#define TFHELP			998
+#define IDC_GROUPBOX1	107
+#define IDC_RADIOBUTTON1	113
+#define IDC_RADIOBUTTON2	114
+#define IDC_RADIOBUTTON3	115
+#define IDC_RADIOBUTTON4	116
+#define IDC_RADIOBUTTON5	117
+#define IDC_GROUPBOX2	118
+
+// #include <bwcc.h>
+#include <windows.h>
+#include <ver.h>
+
+TFDIALOG DIALOG 0, 0, 334, 270
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Text Builder"
+FONT 8, "MS Sans Serif"
+{
+ DEFPUSHBUTTON "OK", IDOK, 276, 8, 50, 14, BS_DEFPUSHBUTTON | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 276, 26, 50, 14
+ PUSHBUTTON "&Help", TFHELP, 276, 44, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ CHECKBOX "Auto &update", 111, 198, 238, 60, 12, BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP
+ CONTROL "-REMOVE-", 110, "COMBOBOX", CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP, 278, 104, 48, 39
+ LTEXT "&Variables:", -1, 18, 18, 44, 11, SS_LEFTNOWORDWRAP | WS_GROUP
+ LISTBOX 105, 18, 29, 65, 70, LBS_NOTIFY | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON " << A&dd <<", 102, 91, 37, 50, 14, BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP
+ PUSHBUTTON "&Remove", 103, 91, 55, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "&Edit...", 104, 91, 73, 50, 14
+ LTEXT "&Available objects:", -1, 149, 18, 60, 11, SS_LEFTNOWORDWRAP | WS_GROUP
+ LISTBOX 101, 149, 29, 65, 70, LBS_NOTIFY | LBS_EXTENDEDSEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+ LTEXT "Varia&ble name:", 112, 8, 119, 57, 11
+ EDITTEXT 109, 8, 130, 92, 14, ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP
+ LTEXT "Re&sult object:", -1, 19, 227, 57, 11
+ COMBOBOX 106, 18, 238, 92, 60, CBS_DROPDOWNLIST | WS_CHILD | WS_VISIBLE | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+ LTEXT " E&xpression:", -1, 18, 162, 64, 11
+ EDITTEXT 108, 18, 173, 240, 50, ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+ GROUPBOX "Group", IDC_GROUPBOX1, 8, 5, 260, 105, BS_GROUPBOX
+ CONTROL "&Text", IDC_RADIOBUTTON1, "BUTTON", BS_AUTORADIOBUTTON, 222, 32, 35, 12
+ CONTROL "&Number", IDC_RADIOBUTTON2, "BUTTON", BS_AUTORADIOBUTTON, 222, 44, 39, 12
+ CONTROL "&Picture", IDC_RADIOBUTTON3, "BUTTON", BS_AUTORADIOBUTTON, 222, 56, 38, 12
+ CONTROL "&List", IDC_RADIOBUTTON4, "BUTTON", BS_AUTORADIOBUTTON, 222, 68, 30, 12
+ CONTROL "Ot&her", IDC_RADIOBUTTON5, "BUTTON", BS_AUTORADIOBUTTON, 222, 80, 36, 12
+ GROUPBOX "Equation", IDC_GROUPBOX2, 8, 149, 260, 113, BS_GROUPBOX
+ LTEXT "--REMOVE--", -1, 280, 93, 39, 8
+}
+
+TFICON ICON "textfact.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Text Builder Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32TFCT\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32TFCT.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,35 @@
+LIBRARY         ALM_NMBR
+DESCRIPTION     'Novell Appware Loadable Module: Number Object'
+EXETYPE         WINDOWS
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+HEAPSIZE        32768
+STACKSIZE       20480
+
+EXPORTS         ; dll entry and exit
+                WEP                            @1   RESIDENTNAME
+
+                NUMADMINPROC                   @3
+                CREATEVISUALINSTANCE           @4
+                NMBREVENT_OBJECTTOTEXT         @5
+                NMBREVENT_TEXTTOOBJECT         @6
+
+
+                ; APIs
+                ONMBRFORMATINTEGER              @10
+                ONMBRFORMATREAL                 @11
+                ONMBRCONVERTTOSTRING            @12
+                ONMBRCONVERTFROMSTRING          @13
+                ONMBRGETINTEGER                 @14
+                ONMBRGETREAL                    @15
+                ONMBRSETINTEGER                 @16
+                ONMBRSETREAL                    @17
+                ONMBRGETTYPE                    @18
+                ONMBRSETTYPE                    @19
+                ONMBRGETSTATUS                  @20
+								ONMBRPARSEFORMATEDNUMBER				@21
+
+
+
+
+

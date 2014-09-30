@@ -1,0 +1,17 @@
+LIBRARY         AW32DDES
+
+DESCRIPTION     'Novell AppWare Loadable Module: DDE Server Object'
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+HEAPSIZE        32768
+STACKSIZE       20480
+
+
+EXPORTS         WEP                   @1    RESIDENTNAME
+                DDESMDRT              @2
+                DDECALLBACK           @3
+                DDESADMN              @4
+                OPTIONSDLGPROC        @5
+
+

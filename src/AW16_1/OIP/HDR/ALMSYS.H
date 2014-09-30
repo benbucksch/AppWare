@@ -1,0 +1,40 @@
+/*//////////////////////////////////////////////////////////////
+//
+//	Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//	THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//	PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//	ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL, INC. EMPLOYEES
+//	WHO HAVE A NEED TO KNOW HOW TO PERFORM THEIR TASKS WITHIN THE SCOPE
+//	OF THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL, INC. WHO
+//	HAVE ENTERED INTO APPROPRIATE LICENSE AGREEMENTS.  NO PART OF THIS
+//	WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//	REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//	COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//	WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL, INC.  ANY USE OR
+//	EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//	THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------
+//
+// FILE:						ALMSYS.H
+//
+// AUTHOR:					Scott McCarty
+//
+// DESCRIPTION:			Main header file for all environment files
+//
+// CHANGES:
+//
+//////////////////////////////////////////////////////////////*/
+
+#include <windows.h>
+#include <a_alm.h>
+
+#ifndef A_WIN32
+#define I_CALLBACK	CALLBACK _export
+#define I_APIENTRY	WINAPI _export
+
+#else
+#define I_CALLBACK	CALLBACK
+#define I_APIENTRY	WINAPI
+#endif	// !A_WIN32

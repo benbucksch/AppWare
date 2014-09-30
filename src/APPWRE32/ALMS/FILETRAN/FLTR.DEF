@@ -1,0 +1,25 @@
+LIBRARY       AW32FLTR                      
+DESCRIPTION   'Novell AppWare Loadable Module: File Transfer Object'
+EXETYPE       WINDOWS
+
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+SEGMENTS      _TEXT PRELOAD
+
+EXPORTS
+              FT_SetConfigFunc               @3   
+              FT_GetConfigFunc               @4   
+              FT_ReceiveFileFunc             @5   
+              FT_SendFileFunc                @6   
+              FT_CancelFunc                  @7  
+              FT_ConfigureFunc               @8 
+              FLTR_ReceiveBinaryFileEvent    @9  
+              FLTR_SendBinaryFileEvent       @10  
+              FLTR_Ascii_ReceiveFileEvent    @11  
+              FLTR_Ascii_CancelFileEvent     @12  
+              FLTR_Ascii_SendFileEvent       @13  
+              FLTR_ActiveidleEvent           @14  
+              FLTR_KillidleEvent             @15  
+			  FLTR_PostPollTimeEvent         @16
+			  FLTR_PostDataTimerEvent        @17
+			  FLTR_StartUpEvent              @18

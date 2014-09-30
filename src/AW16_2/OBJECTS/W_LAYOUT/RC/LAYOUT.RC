@@ -1,0 +1,116 @@
+////////////////////////////////////////////////////////////////////////////
+//
+//	Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+//
+//	THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//	PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//	ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+//	A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+//	THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+//	ENTERED INTO APPROPRIATE LICENCE AGREEMENTS.  NO PART OF THIS
+//	WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//	REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//	COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//	WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+//	EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//	THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------------------
+//
+// FILE:					"layout.rc"
+//
+// AUTHOR:				Kevin J. Smart
+//
+// DESCRIPTION:		WINDOW LAYOUT RESOURCE FILE
+//
+// CHANGES:
+//
+////////////////////////////////////////////////////////////////////////////
+
+#include	<windows.h>
+#include	<bwcc.h>
+#include	"wlay_rsc.h"
+
+// accelerators for the window layout //////////////////////////////////////
+
+#include	"lay_accl.acl"
+
+// bitmaps for the window layout ///////////////////////////////////////////
+
+// Alignment tool bitmaps
+ALIGNTOOL_LEFT								BITMAP	algnleft.bmp
+ALIGNTOOL_RIGHT								BITMAP	algnrght.bmp
+ALIGNTOOL_TOP									BITMAP	algntop.bmp
+ALIGNTOOL_BOTTOM							BITMAP	algnbot.bmp
+ALIGNTOOL_CENTERHORZ					BITMAP	ctrhorz.bmp
+ALIGNTOOL_CENTERVERT					BITMAP	ctrvert.bmp
+ALIGNTOOL_CENTERWINDOWHORZ		BITMAP	ctrwhorz.bmp
+ALIGNTOOL_CENTERWINDOWVERT		BITMAP	ctrwvert.bmp
+ALIGNTOOL_GROWHORZ						BITMAP	growhorz.bmp
+ALIGNTOOL_GROWVERT						BITMAP	growvert.bmp
+ALIGNTOOL_SHRINKHORZ					BITMAP	shrkhorz.bmp
+ALIGNTOOL_SHRINKVERT					BITMAP	shrkvert.bmp
+ALIGNTOOL_SPACEVERT						BITMAP	spacvert.bmp
+ALIGNTOOL_SPACEHORZ						BITMAP	spachorz.bmp
+ALIGNTOOL_GRID								BITMAP	grid.bmp
+ALIGNTOOL_MOVESIZE						BITMAP	movesize.bmp
+
+// standard tool bitmaps
+STDTOOL_ANCHOR								BITMAP	anchor.bmp
+STDTOOL_ARROW									BITMAP	arrow.bmp
+STDTOOL_BACKGROUND						BITMAP	windowbg.bmp
+STDTOOL_GROUPSTOP							BITMAP	groupsto.bmp
+STDTOOL_REORDER								BITMAP	reorder.bmp
+STDTOOL_SELECTALL							BITMAP	selectal.bmp
+STDTOOL_TABSTOP								BITMAP	taborder.bmp
+STDTOOL_VISIBILITY						BITMAP	visible.bmp
+
+// misc. bitmaps
+BMP_SIZES											BITMAP	sizes.bmp
+
+// cursors for the window layout ///////////////////////////////////////////
+
+// Standard tool cursors
+CUR_ANCHOR										CURSOR	atchtool.cur
+CUR_GROUPTOOL									CURSOR	gruptool.cur
+CUR_NMBR_12 									CURSOR	nmbr12.cur
+CUR_NMBR_21										CURSOR	nmbr21.cur
+CUR_TABTOOL										CURSOR	tabtool.cur
+CUR_VISBTOOL									CURSOR	visbtool.cur
+
+// Drag-drop cursors for object list -- Temporary
+TMP_SRCCURSOR									CURSOR	tmpsrc.cur
+TMP_DSTCURSOR									CURSOR	tmpdst.cur
+TMP_INVCURSOR									CURSOR	tmpinv.cur
+
+// dialogs for the window layout ///////////////////////////////////////////
+
+//#include	"attach.dlg"
+#include	"grid.dlg"
+#include	"lay_pref.dlg"
+//#include	"pos&size.dlg"
+//#include	"rename.dlg"
+//#include	"showrulr.dlg"
+#include	"wnd_pos.dlg"
+#include	"wnd_styl.dlg"
+
+// icons for the window layout /////////////////////////////////////////////
+
+ICON_LAYOUT										ICON	layout.ico
+
+// menu for the window layout //////////////////////////////////////////////
+
+#include	"lay_menu.mnu"
+
+// strings for errors //////////////////////////////////////////////////////
+
+STRINGTABLE
+BEGIN
+	ERROR_NOCREATEFUNCTION, "Object did not supply a create function for APROT_WND."
+	ERROR_NOPROTSUPPORT,		"Object created without supporting APROT_WND."
+	ERROR_INVALIDWINDOW,		"The window object could not be constructed from the object data."
+	ERROR_CREATEFAILED,			"The create function for APROT_WND failed."
+	ERROR_INVALIDHWND,			"The hwnd window item has an invalid m_hwndItem member."
+END
+
+////////////////////////////////////////////////////////////////////////////

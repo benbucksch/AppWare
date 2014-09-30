@@ -1,0 +1,26 @@
+LIBRARY       ALM_TEXT
+
+DESCRIPTION   'Novell AppWare Loadable Module: Text Object'
+
+EXETYPE       WINDOWS
+
+CODE          LOADONCALL MOVEABLE DISCARDABLE
+DATA          PRELOAD MOVEABLE SINGLE
+
+HEAPSIZE      32768
+
+EXPORTS
+              WEP                                 @1 RESIDENTNAME
+
+              OTEXTCOMPAREWITHBUFFER              @10
+              OTEXTCOMPAREWITHMEMBLOCK            @11
+              OTEXTGETLENGTH                      @12
+              OTEXTGETTOBUFFER                    @13
+              OTEXTGETTOMEMBLOCK                  @14
+              OTEXTSETVALUEFROMBUFFER             @15
+              OTEXTSETVALUEFROMMEMBLOCK           @16
+              OTEXTGETTOBUFFEREX                  @17
+              OTEXTGETTOMEMBLOCKEX                @18
+              OTEXTSETVALUEFROMBUFFEREX           @19
+              OTEXTSETVALUEFROMMEMBLOCKEX         @20
+							OTEXTGETLIMIT												@21

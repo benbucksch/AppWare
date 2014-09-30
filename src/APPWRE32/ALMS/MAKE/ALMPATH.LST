@@ -1,0 +1,3 @@
+INCLUDE                 \INTERNAL\INCLUDE;..\INCLUDE;c:\msdev\INCLUDE
+LIB                     \INTERNAL\LIB;c:\msdev\LIB
+PATH                    \BUILD\BIN;c:\msdev\BIN;n:\SRCSAFE\win32

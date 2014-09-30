@@ -1,0 +1,78 @@
+;/*-------------------------------------------------------------------------*\
+; | FILE        : DATB.DEF                                                  |
+; | DESCRIPTION : Database object's definition.                             |
+; | COPYRIGHT   : 1993 Novell, Inc.                                         |
+; | EDIT LOG    :                                                           |
+; |   v1.00.00    mw    01-Sep-1993  Initial Edit                           |
+;\*-------------------------------------------------------------------------*/
+LIBRARY         ALM_DATB
+DESCRIPTION     'Novell AppWare Loadable Module: Database Object'
+EXETYPE         WINDOWS
+
+CODE            LOADONCALL MOVEABLE DISCARDABLE
+DATA            PRELOAD MOVEABLE SINGLE
+SEGMENTS        _TEXT PRELOAD
+
+HEAPSIZE        4096
+
+EXPORTS         WEP                             @1              RESIDENTNAME
+                GETSERVERSION                   @2
+
+                ; /* ---- Database object --------------------------------- */
+                ODATBADMINISTRATIONROUTINE      @3
+                ODATBOBJECTDIALOG               @4
+                ODATBPOWERSEARCHDIALOG          @5
+                ODATBSTARTUPFUNC                @6
+                ODATBSHUTDOWNFUNC               @7
+
+                ; /* ---- The functions ----------------------------------- */
+                ODATBADDRECORDFUNC              @8
+                ODATBAPPENDFOUNDIDSFUNC         @9
+                ODATBCLOSEDBFUNC                @10
+                ODATBCOPYFOUNDIDSFUNC           @11
+                ODATBCOUNTRECORDSFUNC           @12
+                ODATBDBFILENAMEFUNC             @13
+                ODATBDELETERECORDFUNC           @14
+                ODATBFINDEXACTRECORDFUNC        @15
+                ODATBFINDRECORDFUNC             @16
+                ODATBFINDRECORDIDFUNC           @17
+                ODATBGETFOUNDRECORDFUNC         @18
+                ODATBGETNEXTRECORDFUNC          @19
+                ODATBGETPREVIOUSRECORDFUNC      @20
+                ODATBGETRECORDFUNC              @21
+                ODATBLOADDBFUNC                 @22
+                ODATBLOCKRECORDFUNC             @23
+                ODATBMACROSEARCHFUNC            @24
+                ODATBNEWDBFUNC                  @25
+                ODATBOPENDBFUNC                 @26
+                ODATBPOWERSEARCHFUNC            @27
+                ODATBREADFOUNDRECORDFUNC        @28
+                ODATBREADNEXTRECORDFUNC         @29
+                ODATBREADPREVIOUSRECORDFUNC     @30
+                ODATBREADRECORDFUNC             @31
+                ODATBRECORDINDEXFUNC            @32
+                ODATBRECOVERDBFUNC              @33
+                ODATBREMOVEFOUNDIDFUNC          @34
+                ODATBSETALLMODEFUNC             @35
+                ODATBSETFOUNDMODEFUNC           @36
+                ODATBSETFOUNDIDSFUNC            @37
+                ODATBSORTFOUNDFUNC              @38
+                ODATBSTARTXFUNC                 @39
+                ODATBSTOPXFUNC                  @40
+                ODATBUNLOCKRECORDFUNC           @41
+                ODATBUPDATERECORDFUNC           @42
+
+                ; /* ---- Additonal functions ----------------------------- */
+                ODATBCOUNTRECSFUNC              @43
+                ODATBGETFIELDIDSFUNC            @44
+                ODATBGETINDEXFIELDIDSFUNC       @45
+                ODATBREADRECORDSFUNC            @46
+
+                ; /* ---- Direct functions -------------------------------- */
+                ODATBGETFIELDOBJECTIDS          @51
+                ODATBGETFOUNDCOUNT              @52
+                ODATBGETFOUNDINDEX              @53
+                ODATBGETKEYOBJECTIDS            @54
+                ODATBGETRECCOUNT                @55
+                ODATBISFILEOPEN                 @56
+                ODATBISRECLOCK                  @57

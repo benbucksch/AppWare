@@ -1,0 +1,28 @@
+LIBRARY       AW32FLAG
+
+DESCRIPTION   'Novell AppWare Loadable Module: Flag Object'
+
+CODE          MOVEABLE DISCARDABLE LOADONCALL
+
+DATA          SINGLE MOVEABLE PRELOAD
+
+SEGMENTS      _TEXT PRELOAD
+
+EXPORTS       ; flag admn and objd
+              Flag_Admn                     @3
+              Flag_ObjD                     @4
+              GetSerVersion                 @5
+
+              ; flag functions
+              Flag_ClearFlag                @6
+              Flag_IsFlagSet                @7
+              Flag_SetFlag                  @8
+              Flag_ToggleFlag               @9      
+
+              ; flag event handlers
+              Flag_objectToText             @10
+              Flag_textToObject             @11
+
+              ; flag APIs
+              OFlagGet                      @12
+              OFlagSet                      @13

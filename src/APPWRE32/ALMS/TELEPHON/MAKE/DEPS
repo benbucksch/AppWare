@@ -1,0 +1,48 @@
+OBJECTFILES= \
+	$(OBJDIR)\tdevadmn.obj \
+	$(OBJDIR)\tdevevnt.obj \
+	$(OBJDIR)\tdevuser.obj \
+	$(OBJDIR)\tlinadmn.obj \
+	$(OBJDIR)\tlinuser.obj \
+	$(OBJDIR)\tlinvisu.obj \
+	$(OBJDIR)\ts__evnt.obj \
+	$(OBJDIR)\ts__func.obj \
+	$(OBJDIR)\ts__main.obj 
+
+
+$(OBJDIR)\tdevadmn.obj:  .\tdevadmn.cpp .\alm_csta.h .\csta.h .\acs.h \
+                         .\cstadefs.h .\acsdefs.h
+
+$(OBJDIR)\tdevevnt.obj:  .\tdevevnt.cpp .\alm_csta.h .\csta.h .\acs.h \
+                         .\cstadefs.h .\acsdefs.h
+
+$(OBJDIR)\tdevuser.obj:  .\tdevuser.cpp .\o_tdev.h .\alm_csta.h .\csta.h \
+                         .\acs.h .\cstadefs.h .\acsdefs.h
+
+$(OBJDIR)\tlinadmn.obj:  .\tlinadmn.cpp .\tlinvisu.h .\alm_csta.h .\csta.h \
+                         .\acs.h .\cstadefs.h .\acsdefs.h
+
+$(OBJDIR)\tlinuser.obj:  .\tlinuser.cpp .\tlinvisu.h .\o_tlin.h .\alm_csta.h \
+                         .\csta.h .\acs.h .\cstadefs.h .\acsdefs.h
+
+$(OBJDIR)\tlinvisu.obj:  .\tlinvisu.cpp .\o_tdev.h .\o_tlin.h .\tlinvisu.h \
+                         .\alm_csta.h .\csta.h .\acs.h .\cstadefs.h \
+                         .\acsdefs.h
+
+$(OBJDIR)\ts__evnt.obj:  .\ts__evnt.cpp .\o_tlin.h .\o_tdev.h .\tlinvisu.h \
+                         .\alm_csta.h .\csta.h .\acs.h .\cstadefs.h \
+                         .\acsdefs.h
+
+$(OBJDIR)\ts__func.obj:  .\ts__func.cpp .\o_tlin.h .\o_tdev.h .\alm_csta.h \
+                         .\csta.h .\acs.h .\cstadefs.h .\acsdefs.h
+
+$(OBJDIR)\ts__main.obj:  .\ts__main.cpp .\o_tlin.h .\o_tdev.h .\tlinvisu.h \
+                         .\alm_csta.h .\csta.h .\acs.h .\cstadefs.h \
+                         .\acsdefs.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\alm_csta.res 
+
+
+$(OBJDIR)\alm_csta.res:  .\alm_csta.rc
+

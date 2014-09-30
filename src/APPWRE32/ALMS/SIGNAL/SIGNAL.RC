@@ -1,0 +1,114 @@
+/*//////////////////////////////////////////////////////////////
+//
+//          Copyright 1993, Novell, Inc.  All rights reserved
+//
+//  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+//  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+//  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL EMPLOYEES WHO HAVE
+//  A NEED TO KNOW TO PERFORM THEIR TASKS WITHIN THE SCOPE OF
+//  THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL WHO HAVE
+//  ENTERED INTO APPROPRIATE LICENSE AGREEMENTS.  NO PART OF THIS
+//  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+//  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+//  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+//  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL.  ANY USE OR
+//  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+//  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+//
+//--------------------------------------------------------------
+//
+// FILE:
+//
+// AUTHOR: Shaili Jain
+//
+// DESCRIPTION:  March 21, 1994
+//
+// CHANGES:
+//
+// 
+//////////////////////////////////////////////////////////////*/
+
+#include <ver.h>
+#include <windows.h>
+#include "resource.h"
+
+
+STRINGTABLE 
+BEGIN
+  IDS_ADDEDOBJECT,  "  Choose a Valid Object"
+END
+
+
+DLGSIGNALS DIALOG 66, 39, 208, 108
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Signals"
+FONT 8, "MS Sans Serif"
+{
+ LISTBOX IDSIGNALLIST, 8, 40, 134, 60, LBS_STANDARD | WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ EDITTEXT IDSIGNAL, 38, 8, 104, 14, ES_LEFT | ES_AUTOHSCROLL | ES_NOHIDESEL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP
+ PUSHBUTTON "OK", IDOK, 150, 8, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 150, 26, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "Help", IDHELP, 150, 44, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "Add", IDADD, 150, 62, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ PUSHBUTTON "Delete", IDDELETE, 150, 80, 50, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+ LTEXT "Signal:", -1, 8, 8, 25, 11, WS_CHILD | WS_VISIBLE | WS_GROUP
+ LTEXT "Signal list:", -1, 8, 28, 41, 11
+}
+
+
+SIGNALICON ICON "sigs.ico"
+
+// Version Info ////////////////////////////////////////////////////////////
+
+1 VERSIONINFO LOADONCALL MOVEABLE 
+FILEVERSION	1, 2, 0, 0
+PRODUCTVERSION	1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Signal Object\0"
+      VALUE "FileVersion",	"1.20\0"
+      VALUE "InternalName",     "AW32SIGS\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32SIGS.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.20\0"
+      VALUE "ProductVersion",	"1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, Visual AppBuilder, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE 
+BEGIN
+  10001, "VeRsIoN=1.20\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+
+////////////////////////////////////////////////////////////////////////////
+
+
+DIALOG_1 DIALOG 18, 18, 142, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DIALOG_1"
+BEGIN
+END
+

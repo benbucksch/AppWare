@@ -1,0 +1,18 @@
+OBJECTFILES= \
+	$(OBJDIR)\groupadm.obj \
+	$(OBJDIR)\groupfnc.obj \
+	$(OBJDIR)\groupobj.obj 
+
+
+$(OBJDIR)\groupadm.obj:  .\groupadm.cpp .\groupobj.h
+
+$(OBJDIR)\groupfnc.obj:  .\groupfnc.cpp .\groupobj.h
+
+$(OBJDIR)\groupobj.obj:  .\groupobj.cpp .\groupobj.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\group.res 
+
+
+$(OBJDIR)\group.res:  .\group.rc .\groupobj.h
+

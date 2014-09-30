@@ -1,0 +1,14 @@
+LIBRARY     ALM_BNDL
+
+DESCRIPTION 'Novell AppWare Loadable Module: Bundle Object'
+
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD SINGLE MOVEABLE
+PROTMODE
+
+EXPORTS
+            BundleAdministration           @1   
+            BuildFunc                      @2   
+
+

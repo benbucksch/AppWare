@@ -1,0 +1,28 @@
+;
+[OPTIONS]
+ROOT=o:\help\menubar
+ERRORLOG=o:\help\menubar\awusmenb.log
+TITLE=Menu Bar ALM Help File
+WARNING=3
+COMPRESS=OFF
+BMROOT=.,o:\help\hb_bmaps
+;
+COPYRIGHT=©1995 Novell, Inc.
+;
+;
+[BUILDTAGS]
+;
+[FILES]
+mnbaralm.rtf
+;
+[BITMAPS]
+;
+[CONFIG]
+BrowseButtons()
+;
+CB(`btn_up', `&Up', `JI(`awusmenb.hlp',`idx_contents')')
+;
+[WINDOWS]
+main="Menu Bar ALM Help File",(431, 0, 591, 916),0,,(255, 255, 128),0
+[MAP]
+#include <alm_mbar.h>

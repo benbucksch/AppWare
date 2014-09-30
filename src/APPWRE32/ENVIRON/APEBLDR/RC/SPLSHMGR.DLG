@@ -1,0 +1,27 @@
+/****************************************************************************
+
+
+splshmgr.dlg
+
+produced by Borland Resource Workshop
+
+
+*****************************************************************************/
+SPLASHMGR DIALOG 166, 99, 220, 197
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Import Splash Screen"
+FONT 8, "MS Sans Serif"
+{
+ DEFPUSHBUTTON "OK", IDOK, 166, 9, 50, 14, BS_DEFPUSHBUTTON | WS_TABSTOP
+ PUSHBUTTON "Cancel", IDCANCEL, 166, 27, 50, 14, WS_TABSTOP
+ PUSHBUTTON "Delete", 1008, 166, 56, 50, 14, WS_TABSTOP
+ PUSHBUTTON "Load File...", 1010, 5, 149, 50, 14, WS_TABSTOP
+ PUSHBUTTON "Paste Bitmap", 1012, 58, 149, 50, 14, WS_TABSTOP
+ PUSHBUTTON "Paste DIB", 1014, 112, 149, 50, 14, WS_TABSTOP
+ LTEXT "Minimum Time Shown (Seconds):", -1, 12, 178, 114, 8
+ CONTROL " ", 1000, "BUTTON", BS_OWNERDRAW | WS_CHILD | WS_VISIBLE | WS_DISABLED, 5, 23, 158, 118
+ LTEXT "Current Splash Screen:", -1, 5, 9, 81, 8
+ CONTROL "", -1, "static", SS_BLACKFRAME, 4, 169, 159, 24
+ EDITTEXT 1020, 125, 176, 25, 12
+}
+

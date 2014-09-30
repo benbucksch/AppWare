@@ -1,0 +1,273 @@
+#include "windows.h"
+#include "resource.h"
+#include <ver.h>
+
+AUTHEN_DIALOG DIALOG 33, 39, 213, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NOVELL NETWARE"
+BEGIN
+   CONTROL "", AUTHEN_DIALOG_SERVER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 50, 24, 75, 12
+   CONTROL "", AUTHEN_DIALOG_USER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 50, 39, 75, 12
+   CONTROL "", AUTHEN_DIALOG_PASSWORD, "EDIT", ES_LEFT | ES_AUTOHSCROLL | ES_PASSWORD | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 50, 55, 75, 12
+   PUSHBUTTON "OK", IDOK, 59, 79, 30, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   RTEXT "Server/Tree:", -1, 3, 25, 40, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   RTEXT "User Name:", -1, 3, 40, 40, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   RTEXT "Password:", -1, 7, 56, 36, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   PUSHBUTTON "Cancel", IDCANCEL, 120, 79, 30, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   CONTROL "Login type", 105, "button", BS_GROUPBOX | WS_CHILD | WS_VISIBLE | WS_GROUP, 130, 20, 76, 47
+   CONTROL "Bindery Only", AUTHEN_BINDERYONLY_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 142, 52, 54, 12
+   CONTROL "NDS Only", AUTHEN_NDSONLY_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 142, 42, 42, 12
+   CONTROL "Default", AUTHEN_DEFAULT_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 142, 32, 38, 12
+   LTEXT "Enter authentication information:", -1, 8, 7, 107, 9, WS_CHILD | WS_VISIBLE | WS_GROUP
+   LTEXT "version", AUTHEN_DIALOG_VERSION, 166, 88, 45, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+END
+
+STRINGTABLE
+BEGIN
+   NO_SERVER, "No server was specified"
+   NO_USER, "No user was specified"
+   CONNECTION_FULL, "All available connections are currently used"
+   MEMORY_ERROR, "Not enough memory available"
+   DIFF_USER_SAME_TREE, "Attempted to log into the current tree as a different user"
+   SYSTEM_ERROR, "System error"
+   NO_OBJECT_BAD_PASSWORD, "Invalid user or password specified"
+   NO_SERVER_OR_TREE, "Server or tree specified was not found"
+   AUTHENTICATION_DENIED, "Authentication denied"
+   LOGOUT_ERROR, "%s, %s"
+   NO_DEFAULT_CONN, "No default connection found"
+   NO_DRIVE_SPECIFIED, "No drive specified for drive mapping"
+   NO_PATH_SPECIFIED, "No path specified for drive mapping"
+   ALL_DRIVES_MAPPED, "All available drives are already mapped"
+   BAD_INPUT_TABLE, "Input table bad format"
+   NO_MAPPINGS_SPECIFIED, "No mapping specified"
+   MAPDRIVES_ERROR, "Drive '%s:' mapping error: %s"
+   TRUE_STRING, "TRUE"
+   FALSE_STRING, "FALSE"
+   INVALID_DRIVE, "Invalid drive specified"
+   DELETEMAP_ERROR, "Drive '%s:' delete mapping error: %s"
+   NO_DRIVE_MAPPED, "Specified drive not currently mapped"
+   VOLUME_NOT_EXIST, "Specified volume does not exist"
+   NO_MAP_LOCAL, "Cannot map to local drives"
+   UNKNOWN_SERVER, "Specified server is unknown"
+   NO_CONNECTION_TOSERVER, "Currently there is no connection to specified server"
+   NOT_LOGGED_IN, "Currently not logged into specified server"
+   INVALIDPATH, "Specified path is invalid"
+   NO_CONNECTIONS, "There are currently no connections to the network"
+   COLUMN1_HEADER, "Drive"
+   COLUMN2_HEADER, "Path"
+   COLUMN3_HEADER, "Map_Root"
+   COLUMN1_FORMAT, "%c:"
+   COLUMN2_NDSFORMAT, "%s\\%s"
+   COLUMN2_FORMAT, "%s\\%s\\%s"
+   INVALID_LOGIN_TYPE, "Invalid login type specified"
+   DS_TO_BINDERY_SERVER, "Attempted to authenticate in NDS mode to a Bindery only server"
+   LOGOUT_TREE_W_SERVER, "Server cannot be specified when logging out of the tree"
+   OK_OR_STOP, "\n\nPress Yes to continue or No to stop"
+   NO_SCRIPT_SPECIFIED, "No login script file specified"
+   SCRIPT_ERROR, "%s,%s"
+   NO_LOGIN_PNW, "Cannot log into a PNW system"
+   CANNOT_FREE_CONNECTIONSLOT, "Cannot free connection slot on workstation"
+   BAD_PRIMARY_CONNECTIONID, "Cannot set primary connection id"
+   MSG_VERSION, "msg_version=4.00"
+   COPYRIGHT, "Copyright=Copyright 1995, Novell, Inc.   All Rights Reserved."
+   CANNOT_CREATE_CONTEXT, "Cannot create temporary context"
+   SYSTEM_SCRIPT_FORMAT, "\\\\%s\\SYS\\PUBLIC\\NET$LOG.DAT"
+   USER_SCRIPT_FORMAT, "\\\\%s\\SYS\\MAIL\\%lX\\LOGIN"
+   NO_LOGOUT, "Error in logging out of other systems"
+   SCRIPT_LINE_TOO_LONG, "Line too long"
+   SCRIPT_GEN_ERROR, "Script error; >>%s<< file %s, line %d, %s\r\n"
+   DEFAULT_SCRIPTNAME, "Default Script"
+   SCRIPT_NO_END_QUOTE, "Missing ending quotation mark"
+   SCRIPT_NO_PARSE, "Unable to corrrectly interpret line"
+   SCRIPT_NO_GOTO, "Identified GOTO cannot be found"
+   SCRIPT_IF_NESTED, "Ifs are nested too deep"
+   CANNOT_OPEN_SCRIPTFILE, "Cannot open script file"
+   SCRIPT_BAD_SYNTAX, "Invalid script syntax"
+   SCRIPT_TOO_MANY_ARGS, "Too many script arguments"
+   SCRIPT_STRING_TABLE, "Error finding string in script string table"
+   SCRIPT_CANONICALIZE, "Cannot canonicalize given user name"
+   DIVIDE_BY_ZERO, "Attempted to divide by zero"
+   SCRIPT_NO_LABEL, "Identified label cannot be found, label %s"
+   SCRIPT_NO_VALID_CONNECTION, "Not currently logged in"
+   MON_JANUARY, "January"
+   MON_FEBRUARY, "February"
+   MON_MARCH, "March"
+   MON_APRIL, "April"
+   MON_MAY, "May"
+   MON_JUNE, "June"
+   MON_JULY, "July"
+   MON_AUGUST, "August"
+   MON_SEPTEMBER, "September"
+   MON_OCTOBER, "October"
+   MON_NOVEMBER, "November"
+   MON_DECEMBER, "December"
+   DAY_SUN, "Sunday"
+   DAY_MON, "Monday"
+   DAY_TUES, "Tuesday"
+   DAY_WED, "Wednesday"
+   DAY_THURS, "Thursday"
+   DAY_FRI, "Friday"
+   DAY_SAT, "Saturday"
+   TIME_AM, "A.M."
+   TIME_PM, "P.M."
+   MORNING, "morning"
+   AFTERNOON, "afternoon"
+   EVENING, "evening"
+   SCRIPT_PROPERTY_ERROR, "Error reading the property %s from object %s"
+   PAUTHEN_CANCEL, "Authentication cancelled, server %s"
+   PAUTHEN_DIFF_USER, "Authentication denied; different user specified than current NDS tree user, server %s"
+   PAUTHEN_ERROR, "Authentication error, server %s"
+   PAUTHEN_DS_OK, "NDS authentication successful to server %s\r\n"
+   PAUTHEN_BINDERY_OK, "Bindery authentication successful to server %s\r\n"
+   PAUTHEN_DS_OK_PE, "NDS authentication successful to server %s, password expired\r\n"
+   PAUTHEN_BINDERY_OK_PE, "Bindery authentication successful to server %s, password expired\r\n"
+   SCRIPT_ATTACHED, "Successfully attached to server %s\r\n"
+   SCRIPT_CANON_CONTEXT, "Cannot canonicalize specified context: %s"
+   SCRIPT_CONTEXT_INVALID, "Specified context is invalid: %s"
+   SCRIPT_READ_OBJECTINFO, "Cannot read object information, object %s"
+   SCRIPT_CANNOT_SET_CONTEXT, "Cannot set context to specified value: %s"
+   SCRIPT_CONTEXT_CHANGED, "Context successfully changed to %s\r\n"
+   SCRIPT_PARSE_PATH, "Cannot locate specified file: %s"
+   SCRIPT_CANT_SET_DRIVE, "Cannot set current drive to %s"
+   SCRIPT_NOT_SUPPORTED_EXIT, "Exit command may not specify filename to execute; unsupported"
+   SCRIPT_UNKNOWN_COMMAND, "Unknown script command"
+   SCRIPT_BAD_FLOW_COMMAND, "Bad flow command specified: %s"
+   SINGLE_MAP_TO_LOCAL_DISK, "Drive %s maps to a local disk.\r\n"
+   MAPPINGS_TO_LOCAL_DISK, "Dives %s map to a local disk.\r\n"
+   SCRIPT_NOT_SUPPORTED_SEARCH_DRIVE, "Search drive mappings are not fully supported"
+   FULL_DS_MAPPED_PATH, "Drive %c: = %s \\%s\r\n"
+   FULL_MAPPED_PATH, "Drive %c: = %s\\%s \\%s\r\n"
+   DISK_UNDEFINED, "Drive %c: is not defined."
+   SCRIPT_PAUSE, "Press CONTINUE button to proceed ....\r\n"
+   SCRIPT_PUTENV, "Cannot put variable %s into environment"
+   SCRIPT_NOT_SUPPORTED_COMSPEC, "The COMSPEC variable is not supported"
+   DISPLAY_LAST_LOGIN_TIME, "Last login occurred at: %s.\r\n"
+   SCRIPT_UNEXPECTED_INTERNAL_ERROR, "Unexpected internal script error, id=%d, ccode = 0x%x"
+   SCRIPT_SPAWN_TOO_BIG, "Could not execute external program %s; either environment  is too big or command line is too long"
+   SCRIPT_SPAWN_NOT_FOUND, "Could not execute external program %s; specified program was not found."
+   SCRIPT_SPAWN_NO_EXEC, "Could not execute external program %s."
+   SCRIPT_SPAWN_NO_MEM, "Could not execute external program %s; not enough memory available."
+   SCRIPT_SPAWN_UNKNOWN, "Could not execute external program %s; error %04x occurred."
+   SCRIPT_CANNOT_LOGOUT, "This server is being used to read login scripts; you cannot log out."
+   SCRIPT_MUST_BE_DOS31, "The %s command is not supported in DOS versions prior to DOS 3.1."
+   ANSWER_YES, "Yes"
+   ANSWER_NO, "No"
+   SCRIPT_DATE_TIME, "The workstation date and time could not be set."
+   SCRIPT_NOT_SUPPORTED_EXTERNAL_COMMAND, "External command executions are not supported."
+   E_UNKNOWN_NAME, "* Unknown *"
+   SCRIPT_CANT_GET_CONNECTION_INFO, "Unable to get connection information, error code: %x."
+   SCRIPT_NO_SHELL, "The NetWare shell is not loaded"
+   SCRIPT_PAUSE_CAPTION, "Pause"
+   ERR_EXE_LOGINSCRIPTS, "Error executing login scripts"
+   SCRIPT_PROMPTED_DEFAULT, "Default"
+   PROFILE_PROMPTED_DEFAULT, "Default"
+   SCRIPT_GEN_QUESTION, "?"
+   SCRIPT_PROCESSING_OKAY, "Script processing completed"
+   SCRIPT_PROCESSING_ERROR, "A fatal error occurred during script processing"
+   SCRIPT_CANT_INCLUDE, "Cannot include script %s"
+   SCRIPT_CANT_OPEN_SCRIPT, "Cannot open included script %s"
+   VERSION_STRING, "Version 4.01"
+   PWD_EXPIRED, "Password expired.\nNumber of remaining grace logins: %ld"
+END
+
+LOGIN_DIALOG DIALOG 20, 20, 223, 139
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NOVELL NETWARE"
+BEGIN
+   CONTROL "", LOGIN_DIALOG_SERVER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 57, 24, 75, 12
+   CONTROL "", LOGIN_DIALOG_USER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 57, 39, 75, 12
+   CONTROL "", LOGIN_DIALOG_PASSWORD, "EDIT", ES_LEFT | ES_AUTOHSCROLL | ES_PASSWORD | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 57, 55, 75, 12
+   CONTROL "", LOGIN_DIALOG_SCRIPT, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 57, 75, 156, 12
+   CONTROL "", LOGIN_DIALOG_PROFILE, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 57, 92, 156, 12
+   CONTROL "Default", LOGIN_DEFAULT_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 149, 32, 38, 12
+   CONTROL "NDS Only", LOGIN_NDSONLY_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 149, 42, 42, 12
+   CONTROL "Bindery Only", LOGIN_BINDERYONLY_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 149, 52, 54, 12
+   PUSHBUTTON "OK", IDOK, 64, 119, 30, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   PUSHBUTTON "Cancel", IDCANCEL, 125, 119, 30, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   RTEXT "Server/Tree:", -1, 10, 25, 40, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   RTEXT "User Name:", -1, 10, 40, 40, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   RTEXT "Password:", -1, 14, 56, 36, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   CONTROL "Login type", LOGIN_DIALOG_GROUP, "button", BS_GROUPBOX | WS_CHILD | WS_VISIBLE | WS_GROUP, 137, 20, 76, 47
+   LTEXT "Enter login information:", -1, 8, 7, 107, 9, WS_CHILD | WS_VISIBLE | WS_GROUP
+   LTEXT "Login Script:", -1, 10, 76, 42, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+   LTEXT "Profile:", -1, 27, 93, 25, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+   LTEXT "version", LOGIN_DIALOG_VERSION, 176, 129, 45, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+END
+
+SCRIPT_DIALOG DIALOG 50, 39, 315, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Script Processing"
+BEGIN
+   CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE, 136, 200, 42, 14
+   LTEXT "Script processing output:", -1, 9, 4, 83, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+   CONTROL "", SCRIPT_DIALOG_BOX, "EDIT", ES_LEFT | ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_HSCROLL, 8, 14, 299, 177
+END
+
+PAUSE_DIALOG DIALOG 28, 134, 294, 19
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Script Processing"
+BEGIN
+   PUSHBUTTON "CONTINUE", IDCONTINUE, 243, 2, 42, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   LTEXT "Pause command encountered.  Press continue to proceeed...", -1, 11, 5, 199, 11, WS_CHILD | WS_VISIBLE | WS_GROUP
+END
+
+LOGOUT_DIALOG DIALOG 20, 41, 222, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NOVELL NETWARE"
+BEGIN
+   CONTROL "", LOGOUT_DIALOG_SERVER, "EDIT", ES_LEFT | ES_AUTOHSCROLL | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 129, 34, 75, 12
+   PUSHBUTTON "OK", IDOK, 70, 68, 30, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   PUSHBUTTON "Cancel", IDCANCEL, 122, 68, 30, 14, WS_CHILD | WS_VISIBLE | WS_TABSTOP
+   RTEXT "Server:", -1, 116, 20, 40, 8, SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP
+   LTEXT "Enter logout information:", -1, 8, 7, 107, 9, WS_CHILD | WS_VISIBLE | WS_GROUP
+   CONTROL "Logout", LOGOUT_DIALOG_GROUP, "button", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 14, 19, 90, 42
+   CONTROL "NDS Tree Logout", LOGOUT_TREE_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 30, 28, 68, 12
+   CONTROL "Server Logout", LOGOUT_SERVER_BUTTON, "BUTTON", BS_AUTORADIOBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 30, 43, 58, 12
+   LTEXT "version", LOGOUT_DIALOG_VERSION, 175, 76, 45, 8, WS_CHILD | WS_VISIBLE | WS_GROUP
+END
+
+/* Version Info */
+
+1 VERSIONINFO LOADONCALL MOVEABLE
+FILEVERSION     1, 2, 1, 0
+PRODUCTVERSION  1, 2, 0, 0
+#ifdef AW_I_DEBUG
+FILEFLAGSMASK   (VS_FF_PRERELEASE | VS_FF_DEBUG)
+#elif defined ADBG_DEBUG
+FILEFLAGSMASK   VS_FF_DEBUG
+#else
+FILEFLAGSMASK   0
+#endif
+FILEOS          VOS__WINDOWS16
+FILETYPE        VFT_DLL
+FILESUBTYPE     0
+
+BEGIN
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName",      "Novell, Inc.\0"
+      VALUE "FileDescription",  "AppWare Loadable Module: Authentication Functions\0"
+      VALUE "FileVersion",      "1.21\0"
+      VALUE "InternalName",     "AW32AUTH\0"
+      VALUE "LegalCopyright",   "Copyright © Novell, Inc. 1993-1995.\0"
+      VALUE "OriginalFilename", "AW32AUTH.DLL\0"
+      VALUE "ProductName",      "AppWare Version 1.2\0"
+      VALUE "ProductVersion",   "1.20\0"
+      VALUE "LegalTrademarks",  "AppWare, AppWare Loadable Module, and Novell are registered trademarks of Novell, Inc.\0"
+    END
+  END
+END
+
+STRINGTABLE
+BEGIN
+  10001, "VeRsIoN=1.21\0"
+  10002, "\0"
+  10003, "CoPyRiGhT=Copyright (c) Novell, Inc. 1993-1995.  All rights reserved.\0"
+END
+

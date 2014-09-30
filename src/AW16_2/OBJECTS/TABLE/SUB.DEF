@@ -1,0 +1,14 @@
+LIBRARY     ALM_SUBR
+
+DESCRIPTION 'Novell AppWare Loadable Module: Subroutine Object'
+EXETYPE     WINDOWS
+CODE        LOADONCALL MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE SINGLE
+SEGMENTS    _TEXT PRELOAD
+PROTMODE
+
+EXPORTS     WEP                            @1       RESIDENTNAME
+            SUBROUTINEADMN                 @10
+            RETURN                         @11
+            FETCHPARAMETERS                @12
+            CALLSUBROUTINE                 @13

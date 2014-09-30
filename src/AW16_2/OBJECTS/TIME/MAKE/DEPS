@@ -1,0 +1,224 @@
+OBJECTFILES= \
+	$(OBJDIR)\attribut.obj \
+	$(OBJDIR)\tm_main.obj \
+	$(OBJDIR)\tm_class.obj \
+	$(OBJDIR)\tm_utl.obj \
+	$(OBJDIR)\tm_adm.obj \
+	$(OBJDIR)\tm_func.obj \
+	$(OBJDIR)\tm_edit.obj \
+	$(OBJDIR)\tm_events.obj \
+	$(OBJDIR)\tm_hti.obj \
+	$(OBJDIR)\tm_lti.obj \
+	$(OBJDIR)\tm_api.obj 
+
+
+$(OBJDIR)\attribut.obj: 
+
+$(OBJDIR)\tm_main.obj:  .\tm_main.cpp .\tm_incld.h .\tm_utl.h .\tm_macro.h \
+                        .\tm_str.h .\tm_glob.h .\tm_vi.h .\tm_class.h \
+                        g:\internal\include\o_print.h \
+                        g:\internal\include\o_time.h \
+                        g:\internal\include\o_text.h \
+                        g:\internal\include\o_date.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h ..\include\attribut.h \
+                        g:\internal\include\intdebug.h \
+                        g:\internal\include\a_almutl.h \
+                        g:\internal\include\a_alm.h \
+                        d:\borlandc\include\stdio.h \
+                        d:\borlandc\include\math.h \
+                        d:\borlandc\include\ctype.h \
+                        d:\borlandc\include\string.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h \
+                        d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_class.obj:  .\tm_class.cpp d:\borlandc\include\alloc.h \
+                         .\tm_dialg.h .\tm_incld.h \
+                         d:\borlandc\include\windows.h .\tm_utl.h \
+                         .\tm_macro.h .\tm_str.h .\tm_glob.h .\tm_vi.h \
+                         .\tm_class.h g:\internal\include\o_print.h \
+                         g:\internal\include\o_time.h \
+                         g:\internal\include\o_text.h \
+                         g:\internal\include\o_date.h \
+                         g:\internal\include\o_number.h \
+                         g:\internal\include\o_wnd.h \
+                         g:\internal\include\op_wnd.h \
+                         g:\internal\include\ap_macro.h ..\include\attribut.h \
+                         g:\internal\include\intdebug.h \
+                         g:\internal\include\a_almutl.h \
+                         g:\internal\include\a_alm.h \
+                         d:\borlandc\include\stdio.h \
+                         d:\borlandc\include\math.h \
+                         d:\borlandc\include\ctype.h \
+                         d:\borlandc\include\string.h \
+                         d:\borlandc\include\mem.h \
+                         d:\borlandc\include\stddef.h
+
+$(OBJDIR)\tm_utl.obj:  .\tm_utl.cpp .\tm_utl.h .\tm_dialg.h .\tm_incld.h \
+                       d:\borlandc\include\alloc.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h \
+                       d:\borlandc\include\windows.h .\tm_macro.h .\tm_str.h \
+                       .\tm_glob.h .\tm_vi.h .\tm_class.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_time.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\mem.h d:\borlandc\include\stddef.h
+
+$(OBJDIR)\tm_adm.obj:  .\tm_adm.cpp .\tm_adm.h .\tm_incld.h .\tm_utl.h \
+                       .\tm_macro.h .\tm_str.h .\tm_glob.h .\tm_vi.h \
+                       .\tm_class.h g:\internal\include\o_print.h \
+                       g:\internal\include\o_time.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_func.obj:  .\tm_func.cpp .\tm_utl.h .\tm_dialg.h .\tm_incld.h \
+                        .\tm_macro.h .\tm_str.h .\tm_glob.h .\tm_vi.h \
+                        .\tm_class.h g:\internal\include\o_print.h \
+                        g:\internal\include\o_time.h \
+                        g:\internal\include\o_text.h \
+                        g:\internal\include\o_date.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h ..\include\attribut.h \
+                        g:\internal\include\intdebug.h \
+                        g:\internal\include\a_almutl.h \
+                        g:\internal\include\a_alm.h \
+                        d:\borlandc\include\stdio.h \
+                        d:\borlandc\include\math.h \
+                        d:\borlandc\include\ctype.h \
+                        d:\borlandc\include\string.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h \
+                        d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_edit.obj:  .\tm_edit.cpp .\tm_utl.h .\tm_dialg.h .\tm_incld.h \
+                        .\tm_macro.h .\tm_str.h .\tm_glob.h .\tm_vi.h \
+                        .\tm_class.h g:\internal\include\o_print.h \
+                        g:\internal\include\o_time.h \
+                        g:\internal\include\o_text.h \
+                        g:\internal\include\o_date.h \
+                        g:\internal\include\o_number.h \
+                        g:\internal\include\o_wnd.h \
+                        g:\internal\include\op_wnd.h \
+                        g:\internal\include\ap_macro.h ..\include\attribut.h \
+                        g:\internal\include\intdebug.h \
+                        g:\internal\include\a_almutl.h \
+                        g:\internal\include\a_alm.h \
+                        d:\borlandc\include\stdio.h \
+                        d:\borlandc\include\math.h \
+                        d:\borlandc\include\ctype.h \
+                        d:\borlandc\include\string.h \
+                        d:\borlandc\include\mem.h \
+                        d:\borlandc\include\stddef.h \
+                        d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_events.obj:  .\tm_events.cpp g:\internal\include\o_time.h \
+                          .\tm_utl.h .\tm_incld.h .\tm_macro.h .\tm_str.h \
+                          .\tm_glob.h .\tm_vi.h .\tm_class.h \
+                          g:\internal\include\o_print.h \
+                          g:\internal\include\o_text.h \
+                          g:\internal\include\o_date.h \
+                          g:\internal\include\o_number.h \
+                          g:\internal\include\o_wnd.h \
+                          g:\internal\include\op_wnd.h \
+                          g:\internal\include\ap_macro.h \
+                          ..\include\attribut.h \
+                          g:\internal\include\intdebug.h \
+                          g:\internal\include\a_almutl.h \
+                          g:\internal\include\a_alm.h \
+                          d:\borlandc\include\stdio.h \
+                          d:\borlandc\include\math.h \
+                          d:\borlandc\include\ctype.h \
+                          d:\borlandc\include\string.h \
+                          d:\borlandc\include\mem.h \
+                          d:\borlandc\include\stddef.h \
+                          d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_hti.obj:  .\tm_hti.cpp .\tm_incld.h .\tm_utl.h .\tm_macro.h \
+                       .\tm_str.h .\tm_glob.h .\tm_vi.h .\tm_class.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_time.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_lti.obj:  .\tm_lti.cpp g:\internal\include\o_wnd.h .\tm_incld.h \
+                       g:\internal\include\op_wnd.h .\tm_utl.h .\tm_macro.h \
+                       .\tm_str.h .\tm_glob.h .\tm_vi.h .\tm_class.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_time.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+$(OBJDIR)\tm_api.obj:  .\tm_api.cpp .\tm_incld.h .\tm_utl.h .\tm_macro.h \
+                       .\tm_str.h .\tm_glob.h .\tm_vi.h .\tm_class.h \
+                       g:\internal\include\o_print.h \
+                       g:\internal\include\o_time.h \
+                       g:\internal\include\o_text.h \
+                       g:\internal\include\o_date.h \
+                       g:\internal\include\o_number.h \
+                       g:\internal\include\o_wnd.h \
+                       g:\internal\include\op_wnd.h \
+                       g:\internal\include\ap_macro.h ..\include\attribut.h \
+                       g:\internal\include\intdebug.h \
+                       g:\internal\include\a_almutl.h \
+                       g:\internal\include\a_alm.h \
+                       d:\borlandc\include\stdio.h d:\borlandc\include\math.h \
+                       d:\borlandc\include\ctype.h \
+                       d:\borlandc\include\string.h d:\borlandc\include\mem.h \
+                       d:\borlandc\include\stddef.h \
+                       d:\borlandc\include\windows.h
+
+OBJECTRCFILE= \
+	$(OBJDIR)\time.res 
+
+
+$(OBJDIR)\time.res:  .\time.rc .\tm_dialg.h
+

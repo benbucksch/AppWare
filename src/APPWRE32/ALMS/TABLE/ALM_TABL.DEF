@@ -1,0 +1,114 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;  Copyright (c) Unpublished Work of Novell, Inc.  All rights reserved.
+;;
+;;  THIS WORK IS AN UNPUBLISHED WORK AND CONTAINS CONFIDENTIAL,
+;;  PROPRIETARY, AND TRADE SECRET INFORMATION OF NOVELL, INC.
+;;  ACCESS TO THIS WORK IS RESTRICTED TO (I) NOVELL, INC. EMPLOYEES
+;;  WHO HAVE A NEED TO KNOW HOW TO PERFORM THEIR TASKS WITHIN THE SCOPE
+;;  OF THEIR ASSIGNMENTS AND (II) ENTITIES OTHER THAN NOVELL, INC. WHO
+;;  HAVE ENTERED INTO APPROPRIATE LICENSE AGREEMENTS.  NO PART OF THIS
+;;  WORK MAY BE USED, PRACTICED, PERFORMED, COPIED, DISTRIBUTED,
+;;  REVISED, MODIFIED, TRANSLATED, ABRIDGED, CONDENSED, EXPANDED,
+;;  COLLECTED, COMPILED, LINKED, RECAST, TRANSFORMED, OR ADAPTED
+;;  WITHOUT THE PRIOR WRITTEN CONSENT OF NOVELL, INC.  ANY USE OR
+;;  EXPLOITATION OF THIS WORK WITHOUT AUTHORIZATION COULD SUBJECT
+;;  THE PERPETRATOR TO CRIMINAL AND CIVIL LIABILITY.
+;;
+;;--------------------------------------------------------------------------
+;;
+;; FILE:  "AW32tabl.def"
+;;
+;; AUTHOR:
+;;
+;; DESCRIPTION:
+;;
+;; CHANGES:
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+LIBRARY         AW32TABL
+
+DESCRIPTION     'Novell AppWare Loadable Module: Table Object'
+
+CODE            MOVEABLE DISCARDABLE LOADONCALL
+
+DATA            SINGLE MOVEABLE PRELOAD
+
+SEGMENTS        _TEXT PRELOAD
+
+HEAPSIZE        32768
+
+EXPORTS         ; dll entry and exit
+		DllEntryPoint                  @1
+
+		; table admn and objd
+		Tabl_Admn                      @3
+		GetSerVersion                  @72
+
+		; table functions
+		Tabl_UpdateAutoTable           @5
+		Tabl_SortAscending             @6
+		Tabl_SortRowAscending          @7
+		Tabl_SetSelection              @8
+		Tabl_SetRow                    @9
+		Tabl_SetIndexedField           @10
+		Tabl_SetDataSource             @11
+		Tabl_SetColumnWidth            @12
+		Tabl_SetColumnTitle            @13
+		Tabl_SetColumn                 @14
+		Tabl_SetCell                   @15
+		Tabl_ScrollToSelection         @16
+		Tabl_RowToText                 @17
+		Tabl_RowToObjects              @18
+		Tabl_RowCalculation            @19
+		Tabl_RefreshAutoTable          @20
+		Tabl_InsertColumn              @21
+		Tabl_GetSelection              @22
+		Tabl_GetRecordID               @23
+		Tabl_GetIndexedField           @24
+		Tabl_GetDataSource             @25
+		Tabl_GetColumnWidth            @26
+		Tabl_GetColumnTitle            @27
+		Tabl_GetColumn                 @28
+		Tabl_GetCell                   @29
+		Tabl_FindExact                 @30
+		Tabl_Find                      @31
+		Tabl_DeleteRow                 @32
+		Tabl_DeleteColumn              @33
+		Tabl_CountRows                 @34
+		Tabl_ColumnCalculation         @35
+		Tabl_ClearTable                @36
+		Tabl_ClearSelections           @37
+		Tabl_CellEdited                @38
+		Tabl_AddRow                    @39
+		Tabl_ActiveColumn              @40
+		Tabl_ActiveCell                @41
+		Tabl_ActivateColumn            @42
+		Tabl_SortDescending            @71
+		Tabl_SortRowDescending         @73
+
+		; table event handlers
+		Tabl_doubleClickWait           @44
+		Tabl_trackCursor               @49
+		Tabl_printItemDrawRoutine      @50
+		Tabl_AdhocViewChanged		@51
+		Tabl_startupEvent              @64
+		Tabl_objectChanged             @70
+
+		; table api entries -- for the SequeLink SQL object and others..
+		OTableAddRow                   @79
+		OTableColumnTitle              @69
+		OTableGetCell                  @80
+		OTableGetColumn                @76
+		OTableGetColumnCount           @78
+		OTableGetRow                   @75
+		OTableGetRowCount              @77
+		OTableSetCell                  @81
+		OTableSetColumnCount           @67
+		OTableSetColumn                @68
+		OTableSetRow                   @74
+		OTableSetRowCount              @66
+		OTableSetColEditAttrib         @100
+		OTableSetColumnWidth           @101
+		OTableFindCell                 @102
