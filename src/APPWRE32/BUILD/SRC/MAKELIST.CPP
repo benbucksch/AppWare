@@ -369,21 +369,18 @@ void	ProcessFiles(
 //
 ////////////////////////////////////////////////////////////////
 
-int		main(
-	int				argc,
-	char**		argv
-	)
-	{
-	BOOL			fFirstFile;
-	int				nArg;
-	char			cOpt;
+int		main( int	argc, char** argv )
+{
+	BOOL fFirstFile;
+	int	nArg;
+	char cOpt;
 
 	if (argc < 2)
-		{
+	{
 		Output(stdout, g_szUsage);
-		}
+	}
 	else
-		{
+	{
 		fFirstFile = FALSE;
 
 		for (nArg = 1; nArg < argc; nArg++)
