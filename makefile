@@ -9,4 +9,5 @@
 all:
 
 	# lowercase:
+		# convert file names to lowercase
 		# for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done
