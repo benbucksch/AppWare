@@ -104,3 +104,29 @@ purist version of the hyperlink idea (!?!?!)
 
  -->
 
+Cocoa Framework includes:
+
+	Audio and Video
+		AV Kit
+		AV Foundation
+		Core Video
+		Core Audio
+		Audio Units
+	Data Management
+		Core Data
+	Graphics and Animation
+		Core Animation
+		Core Image
+		OpenGL
+		Scene Kit
+		Sprite Kit
+		Quartz
+	Networking and Internet
+		Bonjour
+		Directory Services
+		Kerberos
+	User Applications
+		Address Book
+		Calendar Store
+		Instant Message
+
