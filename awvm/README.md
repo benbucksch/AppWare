@@ -47,28 +47,28 @@ Types in AWVM can be translated directly into V8 types (for Node.js).
 
 The ALMs provided by legacy AppWare are:
 
-Application
-Browser
-Bundle
-Button
-Calc
-Cursor
-Date
-File
-Fileops
-General
-Group
-Loop
-Menu
-Menubar
-Menuitem
-Notify
-Picture
-Radgroup
-Sub
-Text
-Textfact
-Window
+	- Application
+	- Browser
+	- Bundle
+	- Button
+	- Calc
+	- Cursor
+	- Date
+	- File
+	- Fileops
+	- General
+	- Group
+	- Loop
+	- Menu
+	- Menubar
+	- Menuitem
+	- Notify
+	- Picture
+	- Radgroup
+	- Sub
+	- Text
+	- Textfact
+	- Window
 
 
 
