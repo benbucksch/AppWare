@@ -6,9 +6,9 @@ AWVM - the AppWare Virtual Machine
 
 AWVM is an experimental new virtual machine "kernel" for AppWare. 
 
-In order to remove system dependencies and make AppWare a stable, universal platform for creating applications, the new AppWare will be architected upon a virtual machine core.
+In order to remove system dependencies and make AppWare a stable, universal platform for creating applications, the new AppWare will be created upon a virtual machine.
 
-The idea is to provide an easy, scriptable interface to system-specific operations (eg, Cocoa and .NET) in Node.js.
+The idea is to provide an easy, scriptable interface for system-specific operations like the APIs of Cocoa and .NET.  An SDK layer on top of the AppWare VM will allow the virtual machine's own API to be accessed from other languages, such as Node.js.
 
 Types in AWVM can be translated directly into V8 types (for Node.js).
 
