@@ -17,6 +17,8 @@ namespace aw
 	class Value : public Data
 	{
 		// TODO
+
+		// conversion operators ************************
 	};
 }
 

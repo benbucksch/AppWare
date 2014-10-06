@@ -22,6 +22,8 @@ Associative Array data structure
 
 #define TRIE_ALPHABET_SIZE 52 // each Trie has 52 children (26 lowercase + 26 uppercase)
 
+#include "awvalue.h"
+
 #include <stdint.h>
 #include <string.h> // for strlen
 
@@ -30,7 +32,7 @@ namespace aw {
 	/*
 	//////////////////////////////////////////////////////////////////////////////////////////
 
-	Node in a Radix Tree
+	A node in a radix tree
 
 	//////////////////////////////////////////////////////////////////////////////////////////
 	*/
@@ -45,14 +47,10 @@ namespace aw {
 		typedef T* pointer;
 
 		// default constructor 
-		RadixTreeNode() : isKey_(false), isRoot_(false), value_(NULL), nodes_()
-		{}
+		RadixTreeNode() : isKey_(false), isRoot_(false), value_(NULL), nodes_() {}
 
 		// construct from a string
-		RadixTreeNode( const char* key ) : RadixTreeNode()
-		{
-			this->addChild(key);
-		}
+		RadixTreeNode( const char* key ) : RadixTreeNode() { this->addChild(key); }
 
 		/**
 		 *
@@ -141,13 +139,9 @@ namespace aw {
 		typedef T value_type;
 		typedef T& reference;
 		typedef T* pointer;
+		
+		// array operators **************************************************
 
-		RadixTree()
-		{
-			// TODO
-		}
-
-		// 
 		const value_type operator[]( key_type field ) const
 		{
 			RadixTreeNode<value_type>* node = root_.getNode( field );
@@ -174,8 +168,9 @@ namespace aw {
 
 	//////////////////////////////////////////////////////////////////////////////////////////
 	*/
+
 	template<class T>
-	class Map : public RadixTree<T>
+	class Map : public RadixTree<T>, public Value
 	{
 	public:
 

@@ -20,7 +20,7 @@ The Objective C part of the kernel (for OSX)
 #ifndef __COCOA_OBJC__
 #define __COCOA_OBJC__
 
-#import "appware.h"
+#import "../appware.h"
 
 #import <stdlib.h>
 #import <Cocoa/Cocoa.h>

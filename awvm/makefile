@@ -12,7 +12,7 @@ else
 
 		objcc = g++
 		objcflags = -lobjc -framework Cocoa
-		objcsrc = cocoa.mm
+		objcsrc = awcocoa/cocoa.mm
 
     endif
  #    UNAME_P := $(shell uname -p)

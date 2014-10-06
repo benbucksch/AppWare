@@ -1,22 +1,28 @@
-AppWare Virtual Machine
+AWVM - the AppWare Virtual Machine
 ====
 
 
 ### AppWare Virtual Machine
 
-AWVM is an experimental new kernel for AppWare. 
+AWVM is an experimental new virtual machine "kernel" for AppWare. 
 
-The idea is to provide an interface between system-specific operations (eg, Cocoa and .NET) and Node.js.
+In order to remove system dependencies and make AppWare a stable, universal platform for creating applications, the new AppWare will be architected upon a virtual machine core.
+
+The idea is to provide an easy, scriptable interface to system-specific operations (eg, Cocoa and .NET) in Node.js.
+
+Types in AWVM can be translated directly into V8 types (for Node.js).
+
+
 
 ####Kernel
 
 - the kernel provides a platform agnostic interface to low-level core operations that tend to be platform specific. __Anything that calls a native function must be part of the kernel__.
 - eg, the kernel provides a single interface to GUI operations in C++ (for Windows) and Objective C (for OSX)
 
-	Application
-	Window
-	GUI
-	Events
+	- Application
+	- Window
+	- GUI
+	- Events
 
 ####Engine
 

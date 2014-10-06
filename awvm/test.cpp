@@ -11,28 +11,45 @@ ClassTemplate exportRect()
 	ClassTemplate Rect = ClassTemplate();
 	Rect.defProperty("origin");
 	Rect.defProperty("size");
-	// .setMethod(Function<>())
-		// .setConstructor(Function<>())
-		// .setProperty(Value())
-		// .setMethod(Function<>())
-
 	return Rect;
+}
+
+ClassTemplate exportWindow()
+{
+	ClassTemplate Window = ClassTemplate();
+	// Window.defProperty("origin");
+	// Window.defProperty("size");
+	// Window.defConstructor(Function());
+
+	// Window.defMethod("name",FunctionWrap());
+	// Window.defMethod("name",FunctionWrap());
+	// Window.defMethod("name",FunctionWrap());
+	return Window;
 }
 
 
 
 int main()
 {
-	ClassTemplate Rect = exportRect();
+
+	auto function = Function<void()>();
+
+	// ClassTemplate Rect = exportRect();
+	// ClassTemplate Window = exportWindow();
+
+	// // TODO
+	// // ClassTemplate Window = WindowTemplate::export();
+
+	// Object rect = Rect.create();
+	// Object window = Window.create(Arguments({rect}));
+
+	
 
 
-	Object rect = Rect.init(Arguments());
+	// auto object = Object();
 
-
-	auto object = Object();
-
-	object["test1"] = Function();
-	object["test2"] = Function();
+	// object["test1"] = Function();
+	// object["test2"] = Function();
 	
 
 

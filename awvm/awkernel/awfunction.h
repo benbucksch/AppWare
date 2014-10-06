@@ -15,33 +15,40 @@ namespace aw
 	//////////////////////////////////////////////////////////////////////////////////////////
 	*/
 
-	// template <class RType, class... ArgType>
-	// class FunctionWrap : public Object
+
+	template<class> class Function; // undefined, this is required for the partial specialization below
+
+	template<class RType, class... ArgType> class Function<RType(ArgType...)>
+	{
+	public:
+
+		// operator=
+		// operator&=
+
+		Function() {}
+		Function( RType func(ArgType... args) ) : func_(func) {}
+
+		RType operator() (ArgType... args)
+		{
+			return func_(args...);
+		}
+
+	private:
+		RType (*func_)(ArgType...); // function pointer
+	};
+
+
+	// class Function : public Value
 	// {
 	// public:
-
-	// 	FunctionWrap( RType func(ArgType... args) ) : func_(func) {}
-
-	// 	RType operator() (ArgType... args)
+	// 	Function()
 	// 	{
-	// 		return func_(args...);
+
 	// 	}
 
 	// private:
-	// 	RType (*func_)(ArgType...); // function pointer
+
 	// };
-
-
-	class Function : public Value
-	{
-	public:
-		Function()
-		{
-
-		}
-
-		
-	};
 	
 }
 
