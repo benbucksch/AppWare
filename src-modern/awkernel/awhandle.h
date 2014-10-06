@@ -1,0 +1,68 @@
+#ifndef __AW_HANDLE__
+#define __AW_HANDLE__
+
+
+namespace aw
+{
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////
+
+	Base class for garbage collected objects
+
+	//////////////////////////////////////////////////////////////////////////////////////////
+	*/
+	template <class T>
+	class Handle
+	{
+	public:
+		Handle() : handle_( new T() )
+		{
+			// register handle with garbage collector
+		}
+
+		~Handle()
+		{
+			delete handle_;
+		}
+
+		// dereference operator returns the handled object
+		T* operator*() { return handle_; }
+
+	private:
+		T* handle_;
+	};
+
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////
+
+	Virtual objects are garbage collected as soon as they go out of scope
+
+	//////////////////////////////////////////////////////////////////////////////////////////
+	*/
+	template <class T>
+	class Virtual : public Handle<T>
+	{
+	public:
+	private:
+	};
+
+
+	/*
+	//////////////////////////////////////////////////////////////////////////////////////////
+
+	Persistent objects are NOT garbage collected when they go out of scope
+
+	//////////////////////////////////////////////////////////////////////////////////////////
+	*/
+	template <class T>
+	class Persistent : public Handle<T>
+	{
+	public:
+	private:
+	};
+
+}
+
+#endif

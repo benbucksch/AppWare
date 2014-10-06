@@ -1,46 +1,96 @@
-#include "kernel.h"
+#include "appware.h"
 
 #include <iostream>
 
-double testfun(int a, int b)
+using namespace aw;
+
+
+
+ClassTemplate exportRect()
 {
-	return (double)(a+b);
+	ClassTemplate Rect = ClassTemplate();
+	Rect.defProperty("origin");
+	Rect.defProperty("size");
+	// .setMethod(Function<>())
+		// .setConstructor(Function<>())
+		// .setProperty(Value())
+		// .setMethod(Function<>())
+
+	return Rect;
 }
+
+
 
 int main()
 {
-
-	// vm interface between languages
-	// vm objects can convert into managed C++ for .NET, v8 for Node.js and 
-	// Objective C
-	
-	// primitives are SIMD optimized?
-
-	// aw::Application : public aw::Object()
-	// aw::Window : public aw::Object()
-
-	// Appware primitives
-	// aw::Object();
-	// aw::Value();
-	// aw::Number();
-	// aw::Array();
-	// aw::Function();
+	ClassTemplate Rect = exportRect();
 
 
-	// object.setMethod(aw::Function<double,int,int>(testfun));
-	// object.setProperty<aw::Number>(number);
+	Object rect = Rect.init(Arguments());
+
+
+	auto object = Object();
+
+	object["test1"] = Function();
+	object["test2"] = Function();
 	
 
 
-	auto function = aw::Function<double, int, int>(testfun);
 
-	auto object = aw::Object();
-	object.set("test",function);
 
-	// object.cast_Obj_C()
-	// object.cast_v8()
+
+	// Handle<Object> rect = Rect.init( Arguments() );
+
+	// Window properties
+	// Window::frame
+	// Window::geometry
+	// Window::size
+		// Object::width
+		// Object::height
+	// Window::maximized
+	// Window::position
+		// Object::top
+		// Object::left
+	// Window::visible
+	// Window::baseSize
+	// Window::fullScreen
+	// Window::focus
+	// Window::children
+
+	// Window methods
+	// Window::init( Rect rect )
+	// Window::acceptDrops( bool active )
+	// Window::resize( int witdth, int height )
+	// Window::setFocus( bool active )
+	// Window::show()
 
 	
+
+	
+	
+	// Window.setConstructor("",Function<>());
+
+
+	// Virtual<Object> exportWindow ()
+	// {
+	// 	ClassTemplate Window = ClassTemplate();
+	// 	// Window.setConstructor("",Function<>());
+	// }
+
+	// Virtual<Object> window = Window.init( Arguments() );
+
+
+
+	// Object::init()
+
+	// (*persists)->
+
+	// window.set("")
+
+	// window::init()
+
+
+
 	
 	return 0;
 }
