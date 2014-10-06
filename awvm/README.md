@@ -45,8 +45,7 @@ Types in AWVM can be translated directly into V8 types (for Node.js).
 - these are basically just Node.js modules
 
 
-The ALMs provided by legacy AppWare are:
-
+- The ALMs provided by legacy AppWare are:
 	- Application
 	- Browser
 	- Bundle
