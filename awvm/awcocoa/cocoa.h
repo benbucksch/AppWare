@@ -27,27 +27,79 @@ The Objective C part of the kernel (for OSX)
 
 namespace aw {
 
-	class Proxy
+
+
+	class CocoaApp
 	{
 	public:
-		Proxy()
+		CocoaApp()
 		{
-
+			pool_ = [[NSAutoreleasePool alloc] init];
+			[NSApplication sharedApplication];
+			// appDelegate_ = [[AppDelegate alloc] init];
+			// [NSApp setDelegate:appDelegate_];
+			
 		}
 
-		~Proxy()
-		{
+		~CocoaApp() { [pool_ release]; }
 
-		}
+		void start() { [NSApp run]; }
+
+	private:
+		NSAutoreleasePool *pool_;
+		// AppDelegate *appDelegate_;
+
 	};
+
+
+	Application::Application() : ptr_(new CocoaApp()) {}
+
+	Application::~Application(){}
+
+	void Application::start() const { ((CocoaApp*)ptr_)->start(); }
 	
-	class Window : Proxy
-	{
-	public:
-		Window();
-	};
+	// callback()
 
-	// window.set()
+	// Application
+
+	// typedef Function<void(self_type self)> callback;
+	
+
+
+	
+
+
+
+
+	// class CocoaWindow
+	// {
+	// public:
+	// 	// CocoaWindow(Rect)
+	// 	CocoaWindow()
+	// 	{
+	// 		frame_ = NSMakeRect(0, 0, 200, 200);
+	// 		window_  = [[[NSWindow alloc] initWithContentRect:frame_
+	// 			styleMask:NSBorderlessWindowMask
+	// 			backing:NSBackingStoreBuffered
+	// 			defer:NO] autorelease];
+	// 		[window_ setBackgroundColor:[NSColor blueColor]];
+	// 		[window_ makeKeyAndOrderFront:NSApp];
+	// 	}
+
+	// 	~CocoaWindow()
+	// 	{
+
+	// 	}
+
+	// private:
+	// 	NSRect frame_;
+	// 	NSWindow* window_;
+		
+	// };
+
+
+
+
 
 
 

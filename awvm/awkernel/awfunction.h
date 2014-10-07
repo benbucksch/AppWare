@@ -28,10 +28,7 @@ namespace aw
 		Function() {}
 		Function( RType func(ArgType... args) ) : func_(func) {}
 
-		RType operator() (ArgType... args)
-		{
-			return func_(args...);
-		}
+		RType operator() (ArgType... args) { return func_(args...); }
 
 	private:
 		RType (*func_)(ArgType...); // function pointer

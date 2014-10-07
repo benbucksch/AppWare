@@ -23,6 +23,7 @@ data structues for AWVM Objects
 #include "awargs.h"
 #include "awmap.h"
 #include "awvalue.h"
+#include "awfunction.h"
 
 namespace aw
 {
@@ -32,26 +33,53 @@ namespace aw
 
 	Object
 
-	inherits 
-
 	//////////////////////////////////////////////////////////////////////////////////////////
 	*/
-	class Object : public Map<Value>
+
+	class Object
+	{
+	public:
+		Object();
+		~Object();
+		
+	};
+
+
+
+
+
+
+	template<class T>
+	class ObjectWrap
 	{
 	public:
 
-		typedef Object self_type;
-		typedef Value value_type;
-		typedef value_type& reference;
-		typedef value_type* pointer;
+		typedef ObjectWrap self_type;
+		typedef T value_type;
+		typedef T& reference;
+		typedef T* pointer;
 
 		// iterate over keys ************************************
 		// TODO
 
+		ObjectWrap( pointer object ) : handle_(object) {}
+		ObjectWrap() : handle_() {}
+
+
+		template <class RType, class ... ArgType>
+		void bindMethod(const char*, Function<RType(ArgType...)>& method)
+		{
+
+		}
+		// object.bindProperty(const char*,T property);
+
+		// bind
+		// bindMethod
+		// bindProperty
 		// cast
 
 	private:
-		// std::map<const char*,Object> properties_;
+		pointer handle_;
 	};
 
 

@@ -13,7 +13,6 @@ The idea is to provide an easy, scriptable interface for system-specific operati
 Types in AWVM can be translated directly into V8 types (for Node.js).
 
 
-
 ####Kernel
 
 - the kernel provides a platform agnostic interface to low-level core operations that tend to be platform specific. __Anything that calls a native function must be part of the kernel__.
@@ -48,7 +47,7 @@ Types in AWVM can be translated directly into V8 types (for Node.js).
 - The ALMs provided by legacy AppWare are:
 	- Application
 	- Browser
-	- Bundle
+	- Bundle	
 	- Button
 	- Calc
 	- Cursor

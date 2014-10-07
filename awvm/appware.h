@@ -39,10 +39,21 @@ the all encompassing AppWare namespace
 
 namespace aw {
 
-
-
+	
+class Application
+{
+public:
+	Application();
+	~Application();
+	void start() const;
+private:
+	void* ptr_;
+};
+	
 
 }
 
 
 #endif
+
+
